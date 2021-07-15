@@ -1,7 +1,2 @@
-/**
- *
- * @param {string} bar
- * @returns
- */
-export default function Number(bar: string): string;
+export * from "./Components";
 //# sourceMappingURL=index.d.ts.map

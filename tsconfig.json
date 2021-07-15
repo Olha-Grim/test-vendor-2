@@ -1,11 +1,13 @@
+
 {
     "compilerOptions": {
-      "jsx": "react-jsx",
-      "target": "ESNext",
-      "module": "ESNext",
+      "jsx": "react",
+      "target": "es6",
+      "module": "commonjs",
       "lib": [
         "DOM",
-        "ESNext"
+        "ESNext",
+        "es6"
       ],
       "allowJs": true,
       "checkJs": true,
@@ -22,7 +24,41 @@
       "skipLibCheck": true,
       "forceConsistentCasingInFileNames": true
     },
+    // "exclude": [
+    //   "./node_modules/**/*"
+    // ],
     "include": [
       "src"
-    ]
+    ],
+   
   }
+// {
+//   "compilerOptions": {
+//     "jsx": "react",
+//     "target": "es6",
+//     "lib": [
+//       "dom",
+//       "dom.iterable",
+//       "esnext"
+//     ],
+//     "skipLibCheck": true,
+//     "esModuleInterop": true,
+//     "allowSyntheticDefaultImports": true,
+//     "strict": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "noFallthroughCasesInSwitch": true,
+//     "module": "esnext",
+//     "moduleResolution": "node",
+//     "resolveJsonModule": true,
+//     "isolatedModules": true,
+//     "noEmit": true,
+//     "allowJs": true,
+//     "removeComments": true,
+//     "sourceMap": true,
+//     "noResolve": false,
+//     "noImplicitAny": false
+//   },
+//   "include": [
+//     "src",
+//   ]
+// }
