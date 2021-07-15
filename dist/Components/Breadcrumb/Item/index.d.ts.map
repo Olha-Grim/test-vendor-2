@@ -1,0 +1,1 @@
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../../src/Components/Breadcrumb/Item/index.js"],"names":[],"mappings":";;eAMU,MAAM;mBACN,MAAM,YAAY,CAAC,GAAG,EAAE,MAAM,CAAC;UAC/B,MAAM;aACN,MAAM,YAAY,CAAC,GAAG,EAAE,MAAM,CAAC;iBAC3B,gBAAgB,CAAC,iBAAiB,GAAG,eAAe,EAAE,gBAAgB,CAAC,KAAK,IAAI;cACpF,WAAW;;AARrB;;;;;;;;;;;GAWG;AACH;;GAEG;AAEH,iGAHW,KAAK,eAcf"}

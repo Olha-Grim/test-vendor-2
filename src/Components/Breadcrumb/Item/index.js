@@ -1,13 +1,14 @@
 import React from "react";
 import { Breadcrumb as AntdBreadcrumb } from "antd";
+
 /**
  *
  * @typedef Props
  * @prop {string} className
- * @prop {Dropdown} dropdownProps
+ * @prop {React.ReactElement<any, string>} dropdownProps
  * @prop {string} href
- * @prop {Menu | () => Menu} overlay
- * @prop {(e:MouseEvent) => void} onClick
+ * @prop {React.ReactElement<any, string> } overlay
+ * @prop {(e: React.MouseEvent<HTMLAnchorElement | HTMLSpanElement, React.MouseEvent>) => void} onClick
  * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor

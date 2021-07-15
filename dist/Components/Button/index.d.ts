@@ -13,11 +13,11 @@ export type Props = {
     shape: "circle" | "round";
     size: "large" | "middle" | "small";
     target: string;
-    type: "link" | "text" | "ghost" | "default" | "primary" | "dashed" | undefined;
+    type: "ghost" | "dashed" | "link" | "text" | "default" | "primary" | undefined;
     onClick: () => void;
     className: string;
     style: React.CSSProperties;
-    children: React.ReactNode;
+    children: JSX.Element;
 };
 /**
  *
@@ -30,15 +30,16 @@ export type Props = {
  * @prop {"button" | "submit" | "reset" | undefined} htmlType
  * @prop {React.ReactNode} icon
  * @prop {boolean | { delay: number}}loading
- * @prop {"circle" | "round" } shape
- * @prop {"large" | "middle" | "small" } size
+ * @prop {"circle" | "round"} shape
+ * @prop {"large" | "middle" | "small"} size
  * @prop {string} target
- * @prop {"link" | "text" | "ghost" | "default" | "primary" | "dashed" | undefined} type
- * @prop {()=>void} onClick
+ * @prop {"ghost" | "dashed" | "link" | "text" | "default" | "primary" | undefined} type
+ * @prop {()=> void} onClick
  * @prop {string} className
  * @prop {React.CSSProperties} style
- * @prop {React.ReactNode} children
- * @returns {React.ReactNode}
+ * @prop {JSX.Element} children
+ * @return {JSX.Element}
+ * @constructor
  */
 /**
  * @param {Props} props

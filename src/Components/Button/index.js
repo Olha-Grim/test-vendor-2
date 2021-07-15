@@ -8,13 +8,13 @@ import { Button as AntdButton } from "antd";
  * @prop {boolean} disabled
  * @prop {boolean} ghost
  * @prop {string} href
- * @prop {string} htmlType
+ * @prop {"button" | "submit" | "reset" | undefined} htmlType
  * @prop {React.ReactNode} icon
  * @prop {boolean | { delay: number}}loading
  * @prop {"circle" | "round"} shape
  * @prop {"large" | "middle" | "small"} size
  * @prop {string} target
- * @prop {string} type
+ * @prop {"ghost" | "dashed" | "link" | "text" | "default" | "primary" | undefined} type
  * @prop {()=> void} onClick
  * @prop {string} className
  * @prop {React.CSSProperties} style

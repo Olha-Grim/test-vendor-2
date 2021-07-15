@@ -1,23 +1,24 @@
 import React from "react";
 import { Calendar as AntdCalendar } from "antd";
+// import moment from "moment";
 
 /**
  * @typedef Props
- * @prop {function(date: moment): React.ReactNode} dateCellRender
- * @prop {function(date: moment): React.ReactNode} dateFullCellRender
- * @prop {moment} defaultValue
- * @prop {(currentDate: moment) => boolean	} disabledDate
+ * @prop {(date: typeof moment)=> React.ReactNode} dateCellRender
+ * @prop {(date: typeof moment)=> React.ReactNode} dateFullCellRender
+ * @prop {typeof moment} defaultValue
+ * @prop {(currentDate: typeof moment) => boolean	} disabledDate
  * @prop {boolean} fullscreen
- * @prop {function(object:{value: moment, type: string, onChange: f(), onTypeChange: f()})	} headerRender
- * @prop {object} locale
- * @prop {"month" | "year"	} mode
- * @prop {function(date: moment):  React.ReactNode} monthCellRender
- * @prop {function(date: moment):  React.ReactNode} monthFullCellRender
- * @prop {[moment, moment]} validRange
- * @prop {moment} value
- * @prop {function(date: moment）	} onChange
- * @prop {function(date: moment, mode: string)	} onPanelChange
- * @prop {function(date: moment）} onSelect
+ * @prop {(object:{value: typeof moment, type: string, onChange: function, onTypeChange: function })=> void	} headerRender
+//  * @prop {object} locale
+ * @prop {"month" | "year"} mode
+ * @prop {(date: typeof moment)=>  React.ReactNode} monthCellRender
+ * @prop {(date: typeof moment)=>  React.ReactNode} monthFullCellRender
+ * @prop {[typeof moment, typeof moment]} validRange
+ * @prop {typeof moment} value
+ * @prop {(date: typeof moment)=> void} onChange
+ * @prop {(date: typeof moment, mode: string)=> void	} onPanelChange
+ * @prop {(date: typeof moment) => void} onSelect
  * @returns {JSX.Element}
  * @constructor
  */
@@ -32,7 +33,7 @@ const Calendar = ({
   disabledDate,
   fullscreen,
   headerRender,
-  locale,
+  // locale,
   mode,
   monthCellRender,
   validRange,
@@ -48,7 +49,7 @@ const Calendar = ({
     disabledDate,
     fullscreen,
     headerRender,
-    locale,
+    // locale,
     mode,
     monthCellRender,
     validRange,

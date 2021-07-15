@@ -1,11 +1,12 @@
 import React from "react";
 import { Breadcrumb as AntdBreadcrumb } from "antd";
+
 /**
  * 
  * @typedef Props
- * @prop {(route, params, routes, paths) => React.ReactNode	} itemRender
+ * @prop {(route: any, params: any, routes: [], paths: string) => React.ReactNode} itemRender
  * @prop {object} params
- * @prop {routes[]} routes
+ * @prop {[]} routes
  * @prop {React.ReactNode} separator
  * @prop {JSX.Element} children
  * @return {JSX.Element}
