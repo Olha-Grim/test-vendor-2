@@ -1,1 +1,1 @@
-{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../../src/Components/Breadcrumb/Breadcrumb/index.js"],"names":[],"mappings":";;wBAMkB,GAAG,UAAU,GAAG,UAAU,EAAE,SAAS,MAAM,KAAK,MAAM,SAAS;YACvE,MAAM;YACN,EAAE;eACF,MAAM,SAAS;cACf,WAAW;;AAPrB;;;;;;;;;;GAUG;AACH;;GAEG;AAEH,iFAHW,KAAK,eAOf"}
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../../src/Components/Breadcrumb/Breadcrumb/index.js"],"names":[],"mappings":""}

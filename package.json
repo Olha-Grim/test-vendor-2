@@ -8,7 +8,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": " tsc ",
-    "build": " microbundle-crl build --no-sourcemap --css-modules=false --format modern,cjs && tsc"
+    "build": " rm -rf dist/ && microbundle-crl build --no-sourcemap --css-modules=false --format modern,cjs && tsc",
+    "dev": "microbundle-crl watch --no-compress --css-modules=false --format modern,cjs"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/Olha-Grim/test-vendor-2#readme",
   "dependencies": {
     "@types/react-dom": "^17.0.9",
+    "@types/react-router": "^5.1.16",
     "antd": "^4.16.7",
     "microbundle-crl": "^0.13.11",
     "moment": "^2.29.1"
