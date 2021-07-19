@@ -1,21 +1,30 @@
 import React from "react";
 import { Collapse as AntdCollapse } from "antd";
 /**
- *
- * @param {boolean} accordion
- * @param {string[] | string number[] | number} activeKey
- * @param {boolean} bordered
- * @param {header | disabled} collapsible
- * @param {string[] | string number[] | number} defaultActiveKey
- * @param {boolean} destroyInactivePanel
- * @param {(panelProps) => ReactNode	} expandIcon
- * @param {left | right	} expandIconPosition
- * @param {boolean} ghost
- * @param {function} onChange
- * @param children
+ * @typedef Props
+ * @prop {boolean} accordion
+ * @prop {Array<string | number> | string | number} activeKey
+ * @prop {boolean} bordered
+ * @prop {'header' | 'disabled'} collapsible
+ * @prop {Array<string | number> | string | number} defaultActiveKey
+ * @prop {boolean} destroyInactivePanel
+ * @prop {(panelProps) => React.ReactNode	} expandIcon
+ * @prop {"left" | "right"	} expandIconPosition
+ * @prop {boolean} ghost
+ * @prop {function} onChange
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
  */
+/**
+ * @param {Props} props
+ */
+/**
+ * Interface for classes that represent a color.
+ *
+ * @interface
+ */
+
 
 const Collapse = ({
   accordion,

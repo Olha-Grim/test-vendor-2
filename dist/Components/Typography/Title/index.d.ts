@@ -16,10 +16,11 @@ export type Props = {
     underline: boolean | undefined;
     children: JSX.Element;
 };
+export type CopyConfig = object;
 /**
  * @typedef Props
  * @prop {boolean} code
- * @prop {copyable?: boolean | CopyConfig} copyable
+ * @prop {CopyConfig.copyable?: boolean | CopyConfig} copyable
  * @prop {boolean} delete
  * @prop {boolean} disabled
  * @prop {boolean | editable} editable
@@ -39,6 +40,23 @@ export type Props = {
  * @interface [<EditConfig>]
  * @interface [<CopyConfig>]
  */
-declare function Title({ code, copyable, disabled, editable, ellipsis, level, mark, onClick, italic, type, underline, children, }: Props): JSX.Element;
+/**
+ * @typedef {object} CopyConfig
+
+ */
+declare function Title({ code, copyable, disabled, editable, ellipsis, level, mark, onClick, italic, type, underline, children, }: {
+    code: any;
+    copyable: any;
+    disabled: any;
+    editable: any;
+    ellipsis: any;
+    level: any;
+    mark: any;
+    onClick: any;
+    italic: any;
+    type: any;
+    underline: any;
+    children: any;
+}): JSX.Element;
 import React from "react";
 //# sourceMappingURL=index.d.ts.map

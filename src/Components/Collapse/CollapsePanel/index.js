@@ -2,16 +2,19 @@ import React from "react";
 import { Collapse as AntdCollapse } from "antd";
 
 /**
- *
- * @param {header | disabled} collapsible
- * @param {ReactNode} extra
- * @param {boolean} forceRender
- * @param {ReactNode} header
- * @param {string | number} key
- * @param {boolean} showArrow
- * @param children
+ * @typedef Props
+ * @prop {"header" | "disabled"} collapsible
+ * @prop {React.ReactNode} extra
+ * @prop {boolean} forceRender
+ * @prop {React.ReactNode} header
+ * @prop {string | number} key
+ * @prop {boolean} showArrow
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
+ */
+/**
+ * @param {Props} props
  */
 
 const CollapsePanel = ({

@@ -12,7 +12,7 @@ import { AutoComplete as AntdAutoComplete } from "antd";
  * @prop {boolean} disabled
  * @prop {string} dropdownClassName
  * @prop {boolean | number	} dropdownMatchSelectWidth
-//  * @prop {boolean | ((inputValue: any, option:any )=> void	)} filterOption
+ * @prop {boolean | ((inputValue: any, option:any )=> void	)} filterOption
  * @prop {string} notFoundContent
  * @prop {boolean}  open
  * @prop {{ label: any, value:any }[]} options
@@ -33,8 +33,7 @@ import { AutoComplete as AntdAutoComplete } from "antd";
  * @param {Props} props
  */
 //  *Methods
-//  blur()	Remove focus
-// focus()	Get focus
+
 
 const AutoComplete = ({
   allowClear,
@@ -48,7 +47,7 @@ const AutoComplete = ({
   disabled,
   dropdownClassName,
   dropdownMatchSelectWidth,
-  // filterOption,
+  filterOption,
   notFoundContent,
   open,
   options,
@@ -73,7 +72,7 @@ const AutoComplete = ({
     disabled,
     dropdownClassName,
     dropdownMatchSelectWidth,
-    // filterOption,
+    filterOption,
     notFoundContent,
     open,
     options,
