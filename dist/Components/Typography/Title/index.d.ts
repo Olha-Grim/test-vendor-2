@@ -1,15 +1,14 @@
 export default Title;
 export type Props = {
     code: boolean;
-    copyable: boolean | "copyable";
+    /**
+     * : boolean | CopyConfig} copyable
+     */
+    "": any | null;
     delete: boolean;
     disabled: boolean;
-    editable: boolean | "editable";
+    editable: boolean | any;
     ellipsis: boolean | "ellipsis";
-    /**
-     * : 1, 2, 3, 4, 5} level
-     */
-    "": number;
     mark: boolean;
     onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
     italic: boolean;
@@ -20,10 +19,10 @@ export type Props = {
 /**
  * @typedef Props
  * @prop {boolean} code
- * @prop {boolean | "copyable"} copyable
+ * @prop {copyable?: boolean | CopyConfig} copyable
  * @prop {boolean} delete
  * @prop {boolean} disabled
- * @prop {boolean | "editable"} editable
+ * @prop {boolean | editable} editable
  * @prop {boolean | "ellipsis"} ellipsis
  * @prop { number: 1, 2, 3, 4, 5} level
  * @prop {boolean} mark
@@ -37,6 +36,8 @@ export type Props = {
  */
 /**
  * @param {Props} props
+ * @interface [<EditConfig>]
+ * @interface [<CopyConfig>]
  */
 declare function Title({ code, copyable, disabled, editable, ellipsis, level, mark, onClick, italic, type, underline, children, }: Props): JSX.Element;
 import React from "react";

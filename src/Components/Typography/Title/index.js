@@ -4,10 +4,10 @@ import { Typography as AntdTypography } from "antd";
 /**
  * @typedef Props
  * @prop {boolean} code
- * @prop {boolean | "copyable"} copyable
+ * @prop {CopyConfig.copyable?: boolean | CopyConfig} copyable
  * @prop {boolean} delete
  * @prop {boolean} disabled
- * @prop {boolean | "editable"} editable
+ * @prop {boolean | editable} editable
  * @prop {boolean | "ellipsis"} ellipsis
  * @prop { number: 1, 2, 3, 4, 5} level
  * @prop {boolean} mark
@@ -21,6 +21,13 @@ import { Typography as AntdTypography } from "antd";
  */
 /**
  * @param {Props} props
+ * @interface [<EditConfig>]
+ * @interface [<CopyConfig>]
+ */
+
+/**
+ * @typedef {object} CopyConfig
+
  */
 
 const Title = ({
