@@ -9,10 +9,7 @@ export type Props = {
     keyboard: boolean;
     max: number;
     min: number;
-    /**
-     * : string | undefined) => number} parser
-     */
-    "": any;
+    parser: (value: string | number | null) => void;
     precision: number;
     readOnly: boolean;
     size: "large" | "middle" | "small";
@@ -38,7 +35,7 @@ export type Props = {
  * @prop {boolean} keyboard
  * @prop {number} max
  * @prop {number} min
- * @prop {displayValue: string | undefined) => number} parser
+ * @prop {(value: string | number | null) => void} parser
  * @prop {number} precision
  * @prop {boolean} readOnly
  * @prop {"large" | "middle" | "small"	} size
