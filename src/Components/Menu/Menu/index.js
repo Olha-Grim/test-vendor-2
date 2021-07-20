@@ -3,30 +3,34 @@ import { Menu as AntdMenu } from "antd";
 
 /**
  *
- * @param {string[]	} defaultOpenKeys
- * @param {string[]} defaultSelectedKeys
- * @param {ReactNode | (props: SubMenuProps & { isSubMenu: boolean }) => ReactNode	} expandIcon
- * @param {boolean} forceSubMenuRender
- * @param {boolean} inlineCollapsed
- * @param {number} inlineIndent
- * @param {vertical | horizontal | inline} mode
- * @param {boolean} multiple
- * @param {string[]	} openKeys
- * @param {ReactNode} overflowedIndicator
- * @param {boolean} selectable
- * @param {string[]	} selectedKeys
- * @param {CSSProperties}  style
- * @param {number} subMenuCloseDelay
- * @param {number} subMenuOpenDelay
- * @param {light | dark} theme
- * @param {hover | click} triggerSubMenuAction
- * @param {function({ item, key, keyPath, domEvent })} onClick
- * @param {function({ item, key, keyPath, selectedKeys, domEvent })	} onDeselect
- * @param {function(openKeys: string[])	} onOpenChange
- * @param {function({ item, key, keyPath, selectedKeys, domEvent })	} onSelect
+ * @typedef Props
+ * @prop {string[]	} defaultOpenKeys
+ * @prop {string[]} defaultSelectedKeys
+ * @prop {React.ReactNode | (props: SubMenuProps & { isSubMenu: boolean }) => React.ReactNode	} expandIcon
+ * @prop {boolean} forceSubMenuRender
+ * @prop {boolean} inlineCollapsed
+ * @prop {number} inlineIndent
+ * @prop {"vertical" | "horizontal" | "inline"} mode
+ * @prop {boolean} multiple
+ * @prop {string[]	} openKeys
+ * @prop {React.ReactNode} overflowedIndicator
+ * @prop {boolean} selectable
+ * @prop {string[]	} selectedKeys
+ * @prop {React.CSSProperties}  style
+ * @prop {number} subMenuCloseDelay
+ * @prop {number} subMenuOpenDelay
+ * @prop {"light" | "dark"} theme
+ * @prop {"hover" | "click"} triggerSubMenuAction
+ * @prop {( item:any, key:any, keyPath:any, domEvent: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement> )=>void} onClick
+ * @prop {( item:any, key:any, keyPath:any,  selectedKeys:string[], domEvent: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement> )=> void	} onDeselect
+ * @prop {(openKeys: string[])=> void} onOpenChange
+ * @prop {(item: any, key: any, keyPath: any, selectedKeys: string[], domEvent: React.MouseEvent<HTMLElement, MouseEvent> | React.KeyboardEvent<HTMLElement>) => void} onSelect
  * @param children
  * @return {JSX.Element}
  * @constructor
+ */
+/**
+ * @param {Props} props
  */
 
 const Menu = ({

@@ -3,23 +3,27 @@ import { Layout as AntdLayout } from "antd";
 
 /**
  *
- * @param {xs | sm | md | lg | xl | xxl} breakpoint
- * @param {string} className
- * @param {boolean} collapsed
- * @param {number} collapsedWidth
- * @param {boolean} collapsible
- * @param {boolean} defaultCollapsed
- * @param {boolean} reverseArrow
- * @param {CSSProperties} style
- * @param {light | dark} theme
- * @param {ReactNode} trigger
- * @param {number | string} width
- * @param {object} zeroWidthTriggerStyle
- * @param {(broken) => {}} onBreakpoint
- * @param {(collapsed, type) => {}} onCollapse
- * @param children
+ * @typedef Props
+ * @prop {"xs" | "sm" | "md" | "lg" | "xl" | "xxl"} breakpoint
+ * @prop {string} className
+ * @prop {boolean} collapsed
+ * @prop {number} collapsedWidth
+ * @prop {boolean} collapsible
+ * @prop {boolean} defaultCollapsed
+ * @prop {boolean} reverseArrow
+ * @prop {React.CSSProperties} style
+ * @prop {"light" | "dark"} theme
+ * @prop {React.ReactNode} trigger
+ * @prop {number | string} width
+ * @prop {object} zeroWidthTriggerStyle
+ * @prop {(broken: boolean) => void} onBreakpoint
+ * @prop {(collapsed: boolean, type: 'clickTrigger' | 'responsive' ) => void} onCollapse
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
+ */
+/**
+ * @param {Props} props
  */
 
 const Sider = ({

@@ -2,10 +2,14 @@ import React from "react";
 import { Mentions as AntdMentions } from "antd";
 /**
  *
- * @param {(text: string, prefix: string) => void} value
- * @param {ReactNode} children
+ * @typedef Props
+ * @prop {(text: string, prefix: string) => void} value
+ * @prop {React.ReactNode} children
  * @return {JSX.Element}
  * @constructor
+ */
+/**
+ * @param {Props} props
  */
 
 const MentionsOption = ({ value, children }) => {

@@ -11,7 +11,7 @@ import { InputNumber as AntdInputNumber } from "antd";
  * @prop {boolean} keyboard
  * @prop {number} max
  * @prop {number} min
- * @prop {displayValue: string | undefined) => number} parser
+ * @prop {(value: string | number | null) => void} parser
  * @prop {number} precision
  * @prop {boolean} readOnly
  * @prop {"large" | "middle" | "small"	} size

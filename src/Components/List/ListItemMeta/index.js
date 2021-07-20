@@ -2,13 +2,18 @@ import React from "react";
 import { List as AntdList } from "antd";
 /**
  *
- * @param {ReactNode} avatar
- * @param {ReactNode} description
- * @param {ReactNode} title
- * @param children
+ * @typedef Props
+ * @prop {React.ReactNode} avatar
+ * @prop {React.ReactNode} description
+ * @prop {React.ReactNode} title
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
  */
+/**
+ * @param {Props} props
+ */
+
 const ListItemMeta = ({ avatar, description, title, children }) => {
   const props = { avatar, description, title, children };
 

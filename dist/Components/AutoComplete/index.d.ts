@@ -8,9 +8,6 @@ export type Props = {
     defaultValue: string;
     disabled: boolean;
     dropdownClassName: string;
-    /**
-     * //  *
-     */
     dropdownMatchSelectWidth: boolean | number;
     filterOption: boolean | ((inputValue: any, option: any) => void);
     notFoundContent: string;
@@ -41,7 +38,7 @@ export type Props = {
  * @prop {boolean} disabled
  * @prop {string} dropdownClassName
  * @prop {boolean | number	} dropdownMatchSelectWidth
-//  * @prop {boolean | ((inputValue: any, option:any )=> void	)} filterOption
+ * @prop {boolean | ((inputValue: any, option:any )=> void	)} filterOption
  * @prop {string} notFoundContent
  * @prop {boolean}  open
  * @prop {{ label: any, value:any }[]} options
@@ -61,5 +58,5 @@ export type Props = {
 /**
  * @param {Props} props
  */
-declare function AutoComplete({ allowClear, className, autoFocus, backfill, children, defaultActiveFirstOption, defaultOpen, defaultValue, disabled, dropdownClassName, dropdownMatchSelectWidth, notFoundContent, open, options, placeholder, value, onBlur, onChange, onDropdownVisibleChange, onFocus, onSearch, onSelect, }: Props): JSX.Element;
+declare function AutoComplete({ allowClear, className, autoFocus, backfill, children, defaultActiveFirstOption, defaultOpen, defaultValue, disabled, dropdownClassName, dropdownMatchSelectWidth, filterOption, notFoundContent, open, options, placeholder, value, onBlur, onChange, onDropdownVisibleChange, onFocus, onSearch, onSelect, }: Props): JSX.Element;
 //# sourceMappingURL=index.d.ts.map

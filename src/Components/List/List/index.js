@@ -1,26 +1,31 @@
 import React from "react";
 import { List as AntdList } from "antd";
 
+
 /**
  *
- * @param {boolean} bordered
- * @param {any[]} dataSource
- * @param {ReactNode} footer
- * @param {object} grid
- * @param {ReactNode} header
- * @param {horizontal | vertical} itemLayout
- * @param {boolean | SpinProps (more)} loading
- * @param {ReactNode} loadMore
- * @param {object} locale
- * @param {boolean | object	} pagination
- * @param {(item) => ReactNode	} renderItem
- * @param {string | Function(record): string	} rowKey
- * @param {default | large | small	} size
- * @param {boolean} split
- * @param {string} className
- * @param children
+ * @typedef Props
+ * @prop {boolean} bordered
+ * @prop {any[]} dataSource
+ * @prop {React.ReactNode} footer
+ * @prop {object} grid
+ * @prop {React.ReactNode} header
+ * @prop {"horizontal" | "vertical"} itemLayout
+ * @prop {boolean | SpinProps (more)} loading
+ * @prop {React.ReactNode} loadMore
+ * @prop {object} locale
+ * @prop {boolean | object	} pagination
+ * @prop {(item: any) => React.ReactNode	} renderItem
+ * @prop {string | Function(record): string	} rowKey
+ * @prop {"default" | "large" | "small"	} size
+ * @prop {boolean} split
+ * @prop {string} className
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
+ */
+/**
+ * @param {Props} props
  */
 
 const List = ({

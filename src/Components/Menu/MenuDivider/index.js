@@ -3,9 +3,14 @@ import { Menu as AntdMenu } from "antd";
 
 /**
  *
- * @param children
+ * @typedef Props
+ * @prop {string} title
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
+ */
+/**
+ * @param {Props} props
  */
 
 const MenuDivider = ({ title, children }) => {

@@ -3,14 +3,18 @@ import { Menu as AntdMenu } from "antd";
 
 /**
  *
- * @param {boolean} danger
- * @param {boolean} disabled
- * @param {ReactNode} icon
- * @param {string} key
- * @param {string} title
- * @param children
+ * @typedef Props
+ * @prop {boolean} danger
+ * @prop {boolean} disabled
+ * @prop {React.ReactNode} icon
+ * @prop {string} key
+ * @prop {string} title
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
+ */
+/**
+ * @param {Props} props
  */
 
 const MenuItem = ({ danger, disabled, icon, key, title, children }) => {

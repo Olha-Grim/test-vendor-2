@@ -2,7 +2,7 @@ import React from "react";
 import { Form as AntdForm } from "antd";
 import { NamePath } from "rc-field-form/lib/interface";
 import { ValidatorRule } from "rc-field-form/lib/interface";
-import{FormListFieldData, FormListOperation} from './Interface'
+import {FormListFieldData, FormListOperation} from './Interface'
 
 /**
  * @typedef Props

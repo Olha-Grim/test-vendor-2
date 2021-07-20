@@ -1,28 +1,33 @@
 import React from "react";
 import { Mentions as AntdMentions } from "antd";
 /**
- *
- * @param {boolean} autoFocus
- * @param {boolean | object	} autoSize
- * @param {string} defaultValue
- * @param {false | (input: string, option: OptionProps) => boolean	} filterOption
- * @param {() => HTMLElement} getPopupContainer
- * @param { ReactNode} notFoundContent
- * @param {top | bottom	} placement
- * @param {string | string[]} prefix
- * @param {string} split
- * @param {(text: string, props: MentionsProps) => void	} validateSearch
- * @param {string} value
- * @param {() => void} onBlur
- * @param {(text: string) => void} onChange
- * @param {() => void} onFocus
- * @param {function({ width, height })} onResize
- * @param {(text: string, prefix: string) => void} onSearch
- * @param {(option: OptionProps, prefix: string) => void} onSelect
- * @param children
+ * @typedef Props
+ * @prop {boolean} autoFocus
+ * @prop {boolean | object	} autoSize
+ * @prop {string} defaultValue
+ * @prop {false | (input: string, option: OptionProps) => boolean	} filterOption
+ * @prop {() => HTMLElement} getPopupContainer
+ * @prop { React.ReactNode} notFoundContent
+ * @prop {"top" | "bottom"	} placement
+ * @prop {string | string[]} prefix
+ * @prop {string} split
+ * @prop {(text: string, props: MentionsProps) => void	} validateSearch
+ * @prop {string} value
+ * @prop {() => void} onBlur
+ * @prop {(text: string) => void} onChange
+ * @prop {() => void} onFocus
+ * @prop {(size: { width: number; height: number; }) => void} onResize
+ * @prop {(text: string, prefix: string) => void} onSearch
+ * @prop {(option: OptionProps, prefix: string) => void} onSelect
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
  */
+/**
+ * @param {Props} props
+ */
+
+ 
 
 const Mentions = ({
   autoFocus,
