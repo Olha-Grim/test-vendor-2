@@ -2,13 +2,17 @@ import React from "react";
 import { Select as AntdSelect } from "antd";
 /**
  *
- * @param {string} className
- * @param {boolean} disabled
- * @param {string} title
- * @param {string | number} value
- * @param children
+ * @typedef Props
+ * @prop {string} className
+ * @prop {boolean} disabled
+ * @prop {string} title
+ * @prop {string | number} value
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
+ */
+/**
+ * @param {Props} props
  */
 
 const SelectOption = ({ className, disabled, title, value, children }) => {

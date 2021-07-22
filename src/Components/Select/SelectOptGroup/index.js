@@ -2,11 +2,15 @@ import React from "react";
 import { Select as AntdSelect } from "antd";
 /**
  *
- * @param {string} key
- * @param {boolean} label
- * @param children
+ * @typedef Props
+ * @prop {string} key
+ * @prop {boolean} label
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
+ */
+/**
+ * @param {Props} props
  */
 
 const SelectOptGroup = ({ key, label, children }) => {

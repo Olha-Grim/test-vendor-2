@@ -2,11 +2,15 @@ import React from "react";
 import { Skeleton as AntdSkeleton } from "antd";
 /**
  *
- * @param {boolean} active
- * @param {large | small | default	} size
- * @param children
+ * @typedef Props
+ * @prop {boolean} active
+ * @prop {"large" | "small" | "default"} size
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
+ */
+/**
+ * @param {Props} props
  */
 const SkeletonInput = ({ active, size, children }) => {
   const props = { active, size, children };

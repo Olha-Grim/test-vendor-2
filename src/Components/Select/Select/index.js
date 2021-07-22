@@ -1,63 +1,69 @@
 import React from "react";
 import { Select as AntdSelect } from "antd";
+
 /**
  *
- * @param {boolean} allowClear
- * @param {boolean} autoClearSearchValue
- * @param {boolean} autoFocus
- * @param {boolean} bordered
- * @param {ReactNode} clearIcon
- * @param {boolean} defaultActiveFirstOption
- * @param {boolean} defaultOpen
- * @param {string | string[] number | number[] LabeledValue | LabeledValue[]} defaultValue
- * @param {boolean} disabled
- * @param {string} dropdownClassName
- * @param {boolean | number	} dropdownMatchSelectWidth
- * @param {(originNode: ReactNode) => ReactNode	} dropdownRender
- * @param {CSSProperties} dropdownStyle
- * @param {boolean | function(inputValue, option)	} filterOption
- * @param {(optionA: Option, optionB: Option) => number	} filterSort
- * @param {function(triggerNode)	} getPopupContainer
- * @param {boolean} labelInValue
- * @param {number} listHeight
- * @param {boolean} loading
- * @param {number | responsive	} maxTagCount
- * @param {ReactNode | function(omittedValues)	} maxTagPlaceholder
- * @param {number} maxTagTextLength
- * @param {ReactNode} menuItemSelectedIcon
- * @param {multiple | tags	} mode
- * @param {ReactNode} notFoundContent
- * @param {boolean} open
- * @param {string} optionFilterProp
- * @param {string}  optionLabelProp
- * @param {{ label, value }[]	}  options
- * @param {ReactNode} placeholder
- * @param {ReactNode}  removeIcon
- * @param {string}  searchValue
- * @param {boolean} showArrow
- * @param {boolean} showSearch
- * @param {large | middle | small} 	size
- * @param {ReactNode} suffixIcon
- * @param {(props) => ReactNode	} tagRender
- * @param {string[]	} tokenSeparators
- * @param {string | string[] number | number[] LabeledValue | LabeledValue[]} value
- * @param {boolean} virtual
- * @param {function} onBlur
- * @param {boolean} onChange
- * @param {function(value, option:Option | Array<Option>)	} onClear
- * @param {function(string | number | LabeledValue)	} onDeselect
- * @param {function(open)} onDropdownVisibleChange
- * @param {function} onFocus
- * @param {function} onInputKeyDown
- * @param {function} onMouseEnter
- * @param {function} onMouseLeave
- * @param {function} onPopupScroll
- * @param {function(value: string)	} onSearch
- * @param {function(string | number | LabeledValue, option: Option)	} onSelect
- * @param children
+ * @typedef Props
+ * @prop {boolean} allowClear
+ * @prop {boolean} autoClearSearchValue
+ * @prop {boolean} autoFocus
+ * @prop {boolean} bordered
+ * @prop {React.ReactNode} clearIcon
+ * @prop {boolean} defaultActiveFirstOption
+ * @prop {boolean} defaultOpen
+ * @prop {string | string[] number | number[] LabeledValue | LabeledValue[]} defaultValue
+ * @prop {boolean} disabled
+ * @prop {string} dropdownClassName
+ * @prop {boolean | number	} dropdownMatchSelectWidth
+ * @prop {(originNode: React.ReactNode) => React.ReactNode	} dropdownRender
+ * @prop {React.CSSProperties} dropdownStyle
+ * @prop {boolean | (inputValue, option)=>void	} filterOption
+ * @prop {(optionA: Option, optionB: Option) => number	} filterSort
+ * @prop {(triggerNode)=>void	} getPopupContainer
+ * @prop {boolean} labelInValue
+ * @prop {number} listHeight
+ * @prop {boolean} loading
+ * @prop {number | "responsive"	} maxTagCount
+ * @prop {React.ReactNode | (omittedValues)=>void	} maxTagPlaceholder
+ * @prop {number} maxTagTextLength
+ * @prop {React.ReactNode} menuItemSelectedIcon
+ * @prop {"multiple" | "tags"	} mode
+ * @prop {React.ReactNode} notFoundContent
+ * @prop {boolean} open
+ * @prop {string} optionFilterProp
+ * @prop {string}  optionLabelProp
+ * @prop {{ label: any, value:any }[]	}  options
+ * @prop {React.ReactNode} placeholder
+ * @prop {React.ReactNode}  removeIcon
+ * @prop {string}  searchValue
+ * @prop {boolean} showArrow
+ * @prop {boolean} showSearch
+ * @prop {"large" | "middle" | "small"} 	size
+ * @prop {React.ReactNode} suffixIcon
+ * @prop {(props:any) => React.ReactNode	} tagRender
+ * @prop {string[]	} tokenSeparators
+ * @prop {{string | string[], number | number[], LabeledValue | LabeledValue[]}} value
+ * @prop {boolean} virtual
+ * @prop {function} onBlur
+ * @prop {boolean} onChange
+ * @prop {(value: any, option:Option | Array<Option>)=>void	} onClear
+ * @prop {(string | number | LabeledValue)=>void	} onDeselect
+ * @prop {(open: any)=>void} onDropdownVisibleChange
+ * @prop {function} onFocus
+ * @prop {function} onInputKeyDown
+ * @prop {function} onMouseEnter
+ * @prop {function} onMouseLeave
+ * @prop {function} onPopupScroll
+ * @prop {(value: string)=>void	} onSearch
+ * @prop {(string | number | LabeledValue, option: Option) =>void	} onSelect
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
  */
+/**
+ * @param {Props} props
+ */
+
 
 const Select = ({
   allowClear,

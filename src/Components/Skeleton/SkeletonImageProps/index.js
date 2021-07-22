@@ -2,9 +2,13 @@ import React from "react";
 import { Skeleton as AntdSkeleton } from "antd";
 /**
  *
- * @param children
+ * @typedef Props
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
+ */
+/**
+ * @param {Props} props
  */
 const SkeletonImage = ({ children }) => {
   const props = {children};

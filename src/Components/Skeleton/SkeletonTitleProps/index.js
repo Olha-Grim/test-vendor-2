@@ -2,11 +2,16 @@ import React from "react";
 import { Skeleton as AntdSkeleton } from "antd";
 /**
  *
- * @param {number | string	} width
- * @param children
+ * @typedef Props
+ * @prop {number | string	} width
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
  */
+/**
+ * @param {Props} props
+ */
+
 const SkeletonTitle = ({ width, children }) => {
   const props = { width, children };
 

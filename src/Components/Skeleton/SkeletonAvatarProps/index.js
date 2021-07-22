@@ -1,13 +1,16 @@
 import React from "react";
 import { Skeleton as AntdSkeleton } from "antd";
 /**
- *
- * @param {boolean} active
- * @param {circle | square	} shape
- * @param {number | large | small | default	} size
- * @param children
+ * @typedef Props
+ * @prop {boolean} active
+ * @prop {"circle" | "square"	} shape
+ * @prop {number | "large" | "small" | "default"	} size
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
+ */
+/**
+ * @param {Props} props
  */
 const SkeletonAvatar = ({ active, shape, size, children }) => {
   const props = { active, shape, size, children };

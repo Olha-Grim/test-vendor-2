@@ -2,25 +2,29 @@ import React from "react";
 import { Rate as AntdRate } from "antd";
 /**
  *
- * @param {boolean} allowClear
- * @param {boolean} allowHalf
- * @param {boolean} autoFocus
- * @param {ReactNode | (RateProps) => ReactNode	} character
- * @param {string} className
- * @param {number} count
- * @param {number} defaultValue
- * @param {boolean} disabled
- * @param {CSSProperties} style
- * @param {string[]	} tooltips
- * @param {number} value
- * @param {function()} onBlur
- * @param {function(value: number)} onChange
- * @param {function()} onFocus
- * @param {function(value: number)} onHoverChange
- * @param {function(event)} onKeyDown
- * @param children
+ * @typedef RateProps
+ * @prop {boolean} allowClear
+ * @prop {boolean} allowHalf
+ * @prop {boolean} autoFocus
+ * @prop {React.ReactNode | ((arg0: RateProps) => React.ReactNode)	} character
+ * @prop {string} className
+ * @prop {number} count
+ * @prop {number} defaultValue
+ * @prop {boolean} disabled
+ * @prop {React.CSSProperties} style
+ * @prop {string[]	} tooltips
+ * @prop {number} value
+ * @prop {()=>void} onBlur
+ * @prop {(value: number)=>void} onChange
+ * @prop {()=>void} onFocus
+ * @prop {(value: number)=>void} onHoverChange
+ * @prop {(event)} onKeyDown
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
+ */
+/**
+ * @param {RateProps} props
  */
 
 const Rate = ({

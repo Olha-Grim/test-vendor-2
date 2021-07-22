@@ -1,27 +1,32 @@
 import React from "react";
 import { Slider as AntdSlider } from "antd";
+
 /**
  *
- * @param {boolean} disabled
- * @param {boolean} dots
- * @param {(triggerNode) => HTMLElement	} getTooltipPopupContainer
- * @param {boolean} included
- * @param {object} marks
- * @param {number} max
- * @param {number} min
- * @param {boolean} range
- * @param {boolean} reverse
- * @param {number | null} step
- * @param {value => ReactNode | null} tipFormatter
- * @param {string} tooltipPlacement
- * @param {boolean} tooltipVisible
- * @param {number | [number, number]} value
- * @param {boolean} vertical
- * @param {(value) => void} onAfterChange
- * @param {(value) => void} onChange
- * @param children
+ * @typedef Props
+ * @prop {boolean} disabled
+ * @prop {boolean} dots
+ * @prop {(triggerNode: HTMLElement) => HTMLElement} getTooltipPopupContainer
+ * @prop {boolean} included
+ * @prop {object} marks
+ * @prop {number} max
+ * @prop {number} min
+ * @prop {true | SliderRange} range
+ * @prop {boolean} reverse
+ * @prop {number | null} step
+ * @prop {null | ((value?: number) => React.ReactNode)} tipFormatter
+ * @prop {string} tooltipPlacement
+ * @prop {boolean} tooltipVisible
+ * @prop {number | [number, number]} value
+ * @prop {boolean} vertical
+ * @prop {(value: [number, number] | number) => void} onAfterChange
+ * @prop {(value: [number, number] | number) => void} onChange
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
+ */
+/**
+ * @param {Props} props
  */
 
 const Slider = ({

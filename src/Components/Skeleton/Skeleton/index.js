@@ -2,14 +2,15 @@ import React from "react";
 import { Skeleton as AntdSkeleton } from "antd";
 /**
  *
- * @param {boolean} active
- * @param {boolean | SkeletonAvatarProps} avatar
- * @param {boolean} loading
- * @param {boolean | SkeletonParagraphProps} paragraph
- * @param {boolean} round
- * @param {boolean | SkeletonTitleProps} title
- * @param children
- * @return {JSX.Element}
+ * @typedef Props
+ * @prop {boolean} active
+ * @prop {boolean | SkeletonAvatarProps} avatar
+ * @prop {boolean} loading
+ * @prop {boolean | SkeletonParagraphProps} paragraph
+ * @prop {boolean} round
+ * @prop {boolean | SkeletonTitleProps} title
+ * @prop children
+ * @return {JSX.Element} {JSX.Element}
  * @constructor
  */
 const Skeleton = ({
