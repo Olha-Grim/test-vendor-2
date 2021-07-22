@@ -1,6 +1,9 @@
 import React from 'react';
-import { Affix as Affix$1, Alert as Alert$2, Anchor as Anchor$1, AutoComplete as AutoComplete$1, Avatar as Avatar$1, BackTop as BackTop$1, Badge as Badge$1, Space as Space$1, Button as Button$1, Divider as Divider$1, Typography, Input as Input$1 } from 'antd';
+import { Affix as Affix$1, Alert as Alert$2, Anchor as Anchor$1, AutoComplete as AutoComplete$1, Avatar as Avatar$1, BackTop as BackTop$1, Badge as Badge$1, Space as Space$1, Breadcrumb as Breadcrumb$1, Button as Button$1, Calendar as Calendar$1, Divider as Divider$1, Typography, Checkbox as Checkbox$1, Input as Input$1 } from 'antd';
 import 'antd/lib/input';
+import 'antd/es/date-picker/generatePicker';
+import 'moment';
+import 'antd/lib/checkbox';
 export { default as AntdCSS } from 'antd/dist/antd.css';
 
 const Affix = ({
@@ -314,6 +317,53 @@ const Space = ({
   return /*#__PURE__*/React.createElement(Space$1, props, children);
 };
 
+const Breadcrumb = ({
+  itemRender,
+  params,
+  routes,
+  separator,
+  children
+}) => {
+  const props = {
+    itemRender,
+    params,
+    routes,
+    separator,
+    children
+  };
+  return /*#__PURE__*/React.createElement(Breadcrumb$1, props, children);
+};
+
+const BreadcrumbItem = ({
+  className,
+  dropdownProps,
+  href,
+  overlay,
+  onClick,
+  children
+}) => {
+  const props = {
+    className,
+    dropdownProps,
+    href,
+    overlay,
+    onClick,
+    children
+  };
+  return /*#__PURE__*/React.createElement(Breadcrumb$1.Item, props, children);
+};
+
+const Separator = ({
+  className,
+  children
+}) => {
+  const props = {
+    className,
+    children
+  };
+  return /*#__PURE__*/React.createElement(Breadcrumb$1.Separator, props, children);
+};
+
 const Button = ({
   block,
   danger,
@@ -353,6 +403,90 @@ const Button = ({
   return /*#__PURE__*/React.createElement(Button$1, props, children);
 };
 
+var de_DE = createCommonjsModule(function (module, exports) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var locale = {
+  locale: 'de_DE',
+  today: 'Heute',
+  now: 'Jetzt',
+  backToToday: 'Zurück zu Heute',
+  ok: 'OK',
+  clear: 'Zurücksetzen',
+  month: 'Monat',
+  year: 'Jahr',
+  timeSelect: 'Zeit wählen',
+  dateSelect: 'Datum wählen',
+  monthSelect: 'Wähle einen Monat',
+  yearSelect: 'Wähle ein Jahr',
+  decadeSelect: 'Wähle ein Jahrzehnt',
+  yearFormat: 'YYYY',
+  dateFormat: 'D.M.YYYY',
+  dayFormat: 'D',
+  dateTimeFormat: 'D.M.YYYY HH:mm:ss',
+  monthBeforeYear: true,
+  previousMonth: 'Vorheriger Monat (PageUp)',
+  nextMonth: 'Nächster Monat (PageDown)',
+  previousYear: 'Vorheriges Jahr (Ctrl + left)',
+  nextYear: 'Nächstes Jahr (Ctrl + right)',
+  previousDecade: 'Vorheriges Jahrzehnt',
+  nextDecade: 'Nächstes Jahrzehnt',
+  previousCentury: 'Vorheriges Jahrhundert',
+  nextCentury: 'Nächstes Jahrhundert'
+};
+var _default = locale;
+exports.default = _default;
+});
+
+unwrapExports(de_DE);
+
+var _interface$1 = createCommonjsModule(function (module, exports) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+});
+
+unwrapExports(_interface$1);
+
+const Calendar = ({
+  dateCellRender,
+  dateFullCellRender,
+  defaultValue,
+  disabledDate,
+  fullscreen,
+  headerRender,
+  locale,
+  mode,
+  monthCellRender,
+  validRange,
+  value,
+  onChange,
+  onPanelChange,
+  onSelect
+}) => {
+  const props = {
+    dateCellRender,
+    dateFullCellRender,
+    defaultValue,
+    disabledDate,
+    fullscreen,
+    headerRender,
+    locale,
+    mode,
+    monthCellRender,
+    validRange,
+    value,
+    onChange,
+    onPanelChange,
+    onSelect
+  };
+  return /*#__PURE__*/React.createElement(Calendar$1, props);
+};
+
 const Divider = ({
   className,
   dashed,
@@ -389,6 +523,48 @@ const Link = ({
     children
   };
   return /*#__PURE__*/React.createElement(Typography.Link, props, children);
+};
+
+const CheckboxGroup = ({
+  defaultValue,
+  disabled,
+  name,
+  options,
+  value,
+  onChange,
+  children
+}) => {
+  const props = {
+    defaultValue,
+    disabled,
+    name,
+    options,
+    value,
+    onChange,
+    children
+  };
+  return /*#__PURE__*/React.createElement(Checkbox$1.Group, props, children);
+};
+
+const Checkbox = ({
+  autoFocus,
+  checked,
+  defaultChecked,
+  disabled,
+  indeterminate,
+  onChange,
+  children
+}) => {
+  const props = {
+    autoFocus,
+    checked,
+    defaultChecked,
+    disabled,
+    indeterminate,
+    onChange,
+    children
+  };
+  return /*#__PURE__*/React.createElement(Checkbox$1, props, children);
 };
 
 const Input = ({
@@ -504,5 +680,5 @@ const InputTextArea = ({
   return /*#__PURE__*/React.createElement(Input$1.TextArea, props);
 };
 
-export { Affix, Alert, Alert$1 as AlertErrorBoundary, Anchor, AutoComplete, Avatar, AvatarGroup, BackTop, Badge, BadgeRibbon, Button, Divider, Input, InputGroup, InputPassword, InputSearch, InputTextArea, Link, Space };
+export { Affix, Alert, Alert$1 as AlertErrorBoundary, Anchor, AutoComplete, Avatar, AvatarGroup, BackTop, Badge, BadgeRibbon, Breadcrumb, BreadcrumbItem, Button, Calendar, Checkbox, CheckboxGroup, Divider, Input, InputGroup, InputPassword, InputSearch, InputTextArea, Link, Separator, Space };
 //# sourceMappingURL=index.modern.js.map

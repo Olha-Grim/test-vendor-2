@@ -6,18 +6,19 @@ import { Avatar, AvatarGroup } from "./Avatar";
 import BackTop from "./BackTop";
 import { Badge, BadgeRibbon } from "./Badge";
 import Space from "./Space";
-// import { Breadcrumb, BreadcrumbItem, Separator } from "./Breadcrumb";
+import { Breadcrumb, BreadcrumbItem, Separator } from "./Breadcrumb";
 import Button from "./Button";
-// import Calendar from "./Calendar";
+import Calendar from "./Calendar";
 import Divider from "./Divider";
 import { Link, Text, Paragraph, Title } from "./Typography";
+import { Checkbox, CheckboxGroup } from "./Checkbox";
 import {
   Input,
   InputGroup,
   InputPassword,
   InputSearch,
   InputTextArea,
-} from "./Input";
+} from "./Input/";
 
 export {
   Button,
@@ -39,6 +40,12 @@ export {
   InputSearch,
   InputTextArea,
   Space,
+  Breadcrumb,
+  BreadcrumbItem,
+  Separator,
+  Calendar,
+  Checkbox,
+  CheckboxGroup,
 };
 
 // import { Form, FormList, FormErrorList, FormItem, FormProvider } from "./Form";

@@ -3,6 +3,9 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 var React = _interopDefault(require('react'));
 var antd = require('antd');
 require('antd/lib/input');
+require('antd/es/date-picker/generatePicker');
+require('moment');
+require('antd/lib/checkbox');
 var antd_css = _interopDefault(require('antd/dist/antd.css'));
 
 var Affix = function Affix(_ref) {
@@ -305,6 +308,50 @@ var Space = function Space(_ref) {
   return /*#__PURE__*/React.createElement(antd.Space, props, children);
 };
 
+var Breadcrumb = function Breadcrumb(_ref) {
+  var itemRender = _ref.itemRender,
+      params = _ref.params,
+      routes = _ref.routes,
+      separator = _ref.separator,
+      children = _ref.children;
+  var props = {
+    itemRender: itemRender,
+    params: params,
+    routes: routes,
+    separator: separator,
+    children: children
+  };
+  return /*#__PURE__*/React.createElement(antd.Breadcrumb, props, children);
+};
+
+var BreadcrumbItem = function BreadcrumbItem(_ref) {
+  var className = _ref.className,
+      dropdownProps = _ref.dropdownProps,
+      href = _ref.href,
+      overlay = _ref.overlay,
+      onClick = _ref.onClick,
+      children = _ref.children;
+  var props = {
+    className: className,
+    dropdownProps: dropdownProps,
+    href: href,
+    overlay: overlay,
+    onClick: onClick,
+    children: children
+  };
+  return /*#__PURE__*/React.createElement(antd.Breadcrumb.Item, props, children);
+};
+
+var Separator = function Separator(_ref) {
+  var className = _ref.className,
+      children = _ref.children;
+  var props = {
+    className: className,
+    children: children
+  };
+  return /*#__PURE__*/React.createElement(antd.Breadcrumb.Separator, props, children);
+};
+
 var Button = function Button(_ref) {
   var block = _ref.block,
       danger = _ref.danger,
@@ -343,6 +390,89 @@ var Button = function Button(_ref) {
   return /*#__PURE__*/React.createElement(antd.Button, props, children);
 };
 
+var de_DE = createCommonjsModule(function (module, exports) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var locale = {
+  locale: 'de_DE',
+  today: 'Heute',
+  now: 'Jetzt',
+  backToToday: 'Zurück zu Heute',
+  ok: 'OK',
+  clear: 'Zurücksetzen',
+  month: 'Monat',
+  year: 'Jahr',
+  timeSelect: 'Zeit wählen',
+  dateSelect: 'Datum wählen',
+  monthSelect: 'Wähle einen Monat',
+  yearSelect: 'Wähle ein Jahr',
+  decadeSelect: 'Wähle ein Jahrzehnt',
+  yearFormat: 'YYYY',
+  dateFormat: 'D.M.YYYY',
+  dayFormat: 'D',
+  dateTimeFormat: 'D.M.YYYY HH:mm:ss',
+  monthBeforeYear: true,
+  previousMonth: 'Vorheriger Monat (PageUp)',
+  nextMonth: 'Nächster Monat (PageDown)',
+  previousYear: 'Vorheriges Jahr (Ctrl + left)',
+  nextYear: 'Nächstes Jahr (Ctrl + right)',
+  previousDecade: 'Vorheriges Jahrzehnt',
+  nextDecade: 'Nächstes Jahrzehnt',
+  previousCentury: 'Vorheriges Jahrhundert',
+  nextCentury: 'Nächstes Jahrhundert'
+};
+var _default = locale;
+exports.default = _default;
+});
+
+unwrapExports(de_DE);
+
+var _interface$1 = createCommonjsModule(function (module, exports) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+});
+
+unwrapExports(_interface$1);
+
+var Calendar = function Calendar(_ref) {
+  var dateCellRender = _ref.dateCellRender,
+      dateFullCellRender = _ref.dateFullCellRender,
+      defaultValue = _ref.defaultValue,
+      disabledDate = _ref.disabledDate,
+      fullscreen = _ref.fullscreen,
+      headerRender = _ref.headerRender,
+      locale = _ref.locale,
+      mode = _ref.mode,
+      monthCellRender = _ref.monthCellRender,
+      validRange = _ref.validRange,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      onPanelChange = _ref.onPanelChange,
+      onSelect = _ref.onSelect;
+  var props = {
+    dateCellRender: dateCellRender,
+    dateFullCellRender: dateFullCellRender,
+    defaultValue: defaultValue,
+    disabledDate: disabledDate,
+    fullscreen: fullscreen,
+    headerRender: headerRender,
+    locale: locale,
+    mode: mode,
+    monthCellRender: monthCellRender,
+    validRange: validRange,
+    value: value,
+    onChange: onChange,
+    onPanelChange: onPanelChange,
+    onSelect: onSelect
+  };
+  return /*#__PURE__*/React.createElement(antd.Calendar, props);
+};
+
 var Divider = function Divider(_ref) {
   var className = _ref.className,
       dashed = _ref.dashed,
@@ -377,6 +507,46 @@ var Link = function Link(_ref) {
     children: children
   };
   return /*#__PURE__*/React.createElement(antd.Typography.Link, props, children);
+};
+
+var CheckboxGroup = function CheckboxGroup(_ref) {
+  var defaultValue = _ref.defaultValue,
+      disabled = _ref.disabled,
+      name = _ref.name,
+      options = _ref.options,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      children = _ref.children;
+  var props = {
+    defaultValue: defaultValue,
+    disabled: disabled,
+    name: name,
+    options: options,
+    value: value,
+    onChange: onChange,
+    children: children
+  };
+  return /*#__PURE__*/React.createElement(antd.Checkbox.Group, props, children);
+};
+
+var Checkbox = function Checkbox(_ref) {
+  var autoFocus = _ref.autoFocus,
+      checked = _ref.checked,
+      defaultChecked = _ref.defaultChecked,
+      disabled = _ref.disabled,
+      indeterminate = _ref.indeterminate,
+      onChange = _ref.onChange,
+      children = _ref.children;
+  var props = {
+    autoFocus: autoFocus,
+    checked: checked,
+    defaultChecked: defaultChecked,
+    disabled: disabled,
+    indeterminate: indeterminate,
+    onChange: onChange,
+    children: children
+  };
+  return /*#__PURE__*/React.createElement(antd.Checkbox, props, children);
 };
 
 var Input = function Input(_ref) {
@@ -498,7 +668,12 @@ exports.AvatarGroup = AvatarGroup;
 exports.BackTop = BackTop;
 exports.Badge = Badge;
 exports.BadgeRibbon = BadgeRibbon;
+exports.Breadcrumb = Breadcrumb;
+exports.BreadcrumbItem = BreadcrumbItem;
 exports.Button = Button;
+exports.Calendar = Calendar;
+exports.Checkbox = Checkbox;
+exports.CheckboxGroup = CheckboxGroup;
 exports.Divider = Divider;
 exports.Input = Input;
 exports.InputGroup = InputGroup;
@@ -506,5 +681,6 @@ exports.InputPassword = InputPassword;
 exports.InputSearch = InputSearch;
 exports.InputTextArea = InputTextArea;
 exports.Link = Link;
+exports.Separator = Separator;
 exports.Space = Space;
 //# sourceMappingURL=index.js.map

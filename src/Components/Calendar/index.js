@@ -1,24 +1,27 @@
 import React from "react";
 import { Calendar as AntdCalendar } from "antd";
-// import moment from "moment";
+import TimePickerLocale from "rc-picker/lib/locale/de_DE";
+import { AdditionalPickerLocaleLangProps } from "antd/es/date-picker/generatePicker";
+import { Locale } from "rc-picker/lib/interface";
+import Moment from "moment";
 
 /**
  * @typedef Props
- * @prop {(date: typeof moment)=> React.ReactNode} dateCellRender
- * @prop {(date: typeof moment)=> React.ReactNode} dateFullCellRender
- * @prop {typeof moment} defaultValue
- * @prop {(currentDate: typeof moment) => boolean	} disabledDate
+ * @prop {(date: Moment)=> React.ReactNode} dateCellRender
+ * @prop {(date: Moment)=> React.ReactNode} dateFullCellRender
+ * @prop {typeof Moment} defaultValue
+ * @prop {(date: Moment) => boolean} disabledDate
  * @prop {boolean} fullscreen
- * @prop {(object:{value: typeof moment, type: string, onChange: function, onTypeChange: function })=> void	} headerRender
- * @prop {object} locale
+ * @prop {(object:{value: Moment, type: string, onChange: function, onTypeChange: function })=> void	} headerRender
+ * @prop {{ lang: Locale & AdditionalPickerLocaleLangProps; timePickerLocale: TimePickerLocale; }} locale
  * @prop {"month" | "year"} mode
- * @prop {(date: typeof moment)=>  React.ReactNode} monthCellRender
- * @prop {(date: typeof moment)=>  React.ReactNode} monthFullCellRender
- * @prop {[typeof moment, typeof moment]} validRange
- * @prop {typeof moment} value
- * @prop {(date: typeof moment)=> void} onChange
- * @prop {(date: typeof moment, mode: string)=> void	} onPanelChange
- * @prop {(date: typeof moment) => void} onSelect
+ * @prop {(date: Moment)=>  React.ReactNode} monthCellRender
+ * @prop {(date: Moment)=>  React.ReactNode} monthFullCellRender
+ * @prop {[Moment, Moment]} validRange
+ * @prop {Moment} value
+ * @prop {(date: Moment)=> void} onChange
+ * @prop {(date: Moment, mode: string)=> void	} onPanelChange
+ * @prop {(date: Moment) => void} onSelect
  * @returns {JSX.Element}
  * @constructor
  */
@@ -26,6 +29,7 @@ import { Calendar as AntdCalendar } from "antd";
 /**
  * @param {Props} props
  */
+
 const Calendar = ({
   dateCellRender,
   dateFullCellRender,
@@ -33,7 +37,7 @@ const Calendar = ({
   disabledDate,
   fullscreen,
   headerRender,
-  // locale,
+  locale,
   mode,
   monthCellRender,
   validRange,
@@ -49,7 +53,7 @@ const Calendar = ({
     disabledDate,
     fullscreen,
     headerRender,
-    // locale,
+    locale,
     mode,
     monthCellRender,
     validRange,

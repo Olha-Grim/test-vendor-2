@@ -1,13 +1,6 @@
 import React from "react";
 import { Checkbox as AntdCheckbox } from "antd";
-
-//  interface CheckboxChangeEvent {
-//   // target: CheckboxChangeEventTarget;
-//   stopPropagation: () => void;
-//   preventDefault: () => void;
-//   nativeEvent: MouseEvent;
-// }
-
+import { CheckboxChangeEvent } from 'antd/lib/checkbox';
 /**
  *
  * @typedef Props
@@ -16,7 +9,7 @@ import { Checkbox as AntdCheckbox } from "antd";
  * @prop {boolean} defaultChecked
  * @prop {boolean} disabled
  * @prop {boolean} indeterminate
- * @prop {((e: CheckboxChangeEvent) => void} onChange
+ * @prop {(e: CheckboxChangeEvent) => void} onChange
  * @prop  {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
