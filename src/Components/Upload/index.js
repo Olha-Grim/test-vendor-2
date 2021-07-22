@@ -1,37 +1,40 @@
 import React from "react";
 import { Upload as AntdUpload } from "antd";
+import { RcFile } from "rc-upload/lib/interface";
+import { UploadFile, UploadListType, BeforeUploadValueType, ShowUploadListInterface } from "./interface";
+import  ProgressProps from "../Progress"
 
 /**
  *
  * @typedef Props
  * @prop {string} accept
- * @prop {string | (file) => Promise<string>	} action
- * @prop {(file, fileList) => boolean | Promise<File> | Upload.LIST_IGNORE	} beforeUpload
+ * @prop {string | ((file: RcFile) => string) | ((file: RcFile) => PromiseLike<string>)} action
+ * @prop {(file: RcFile, FileList: RcFile[],) => BeforeUploadValueType | Promise<BeforeUploadValueType>} beforeUpload
  * @prop {function} customRequest
- * @prop {object | (file) => object | Promise<object>	} data
- * @prop {object[]	} defaultFileList
+ * @prop {object | ((file: UploadFile<"T:any">) => object)} data
+ * @prop {Array<UploadFile<"T:any">>} defaultFileList
  * @prop {boolean} directory
  * @prop {boolean} disabled
  * @prop {UploadFile[]} fileList
  * @prop {object} headers
- * @prop {(file: UploadFile, listType?: UploadListType) => ReactNode	} iconRender
+ * @prop {(file: UploadFile<"T:any">, listType?: UploadListType) => React.ReactNode} iconRender
  * @prop {(file: UploadFile) => boolean	} isImageUrl
- * @prop {(originNode: ReactElement, file: UploadFile, fileList: object[], actions: { download: function, preview: function, remove: function }) => React.ReactNode	} itemRender
+ * @prop {(originNode: React.ReactElement, file: UploadFile, fileList: object[], actions: { download: function, preview: function, remove: function }) => React.ReactNode	} itemRender
  * @prop {string} listType
  * @prop {number}  maxCount
  * @prop {string} method
  * @prop {boolean} multiple
  * @prop {string} name
  * @prop {boolean} openFileDialogOnClick
- * @prop {(file: File | Blob) => Promise<dataURL: string>	} previewFile
- * @prop {ProgressProps (support type="line" only)} progress
- * @prop {boolean | { showPreviewIcon?: boolean, showDownloadIcon?: boolean, showRemoveIcon?: boolean, removeIcon?: ReactNode | (file: UploadFile) => ReactNode, downloadIcon?: ReactNode | (file: UploadFile) => ReactNode }	} showUploadList
+ * @prop {(file: File | Blob) => PromiseLike<string>} previewFile
+ * @prop {Omit<ProgressProps, 'percent' | 'type'>} progress
+ * @prop {boolean | ShowUploadListInterface	} showUploadList
  * @prop {boolean} withCredentials
  * @prop {function} onChange
  * @prop {(event: React.DragEvent) => void	} onDrop
- * @prop {function(file): void} onDownload
- * @prop {function(file)	} onPreview
- * @prop {function(file): boolean | Promise	} onRemove
+ * @prop {(file: UploadFile<"T:any">) => void} onDownload
+ * @prop {(file: UploadFile<"T:any">) => void} onPreview
+ * @prop {(file: UploadFile<"T:any">) => void | boolean} onRemove
  * * UploadFile - Extends File with additional props.
  * @prop {string} name
  * @prop {number} percent
@@ -46,6 +49,8 @@ import { Upload as AntdUpload } from "antd";
 /**
  * @param {Props} props
  */
+
+ 
 
 const Upload = ({
   accept,
