@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography as AntdTypography } from "antd";
-import { CopyConfig, EditConfig, EllipsisConfig } from "../interface";
+// import { CopyConfig, EditConfig, EllipsisConfig } from "../typographyInterface.tsx";
 
 /**
  * @typedef Props
