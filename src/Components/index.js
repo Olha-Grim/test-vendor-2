@@ -5,11 +5,19 @@ import AutoComplete from "./AutoComplete";
 import { Avatar, AvatarGroup } from "./Avatar";
 import BackTop from "./BackTop";
 import { Badge, BadgeRibbon } from "./Badge";
+import Space from "./Space";
 // import { Breadcrumb, BreadcrumbItem, Separator } from "./Breadcrumb";
 import Button from "./Button";
 // import Calendar from "./Calendar";
 import Divider from "./Divider";
 import { Link, Text, Paragraph, Title } from "./Typography";
+import {
+  Input,
+  InputGroup,
+  InputPassword,
+  InputSearch,
+  InputTextArea,
+} from "./Input";
 
 export {
   Button,
@@ -20,12 +28,19 @@ export {
   Anchor,
   Alert,
   AlertErrorBoundary,
-  //   AutoComplete,
+  AutoComplete,
   BackTop,
   Badge,
   BadgeRibbon,
-  Link
+  Link,
+  Input,
+  InputGroup,
+  InputPassword,
+  InputSearch,
+  InputTextArea,
+  Space,
 };
+
 // import { Form, FormList, FormErrorList, FormItem, FormProvider } from "./Form";
 // import { Layout, Header, Sider, Content, Footer } from "./Layout";
 // import { TimePicker, TimePickerRangePicker } from "./TimePicker";
@@ -34,7 +49,7 @@ export {
 // import { DescriptionItem, Descriptions } from "./Descriptions";
 // import { Text, Link, Title, Paragraph } from "./Typography";
 // import { Statistic, StatisticCountdown } from "./Statistic";
-// import { Breadcrumb, BreadcrumbItem, Separator } from "./Breadcrumb";
+// // import { Breadcrumb, BreadcrumbItem, Separator } from "./Breadcrumb";
 // import { Radio, RadioGroup, RadioButton } from "./Radio";
 // import { Tree, TreeNode, DirectoryTree } from "./Tree";
 // import { List, ListItem, ListItemMeta } from "./List";
@@ -73,7 +88,7 @@ export {
 // import BackTop from "./BackTop";
 // import Button from "./Button";
 // import Switch from "./Switch";
-// import Upload from "./Upload";
+// // import Upload from "./Upload";
 // import Slider from "./Slider";
 // import Drawer from "./Drawer";
 // import Anchor from "./Anchor";
@@ -118,7 +133,6 @@ export {
 // import Settings from "./Screens/Settings";
 // import PSError from "./Screens/PSError";
 
-
 // export {
 //   PSError,
 //   Settings,
@@ -140,9 +154,9 @@ export {
 //   Footer,
 //   Space,
 //   Affix,
-//   Breadcrumb,
-//   BreadcrumbItem,
-//   Separator,
+//   // Breadcrumb,
+//   // BreadcrumbItem,
+//   // Separator,
 //   Dropdown,
 //   DropdownButton,
 //   Menu,
@@ -164,11 +178,11 @@ export {
 //   MonthPicker,
 //   WeekPicker,
 //   RangePicker,
-//   Form,
-//   FormList,
-//   FormErrorList,
-//   FormItem,
-//   FormProvider,
+//   // Form,
+//   // FormList,
+//   // FormErrorList,
+//   // FormItem,
+//   // FormProvider,
 //   Input,
 //   InputGroup,
 //   InputPassword,
@@ -190,7 +204,7 @@ export {
 //   TimePickerRangePicker,
 //   Transfer,
 //   TreeSelect,
-//   Upload,
+//   // Upload,
 //   AvatarGroup,
 //   Avatar,
 //   BadgeRibbon,
@@ -249,4 +263,3 @@ export {
 //   Complete,
 //   AccountChange,
 // };
-
