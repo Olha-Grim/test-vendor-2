@@ -1,14 +1,15 @@
 import React from "react";
 import { DatePicker as AntdDatePicker } from "antd";
+import { Moment } from "moment";
 
 /**
  * @typedef Props
- * @prop {moment} defaultPickerValue
- * @prop {moment} defaultValue
+ * @prop {Moment} defaultPickerValue
+ * @prop {Moment } defaultValue
  * @prop {string} format
  * @prop {() => React.ReactNode} renderExtraFooter
- * @prop {moment} value
- * @prop {(date: moment, dateString: string)=>void} onChange
+ * @prop {Moment | null} value
+ * @prop {(date: Moment | null, dateString: string) => void} onChange
  * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
@@ -24,7 +25,7 @@ const YearPicker = ({
   renderExtraFooter,
   value,
   onChange,
-  children
+  children,
 }) => {
   const props = {
     defaultPickerValue,
@@ -33,7 +34,7 @@ const YearPicker = ({
     renderExtraFooter,
     value,
     onChange,
-    children
+    children,
   };
 
   return (

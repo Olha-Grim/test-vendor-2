@@ -1,24 +1,24 @@
 import React from "react";
 import { DatePicker as AntdDatePicker } from "antd";
+import { Moment } from "moment";
+
 /**
  *
  * @typedef Props
- * @prop {moment} defaultPickerValue
- * @prop {moment} defaultValue
+ * @prop {Moment} defaultPickerValue
+ * @prop {Moment} defaultValue
  * @prop {string} format
  * @prop {() => React.ReactNode} renderExtraFooter
- * @prop {moment} value
- * @prop {function(date: moment, dateString: string)} onChange
+ * @prop {Moment | null} value
+ * @prop {(date: Moment | null, dateString: string)=>void} onChange
  * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
  */
 
-
 /**
  * @param {Props} props
  */
-
 
 const QuarterPicker = ({
   defaultPickerValue,
