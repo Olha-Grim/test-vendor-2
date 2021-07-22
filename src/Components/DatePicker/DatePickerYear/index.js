@@ -8,10 +8,13 @@ import { DatePicker as AntdDatePicker } from "antd";
  * @prop {string} format
  * @prop {() => React.ReactNode} renderExtraFooter
  * @prop {moment} value
- * @prop {function(date: moment, dateString: string)} onChange
+ * @prop {(date: moment, dateString: string)=>void} onChange
  * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
+ */
+/**
+ * @param {Props} props
  */
 
 const YearPicker = ({

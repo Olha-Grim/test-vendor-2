@@ -1,6 +1,5 @@
 import React from "react";
 import { Statistic as AntdStatistic } from "antd";
-import moment from "moment";
 
 /**
  *
