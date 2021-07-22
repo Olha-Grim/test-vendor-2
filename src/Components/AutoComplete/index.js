@@ -1,18 +1,25 @@
 import React from "react";
 import { AutoComplete as AntdAutoComplete } from "antd";
+import { OptionData, OptionGroupData } from "rc-select/lib/interface";
+import { FilterFunc } from "rc-select/lib/interface/generator";
+import { OptionProps } from 'rc-select/lib/Option'
+import { InputProps } from 'antd/lib/input';
+
 
 /**
  * @typedef Props
  * @prop {boolean} allowClear
  * @prop {boolean} autoFocus
  * @prop {boolean} backfill
+ * @prop {HTMLInputElement | HTMLTextAreaElement | React.ReactElement<InputProps>	} children 
+ * @prop {React.ReactElement<OptionProps> | Array<React.ReactElement<OptionProps>>	} children 
  * @prop {boolean} defaultActiveFirstOption
  * @prop {boolean} defaultOpen
  * @prop {string} defaultValue
  * @prop {boolean} disabled
  * @prop {string} dropdownClassName
  * @prop {boolean | number	} dropdownMatchSelectWidth
- * @prop {boolean | ((inputValue: any, option:any )=> void	)} filterOption
+ * @prop {boolean |  FilterFunc<OptionData | OptionGroupData>} filterOption
  * @prop {string} notFoundContent
  * @prop {boolean}  open
  * @prop {{ label: any, value:any }[]} options
@@ -32,8 +39,6 @@ import { AutoComplete as AntdAutoComplete } from "antd";
 /**
  * @param {Props} props
  */
-//  *Methods
-
 
 const AutoComplete = ({
   allowClear,

@@ -1,9 +1,9 @@
 import React from "react";
 import { Tree as AntdTree } from "antd";
-import { DataNode, Key} from 'rc-tree/lib/interface';
+import { DataNode, Key } from "rc-tree/lib/interface";
 
 /**
- * 
+ *
  * @typedef Props
  * @prop {({ dropNode, dropPosition }) => boolean	} allowDrop
  * @prop {boolean} autoExpandParent

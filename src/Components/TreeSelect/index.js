@@ -1,6 +1,8 @@
 import React from "react";
 import { TreeSelect as AntdTreeSelect } from "antd";
-
+import { FilterFunc } from 'rc-select/lib/interface/generator';
+import { DataNode, Key} from 'rc-tree/lib/interface';
+import { LegacyDataNode } from './interface'
 
 /**
  *
@@ -12,28 +14,28 @@ import { TreeSelect as AntdTreeSelect } from "antd";
  * @prop {boolean} disabled
  * @prop {string} dropdownClassName
  * @prop {boolean | number	} dropdownMatchSelectWidth
- * @prop {(originNode: React.ReactNode, props) => React.ReactNode	} dropdownRender
+ * @prop {((menu: React.ReactElement<any, string | React.JSXElementConstructor<any>>) => React.ReactElement<any, string | React.JSXElementConstructor<any>>)} dropdownRender
  * @prop {React.CSSProperties} dropdownStyle
- * @prop {boolean | function(inputValue: string, treeNode: TreeNode) (should return boolean)	} filterTreeNode
- * @prop {function(triggerNode)} getPopupContainer
+ * @prop {boolean | FilterFunc<LegacyDataNode> | undefined} filterTreeNode
+ * @prop {(triggerNode:any)=> HTMLElement} getPopupContainer
  * @prop {boolean} labelInValue
  * @prop {number} listHeight
- * @prop {(node:any)=>void	} loadData
+ * @prop {(node:any)=> Promise<unknown>	} loadData
  * @prop {number | "responsive"	} maxTagCount
- * @prop {React.ReactNode | function(omittedValues)	} maxTagPlaceholder
+ * @prop {React.ReactNode | ((omittedValues:any)=>void)	} maxTagPlaceholder
  * @prop {boolean} multiple
  * @prop {string} placeholder
  * @prop {string} searchValue
  * @prop {boolean} showArrow
- * @prop {TreeSelect.SHOW_ALL | TreeSelect.SHOW_PARENT | TreeSelect.SHOW_CHILD	} showCheckedStrategy
+ * @prop {TreeSelect} showCheckedStrategy
  * @prop {boolean} showSearch
- * @prop {large | middle | small	} size
+ * @prop {"large" | "middle" | "small"	} size
  * @prop {React.ReactNode} suffixIcon
  * @prop {React.ReactNode} switcherIcon
  * @prop {boolean} treeCheckable
  * @prop {boolean} treeCheckStrictly
- * @prop {array<{ value, title, children, [disabled, disableCheckbox, selectable, checkable] }>	}  treeData
- * @prop {boolean | object<{ id: string, pId: string, rootPId: string }>	} treeDataSimpleMode
+ * @prop {DataNode[]}  treeData
+ * @prop {boolean | Object	} treeDataSimpleMode
  * @prop {boolean} treeDefaultExpandAll
  * @prop {string[]	} treeDefaultExpandedKeys
  * @prop {string[]	} treeExpandedKeys
@@ -41,17 +43,17 @@ import { TreeSelect as AntdTreeSelect } from "antd";
  * @prop {string} treeNodeLabelProp
  * @prop {string | string[]	} value
  * @prop {boolean} virtual
- * @prop {function(value, label, extra)	} onChange
- * @prop {function(open)	} onDropdownVisibleChange
- * @prop {function(value: string)	} onSearch
- * @prop {function(value, node, extra)	} onSelect
- * @prop {function(expandedKeys)	} onTreeExpand
+ * @prop {(value:any, label:any, extra:any)=> void	} onChange
+ * @prop {(open:any)=> void	} onDropdownVisibleChange
+ * @prop {(value: string)=>void	} onSearch
+ * @prop {(value: string, option: any) => void} onSelect
+ * @prop {(expandedKeys:any)=>void	} onTreeExpand
  * * TreeNode - We recommend you to use treeData rather than TreeNode, to avoid the trouble of manual construction
  * @prop {boolean} checkable
  * @prop {boolean} disableCheckbox
  * @prop {boolean} disabled
  * @prop {boolean} isLeaf
- * @prop {string} key
+ * @prop {string | number | Key | undefined} key
  * @prop {boolean} selectable
  * @prop {React.ReactNode} title
  * @prop {string} value
