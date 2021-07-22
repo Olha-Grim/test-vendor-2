@@ -1,17 +1,18 @@
 import React from "react";
 import { Typography as AntdTypography } from "antd";
+import { CopyConfig, EditConfig, EllipsisConfig } from "../interface";
 
 /**
  * @typedef Props
  * @prop {boolean} code
- * @prop {CopyConfig.copyable?: boolean | CopyConfig} copyable
+ * @prop {boolean | CopyConfig} copyable
  * @prop {boolean} delete
  * @prop {boolean} disabled
- * @prop {boolean | editable} editable
- * @prop {boolean | "ellipsis"} ellipsis
- * @prop { number: 1, 2, 3, 4, 5} level
+ * @prop {boolean | EditConfig} editable
+ * @prop {boolean | EllipsisConfig} ellipsis
+ * @prop {5 | 1 | 2 | 3 | 4 | undefined} level
  * @prop {boolean} mark
- * @prop {(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void} onClick
+ * @prop {(event: React.MouseEvent<HTMLDivElement, MouseEvent> | undefined) => void} onClick
  * @prop {boolean} italic
  * @prop {"secondary" | "success" | "warning" | "danger"} type
  * @prop {boolean | undefined} underline
@@ -21,13 +22,6 @@ import { Typography as AntdTypography } from "antd";
  */
 /**
  * @param {Props} props
- * @interface [<EditConfig>]
- * @interface [<CopyConfig>]
- */
-
-/**
- * @typedef {object} CopyConfig
-
  */
 
 const Title = ({

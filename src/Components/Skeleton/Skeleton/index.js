@@ -1,18 +1,24 @@
 import React from "react";
 import { Skeleton as AntdSkeleton } from "antd";
+
 /**
  *
- * @typedef Props
+ * @typedef SkeletonProps
  * @prop {boolean} active
  * @prop {boolean | SkeletonAvatarProps} avatar
  * @prop {boolean} loading
  * @prop {boolean | SkeletonParagraphProps} paragraph
  * @prop {boolean} round
  * @prop {boolean | SkeletonTitleProps} title
- * @prop children
- * @return {JSX.Element} {JSX.Element}
+ * @prop {JSX.Element} children
+ * @return {JSX.Element} 
  * @constructor
  */
+/**
+ * @param {SkeletonProps} props
+ */
+
+
 const Skeleton = ({
   active,
   avatar,

@@ -1,13 +1,15 @@
 import React from "react";
 import { Typography as AntdTypography } from "antd";
+import { EditConfig, CopyConfig, EllipsisConfig } from "../interface";
+
 /**
  * @typedef Props
  * @prop {boolean} code
- * @prop {boolean | "copyable"} copyable
+ * @prop {boolean | CopyConfig} copyable
  * @prop {boolean} delete
  * @prop {boolean} disabled
- * @prop {boolean | editable} editable
- * @prop {boolean | "ellipsis"} ellipsis
+ * @prop {boolean | EditConfig} editable
+ * @prop {boolean | Omit<EllipsisConfig, 'expandable' | 'rows' | 'onExpand'>} ellipsis
  * @prop {boolean} mark
  * @prop {(e?: React.MouseEvent<HTMLDivElement, MouseEvent> | undefined) => void} onClick
  * @prop {boolean} strong

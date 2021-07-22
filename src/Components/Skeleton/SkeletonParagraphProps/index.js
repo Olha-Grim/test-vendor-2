@@ -2,15 +2,15 @@ import React from "react";
 import { Skeleton as AntdSkeleton } from "antd";
 /**
  *
- * @typedef Props
- * @param {number} rows
- * @param {number | string | Array<number | string>	} width
- * @param children
+ * @typedef SkeletonParagraphProps
+ * @prop {number} rows
+ * @prop {number | string | Array<number | string>	} width
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
  */
 /**
- * @param {Props} props
+ * @param {SkeletonParagraphProps} props
  */
 const SkeletonParagraph = ({ rows, width, children }) => {
   const props = { rows, width, children };

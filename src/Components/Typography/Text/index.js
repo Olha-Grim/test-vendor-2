@@ -1,13 +1,14 @@
 import React from "react";
 import { Typography as AntdTypography } from "antd";
+import { CopyConfig, EditConfig } from "../interface";
 
 /**
  * @typedef Props
  * @prop {boolean} code
- * @prop {copyable?: boolean | CopyConfig} copyable
+ * @prop { boolean | CopyConfig} copyable
  * @prop {boolean} delete
  * @prop {boolean} disabled
- * @prop {} editable
+ * @prop {boolean | EditConfig} editable
  * @prop {boolean} ellipsis
  * @prop {boolean} keyboard
  * @prop {boolean} mark
@@ -24,7 +25,7 @@ import { Typography as AntdTypography } from "antd";
 
 /**
  * @param {Props} props
- * 
+ *
  */
 
 const Text = ({

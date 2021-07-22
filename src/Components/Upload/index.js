@@ -11,13 +11,13 @@ import  ProgressProps from "../Progress"
  * @prop {string | ((file: RcFile) => string) | ((file: RcFile) => PromiseLike<string>)} action
  * @prop {(file: RcFile, FileList: RcFile[],) => BeforeUploadValueType | Promise<BeforeUploadValueType>} beforeUpload
  * @prop {function} customRequest
- * @prop {object | ((file: UploadFile<"T:any">) => object)} data
- * @prop {Array<UploadFile<"T:any">>} defaultFileList
+ * @prop {object | ((file: UploadFile<any>) => object)} data
+ * @prop {Array<UploadFile<any>>} defaultFileList
  * @prop {boolean} directory
  * @prop {boolean} disabled
  * @prop {UploadFile[]} fileList
  * @prop {object} headers
- * @prop {(file: UploadFile<"T:any">, listType?: UploadListType) => React.ReactNode} iconRender
+ * @prop {(file: UploadFile<any>, listType?: UploadListType) => React.ReactNode} iconRender
  * @prop {(file: UploadFile) => boolean	} isImageUrl
  * @prop {(originNode: React.ReactElement, file: UploadFile, fileList: object[], actions: { download: function, preview: function, remove: function }) => React.ReactNode	} itemRender
  * @prop {string} listType
@@ -32,9 +32,9 @@ import  ProgressProps from "../Progress"
  * @prop {boolean} withCredentials
  * @prop {function} onChange
  * @prop {(event: React.DragEvent) => void	} onDrop
- * @prop {(file: UploadFile<"T:any">) => void} onDownload
- * @prop {(file: UploadFile<"T:any">) => void} onPreview
- * @prop {(file: UploadFile<"T:any">) => void | boolean} onRemove
+ * @prop {(file: UploadFile<any>) => void} onDownload
+ * @prop {(file: UploadFile<any>) => void} onPreview
+ * @prop {(file: UploadFile<any>) => void | boolean} onRemove
  * * UploadFile - Extends File with additional props.
  * @prop {string} name
  * @prop {number} percent

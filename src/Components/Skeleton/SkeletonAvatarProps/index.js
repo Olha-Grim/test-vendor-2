@@ -1,7 +1,7 @@
 import React from "react";
 import { Skeleton as AntdSkeleton } from "antd";
 /**
- * @typedef Props
+ * @typedef SkeletonAvatarProps
  * @prop {boolean} active
  * @prop {"circle" | "square"	} shape
  * @prop {number | "large" | "small" | "default"	} size
@@ -10,7 +10,7 @@ import { Skeleton as AntdSkeleton } from "antd";
  * @constructor
  */
 /**
- * @param {Props} props
+ * @param {SkeletonAvatarProps} props
  */
 const SkeletonAvatar = ({ active, shape, size, children }) => {
   const props = { active, shape, size, children };
