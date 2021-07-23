@@ -17,7 +17,7 @@ import { LegacyDataNode } from './interface'
  * @prop {((menu: React.ReactElement<any, string | React.JSXElementConstructor<any>>) => React.ReactElement<any, string | React.JSXElementConstructor<any>>)} dropdownRender
  * @prop {React.CSSProperties} dropdownStyle
  * @prop {boolean | FilterFunc<LegacyDataNode> | undefined} filterTreeNode
- * @prop {(triggerNode:any)=> HTMLElement} getPopupContainer
+ * @prop {(triggerNode:HTMLElement)=> HTMLElement} getPopupContainer
  * @prop {boolean} labelInValue
  * @prop {number} listHeight
  * @prop {(node:any)=> Promise<unknown>	} loadData

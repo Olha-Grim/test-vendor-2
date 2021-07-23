@@ -1,5 +1,6 @@
 import React from "react";
 import { Image as AntdImage } from "antd";
+import { ImagePreviewType } from "rc-image/lib/Image";
 /**
  *
  * @typedef Props
@@ -7,7 +8,7 @@ import { Image as AntdImage } from "antd";
  * @prop {string} fallback
  * @prop {string | number	} height
  * @prop {React.ReactNode} placeholder
- * @prop {boolean | previewType} preview
+ * @prop {boolean | ImagePreviewType} preview
  * @prop {string} src
  * @prop {string | number	} width
  * @prop {(event: React.SyntheticEvent<HTMLImageElement, Event>) => void	} onError

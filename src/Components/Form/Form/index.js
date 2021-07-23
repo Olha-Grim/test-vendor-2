@@ -1,11 +1,12 @@
 import React from "react";
 import { Form as AntdForm } from "antd";
-import { Options } from 'scroll-into-view-if-needed';
+import { Options } from "scroll-into-view-if-needed";
+import { ValidateMessages, FieldData, FormInstance } from "rc-field-form/lib/interface";
 
 /**
  * @typedef Props
  * @prop {boolean} colon
- * @prop {ComponentType | false} component
+ * @prop {React.ComponentType | false} component
  * @prop {FieldData[]} fields
  * @prop {FormInstance} form
  * @prop {object} initialValues
@@ -20,10 +21,10 @@ import { Options } from 'scroll-into-view-if-needed';
  * @prop {ValidateMessages} validateMessages
  * @prop {string | string[]} validateTrigger
  * @prop {object} wrapperCol
- * @prop {function(changedFields, allFields)} onFieldsChange
- * @prop {function(values)	} onFinish
- * @prop {function({ values, errorFields, outOfDate })	} onFinishFailed
- * @prop {function(changedValues, allValues)} onValuesChange
+ * @prop {(changedFields, allFields)=>void} onFieldsChange
+ * @prop {(values:any )=>void	} onFinish
+ * @prop {({ values, errorFields, outOfDate })=>void	} onFinishFailed
+ * @prop {(changedValues, allValues)=>void} onValuesChange
  * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor

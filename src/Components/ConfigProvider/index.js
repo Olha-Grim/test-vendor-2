@@ -8,7 +8,7 @@ import { ConfigProvider as AntdConfigProvider } from "antd";
  * @prop {"ltr" | "rtl"} direction
  * @prop {boolean | number	} dropdownMatchSelectWidth
  * @prop {{ validateMessages?: ValidateMessages, requiredMark?: boolean | optional } } form
- * @prop {(triggerNode:any )=>void	} getPopupContainer
+ * @prop {(triggerNode: HTMLElement )=>void	} getPopupContainer
  * @prop {() => HTMLElement	} getTargetContainer
  * @prop {string} iconPrefixCls
  * @prop {{ autoComplete?: string }} input

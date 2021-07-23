@@ -4,18 +4,21 @@ export type Props = {
     autoFocus: boolean;
     bordered: boolean;
     className: string;
-    dateRender: (currentDate: typeof Moment, today: typeof Moment) => React.ReactNode;
+    dateRender: (currentDate: Moment, today: Moment) => React.ReactNode;
     disabled: boolean;
-    disabledDate: (date: typeof Moment) => boolean;
+    disabledDate: (date: Moment | null) => boolean;
     dropdownClassName: string;
-    getPopupContainer: (trigger: any) => void;
+    getPopupContainer: (trigger: any) => HTMLElement;
     inputReadOnly: boolean;
-    locale: object;
-    mode: "time" | "date" | "month" | "year" | "decade";
+    locale: {
+        lang: Locale & AdditionalPickerLocaleLangProps;
+        timePickerLocale: Locale;
+    };
+    mode: [PanelMode, PanelMode] | undefined;
     open: boolean;
     panelRender: (panelNode: any) => React.ReactNode;
-    picker: "date" | "week" | "month" | "quarter" | "year";
-    placeholder: string | [string, string];
+    picker: "date" | undefined;
+    placeholder: [string, string] | undefined;
     popupStyle: React.CSSProperties;
     size: "large" | "middle" | "small";
     style: React.CSSProperties;
@@ -23,23 +26,17 @@ export type Props = {
     onOpenChange: (open: any) => void;
     onPanelChange: (value: any, mode: any) => void;
     allowEmpty: [boolean, boolean];
-    defaultPickerValue: [typeof Moment, typeof Moment];
-    defaultValue: [typeof Moment, typeof Moment];
-    disabledTime: (date: typeof Moment, partial: "start" | "end") => void;
+    defaultPickerValue: [Moment, Moment];
+    defaultValue: [Moment, Moment];
+    disabledTime: (date: EventValue<Moment>, type: RangeType) => DisabledTimes;
     format: string | string[];
-    ranges: {
-        [range: string]: (typeof Moment)[];
-    } | {
-        [range: string]: () => (typeof Moment)[];
-    };
+    ranges: Record<string, [EventValue<Moment>, EventValue<Moment>] | (() => [EventValue<Moment>, EventValue<Moment>])>;
     renderExtraFooter: () => React.ReactNode;
     separator: React.ReactNode;
     showTime: object | boolean;
-    value: [typeof Moment, typeof Moment];
-    onCalendarChange: (dates: [typeof Moment, typeof Moment], dateStrings: [string, string], info: {
-        range: "start" | "end";
-    }) => void;
-    onChange: (dates: [typeof Moment, typeof Moment], dateStrings: [string, string]) => void;
+    value: [Moment | null, Moment | null];
+    onCalendarChange: (values: RangeValue<Moment>, formatString: [string, string], info: RangeInfo) => void;
+    onChange: (values: RangeValue<Moment>, formatString: [string, string]) => void;
     children: JSX.Element;
 };
 /**
@@ -50,16 +47,16 @@ export type Props = {
  * @prop {string} className
  * @prop {(currentDate: Moment, today: Moment) => React.ReactNode	} dateRender
  * @prop {boolean} disabled
- * @prop {(date: Moment) => boolean} disabledDate
+ * @prop {(date: Moment | null) => boolean} disabledDate
  * @prop {string} dropdownClassName
- * @prop {(trigger:any)=>void} getPopupContainer
+ * @prop {(trigger:any)=> HTMLElement} getPopupContainer
  * @prop {boolean} inputReadOnly
- * @prop {object} locale
- * @prop {"time" | "date" | "month" | "year" | "decade"	} mode
+ * @prop {{ lang: Locale & AdditionalPickerLocaleLangProps; timePickerLocale: TimePickerLocale; }} locale
+ * @prop {[PanelMode, PanelMode] | undefined} mode
  * @prop {boolean} open
  * @prop {(panelNode:any) => React.ReactNode	} panelRender
- * @prop {"date" | "week" | "month" | "quarter" | "year"	} picker
- * @prop {string | [string,string]	} placeholder
+ * @prop {"date" | undefined	} picker
+ * @prop {[string, string] | undefined} placeholder
  * @prop {React.CSSProperties} popupStyle
  * @prop {"large" | "middle" | "small"	} size
  * @prop {React.CSSProperties} style
@@ -67,20 +64,20 @@ export type Props = {
  * @prop {(open:any)=> void} onOpenChange
  * @prop {(value:any, mode:any)=>void} onPanelChange
  * @prop {[boolean, boolean]} allowEmpty
- * @prop {(currentDate: Moment | typeof moment, today: Moment, info: { range: "start" | "end" }) => React.ReactNode} dateRender
+ * @prop {(currentDate: Moment , today: Moment , info: { range: "start" | "end" }) => React.ReactNode} dateRender
  * @prop {[Moment, Moment]} defaultPickerValue
  * @prop {[Moment, Moment]} defaultValue
  * @prop {[boolean, boolean]}  disabled
- * @prop {(date: Moment, partial: "start" | "end")=>void	} disabledTime
+ * @prop {(date: EventValue<Moment>, type: RangeType) => DisabledTimes} disabledTime
  * @prop {string | string[]} format
- * @prop {{ [range: string]: Moment[] } | { [range: string]: () => Moment[] }	}  ranges
+ * @prop {Record<string, [EventValue<Moment>, EventValue<Moment>] | (() => [EventValue<Moment>, EventValue<Moment>])>}  ranges
  * @prop {() => React.ReactNode} renderExtraFooter
  * @prop {React.ReactNode	} separator
  * @prop {object | boolean	} showTime
- * @prop {Moment[]} showTime.defaultValue
- * @prop {[Moment, Moment]} value
- * @prop {(dates: [Moment, Moment], dateStrings: [string, string], info: { range:"start"|"end" })=>void} onCalendarChange
- * @prop {(dates: [Moment, Moment], dateStrings: [string, string])=>void	} onChange
+ * @prop {Moment[]| null} showTime.defaultValue
+ * @prop {[Moment | null, Moment | null]} value
+ * @prop {(values: RangeValue<Moment>, formatString: [string, string], info: RangeInfo) => void} onCalendarChange
+ * @prop {(values: RangeValue<Moment>, formatString: [string, string]) => void	} onChange
  * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
@@ -89,6 +86,14 @@ export type Props = {
  * @param {Props} props
  */
 declare function RangePicker({ allowClear, autoFocus, bordered, className, disabled, disabledDate, dropdownClassName, getPopupContainer, inputReadOnly, locale, mode, open, panelRender, picker, placeholder, popupStyle, size, style, suffixIcon, onOpenChange, onPanelChange, allowEmpty, dateRender, defaultPickerValue, defaultValue, disabledTime, format, ranges, renderExtraFooter, separator, showTime, value, onCalendarChange, onChange, children, }: Props): JSX.Element;
-import Moment from "moment";
+import { Moment } from "moment";
 import React from "react";
+import { Locale } from "rc-picker/lib/interface";
+import { AdditionalPickerLocaleLangProps } from "antd/es/date-picker/generatePicker";
+import { PanelMode } from "rc-picker/lib/interface";
+import { EventValue } from "rc-picker/lib/interface";
+import { RangeType } from "rc-picker/lib/RangePicker";
+import { DisabledTimes } from "rc-picker/lib/interface";
+import { RangeValue } from "rc-picker/lib/interface";
+import { RangeInfo } from "rc-picker/lib/RangePicker";
 //# sourceMappingURL=index.d.ts.map

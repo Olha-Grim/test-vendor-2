@@ -1,5 +1,6 @@
 import React from "react";
 import { Transfer as AntdTransfer } from "antd";
+import {RecordType} from 'rc-table/lib/interface';
 /**
  * 
  * @typedef Props

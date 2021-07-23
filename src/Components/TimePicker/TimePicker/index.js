@@ -1,6 +1,6 @@
 import React from "react";
 import { TimePicker as AntdTimePicker } from "antd";
-import moment from "moment";
+import {Moment} from "moment";
 
 /**
  * @typedef Props
@@ -9,11 +9,11 @@ import moment from "moment";
  * @prop {string} className
  * @prop {React.ReactNode} clearIcon
  * @prop {string} clearText
- * @prop {typeof moment} defaultValue
+ * @prop {Moment} defaultValue
  * @prop {boolean} disabled
- * @prop {()=>void} disabledHours
- * @prop {(selectedHour:any)=>void	} disabledMinutes
- * @prop {(selectedHour:any, selectedMinute:any)=>void} disabledSeconds
+ * @prop {()=>number[]} disabledHours
+ * @prop {(selectedHour:any)=>number[]	} disabledMinutes
+ * @prop {(selectedHour:any, selectedMinute:any)=>number[]} disabledSeconds
  * @prop {string} format
  * @prop {boolean} allowClear
  * @prop {(trigger:any)=> HTMLElement	} getPopupContainer
@@ -30,10 +30,10 @@ import moment from "moment";
  * @prop {boolean} showNow
  * @prop {React.ReactNode} suffixIcon
  * @prop {boolean} use12Hours
- * @prop {typeof moment} value
- * @prop {(time: typeof moment, timeString: string)=> void	} onChange
+ * @prop {Moment} value
+ * @prop {(time: Moment | null, timeString: string)=> void	} onChange
  * @prop {(open: boolean) => void	} onOpenChange
- * @prop {(time: typeof moment)=> void	} onSelect
+ * @prop {(time: Moment | null)=> void	} onSelect
  * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor

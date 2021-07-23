@@ -12,7 +12,7 @@ import { Tooltip as AntdTooltip } from "antd";
  * @prop {string} color
  * @prop {boolean} defaultVisible
  * @prop {boolean | { keepParent?: boolean }	} destroyTooltipOnHide
- * @prop {(triggerNode:any)=>void	} getPopupContainer
+ * @prop {(triggerNode:HTMLElement)=>void	} getPopupContainer
  * @prop {number} mouseEnterDelay
  * @prop {number} mouseLeaveDelay
  * @prop {string} overlayClassName

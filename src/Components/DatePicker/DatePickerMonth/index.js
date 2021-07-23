@@ -1,15 +1,17 @@
 import React from "react";
 import { DatePicker as AntdDatePicker } from "antd";
-// import { Moment } from 'moment';
+import { DateType } from "rc-picker/es/panels/TimePanel";
+import { Moment } from "moment";
+
 /**
  * @typedef Props
- * @prop {moment} defaultPickerValue
- * @prop {moment} defaultValue
+ * @prop {Moment} defaultPickerValue
+ * @prop {Moment} defaultValue
  * @prop {string} format
  * @prop {() => React.ReactNode} renderExtraFooter
- * @prop {moment} value
- * @prop {function(date: moment, dateString: string)} onChange
- * @prop {function(date, locale): React.ReactNode} monthCellRender
+ * @prop {Moment} value
+ * @prop {(date: Moment, dateString: string)=>void} onChange
+ * @prop {(date: DateType) => React.ReactNode} monthCellRender
  * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor

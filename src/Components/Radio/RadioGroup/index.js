@@ -1,5 +1,5 @@
 import React from "react";
-import { Radio as AntdRadio } from "antd";
+import { RadioChangeEvent, Radio as AntdRadio } from "antd";
 /**
  *
  * @typedef Props

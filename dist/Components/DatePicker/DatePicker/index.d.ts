@@ -1,46 +1,88 @@
 export default DatePicker;
-export type Props = any;
+export type Props = {
+    allowClear: boolean;
+    autoFocus: boolean;
+    bordered: boolean;
+    className: string;
+    dateRender: (currentDate: Moment, today: Moment) => React.ReactNode;
+    disabled: boolean;
+    disabledDate: (currentDate: Moment) => boolean;
+    dropdownClassName: string;
+    getPopupContainer: (trigger: any) => HTMLElement;
+    inputReadOnly: boolean;
+    locale: {
+        lang: Locale & AdditionalPickerLocaleLangProps;
+        timePickerLocale: Locale;
+    };
+    mode: "time" | "date" | "month" | "year" | "decade";
+    open: boolean;
+    panelRender: (panelNode: any) => React.ReactNode;
+    picker: "date" | undefined;
+    placeholder: string;
+    popupStyle: React.CSSProperties;
+    size: "large" | "middle" | "small";
+    style: React.CSSProperties;
+    suffixIcon: React.ReactNode;
+    onOpenChange: (open: any) => void;
+    onPanelChange: (value: any, mode: any) => void;
+    defaultPickerValue: Moment;
+    defaultValue: Moment;
+    disabledTime: (date: any) => DisabledTimes;
+    format: string | CustomFormat<Moment> | (string | CustomFormat<Moment>)[] | undefined;
+    renderExtraFooter: (mode: any) => React.ReactNode;
+    showNow: boolean;
+    showToday: boolean;
+    value: Moment;
+    onChange: () => void;
+    children: JSX.Element;
+};
 /**
  * @typedef Props
- * @param {boolean} allowClear
- * @param {boolean} autoFocus
- * @param {boolean} bordered
- * @param {string} className
- * @param {function(currentDate: moment, today: moment) => React.ReactNode	} dateRender
- * @param {boolean} disabled
- * @param {(currentDate: moment) => boolean	} disabledDate
- * @param {string} dropdownClassName
- * @param {(trigger)=>void} getPopupContainer
- * @param {boolean} inputReadOnly
- * @param {object} locale
- * @param {"time" | "date" | "month" | "year" | "decade"	} mode
- * @param {boolean} open
- * @param {(panelNode) => React.ReactNode	} panelRender
- * @param {"date" | "week" | "month" | "quarter" | "year"	} picker
- * @param {string | [string,string]	} placeholder
- * @param {React.CSSProperties} popupStyle
- * @param {"large" | "middle" | "small"	} size
- * @param {React.CSSProperties} style
- * @param {React.ReactNode} suffixIcon
- * @param {(open)=>void} onOpenChange
- * @param {(value, mode)=>void} onPanelChange
- * @param {moment} defaultPickerValue
- * @param {} defaultValue
- * @param {(date)=>void} disabledTime
- * @param {string | (value: moment) => string | (string | (value: moment) => string)[]	} format
- * @param {(mode) => React.ReactNode} renderExtraFooter
- * @param {boolean} showNow
- * @param {moment} showTime.defaultValue
- * @param {boolean} showToday
- * @param {moment} value
- * @param {()=>void} onChange
- * @param {(value, mode)=>void} onPanelChange
- * @param children
+ * @prop {boolean} allowClear
+ * @prop {boolean} autoFocus
+ * @prop {boolean} bordered
+ * @prop {string} className
+ * @prop {(currentDate: Moment, today: Moment) => React.ReactNode	} dateRender
+ * @prop {boolean} disabled
+ * @prop {(currentDate: Moment) => boolean	} disabledDate
+ * @prop {string} dropdownClassName
+ * @prop {(trigger:any)=>HTMLElement} getPopupContainer
+ * @prop {boolean} inputReadOnly
+ * @prop {{ lang: Locale & AdditionalPickerLocaleLangProps; timePickerLocale: TimePickerLocale; }} locale
+ * @prop {"time" | "date" | "month" | "year" | "decade"	} mode
+ * @prop {boolean} open
+ * @prop {(panelNode:any) => React.ReactNode	} panelRender
+ * @prop {"date" | undefined} picker
+ * @prop {string} placeholder
+ * @prop {React.CSSProperties} popupStyle
+ * @prop {"large" | "middle" | "small"	} size
+ * @prop {React.CSSProperties} style
+ * @prop {React.ReactNode} suffixIcon
+ * @prop {(open:any)=>void} onOpenChange
+ * @prop {(value:any, mode:any)=>void} onPanelChange
+ * @prop {Moment} defaultPickerValue
+ * @prop {Moment} defaultValue
+ * @prop {(date:any)=> DisabledTimes} disabledTime
+ * @prop {string | CustomFormat<Moment> | (string | CustomFormat<Moment>)[] | undefined} format
+ * @prop {(mode:any) => React.ReactNode} renderExtraFooter
+ * @prop {boolean} showNow
+ * @prop {Moment} showTime.defaultValue
+ * @prop {boolean} showToday
+ * @prop {Moment} value
+ * @prop {()=>void} onChange
+ * @prop {(value:any, mode:any)=>void} onPanelChange
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
  */
 /**
  * @param {Props} props
  */
-declare function DatePicker({ children, allowClear, autoFocus, bordered, className, dateRender, disabled, disabledDate, dropdownClassName, getPopupContainer, inputReadOnly, locale, mode, open, panelRender, picker, placeholder, popupStyle, size, style, suffixIcon, onOpenChange, onPanelChange, defaultPickerValue, defaultValue, disabledTime, format, renderExtraFooter, showNow, showToday, value, onChange, }: any): JSX.Element;
+declare function DatePicker({ children, allowClear, autoFocus, bordered, className, dateRender, disabled, disabledDate, dropdownClassName, getPopupContainer, inputReadOnly, locale, mode, open, panelRender, picker, placeholder, popupStyle, size, style, suffixIcon, onOpenChange, onPanelChange, defaultPickerValue, defaultValue, disabledTime, format, renderExtraFooter, showNow, showToday, value, onChange, }: Props): JSX.Element;
+import { Moment } from "moment";
+import React from "react";
+import { Locale } from "rc-picker/lib/interface";
+import { AdditionalPickerLocaleLangProps } from "antd/es/date-picker/generatePicker";
+import { DisabledTimes } from "rc-picker/lib/interface";
+import { CustomFormat } from "rc-picker/lib/interface";
 //# sourceMappingURL=index.d.ts.map

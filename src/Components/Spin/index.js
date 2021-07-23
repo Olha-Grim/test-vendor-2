@@ -2,7 +2,7 @@ import React from "react";
 import { Spin as AntdSpin } from "antd";
 /**
  *
- * @typedef Props
+ * @typedef SpinProps
  * @prop {number} delay (milliseconds)
  * @prop {React.ReactElement<HTMLElement> | undefined} indicator
  * @prop {"small" | "default" | "large" | undefined} size
@@ -13,7 +13,7 @@ import { Spin as AntdSpin } from "antd";
  * @constructor
  */
 /**
- * @param {Props} props
+ * @param {SpinProps} props
  */
 
 const Spin = ({ delay, indicator, size, spinning, tip, wrapperClassName }) => {

@@ -3,18 +3,18 @@ import { Col as AntdCol } from "antd";
 /**
  *
  * @typedef Props
- * @param {string | number} flex
- * @param {number} offset
- * @param {number} order
- * @param {number} pull
- * @param {number} push
- * @param {number} span
- * @param {number | object} xs
- * @param {number | object} sm
- * @param {number | object} lg
- * @param {number | object} xl
- * @param {number | object} xxl
- * @param children
+ * @prop {string | number} flex
+ * @prop {number} offset
+ * @prop {number} order
+ * @prop {number} pull
+ * @prop {number} push
+ * @prop {number} span
+ * @prop {number | object} xs
+ * @prop {number | object} sm
+ * @prop {number | object} lg
+ * @prop {number | object} xl
+ * @prop {number | object} xxl
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
  */

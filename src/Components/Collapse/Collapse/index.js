@@ -8,21 +8,16 @@ import { Collapse as AntdCollapse } from "antd";
  * @prop {'header' | 'disabled'} collapsible
  * @prop {Array<string | number> | string | number} defaultActiveKey
  * @prop {boolean} destroyInactivePanel
- * @prop {(panelProps) => React.ReactNode	} expandIcon
+ * @prop {(panelProps:any) => React.ReactNode	} expandIcon
  * @prop {"left" | "right"	} expandIconPosition
  * @prop {boolean} ghost
- * @prop {function} onChange
+ * @prop {(key: string | string[])=>void} onChange
  * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
  */
 /**
  * @param {Props} props
- */
-/**
- * Interface for classes that represent a color.
- *
- * @interface
  */
 
 

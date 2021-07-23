@@ -22,7 +22,7 @@ import {FormListFieldData, FormListOperation} from './Interface'
  * @param {Props} props
  */
 
-const Form = ({ children, initialValue, name, rules }) => {
+const FormList = ({ children, initialValue, name, rules }) => {
   const props = {
     children,
     initialValue,
@@ -32,4 +32,4 @@ const Form = ({ children, initialValue, name, rules }) => {
 
   return <AntdForm.List {...props}>{children}</AntdForm.List>;
 };
-export default Form;
+export default FormList;

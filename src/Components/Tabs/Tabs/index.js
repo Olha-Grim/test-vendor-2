@@ -1,5 +1,6 @@
 import React from "react";
 import { Tabs as AntdTabs } from "antd";
+
 /**
  *
  * @typedef Props
@@ -10,7 +11,7 @@ import { Tabs as AntdTabs } from "antd";
  * @prop {string} defaultActiveKey
  * @prop {boolean} hideAdd
  * @prop {React.ReactNode} moreIcon
- * @prop {(props: DefaultTabBarProps, DefaultTabBar: React.ComponentClass) => React.ReactElement	} renderTabBar
+ * @prop {(props: any, DefaultTabBar: React.ComponentClass) => React.ReactElement} renderTabBar
  * @prop {"large" | "default" | "small"	} size
  * @prop {React.ReactNode | {left?: React.ReactNode, right?: React.ReactNode}	} tabBarExtraContent
  * @prop {number} tabBarGutter

@@ -1,5 +1,6 @@
 import React from "react";
-import { Select as AntdSelect } from "antd";
+import {  Select as AntdSelect } from "antd";
+import {  LabeledValue } from 'antd/es/select';
 
 /**
  *
@@ -19,7 +20,7 @@ import { Select as AntdSelect } from "antd";
  * @prop {React.CSSProperties} dropdownStyle
  * @prop {boolean | (inputValue, option)=>void	} filterOption
  * @prop {(optionA: Option, optionB: Option) => number	} filterSort
- * @prop {(triggerNode)=>void	} getPopupContainer
+ * @prop {(triggerNode:HTMLElement)=>void	} getPopupContainer
  * @prop {boolean} labelInValue
  * @prop {number} listHeight
  * @prop {boolean} loading
@@ -55,7 +56,7 @@ import { Select as AntdSelect } from "antd";
  * @prop {function} onMouseLeave
  * @prop {function} onPopupScroll
  * @prop {(value: string)=>void	} onSearch
- * @prop {(string | number | LabeledValue, option: Option) =>void	} onSelect
+ * @prop {(string | number | LabeledValue | option: Option) =>void	} onSelect
  * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor

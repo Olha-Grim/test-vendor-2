@@ -1,6 +1,8 @@
 import React from "react";
 import { Table as AntdTable } from "antd";
-
+import SpinProps from "antd/lib/spin/index";
+import { TooltipProps } from "rc-tooltip/lib/Tooltip";
+import { ColumnsType, TableComponents, RecordType} from 'rc-table/lib/interface';
 /**
  *
  * @typedef Props
@@ -8,24 +10,24 @@ import { Table as AntdTable } from "antd";
  * @prop {ColumnsType<RecordType>} columns
  * @prop {TableComponents} components
  * @prop {object[]	} dataSource
- * @prop {expandable} expandable
- * @prop {function(currentPageData)	} footer
- * @prop {(triggerNode) => HTMLElement	} getPopupContainer
- * @prop {boolean | Spin Props} loading
+ * @prop {boolean} expandable
+ * @prop {(currentPageData: Object[]) => React.ReactNode} footer
+ * @prop {(triggerNode: HTMLElement) => HTMLElement	} getPopupContainer
+ * @prop {boolean | SpinProps} loading
  * @prop {object} locale
  * @prop {object} pagination
- * @prop {function(record, index): string	} rowClassName
- * @prop {string | function(record): string	} rowKey
+ * @prop {(record: any, index: number) => string} rowClassName
+ * @prop {string | ((record: any, index: number) => string)} rowKey
  * @prop {object} rowSelection
  * @prop {object} scroll
  * @prop {boolean} showHeader
- * @prop {boolean | Tooltip props} showSorterTooltip
- * @prop {"default" | "middle" | "small"	} size
+ * @prop {boolean | TooltipProps} showSorterTooltip
+ * @prop {"default" | "middle" | "small"} size SizeType
  * @prop {[]} sortDirections
  * @prop {boolean | {offsetHeader?: number, offsetScroll?: number, getContainer?: () => HTMLElement}	} sticky
- * @prop {(currentData) => React.ReactNode} summary
- * @prop {- | auto | fixed	} tableLayout
- * @prop {(currentPageData)=> void} title
+ * @prop {(currentData:any) => React.ReactNode} summary
+ * @prop {  "auto" | "fixed"	} tableLayout
+ * @prop {(currentPageData:any)=> void} title
  * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor

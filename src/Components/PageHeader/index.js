@@ -1,27 +1,30 @@
 import React from "react";
-import { Breadcrumb, Tag,  PageHeader as AntdPageHeader } from "antd";
+import { PageHeader as AntdPageHeader } from "antd";
+import { Tag } from "antd";
+import { Breadcrumb } from "../Breadcrumb";
+import AvatarProps from "antd/lib/avatar/avatar";
 
 /**
  *
- * @typedef Props
- * @param {AvatarProps} avatar
- * @param {React.ReactNode | boolean} backIcon
- * @param {(props, originBreadcrumb)=> React.ReactNode} breadcrumbRender
- * @param {Breadcrumb} breadcrumb
- * @param {React.ReactNode} extra
- * @param {React.ReactNode} footer
- * @param {boolean} ghost
- * @param {React.ReactNode} subTitle
- * @param {Tag[] | Tag} tags
- * @param {React.ReactNode} title
- * @param {() => void} onBack
- * @param  children
+ * @typedef PageHeaderProps
+ * @prop {AvatarProps} avatar
+ * @prop {React.ReactNode | boolean} backIcon
+ * @prop {(props: PageHeaderProps, defaultDom: React.ReactNode) => React.ReactNode} breadcrumbRender
+ * @prop {Breadcrumb} breadcrumb
+ * @prop {React.ReactNode} extra
+ * @prop {React.ReactNode} footer
+ * @prop {boolean} ghost
+ * @prop {React.ReactNode} subTitle
+ * @prop {Tag[] | Tag} tags
+ * @prop {React.ReactNode} title
+ * @prop {() => void} onBack
+ * @prop  {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
  */
 
 /**
- * @param {Props} props
+ * @param {PageHeaderProps} props
  */
 
 const PageHeader = ({
