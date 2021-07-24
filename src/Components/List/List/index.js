@@ -1,6 +1,7 @@
 import React from "react";
-import { List as AntdList } from "antd";
-
+import { SpinProps, List as AntdList } from "antd";
+import { ListLocale } from "antd/lib/list/index";
+import { PaginationConfig } from "antd/es/pagination";
 
 /**
  *
@@ -11,12 +12,12 @@ import { List as AntdList } from "antd";
  * @prop {object} grid
  * @prop {React.ReactNode} header
  * @prop {"horizontal" | "vertical"} itemLayout
- * @prop {boolean | SpinProps (more)} loading
+ * @prop {boolean | SpinProps} loading
  * @prop {React.ReactNode} loadMore
- * @prop {object} locale
- * @prop {boolean | object	} pagination
+ * @prop {ListLocale | undefined} locale
+ * @prop {false | PaginationConfig | undefined} pagination
  * @prop {(item: any) => React.ReactNode	} renderItem
- * @prop {string | Function(record): string	} rowKey
+ * @prop {string | ((record:any)=>string)	} rowKey
  * @prop {"default" | "large" | "small"	} size
  * @prop {boolean} split
  * @prop {string} className

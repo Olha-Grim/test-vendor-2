@@ -1,21 +1,22 @@
 import React from "react";
 import { Transfer as AntdTransfer } from "antd";
-import {RecordType} from 'rc-table/lib/interface';
+import { RenderResult, SelectAllLabel, ListStyle } from "antd/lib/transfer";
+
 /**
- * 
+ *
  * @typedef Props
- * @prop {RecordType[]} dataSource
+ * @prop {any} dataSource
  * @prop {boolean} disabled
- * @prop {(inputValue: string, item: RecordType) => boolean} filterOption
+ * @prop {(inputValue: string, item: any) => boolean} filterOption
  * @prop {(props:any) => React.ReactNode	} footer
- * @prop {object | ((direction: "left" | "right") => object)} listStyle
+ * @prop {React.CSSProperties | ((style: ListStyle) => React.CSSProperties) | undefined} listStyle
  * @prop {{ itemUnit: string; itemsUnit: string; searchPlaceholder: string; notFoundContent: React.ReactNode; }	} locale
  * @prop {boolean} oneWay
  * @prop { string[]} operations
  * @prop {object} operationStyle
  * @prop {boolean | { pageSize: number }} pagination
- * @prop {(record:any ) => React.ReactNode} render
- * @prop {(React.ReactNode | ((info: { selectedCount: number, totalCount: number }) => React.ReactNode)[])	} selectAllLabels
+ * @prop {(record:any ) => RenderResult} render
+ * @prop {SelectAllLabel[] | undefined} selectAllLabels
  * @prop {string[]	} selectedKeys
  * @prop {boolean} showSearch
  * @prop {boolean } showSelectAll

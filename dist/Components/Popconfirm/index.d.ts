@@ -7,7 +7,7 @@ export type Props = {
     okButtonProps: ButtonProps;
     okText: string;
     okType: LegacyButtonType | undefined;
-    title: React.ReactNode | (() => React.ReactNode);
+    title: string;
     onCancel: (e?: React.MouseEvent<HTMLElement, MouseEvent> | undefined) => void;
     onConfirm: (e?: React.MouseEvent<HTMLElement, MouseEvent> | undefined) => void;
     children: JSX.Element;
@@ -22,7 +22,7 @@ export type Props = {
  * @prop {ButtonProps} okButtonProps
  * @prop {string} okText
  * @prop {LegacyButtonType | undefined} okType
- * @prop {React.ReactNode | (() => React.ReactNode)} title
+ * @prop {string} title
  * @prop {(e?: React.MouseEvent<HTMLElement>) => void} onCancel
  * @prop {(e?: React.MouseEvent<HTMLElement>) => void} onConfirm
  * @prop {JSX.Element} children

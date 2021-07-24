@@ -1,23 +1,23 @@
 import React from "react";
 import { Tooltip as AntdTooltip } from "antd";
+import { TooltipPlacement } from "antd/lib/tooltip";
 
 /**
  *
  * @typedef Props
  * @prop {React.ReactNode | (() => React.ReactNode)	} title
- * *The following APIs are shared by Tooltip, Popconfirm, Popover.
  * @prop {object} align
  * @prop {boolean} arrowPointAtCenter
  * @prop {boolean} autoAdjustOverflow
  * @prop {string} color
  * @prop {boolean} defaultVisible
  * @prop {boolean | { keepParent?: boolean }	} destroyTooltipOnHide
- * @prop {(triggerNode:HTMLElement)=>void	} getPopupContainer
+ * @prop {(triggerNode:HTMLElement)=>HTMLElement	} getPopupContainer
  * @prop {number} mouseEnterDelay
  * @prop {number} mouseLeaveDelay
  * @prop {string} overlayClassName
  * @prop {object} overlayStyle
- * @prop {string} placement
+ * @prop {TooltipPlacement | undefined} placement
  * @prop {"hover" | "focus" | "click" | "contextMenu" | Array<string>	} trigger
  * @prop {boolean} visible
  * @prop {number} zIndex

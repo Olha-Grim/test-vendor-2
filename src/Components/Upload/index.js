@@ -1,8 +1,16 @@
 import React from "react";
 import { Upload as AntdUpload } from "antd";
-import { RcFile } from "rc-upload/lib/interface";
-import { UploadFile, UploadListType, BeforeUploadValueType, ShowUploadListInterface } from "./interface";
-import  ProgressProps from "../Progress"
+import {
+  UploadFile,
+  RcFile,
+  UploadListType,
+  BeforeUploadValueType,
+  ShowUploadListInterface,
+  HttpRequestHeader,
+  UploadChangeParam,
+} from "antd/lib/upload/interface";
+import { UploadRequestOption } from "rc-upload/lib/interface";
+import ProgressProps from "../Progress";
 
 /**
  *
@@ -10,19 +18,19 @@ import  ProgressProps from "../Progress"
  * @prop {string} accept
  * @prop {string | ((file: RcFile) => string) | ((file: RcFile) => PromiseLike<string>)} action
  * @prop {(file: RcFile, FileList: RcFile[],) => BeforeUploadValueType | Promise<BeforeUploadValueType>} beforeUpload
- * @prop {function} customRequest
+ * @prop {(options: UploadRequestOption<any>)=> void} customRequest
  * @prop {object | ((file: UploadFile<any>) => object)} data
  * @prop {Array<UploadFile<any>>} defaultFileList
  * @prop {boolean} directory
  * @prop {boolean} disabled
  * @prop {UploadFile[]} fileList
- * @prop {object} headers
+ * @prop {HttpRequestHeader | undefined} headers
  * @prop {(file: UploadFile<any>, listType?: UploadListType) => React.ReactNode} iconRender
  * @prop {(file: UploadFile) => boolean	} isImageUrl
  * @prop {(originNode: React.ReactElement, file: UploadFile, fileList: object[], actions: { download: function, preview: function, remove: function }) => React.ReactNode	} itemRender
- * @prop {string} listType
+ * @prop {UploadListType | undefined} listType
  * @prop {number}  maxCount
- * @prop {string} method
+ * @prop {"POST" | "PUT" | "PATCH" | "post" | "put" | "patch" | undefined} method
  * @prop {boolean} multiple
  * @prop {string} name
  * @prop {boolean} openFileDialogOnClick
@@ -30,7 +38,7 @@ import  ProgressProps from "../Progress"
  * @prop {Omit<ProgressProps, 'percent' | 'type'>} progress
  * @prop {boolean | ShowUploadListInterface	} showUploadList
  * @prop {boolean} withCredentials
- * @prop {function} onChange
+ * @prop {(info: UploadChangeParam<UploadFile<any>>)=> void} onChange
  * @prop {(event: React.DragEvent) => void	} onDrop
  * @prop {(file: UploadFile<any>) => void} onDownload
  * @prop {(file: UploadFile<any>) => void} onPreview
@@ -49,8 +57,6 @@ import  ProgressProps from "../Progress"
 /**
  * @param {Props} props
  */
-
- 
 
 const Upload = ({
   accept,

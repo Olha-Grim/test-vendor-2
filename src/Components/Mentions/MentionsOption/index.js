@@ -3,7 +3,7 @@ import { Mentions as AntdMentions } from "antd";
 /**
  *
  * @typedef Props
- * @prop {(text: string, prefix: string) => void} value
+ * @prop {string} value
  * @prop {React.ReactNode} children
  * @return {JSX.Element}
  * @constructor

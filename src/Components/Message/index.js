@@ -11,7 +11,7 @@ import { message as AntdMessage } from "antd";
  * @prop {React.CSSProperties} style
  * @prop {function} onClick
  * @prop {function} onClose
- * @return {JSX.Element}
+ * @return {void}
  * @constructor
  */
 /**
@@ -38,6 +38,6 @@ const message = ({
     onClose,
   };
 
-  return <AntdMessage {...props} />;
+  return AntdMessage ;
 };
 export default message;

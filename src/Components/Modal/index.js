@@ -1,37 +1,39 @@
 import React from "react";
-import { Modal as AntdModal } from "antd";
+import {ButtonProps, Modal as AntdModal } from "antd";
+import { LegacyButtonType } from "antd/lib/button/button";
+
 /**
  * 
  * @typedef Props
- * @param {function} afterClose
- * @param {React.CSSProperties} bodyStyle
- * @param {ButtonProps} cancelButtonProps
- * @param {boolean} centered
- * @param {boolean} closable
- * @param {React.ReactNode} closeIcon
- * @param {boolean} confirmLoading
- * @param {boolean} destroyOnClose
- * @param {boolean} focusTriggerAfterClose
- * @param {React.ReactNode} footer
- * @param {boolean} forceRender
- * @param {HTMLElement | () => HTMLElement | Selectors | false	} getContainer
- * @param {boolean} keyboard
- * @param {boolean} mask
- * @param {boolean} maskClosable
- * @param {React.CSSProperties	} maskStyle
- * @param {(node: React.ReactNode) => React.ReactNode	} modalRender
- * @param {ButtonProps} okButtonProps
- * @param {React.ReactNode} okText
- * @param {string} okType
- * @param {React.CSSProperties} style
- * @param {React.ReactNode} title
- * @param {boolean} visible
- * @param {string | number	} width
- * @param {string} wrapClassName
- * @param {number} zIndex
- * @param {(e)=>void	} onCancel
- * @param {(e)=>void	} onOk
- * @param {JSX.Element} children
+ * @prop {() => void} afterClose
+ * @prop {React.CSSProperties} bodyStyle
+ * @prop {ButtonProps} cancelButtonProps
+ * @prop {boolean} centered
+ * @prop {boolean} closable
+ * @prop {React.ReactNode} closeIcon
+ * @prop {boolean} confirmLoading
+ * @prop {boolean} destroyOnClose
+ * @prop {boolean} focusTriggerAfterClose
+ * @prop {React.ReactNode} footer
+ * @prop {boolean} forceRender
+ * @prop {HTMLElement | (() => HTMLElement)	} getContainer
+ * @prop {boolean} keyboard
+ * @prop {boolean} mask
+ * @prop {boolean} maskClosable
+ * @prop {React.CSSProperties	} maskStyle
+ * @prop {(node: React.ReactNode) => React.ReactNode	} modalRender
+ * @prop {ButtonProps} okButtonProps
+ * @prop {React.ReactNode} okText
+ * @prop {LegacyButtonType | undefined} okType
+ * @prop {React.CSSProperties} style
+ * @prop {React.ReactNode} title
+ * @prop {boolean} visible
+ * @prop {string | number	} width
+ * @prop {string} wrapClassName
+ * @prop {number} zIndex
+ * @prop {()=>void	} onCancel
+ * @prop {()=>void	} onOk
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
  */

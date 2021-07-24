@@ -2,8 +2,8 @@ import React from "react";
 import { AutoComplete as AntdAutoComplete } from "antd";
 import { OptionData, OptionGroupData } from "rc-select/lib/interface";
 import { FilterFunc } from "rc-select/lib/interface/generator";
-import { OptionProps } from 'rc-select/lib/Option'
 import { InputProps } from 'antd/lib/input';
+import { OptionProps } from 'rc-mentions/lib/Option';
 
 
 /**

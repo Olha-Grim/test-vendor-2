@@ -1,6 +1,5 @@
 import React from "react";
-import { DatePicker as AntdDatePicker } from "antd";
-import { DateType } from "rc-picker/es/panels/TimePanel";
+import {  DatePicker as AntdDatePicker } from "antd";
 import { Moment } from "moment";
 
 /**
@@ -10,8 +9,8 @@ import { Moment } from "moment";
  * @prop {string} format
  * @prop {() => React.ReactNode} renderExtraFooter
  * @prop {Moment} value
- * @prop {(date: Moment, dateString: string)=>void} onChange
- * @prop {(date: DateType) => React.ReactNode} monthCellRender
+ * @prop {(date: Moment | null, dateString: string)=>void} onChange
+ * @prop {(date: any) => React.ReactNode} monthCellRender
  * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor

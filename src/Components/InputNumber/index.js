@@ -1,5 +1,8 @@
 import React from "react";
 import { InputNumber as AntdInputNumber } from "antd";
+import { ValueType } from "antd/lib/input-number";
+
+
 /**
  * @typedef Props
  * @prop {boolean} autoFocus
@@ -11,7 +14,7 @@ import { InputNumber as AntdInputNumber } from "antd";
  * @prop {boolean} keyboard
  * @prop {number} max
  * @prop {number} min
- * @prop {(value: string | number | null) => void} parser
+ * @prop {(displayValue: string | undefined) => number} parser
  * @prop {number} precision
  * @prop {boolean} readOnly
  * @prop {"large" | "middle" | "small"	} size
@@ -19,8 +22,8 @@ import { InputNumber as AntdInputNumber } from "antd";
  * @prop { boolean} stringMode
  * @prop {number| undefined} value
  * @prop {(value: number | string | null) =>void	} onChange
- * @prop {(value: number | string | null) =>void	} onPressEnter
- * @prop {(value: number, info: { offset: number, type: 'up' | 'down' }) => void	} onStep
+ * @prop {React.KeyboardEventHandler<HTMLInputElement>} onPressEnter
+ * @prop {(value: number, info: { offset: ValueType; type: "up" | "down"; }) => void} onStep
  * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor

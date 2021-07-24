@@ -1,34 +1,33 @@
 import React from "react";
-import { PageHeader as AntdPageHeader } from "antd";
-import { Tag } from "antd";
-import { Breadcrumb } from "../Breadcrumb";
-import AvatarProps from "antd/lib/avatar/avatar";
+import { BreadcrumbInterface } from "antd/lib/breadcrumb/Breadcrumb";
+import { TagType } from "antd";
+import { BreadcrumbProps, PageHeaderProps, PageHeader as AntdPageHeader } from "antd";
+import { AvatarProps } from "antd/lib/avatar/avatar";
 
 /**
  *
- * @typedef PageHeaderProps
+ * @typedef Prop
  * @prop {AvatarProps} avatar
  * @prop {React.ReactNode | boolean} backIcon
  * @prop {(props: PageHeaderProps, defaultDom: React.ReactNode) => React.ReactNode} breadcrumbRender
- * @prop {Breadcrumb} breadcrumb
+ * @prop {BreadcrumbProps | React.ReactElement<BreadcrumbInterface, string | React.JSXElementConstructor<any>> | undefined} breadcrumb
  * @prop {React.ReactNode} extra
  * @prop {React.ReactNode} footer
  * @prop {boolean} ghost
  * @prop {React.ReactNode} subTitle
- * @prop {Tag[] | Tag} tags
+ * @prop {React.ReactElement<TagType, string | React.JSXElementConstructor<any>>[]} tags
  * @prop {React.ReactNode} title
  * @prop {() => void} onBack
- * @prop  {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
  */
 
 /**
- * @param {PageHeaderProps} props
+ * @param {Prop} props
  */
 
 const PageHeader = ({
-  AvatarProps,
+  avatar,
   backIcon,
   breadcrumbRender,
   breadcrumb,
@@ -39,10 +38,9 @@ const PageHeader = ({
   tags,
   title,
   onBack,
-  children,
 }) => {
   const props = {
-    AvatarProps,
+    avatar,
     backIcon,
     breadcrumbRender,
     breadcrumb,
@@ -53,9 +51,8 @@ const PageHeader = ({
     tags,
     title,
     onBack,
-    children,
   };
-  return <AntdPageHeader {...props}>{children}</AntdPageHeader>;
+  return <AntdPageHeader {...props} />;
 };
 
 export default PageHeader;

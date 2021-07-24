@@ -1,7 +1,6 @@
 import React from "react";
 import { Tree as AntdTree } from "antd";
 import { EventDataNode, DataNode, Key } from "rc-tree/lib/interface";
-export { EventDataNode, DataNode } from "rc-tree/lib/interface";
 import { NodeDragEventParams } from "rc-tree/lib/contextTypes";
 
 /**

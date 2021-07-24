@@ -1,12 +1,14 @@
 import React from "react";
-import { Menu as AntdMenu } from "antd";
+import {SubMenuProps, Menu as AntdMenu } from "antd";
+import {SelectEventHandler, MenuClickEventHandler } from "rc-menu/lib/interface";
+import { Key } from "rc-tree/lib/interface";
 
 /**
  *
  * @typedef Props
  * @prop {string[]	} defaultOpenKeys
  * @prop {string[]} defaultSelectedKeys
- * @prop {React.ReactNode | (props: SubMenuProps & { isSubMenu: boolean }) => React.ReactNode	} expandIcon
+ * @prop {React.ReactNode |((props: SubMenuProps & { isSubMenu: boolean }) => React.ReactNode)	} expandIcon
  * @prop {boolean} forceSubMenuRender
  * @prop {boolean} inlineCollapsed
  * @prop {number} inlineIndent
@@ -21,11 +23,11 @@ import { Menu as AntdMenu } from "antd";
  * @prop {number} subMenuOpenDelay
  * @prop {"light" | "dark"} theme
  * @prop {"hover" | "click"} triggerSubMenuAction
- * @prop {( item:any, key:any, keyPath:any, domEvent: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement> )=>void} onClick
- * @prop {( item:any, key:any, keyPath:any,  selectedKeys:string[], domEvent: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement> )=> void	} onDeselect
- * @prop {(openKeys: string[])=> void} onOpenChange
- * @prop {(item: any, key: any, keyPath: any, selectedKeys: string[], domEvent: React.MouseEvent<HTMLElement, MouseEvent> | React.KeyboardEvent<HTMLElement>) => void} onSelect
- * @param children
+ * @prop {MenuClickEventHandler} onClick
+ * @prop {SelectEventHandler} onDeselect
+ * @prop {(openKeys: string[] | Key[]) => void} onOpenChange
+ * @prop {SelectEventHandler} onSelect
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
  */

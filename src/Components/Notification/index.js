@@ -60,6 +60,6 @@ const notification = ({
     onClose,
   };
 
-  return <AntdNotification {...props} />;
+  return AntdNotification;
 };
 export default notification;

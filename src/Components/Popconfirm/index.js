@@ -3,6 +3,7 @@ import { Popconfirm as AntdPopconfirm } from "antd";
 import {LegacyButtonType, BaseButtonProps as ButtonProps} from "antd/lib/button/button";
 
 
+
 /**
  *
  * @typedef Props
@@ -13,7 +14,7 @@ import {LegacyButtonType, BaseButtonProps as ButtonProps} from "antd/lib/button/
  * @prop {ButtonProps} okButtonProps
  * @prop {string} okText
  * @prop {LegacyButtonType | undefined} okType
- * @prop {React.ReactNode | (() => React.ReactNode)} title
+ * @prop {string} title
  * @prop {(e?: React.MouseEvent<HTMLElement>) => void} onCancel
  * @prop {(e?: React.MouseEvent<HTMLElement>) => void} onConfirm
  * @prop {JSX.Element} children

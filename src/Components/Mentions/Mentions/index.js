@@ -1,17 +1,20 @@
 import React from "react";
-import { Mentions as AntdMentions } from "antd";
+import {  Mentions as AntdMentions } from "antd";
+import { MentionsProps } from 'rc-mentions/lib/Mentions';
+import { OptionProps } from 'rc-mentions/lib/Option';
+
 /**
  * @typedef Props
  * @prop {boolean} autoFocus
  * @prop {boolean | object	} autoSize
  * @prop {string} defaultValue
- * @prop {false | (input: string, option: OptionProps) => boolean	} filterOption
+ * @prop {false | ((input: string, { value }: OptionProps) => boolean) | undefined} filterOption
  * @prop {() => HTMLElement} getPopupContainer
  * @prop { React.ReactNode} notFoundContent
  * @prop {"top" | "bottom"	} placement
  * @prop {string | string[]} prefix
  * @prop {string} split
- * @prop {(text: string, props: MentionsProps) => void	} validateSearch
+ * @prop {(text: string, props: MentionsProps) => boolean	} validateSearch
  * @prop {string} value
  * @prop {() => void} onBlur
  * @prop {(text: string) => void} onChange

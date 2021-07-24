@@ -1,10 +1,14 @@
 import React from "react";
 import { Table as AntdTable } from "antd";
 import { Breakpoint } from "antd/lib/_util/responsiveObserve";
-import { FilterDropdownProps,  } from "antd/lib/table/interface";
-
-import { TooltipProps } from "rc-tooltip/lib/Tooltip";
-import { ColumnProps } from "antd/lib/table/Column";
+import {
+  FilterDropdownProps,
+  CompareFn,
+  SortOrder,
+  ColumnFilterItem,
+} from "antd/lib/table/interface";
+import { FixedType } from "rc-table/lib/interface";
+import { TooltipPropsWithOverlay } from "antd/lib/tooltip";
 
 /**
  *
@@ -19,27 +23,26 @@ import { ColumnProps } from "antd/lib/table/Column";
  * @prop {boolean | {showTitle?: boolean }	} ellipsis
  * @prop {React.ReactNode | ((props: FilterDropdownProps) => React.ReactNode)} filterDropdown
  * @prop {boolean} filterDropdownVisible
- * @prop {boolean} filtered
+ * @prop {true} filtered
  * @prop {string[]	} filteredValue
  * @prop {React.ReactNode | ((filtered: boolean) => React.ReactNode	)} filterIcon
  * @prop {boolean} filterMultiple
- * @prop {Record<string, string[]>} filters
- * @prop {boolean | string	} fixed
+ * @prop {ColumnFilterItem[]} filters
+ * @prop {FixedType | undefined} fixed
  * @prop {string} key
  * @prop {(text:string, record:any, index:any)=>{}	} render
  * @prop {Breakpoint[]} responsive
  * @prop {(record:any, prevRecord:any) => boolean} shouldCellUpdate
- * @prop {boolean | TooltipProps} showSorterTooltip
+ * @prop {TooltipPropsWithOverlay} showSorterTooltip
  * @prop {[]} sortDirections
- * @prop {function | boolean	} sorter
- * @prop {boolean | string	} sortOrder
+ * @prop {{ compare?: CompareFn<any> | undefined; multiple?: number | undefined; }} sorter
+ * @prop {SortOrder | undefined} sortOrder
  * @prop {React.ReactNode | (( sortOrder:any, sortColumn:any, filters:any ) => React.ReactNode)	} title
  * @prop {string | number	} width
- * @prop {(record: any, rowIndex:any)=>void	} onCell
- * @prop {(value: string | number | boolean, record: RecordType) => boolean} onFilter
+ * @prop {(record: any, rowIndex:any)=> React.HTMLAttributes<HTMLElement>	} onCell
+ * @prop {(value: string | number | boolean, record: any) => boolean} onFilter
  * @prop {(visible:any)=> {}	} onFilterDropdownVisibleChange
- * @prop {(column:any)=>void	}  onHeaderCell
- * @prop {JSX.IntrinsicAttributes & ColumnProps<any>} children
+ * @prop {(column:any)=>React.HTMLAttributes<HTMLElement>	}  onHeaderCell
  * @return {JSX.Element}
  * @constructor
  */
@@ -78,7 +81,6 @@ const TableColumn = ({
   onFilter,
   onFilterDropdownVisibleChange,
   onHeaderCell,
-  children,
 }) => {
   const props = {
     align,
@@ -111,9 +113,8 @@ const TableColumn = ({
     onFilter,
     onFilterDropdownVisibleChange,
     onHeaderCell,
-    children,
   };
 
-  return <AntdTable.Column {...props}>{children}</AntdTable.Column>;
+  return <AntdTable.Column {...props} />;
 };
 export default TableColumn;

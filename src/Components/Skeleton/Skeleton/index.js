@@ -1,8 +1,8 @@
 import React from "react";
 import { Skeleton as AntdSkeleton } from "antd";
-import SkeletonAvatarProps from "../SkeletonAvatarProps";
-import SkeletonParagraphProps from "../SkeletonParagraphProps";
-import SkeletonTitleProps from "../SkeletonTitleProps";
+import { SkeletonAvatarProps} from "antd/lib/skeleton/Skeleton";
+import { SkeletonTitleProps} from "antd/lib/skeleton/Title";
+import { SkeletonParagraphProps} from "antd/lib/skeleton/Paragraph";
 
 /**
  *

@@ -1,10 +1,11 @@
 import React from "react";
 import { Row as AntdRow } from "antd";
+import { Gutter } from "antd/lib/grid/row";
 /**
  *
  * @typedef Props
- * @prop {number | object | array} align
- * @prop {number | object | []} gutter
+ * @prop {"middle" | "top" | "bottom" | "stretch" | undefined} align
+ * @prop {Gutter | [Gutter, Gutter] | undefined} gutter
  * @prop {"start" | "end" | "center" |"space-around" | "space-between"} justify
  * @prop {boolean} wrap
  * @prop {string} className

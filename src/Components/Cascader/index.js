@@ -1,5 +1,10 @@
 import React from "react";
 import { Cascader as AntdCascader } from "antd";
+import {
+  CascaderValueType,
+  FilledFieldNamesType,
+  CascaderOptionType,
+} from "antd/lib/cascader";
 
 /**
  *
@@ -15,7 +20,7 @@ import { Cascader as AntdCascader } from "antd";
  * @prop {React.ReactNode} expandIcon
  * @prop {'click' | 'hover'} expandTrigger
  * @prop {object} fieldNames
- * @prop {(triggerNode: HTMLElement)=> void} getPopupContainer
+ * @prop {(triggerNode: HTMLElement)=> HTMLElement} getPopupContainer
  * @prop {(selectedOptions: any) => void} loadData
  * @prop {string} notFoundContent
  * @prop {Option[]}  options
@@ -30,21 +35,17 @@ import { Cascader as AntdCascader } from "antd";
  * @prop {string[] | number[]	} value
  * @prop {(value:any, selectedOptions: any) => void	} onChange
  * @prop {(value:any) => void} onPopupVisibleChange
- * @prop {boolean | Object}
- * @prop {(inputValue: string, path: CascaderValueType[], names: FilledFieldNamesType) => boolean;	}  filter
+ * @prop {(inputValue: string, path: CascaderValueType[], names: FilledFieldNamesType) => boolean	}  filter
  * @prop {number | false}  limit
  * @prop {boolean} matchInputWidth
  * @prop {( a: CascaderOptionType[], b: CascaderOptionType[], inputValue: string, names: FilledFieldNamesType,) => number} render
- * @prop {function(a, b, inputValue)} sort
+ * @prop {(a:any, b:any, inputValue:any)=>void} sort
  * @return {JSX.Element}
  * @constructor
  */
 /**
  * @param {Props} props
  */
-
-
-
 
 const Cascader = ({
   allowClear,
