@@ -1,19 +1,26 @@
 export default Row;
-export type Props = any;
+export type Props = {
+    align: number | object | any;
+    gutter: number | object | [];
+    justify: "start" | "end" | "center" | "space-around" | "space-between";
+    wrap: boolean;
+    className: string;
+    children: JSX.Element;
+};
 /**
  *
  * @typedef Props
- * @param {top | middle | bottom} align
- * @param {number | object | array} gutter
- * @param {start | end | center | space-around | space-between} justify
- * @param {boolean} wrap
- * @param {string} className
- * @param children
+ * @prop {number | object | array} align
+ * @prop {number | object | []} gutter
+ * @prop {"start" | "end" | "center" |"space-around" | "space-between"} justify
+ * @prop {boolean} wrap
+ * @prop {string} className
+ * @prop {JSX.Element}children
  * @return {JSX.Element}
  * @constructor
  */
 /**
  * @param {Props} props
  */
-declare function Row({ children, align, gutter, justify, wrap, className }: any): JSX.Element;
+declare function Row({ children, align, gutter, justify, wrap, className }: Props): JSX.Element;
 //# sourceMappingURL=index.d.ts.map

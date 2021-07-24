@@ -1,9 +1,9 @@
 export default Form;
 export type Props = {
     colon: boolean;
-    component: any | false;
-    fields: any[];
-    form: any;
+    component: React.ComponentType | false;
+    fields: FieldData[];
+    form: FormInstance;
     initialValues: object;
     labelAlign: "left" | "right";
     labelCol: object;
@@ -13,23 +13,23 @@ export type Props = {
     requiredMark: boolean | 'optional';
     scrollToFirstError: boolean | Options;
     size: "small" | "middle" | "large";
-    validateMessages: any;
+    validateMessages: ValidateMessages;
     validateTrigger: string | string[];
     wrapperCol: object;
-    onFieldsChange: (arg0: any, arg1: any) => any;
-    onFinish: (arg0: any) => any;
-    onFinishFailed: (arg0: {
-        values;
-        errorFields;
-        outOfDate;
-    }) => any;
-    onValuesChange: (arg0: any, arg1: any) => any;
+    onFieldsChange: (changedFields: any, allFields: any) => void;
+    onFinish: (values: any) => void;
+    onFinishFailed: ({ values, errorFields, outOfDate }: {
+        values: any;
+        errorFields: any;
+        outOfDate: any;
+    }) => void;
+    onValuesChange: (changedValues: any, allValues: any) => void;
     children: JSX.Element;
 };
 /**
  * @typedef Props
  * @prop {boolean} colon
- * @prop {ComponentType | false} component
+ * @prop {React.ComponentType | false} component
  * @prop {FieldData[]} fields
  * @prop {FormInstance} form
  * @prop {object} initialValues
@@ -44,10 +44,10 @@ export type Props = {
  * @prop {ValidateMessages} validateMessages
  * @prop {string | string[]} validateTrigger
  * @prop {object} wrapperCol
- * @prop {function(changedFields, allFields)} onFieldsChange
- * @prop {function(values)	} onFinish
- * @prop {function({ values, errorFields, outOfDate })	} onFinishFailed
- * @prop {function(changedValues, allValues)} onValuesChange
+ * @prop {(changedFields, allFields)=>void} onFieldsChange
+ * @prop {(values:any )=>void	} onFinish
+ * @prop {({ values, errorFields, outOfDate })=>void	} onFinishFailed
+ * @prop {(changedValues, allValues)=>void} onValuesChange
  * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
@@ -56,5 +56,9 @@ export type Props = {
  * @param {Props} props
  */
 declare function Form({ colon, children, component, fields, form, initialValues, labelAlign, labelCol, layout, name, preserve, requiredMark, scrollToFirstError, size, validateMessages, validateTrigger, wrapperCol, onFieldsChange, onFinishFailed, onValuesChange, }: Props): JSX.Element;
+import React from "react";
+import { FieldData } from "rc-field-form/lib/interface";
+import { FormInstance } from "rc-field-form/lib/interface";
 import { Options } from "scroll-into-view-if-needed";
+import { ValidateMessages } from "rc-field-form/lib/interface";
 //# sourceMappingURL=index.d.ts.map

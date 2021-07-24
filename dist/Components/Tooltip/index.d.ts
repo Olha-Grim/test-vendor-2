@@ -12,7 +12,7 @@ export type Props = {
     destroyTooltipOnHide: boolean | {
         keepParent?: boolean;
     };
-    getPopupContainer: (triggerNode: any) => void;
+    getPopupContainer: (triggerNode: HTMLElement) => void;
     mouseEnterDelay: number;
     mouseLeaveDelay: number;
     overlayClassName: string;
@@ -35,7 +35,7 @@ export type Props = {
  * @prop {string} color
  * @prop {boolean} defaultVisible
  * @prop {boolean | { keepParent?: boolean }	} destroyTooltipOnHide
- * @prop {(triggerNode:any)=>void	} getPopupContainer
+ * @prop {(triggerNode:HTMLElement)=>void	} getPopupContainer
  * @prop {number} mouseEnterDelay
  * @prop {number} mouseLeaveDelay
  * @prop {string} overlayClassName

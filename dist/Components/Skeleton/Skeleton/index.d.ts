@@ -1,11 +1,11 @@
 export default Skeleton;
 export type SkeletonProps = {
     active: boolean;
-    avatar: boolean | any;
+    avatar: boolean | (({ active, shape, size, children }: import("../SkeletonAvatarProps").SkeletonAvatarProps) => JSX.Element);
     loading: boolean;
-    paragraph: boolean | any;
+    paragraph: boolean | (({ rows, width, children }: import("../SkeletonParagraphProps").SkeletonParagraphProps) => JSX.Element);
     round: boolean;
-    title: boolean | any;
+    title: boolean | (({ width, children }: import("../SkeletonTitleProps").Props) => JSX.Element);
     children: JSX.Element;
 };
 /**

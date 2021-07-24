@@ -1,4 +1,4 @@
-export default Form;
+export default FormList;
 export type Props = {
     children: (fields: FormListFieldData[], operation: FormListOperation, meta: {
         errors: React.ReactNode[];
@@ -30,9 +30,9 @@ export type Props = {
 /**
  * @param {Props} props
  */
-declare function Form({ children, initialValue, name, rules }: Props): JSX.Element;
-import { FormListFieldData } from "./Interface";
-import { FormListOperation } from "./Interface";
+declare function FormList({ children, initialValue, name, rules }: Props): JSX.Element;
+import { FormListFieldData } from "antd/lib/form/FormList";
+import { FormListOperation } from "antd/lib/form/FormList";
 import React from "react";
 import { NamePath } from "rc-field-form/lib/interface";
 import { ValidatorRule } from "rc-field-form/lib/interface";

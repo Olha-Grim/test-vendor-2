@@ -18,7 +18,7 @@ export type Props = {
     dropdownStyle: React.CSSProperties;
     filterOption: boolean | ((inputValue: any, option: any) => void);
     filterSort: (optionA: new (text?: string | undefined, value?: string | undefined, defaultSelected?: boolean | undefined, selected?: boolean | undefined) => HTMLOptionElement, optionB: new (text?: string | undefined, value?: string | undefined, defaultSelected?: boolean | undefined, selected?: boolean | undefined) => HTMLOptionElement) => number;
-    getPopupContainer: (triggerNode: any) => void;
+    getPopupContainer: (triggerNode: HTMLElement) => void;
     labelInValue: boolean;
     listHeight: number;
     loading: boolean;
@@ -55,7 +55,7 @@ export type Props = {
     /**
      * =>void	} onDeselect
      */
-    "": (string | number | any);
+    "": (string | number | LabeledValue);
     onDropdownVisibleChange: (open: any) => void;
     onFocus: Function;
     onInputKeyDown: Function;
@@ -83,7 +83,7 @@ export type Props = {
  * @prop {React.CSSProperties} dropdownStyle
  * @prop {boolean | (inputValue, option)=>void	} filterOption
  * @prop {(optionA: Option, optionB: Option) => number	} filterSort
- * @prop {(triggerNode)=>void	} getPopupContainer
+ * @prop {(triggerNode:HTMLElement)=>void	} getPopupContainer
  * @prop {boolean} labelInValue
  * @prop {number} listHeight
  * @prop {boolean} loading
@@ -119,7 +119,7 @@ export type Props = {
  * @prop {function} onMouseLeave
  * @prop {function} onPopupScroll
  * @prop {(value: string)=>void	} onSearch
- * @prop {(string | number | LabeledValue, option: Option) =>void	} onSelect
+ * @prop {(string | number | LabeledValue | option: Option) =>void	} onSelect
  * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
@@ -129,4 +129,5 @@ export type Props = {
  */
 declare function Select({ allowClear, autoClearSearchValue, autoFocus, bordered, clearIcon, defaultActiveFirstOption, defaultOpen, defaultValue, disabled, dropdownClassName, downMatchSelectWidth, dropdownRender, dropdownStyle, filterOption, filterSort, getPopupContainer, labelInValue, listHeight, loading, maxTagCount, maxTagPlaceholder, maxTagTextLength, menuItemSelectedIcon, mode, notFoundContent, open, optionFilterProp, optionLabelProp, options, placeholder, removeIcon, searchValue, showArrow, showSearch, tagRender, suffixIcon, tokenSeparators, value, virtual, onBlur, onChange, onClear, onDeselect, onDropdownVisibleChange, onFocus, onInputKeyDown, onMouseEnter, onMouseLeave, onPopupScroll, onSearch, onSelect, children, }: Props): JSX.Element;
 import React from "react";
+import { LabeledValue } from "antd/es/select";
 //# sourceMappingURL=index.d.ts.map

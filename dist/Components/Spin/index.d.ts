@@ -1,5 +1,5 @@
 export default Spin;
-export type Props = {
+export type SpinProps = {
     /**
      * (milliseconds)
      */
@@ -12,7 +12,7 @@ export type Props = {
 };
 /**
  *
- * @typedef Props
+ * @typedef SpinProps
  * @prop {number} delay (milliseconds)
  * @prop {React.ReactElement<HTMLElement> | undefined} indicator
  * @prop {"small" | "default" | "large" | undefined} size
@@ -23,8 +23,8 @@ export type Props = {
  * @constructor
  */
 /**
- * @param {Props} props
+ * @param {SpinProps} props
  */
-declare function Spin({ delay, indicator, size, spinning, tip, wrapperClassName }: Props): JSX.Element;
+declare function Spin({ delay, indicator, size, spinning, tip, wrapperClassName }: SpinProps): JSX.Element;
 import React from "react";
 //# sourceMappingURL=index.d.ts.map

@@ -1,6 +1,9 @@
 import React from "react";
-import {  Slider as AntdSlider } from "antd";
-import {RangeProps} from 'rc-slider/lib/Range'
+import { Slider as AntdSlider } from "antd";
+import { RangeProps } from "rc-slider/lib/Range";
+import { SliderMarks } from "antd/lib/slider";
+import { TooltipPlacement } from "antd/lib/tooltip";
+
 /**
  *
  * @typedef Props
@@ -8,16 +11,16 @@ import {RangeProps} from 'rc-slider/lib/Range'
  * @prop {boolean} dots
  * @prop {(triggerNode: HTMLElement) => HTMLElement} getTooltipPopupContainer
  * @prop {boolean} included
- * @prop {object} marks
+ * @prop {SliderMarks} marks
  * @prop {number} max
  * @prop {number} min
  * @prop {true |  RangeProps} range
  * @prop {boolean} reverse
  * @prop {number | null} step
- * @prop {null | ((value?: [number, number] | undefined) => React.ReactNode)} tipFormatter
- * @prop {string} tooltipPlacement
+ * @prop {((value?: number | undefined) => React.ReactNode) | null | undefined} tipFormatter
+ * @prop {TooltipPlacement | undefined} tooltipPlacement
  * @prop {boolean} tooltipVisible
- * @prop {number | [number, number] | undefined} value
+ * @prop {[number, number] | undefined} value
  * @prop {boolean} vertical
  * @prop {(value: [number, number] | undefined) => void} onAfterChange
  * @prop {(value: [number, number] | undefined) => void} onChange

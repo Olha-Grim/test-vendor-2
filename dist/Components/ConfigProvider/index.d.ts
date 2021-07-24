@@ -11,7 +11,7 @@ export type Props = {
         validateMessages?: any;
         requiredMark?: boolean | any;
     };
-    getPopupContainer: (triggerNode: any) => void;
+    getPopupContainer: (triggerNode: HTMLElement) => void;
     getTargetContainer: () => HTMLElement;
     iconPrefixCls: string;
     input: {
@@ -37,7 +37,7 @@ export type Props = {
  * @prop {"ltr" | "rtl"} direction
  * @prop {boolean | number	} dropdownMatchSelectWidth
  * @prop {{ validateMessages?: ValidateMessages, requiredMark?: boolean | optional } } form
- * @prop {(triggerNode:any )=>void	} getPopupContainer
+ * @prop {(triggerNode: HTMLElement )=>void	} getPopupContainer
  * @prop {() => HTMLElement	} getTargetContainer
  * @prop {string} iconPrefixCls
  * @prop {{ autoComplete?: string }} input

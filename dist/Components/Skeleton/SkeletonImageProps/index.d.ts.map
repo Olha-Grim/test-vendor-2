@@ -1,1 +1,1 @@
-{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../../src/Components/Skeleton/SkeletonImageProps/index.js"],"names":[],"mappings":";;cAKU,WAAW;;AAHrB;;;;;;GAMG;AACH;;GAEG;AACH,6CAFW,KAAK,eAQf"}
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../../src/Components/Skeleton/SkeletonImageProps/index.js"],"names":[],"mappings":";;cAKU,IAAI,mBAAmB,GAAG,kBAAkB;;AAHtD;;;;;;GAMG;AACH;;GAEG;AACH,6CAFW,kBAAkB,eAQ5B"}

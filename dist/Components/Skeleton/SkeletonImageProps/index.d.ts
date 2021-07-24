@@ -1,16 +1,16 @@
 export default SkeletonImage;
-export type Props = {
-    children: JSX.Element;
+export type SkeletonImageProps = {
+    children: JSX.IntrinsicAttributes & SkeletonImageProps;
 };
 /**
  *
- * @typedef Props
- * @prop {JSX.Element} children
+ * @typedef SkeletonImageProps
+ * @prop {JSX.IntrinsicAttributes & SkeletonImageProps} children
  * @return {JSX.Element}
  * @constructor
  */
 /**
- * @param {Props} props
+ * @param {SkeletonImageProps} props
  */
-declare function SkeletonImage({ children }: Props): JSX.Element;
+declare function SkeletonImage({ children }: SkeletonImageProps): JSX.Element;
 //# sourceMappingURL=index.d.ts.map

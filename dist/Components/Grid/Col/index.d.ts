@@ -1,25 +1,38 @@
 export default Col;
-export type Props = any;
+export type Props = {
+    flex: string | number;
+    offset: number;
+    order: number;
+    pull: number;
+    push: number;
+    span: number;
+    xs: number | object;
+    sm: number | object;
+    lg: number | object;
+    xl: number | object;
+    xxl: number | object;
+    children: JSX.Element;
+};
 /**
  *
  * @typedef Props
- * @param {string | number} flex
- * @param {number} offset
- * @param {number} order
- * @param {number} pull
- * @param {number} push
- * @param {number} span
- * @param {number | object} xs
- * @param {number | object} sm
- * @param {number | object} lg
- * @param {number | object} xl
- * @param {number | object} xxl
- * @param children
+ * @prop {string | number} flex
+ * @prop {number} offset
+ * @prop {number} order
+ * @prop {number} pull
+ * @prop {number} push
+ * @prop {number} span
+ * @prop {number | object} xs
+ * @prop {number | object} sm
+ * @prop {number | object} lg
+ * @prop {number | object} xl
+ * @prop {number | object} xxl
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
  */
 /**
  * @param {Props} props
  */
-declare function Col({ children, flex, offset, order, pull, push, span, xs, sm, lg, xl, xxl, }: any): JSX.Element;
+declare function Col({ children, flex, offset, order, pull, push, span, xs, sm, lg, xl, xxl, }: Props): JSX.Element;
 //# sourceMappingURL=index.d.ts.map

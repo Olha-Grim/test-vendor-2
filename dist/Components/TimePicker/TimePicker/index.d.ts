@@ -5,11 +5,11 @@ export type Props = {
     className: string;
     clearIcon: React.ReactNode;
     clearText: string;
-    defaultValue: typeof moment;
+    defaultValue: Moment;
     disabled: boolean;
-    disabledHours: () => void;
-    disabledMinutes: (selectedHour: any) => void;
-    disabledSeconds: (selectedHour: any, selectedMinute: any) => void;
+    disabledHours: () => number[];
+    disabledMinutes: (selectedHour: any) => number[];
+    disabledSeconds: (selectedHour: any, selectedMinute: any) => number[];
     format: string;
     allowClear: boolean;
     getPopupContainer: (trigger: any) => HTMLElement;
@@ -26,10 +26,10 @@ export type Props = {
     showNow: boolean;
     suffixIcon: React.ReactNode;
     use12Hours: boolean;
-    value: typeof moment;
-    onChange: (time: typeof moment, timeString: string) => void;
+    value: Moment;
+    onChange: (time: Moment | null, timeString: string) => void;
     onOpenChange: (open: boolean) => void;
-    onSelect: (time: typeof moment) => void;
+    onSelect: (time: Moment | null) => void;
     children: JSX.Element;
 };
 /**
@@ -39,11 +39,11 @@ export type Props = {
  * @prop {string} className
  * @prop {React.ReactNode} clearIcon
  * @prop {string} clearText
- * @prop {typeof moment} defaultValue
+ * @prop {Moment} defaultValue
  * @prop {boolean} disabled
- * @prop {()=>void} disabledHours
- * @prop {(selectedHour:any)=>void	} disabledMinutes
- * @prop {(selectedHour:any, selectedMinute:any)=>void} disabledSeconds
+ * @prop {()=>number[]} disabledHours
+ * @prop {(selectedHour:any)=>number[]	} disabledMinutes
+ * @prop {(selectedHour:any, selectedMinute:any)=>number[]} disabledSeconds
  * @prop {string} format
  * @prop {boolean} allowClear
  * @prop {(trigger:any)=> HTMLElement	} getPopupContainer
@@ -60,10 +60,10 @@ export type Props = {
  * @prop {boolean} showNow
  * @prop {React.ReactNode} suffixIcon
  * @prop {boolean} use12Hours
- * @prop {typeof moment} value
- * @prop {(time: typeof moment, timeString: string)=> void	} onChange
+ * @prop {Moment} value
+ * @prop {(time: Moment | null, timeString: string)=> void	} onChange
  * @prop {(open: boolean) => void	} onOpenChange
- * @prop {(time: typeof moment)=> void	} onSelect
+ * @prop {(time: Moment | null)=> void	} onSelect
  * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
@@ -73,5 +73,5 @@ export type Props = {
  */
 declare function TimePicker({ autoFocus, bordered, className, clearIcon, clearText, defaultValue, disabled, disabledHours, disabledMinutes, disabledSeconds, format, allowClear, getPopupContainer, hideDisabledOptions, hourStep, inputReadOnly, minuteStep, open, placeholder, popupClassName, popupStyle, renderExtraFooter, secondStep, showNow, suffixIcon, use12Hours, value, onChange, onOpenChange, onSelect, children, }: Props): JSX.Element;
 import React from "react";
-import moment from "moment";
+import { Moment } from "moment";
 //# sourceMappingURL=index.d.ts.map

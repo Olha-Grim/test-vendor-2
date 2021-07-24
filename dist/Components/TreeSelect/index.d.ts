@@ -10,7 +10,7 @@ export type Props = {
     dropdownRender: (menu: React.ReactElement<any, string | React.JSXElementConstructor<any>>) => React.ReactElement<any, string | React.JSXElementConstructor<any>>;
     dropdownStyle: React.CSSProperties;
     filterTreeNode: boolean | FilterFunc<LegacyDataNode> | undefined;
-    getPopupContainer: (triggerNode: any) => HTMLElement;
+    getPopupContainer: (triggerNode: HTMLElement) => HTMLElement;
     labelInValue: boolean;
     listHeight: number;
     loadData: (node: any) => Promise<unknown>;
@@ -65,7 +65,7 @@ export type Props = {
  * @prop {((menu: React.ReactElement<any, string | React.JSXElementConstructor<any>>) => React.ReactElement<any, string | React.JSXElementConstructor<any>>)} dropdownRender
  * @prop {React.CSSProperties} dropdownStyle
  * @prop {boolean | FilterFunc<LegacyDataNode> | undefined} filterTreeNode
- * @prop {(triggerNode:any)=> HTMLElement} getPopupContainer
+ * @prop {(triggerNode:HTMLElement)=> HTMLElement} getPopupContainer
  * @prop {boolean} labelInValue
  * @prop {number} listHeight
  * @prop {(node:any)=> Promise<unknown>	} loadData

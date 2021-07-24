@@ -1,47 +1,51 @@
 import React from "react";
 import { Table as AntdTable } from "antd";
+import { Breakpoint } from "antd/lib/_util/responsiveObserve";
+import { FilterDropdownProps,  } from "antd/lib/table/interface";
+
+import { TooltipProps } from "rc-tooltip/lib/Tooltip";
+import { ColumnProps } from "antd/lib/table/Column";
 
 /**
  *
  * @typedef Props
- * @param {"left" | "right" | "center"} align
- * @param {string}  className
- * @param {number}  colSpan
- * @param {string | string[]		}  dataIndex
- * @param {string[]	}  defaultFilteredValue
- * @param {"ascend" | "descend"	} defaultSortOrder
- * @param {boolean} editable
- * @param {boolean | {showTitle?: boolean }	} ellipsis
- * @param {React.ReactNode | ((props: FilterDropdownProps) => React.ReactNode)} filterDropdown
- * @param {boolean} filterDropdownVisible
- * @param {boolean} filtered
- * @param {string[]	} filteredValue
- * @param {React.ReactNode | ((filtered: boolean) => React.ReactNode	)} filterIcon
- * @param {boolean} filterMultiple
- * @param {Record<string, string[]>} filters
- * @param {boolean | string	} fixed
- * @param {string} key
- * @param {function(text, record, index) {}	} render
- * @param {Breakpoint[]} responsive
- * @param {(record, prevRecord) => boolean} shouldCellUpdate
- * @param {boolean | Tooltip props} showSorterTooltip
- * @param {Array} sortDirections
- * @param {function | boolean	} sorter
- * @param {boolean | string	} sortOrder
- * @param {React.ReactNode | ({ sortOrder, sortColumn, filters }) => React.ReactNode	} title
- * @param {string | number	} width
- * @param {function(record, rowIndex)	} onCell
- * @param {(value: string | number | boolean, record: RecordType) => boolean} onFilter
- * @param {function(visible) {}	} onFilterDropdownVisibleChange
- * @param {(column)=>void	}  onHeaderCell
- * @param children
+ * @prop {"left" | "right" | "center"} align
+ * @prop {string}  className
+ * @prop {number}  colSpan
+ * @prop {string | string[]		}  dataIndex
+ * @prop {string[]	}  defaultFilteredValue
+ * @prop {"ascend" | "descend"	} defaultSortOrder
+ * @prop {boolean} editable
+ * @prop {boolean | {showTitle?: boolean }	} ellipsis
+ * @prop {React.ReactNode | ((props: FilterDropdownProps) => React.ReactNode)} filterDropdown
+ * @prop {boolean} filterDropdownVisible
+ * @prop {boolean} filtered
+ * @prop {string[]	} filteredValue
+ * @prop {React.ReactNode | ((filtered: boolean) => React.ReactNode	)} filterIcon
+ * @prop {boolean} filterMultiple
+ * @prop {Record<string, string[]>} filters
+ * @prop {boolean | string	} fixed
+ * @prop {string} key
+ * @prop {(text:string, record:any, index:any)=>{}	} render
+ * @prop {Breakpoint[]} responsive
+ * @prop {(record:any, prevRecord:any) => boolean} shouldCellUpdate
+ * @prop {boolean | TooltipProps} showSorterTooltip
+ * @prop {[]} sortDirections
+ * @prop {function | boolean	} sorter
+ * @prop {boolean | string	} sortOrder
+ * @prop {React.ReactNode | (( sortOrder:any, sortColumn:any, filters:any ) => React.ReactNode)	} title
+ * @prop {string | number	} width
+ * @prop {(record: any, rowIndex:any)=>void	} onCell
+ * @prop {(value: string | number | boolean, record: RecordType) => boolean} onFilter
+ * @prop {(visible:any)=> {}	} onFilterDropdownVisibleChange
+ * @prop {(column:any)=>void	}  onHeaderCell
+ * @prop {JSX.IntrinsicAttributes & ColumnProps<any>} children
  * @return {JSX.Element}
  * @constructor
  */
 /**
  * @param {Props} props
  */
-
 
 const TableColumn = ({
   align,

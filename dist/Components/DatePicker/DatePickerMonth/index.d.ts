@@ -1,23 +1,23 @@
 export default MonthPicker;
 export type Props = {
-    defaultPickerValue: typeof import("moment");
-    defaultValue: typeof import("moment");
+    defaultPickerValue: Moment;
+    defaultValue: Moment;
     format: string;
     renderExtraFooter: () => React.ReactNode;
-    value: typeof import("moment");
-    onChange: (arg0: any, arg1: typeof import("moment"), arg2: any, arg3: string) => any;
-    monthCellRender: (arg0: any, arg1: any) => React.ReactNode;
+    value: Moment;
+    onChange: (date: Moment, dateString: string) => void;
+    monthCellRender: (date: any) => React.ReactNode;
     children: JSX.Element;
 };
 /**
  * @typedef Props
- * @prop {moment} defaultPickerValue
- * @prop {moment} defaultValue
+ * @prop {Moment} defaultPickerValue
+ * @prop {Moment} defaultValue
  * @prop {string} format
  * @prop {() => React.ReactNode} renderExtraFooter
- * @prop {moment} value
- * @prop {function(date: moment, dateString: string)} onChange
- * @prop {function(date, locale): React.ReactNode} monthCellRender
+ * @prop {Moment} value
+ * @prop {(date: Moment, dateString: string)=>void} onChange
+ * @prop {(date: DateType) => React.ReactNode} monthCellRender
  * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
@@ -26,5 +26,6 @@ export type Props = {
  * @param {Props} props
  */
 declare function MonthPicker({ defaultPickerValue, defaultValue, format, renderExtraFooter, monthCellRender, value, onChange, children, }: Props): JSX.Element;
+import { Moment } from "moment";
 import React from "react";
 //# sourceMappingURL=index.d.ts.map

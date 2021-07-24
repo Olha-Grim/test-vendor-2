@@ -9,7 +9,7 @@ export type Props = {
     expandIcon: (panelProps: any) => React.ReactNode;
     expandIconPosition: "left" | "right";
     ghost: boolean;
-    onChange: Function;
+    onChange: (key: string | string[]) => void;
     children: JSX.Element;
 };
 /**
@@ -20,10 +20,10 @@ export type Props = {
  * @prop {'header' | 'disabled'} collapsible
  * @prop {Array<string | number> | string | number} defaultActiveKey
  * @prop {boolean} destroyInactivePanel
- * @prop {(panelProps) => React.ReactNode	} expandIcon
+ * @prop {(panelProps:any) => React.ReactNode	} expandIcon
  * @prop {"left" | "right"	} expandIconPosition
  * @prop {boolean} ghost
- * @prop {function} onChange
+ * @prop {(key: string | string[])=>void} onChange
  * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
@@ -31,23 +31,6 @@ export type Props = {
 /**
  * @param {Props} props
  */
-/**
- * Interface for classes that represent a color.
- *
- * @interface
- */
-declare function Collapse({ accordion, activeKey, bordered, collapsible, defaultActiveKey, destroyInactivePanel, expandIcon, expandIconPosition, ghost, onChange, children, }: {
-    accordion: any;
-    activeKey: any;
-    bordered: any;
-    collapsible: any;
-    defaultActiveKey: any;
-    destroyInactivePanel: any;
-    expandIcon: any;
-    expandIconPosition: any;
-    ghost: any;
-    onChange: any;
-    children: any;
-}): JSX.Element;
+declare function Collapse({ accordion, activeKey, bordered, collapsible, defaultActiveKey, destroyInactivePanel, expandIcon, expandIconPosition, ghost, onChange, children, }: Props): JSX.Element;
 import React from "react";
 //# sourceMappingURL=index.d.ts.map

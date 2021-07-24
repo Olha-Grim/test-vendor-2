@@ -4,7 +4,7 @@ export type Props = {
     fallback: string;
     height: string | number;
     placeholder: React.ReactNode;
-    preview: boolean | any;
+    preview: boolean | ImagePreviewType;
     src: string;
     width: string | number;
     onError: (event: React.SyntheticEvent<HTMLImageElement, Event>) => void;
@@ -16,7 +16,7 @@ export type Props = {
  * @prop {string} fallback
  * @prop {string | number	} height
  * @prop {React.ReactNode} placeholder
- * @prop {boolean | previewType} preview
+ * @prop {boolean | ImagePreviewType} preview
  * @prop {string} src
  * @prop {string | number	} width
  * @prop {(event: React.SyntheticEvent<HTMLImageElement, Event>) => void	} onError
@@ -28,4 +28,5 @@ export type Props = {
  */
 declare function Image({ alt, fallback, height, placeholder, preview, src, width, onError, }: Props): JSX.Element;
 import React from "react";
+import { ImagePreviewType } from "rc-image/lib/Image";
 //# sourceMappingURL=index.d.ts.map

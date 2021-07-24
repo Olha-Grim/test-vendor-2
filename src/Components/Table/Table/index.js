@@ -2,16 +2,17 @@ import React from "react";
 import { Table as AntdTable } from "antd";
 import SpinProps from "antd/lib/spin/index";
 import { TooltipProps } from "rc-tooltip/lib/Tooltip";
-import { ColumnsType, TableComponents, RecordType} from 'rc-table/lib/interface';
+import { ColumnsType } from "rc-table/lib/interface";
+import { TableComponents } from "rc-table/lib/interface";
 /**
  *
  * @typedef Props
  * @prop {boolean} bordered
- * @prop {ColumnsType<RecordType>} columns
- * @prop {TableComponents} components
+ * @prop {ColumnsType<object>} columns
+ * @prop {TableComponents<any>} components
  * @prop {object[]	} dataSource
  * @prop {boolean} expandable
- * @prop {(currentPageData: Object[]) => React.ReactNode} footer
+ * @prop {(data: readonly object[])=> React.ReactNode} footer
  * @prop {(triggerNode: HTMLElement) => HTMLElement	} getPopupContainer
  * @prop {boolean | SpinProps} loading
  * @prop {object} locale
@@ -22,12 +23,12 @@ import { ColumnsType, TableComponents, RecordType} from 'rc-table/lib/interface'
  * @prop {object} scroll
  * @prop {boolean} showHeader
  * @prop {boolean | TooltipProps} showSorterTooltip
- * @prop {"default" | "middle" | "small"} size SizeType
+ * @prop {'small' | 'middle' | 'large' | undefined} size 
  * @prop {[]} sortDirections
  * @prop {boolean | {offsetHeader?: number, offsetScroll?: number, getContainer?: () => HTMLElement}	} sticky
  * @prop {(currentData:any) => React.ReactNode} summary
- * @prop {  "auto" | "fixed"	} tableLayout
- * @prop {(currentPageData:any)=> void} title
+ * @prop { "auto" | "fixed"	} tableLayout
+ * @prop {(currentPageData:any)=> React.ReactNode} title
  * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor

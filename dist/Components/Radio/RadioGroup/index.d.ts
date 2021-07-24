@@ -12,7 +12,7 @@ export type Props = {
     optionType: "default" | "button";
     size: "large" | "middle" | "small";
     value: any;
-    onChange: (e: any) => void;
+    onChange: (e: RadioChangeEvent) => void;
     children: JSX.Element;
 };
 /**
@@ -35,4 +35,5 @@ export type Props = {
  * @param {Props} props
  */
 declare function RadioGroup({ buttonStyle, defaultValue, disabled, name, options, optionType, size, value, onChange, children, }: Props): JSX.Element;
+import { RadioChangeEvent } from "antd";
 //# sourceMappingURL=index.d.ts.map

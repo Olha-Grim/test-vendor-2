@@ -32,8 +32,6 @@ import { Tabs as AntdTabs } from "antd";
 const Tabs = ({ children }) => {
   const props = {};
 
-  return (
-    <AntdTabs {...props}>{children}</AntdTabs>
-  );
+  return <AntdTabs {...props}>{children}</AntdTabs>;
 };
 export default Tabs;

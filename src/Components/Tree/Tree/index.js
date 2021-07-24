@@ -1,11 +1,13 @@
 import React from "react";
 import { Tree as AntdTree } from "antd";
-import { DataNode, Key } from "rc-tree/lib/interface";
+import { EventDataNode, DataNode, Key } from "rc-tree/lib/interface";
+export { EventDataNode, DataNode } from "rc-tree/lib/interface";
+import { NodeDragEventParams } from "rc-tree/lib/contextTypes";
 
 /**
  *
  * @typedef Props
- * @prop {({ dropNode, dropPosition }) => boolean	} allowDrop
+ * @prop {(options: { dropNode: DataNode; dropPosition: 0 | 1 | -1; })=> boolean} allowDrop
  * @prop {boolean} autoExpandParent
  * @prop {boolean} blockNode
  * @prop {boolean} checkable
@@ -15,36 +17,36 @@ import { DataNode, Key } from "rc-tree/lib/interface";
  * @prop {boolean} defaultExpandAll
  * @prop {string[]	} defaultExpandedKeys
  * @prop {boolean} defaultExpandParent
- * @prop {string[]	} defaultSelectedKeys
+ * @prop {string[]} defaultSelectedKeys
  * @prop {boolean} disabled
- * @prop {boolean | ((node: DataNode) => boolean)	} draggable
+ * @prop {((node: DataNode) => boolean) | boolean} draggable
  * @prop {string[]	} expandedKeys
- * @prop {(node:any)=>void	} filterTreeNode
+ * @prop {(node:any)=>boolean	} filterTreeNode
  * @prop {number} height
  * @prop {React.ReactNode | ((props:any) => React.ReactNode)	} icon
- * @prop {(node:any)=>void	} loadData
+ * @prop {(node:any)=>Promise<void>	} loadData
  * @prop {string[]	} loadedKeys
  * @prop {boolean	} multiple
  * @prop {boolean	} selectable
- * @prop {string[]	} selectedKeys
+ * @prop {string[] | Key[]} selectedKeys
  * @prop {boolean} showIcon
  * @prop {boolean | {showLeafIcon: boolean}}  showLine
- * @prop {React.ReactNode} switcherIcon
+ * @prop {React.ReactElement<any, string | React.JSXElementConstructor<any>>} switcherIcon
  * @prop {(nodeData:any) => React.ReactNode	} titleRender
- * @prop {array<{ key, title, children, [disabled, selectable] }>	} treeData
+ * @prop {Array<{ key:any, title:string, children: [disabled:any, selectable:any] }>	} treeData
  * @prop {boolean} virtual
- * @prop {(checkedKeys, e:{checked: bool, checkedNodes, node, event, halfCheckedKeys})=>void	} onCheck
- * @prop {({event, node})=>void	} onDragEnd
- * @prop {({event, node, expandedKeys})=>void} onDragEnter
- * @prop {({event, node})=>void} onDragLeave
- * @prop {({event, node})=>void	} onDragOver
- * @prop {({event, node})=>void	} onDragStart
- * @prop {({event, node, dragNode, dragNodesKeys})=>void	} onDrop
- * @prop {(expandedKeys, {expanded: bool, node})=>void	} onExpand
- * @prop {(Key[], event:Event, node:any)=>void	} onLoad
- * @prop {(event:Event, node:any)=> void} onRightClick
- * @prop {(sourceSelectedKeys: string[], targetSelectedKeys: string[]) => void} onSelect
- * @param children
+ * @prop {(checked: Key[] | { checked: Key[]; halfChecked: Key[]; }, info: any) => void	} onCheck
+ * @prop {(info: NodeDragEventParams<HTMLDivElement>) => void} onDragEnd
+ * @prop {(info: NodeDragEventParams<HTMLDivElement> & { expandedKeys: Key[]; }) => void} onDragEnter
+ * @prop {(info: NodeDragEventParams<HTMLDivElement>) => void} onDragLeave
+ * @prop {(info: NodeDragEventParams<HTMLDivElement>) => void} onDragOver
+ * @prop {(info: NodeDragEventParams<HTMLDivElement>) => void} onDragStart
+ * @prop {(info: NodeDragEventParams<HTMLDivElement> & { dragNode: EventDataNode; dragNodesKeys: Key[]; dropPosition: number; dropToGap: boolean; }) => void} onDrop
+ * @prop {(expandedKeys: Key[], info: { node: EventDataNode; expanded: boolean; nativeEvent: MouseEvent; }) => void} onExpand
+ * @prop {(loadedKeys: Key[], info: { event: "load"; node: EventDataNode; }) => void} onLoad
+ * @prop {(info: { event: React.MouseEvent<Element, MouseEvent>; node: EventDataNode; }) => void} onRightClick
+ * @prop {(selectedKeys: Key[], info: { event: "select"; selected: boolean; node: EventDataNode; selectedNodes: DataNode[]; nativeEvent: MouseEvent; }) => void} onSelect
+ * @prop {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
  */

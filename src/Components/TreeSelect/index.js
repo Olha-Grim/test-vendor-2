@@ -1,8 +1,9 @@
 import React from "react";
 import { TreeSelect as AntdTreeSelect } from "antd";
-import { FilterFunc } from 'rc-select/lib/interface/generator';
-import { DataNode, Key} from 'rc-tree/lib/interface';
-import { LegacyDataNode } from './interface'
+import { FilterFunc } from "rc-select/lib/interface/generator";
+import { DataNode, Key } from "rc-tree/lib/interface";
+import { LegacyDataNode, LabelValueType } from "rc-tree-select/lib/interface";
+import { CheckedStrategy } from "rc-tree-select/lib/utils/strategyUtil";
 
 /**
  *
@@ -21,13 +22,13 @@ import { LegacyDataNode } from './interface'
  * @prop {boolean} labelInValue
  * @prop {number} listHeight
  * @prop {(node:any)=> Promise<unknown>	} loadData
- * @prop {number | "responsive"	} maxTagCount
- * @prop {React.ReactNode | ((omittedValues:any)=>void)	} maxTagPlaceholder
+ * @prop { "responsive" | undefined	} maxTagCount
+ * @prop {((omittedValues: LabelValueType[]) => React.ReactNode) | undefined	} maxTagPlaceholder
  * @prop {boolean} multiple
  * @prop {string} placeholder
  * @prop {string} searchValue
  * @prop {boolean} showArrow
- * @prop {TreeSelect} showCheckedStrategy
+ * @prop {CheckedStrategy | undefined} showCheckedStrategy
  * @prop {boolean} showSearch
  * @prop {"large" | "middle" | "small"	} size
  * @prop {React.ReactNode} suffixIcon
@@ -64,7 +65,6 @@ import { LegacyDataNode } from './interface'
 /**
  * @param {Props} props
  */
-
 
 const TreeSelect = ({
   allowClear,
