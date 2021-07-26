@@ -1,35 +1,39 @@
-import React__default, { createContext, isValidElement, cloneElement, useContext, createElement, Fragment, Component, useRef, useState, useImperativeHandle, useEffect, useMemo as useMemo$1, forwardRef, useLayoutEffect, useCallback, Children, createRef, memo } from 'react';
-import { Form as Form$3, Layout as Layout$1, TimePicker as TimePicker$1, Select as Select$1, Table as Table$1, Descriptions as Descriptions$1, Typography, Statistic as Statistic$1, Breadcrumb as Breadcrumb$1, Radio as Radio$1, Tree as Tree$1, List as List$2, Mentions as Mentions$1, Dropdown as Dropdown$1, Checkbox as Checkbox$1, Collapse as Collapse$1, Timeline as Timeline$1, Alert as Alert$2, Card as Card$1, Avatar as Avatar$1, Badge as Badge$1, Steps as Steps$1, Tabs as Tabs$1, Tag as Tag$1, Col as Col$1, Row as Row$1, ConfigProvider as ConfigProvider$1, AutoComplete as AutoComplete$1, notification as notification$1, InputNumber as InputNumber$1, Pagination as Pagination$1, PageHeader as PageHeader$1, Popconfirm as Popconfirm$1, Cascader as Cascader$1, Calendar as Calendar$1, Carousel as Carousel$1, Progress as Progress$1, Transfer as Transfer$1, Rate as Rate$1, Tooltip as Tooltip$1, Divider as Divider$2, Comment as Comment$1, Popover as Popover$1, message, BackTop as BackTop$1, Button as Button$1, Switch as Switch$1, Upload as Upload$1, Slider as Slider$1, Drawer as Drawer$1, Anchor as Anchor$1, Result as Result$1, Space as Space$1, Affix as Affix$1, Empty as Empty$1, Modal as Modal$1, Image as Image$2, Spin as Spin$1, Menu as Menu$2, DatePicker as DatePicker$1, Input as Input$1, Skeleton as Skeleton$1 } from 'antd';
-import 'antd/lib/form/FormList';
-import reactIs, { isFragment, isMemo } from 'react-is';
-import ReactDOM from 'react-dom';
-import 'moment';
-import 'antd/lib/date-picker/generatePicker/index';
-import 'antd/es/select';
-import 'antd/lib/spin/index';
-import 'antd/lib/tooltip';
-import 'antd/lib/_util/responsiveObserve';
-import 'antd/lib/table/interface';
-import 'antd/lib/typography/Base';
-import 'antd/lib/breadcrumb/Breadcrumb';
-import 'antd/lib/dropdown/dropdown';
-import 'antd/lib/list/index';
-import 'antd/es/pagination';
-import 'antd/lib/checkbox';
-import 'antd/lib/grid/row';
-import 'antd/lib/input';
-import 'antd/lib/input-number';
-import 'antd/lib/avatar/avatar';
-import 'antd/lib/button/button';
-import 'antd/lib/cascader';
-import 'antd/es/date-picker/generatePicker';
-import 'antd/lib/transfer';
-import 'antd/lib/upload/interface';
-import 'antd/lib/slider';
-import 'antd/lib/skeleton/Skeleton';
-import 'antd/lib/skeleton/Title';
-import 'antd/lib/skeleton/Paragraph';
-import 'antd/dist/antd.css';
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var React = require('react');
+var React__default = _interopDefault(React);
+var antd = require('antd');
+require('antd/lib/form/FormList');
+var reactIs = require('react-is');
+var reactIs__default = _interopDefault(reactIs);
+var ReactDOM = _interopDefault(require('react-dom'));
+require('moment');
+require('antd/lib/date-picker/generatePicker/index');
+require('antd/es/select');
+require('antd/lib/spin/index');
+require('antd/lib/tooltip');
+require('antd/lib/_util/responsiveObserve');
+require('antd/lib/table/interface');
+require('antd/lib/typography/Base');
+require('antd/lib/breadcrumb/Breadcrumb');
+require('antd/lib/dropdown/dropdown');
+require('antd/lib/list/index');
+require('antd/es/pagination');
+require('antd/lib/checkbox');
+require('antd/lib/grid/row');
+require('antd/lib/input');
+require('antd/lib/input-number');
+require('antd/lib/avatar/avatar');
+require('antd/lib/button/button');
+require('antd/lib/cascader');
+require('antd/es/date-picker/generatePicker');
+require('antd/lib/transfer');
+require('antd/lib/upload/interface');
+require('antd/lib/slider');
+require('antd/lib/skeleton/Skeleton');
+require('antd/lib/skeleton/Title');
+require('antd/lib/skeleton/Paragraph');
+require('antd/dist/antd.css');
 
 function unwrapExports (x) {
 	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
@@ -48,66 +52,64 @@ Object.defineProperty(exports, "__esModule", {
 
 unwrapExports(_interface);
 
-const Form = ({
-  colon,
-  children,
-  component,
-  fields,
-  form,
-  initialValues,
-  labelAlign,
-  labelCol,
-  layout,
-  name,
-  preserve,
-  requiredMark,
-  scrollToFirstError,
-  size,
-  validateMessages,
-  validateTrigger,
-  wrapperCol,
-  onFieldsChange,
-  onFinishFailed,
-  onValuesChange
-}) => {
-  const props = {
-    colon,
-    children,
-    component,
-    fields,
-    form,
-    initialValues,
-    labelAlign,
-    labelCol,
-    layout,
-    name,
-    preserve,
-    requiredMark,
-    scrollToFirstError,
-    size,
-    validateMessages,
-    validateTrigger,
-    wrapperCol,
-    onFieldsChange,
-    onFinishFailed,
-    onValuesChange
+var Form = function Form(_ref) {
+  var colon = _ref.colon,
+      children = _ref.children,
+      component = _ref.component,
+      fields = _ref.fields,
+      form = _ref.form,
+      initialValues = _ref.initialValues,
+      labelAlign = _ref.labelAlign,
+      labelCol = _ref.labelCol,
+      layout = _ref.layout,
+      name = _ref.name,
+      preserve = _ref.preserve,
+      requiredMark = _ref.requiredMark,
+      scrollToFirstError = _ref.scrollToFirstError,
+      size = _ref.size,
+      validateMessages = _ref.validateMessages,
+      validateTrigger = _ref.validateTrigger,
+      wrapperCol = _ref.wrapperCol,
+      onFieldsChange = _ref.onFieldsChange,
+      onFinishFailed = _ref.onFinishFailed,
+      onValuesChange = _ref.onValuesChange;
+  var props = {
+    colon: colon,
+    children: children,
+    component: component,
+    fields: fields,
+    form: form,
+    initialValues: initialValues,
+    labelAlign: labelAlign,
+    labelCol: labelCol,
+    layout: layout,
+    name: name,
+    preserve: preserve,
+    requiredMark: requiredMark,
+    scrollToFirstError: scrollToFirstError,
+    size: size,
+    validateMessages: validateMessages,
+    validateTrigger: validateTrigger,
+    wrapperCol: wrapperCol,
+    onFieldsChange: onFieldsChange,
+    onFinishFailed: onFinishFailed,
+    onValuesChange: onValuesChange
   };
-  return /*#__PURE__*/React__default.createElement(Form$3, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Form, props, children);
 };
 
-const FormList = ({
-  children,
-  initialValue,
-  name,
-  rules
-}) => {
-  const props = {
-    children,
-    initialValue,
-    name,
-    rules
+var FormList = function FormList(_ref) {
+  var children = _ref.children,
+      initialValue = _ref.initialValue,
+      name = _ref.name,
+      rules = _ref.rules;
+  var props = {
+    children: children,
+    initialValue: initialValue,
+    name: name,
+    rules: rules
   };
-  return /*#__PURE__*/React__default.createElement(Form$3.List, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Form.List, props, children);
 };
 
 function _extends() {
@@ -386,7 +388,7 @@ function toArray(children) {
 
     if (Array.isArray(child)) {
       ret = ret.concat(toArray(child));
-    } else if (isFragment(child) && child.props) {
+    } else if (reactIs.isFragment(child) && child.props) {
       ret = ret.concat(toArray(child.props.children, option));
     } else {
       ret.push(child);
@@ -420,7 +422,7 @@ var warningFunc = function warningFunc() {
   warningOnce(false, 'Can not find FormContext. Please make sure you wrap Field under Form.');
 };
 
-var Context = /*#__PURE__*/createContext({
+var Context = /*#__PURE__*/React.createContext({
   getFieldValue: warningFunc,
   getFieldsValue: warningFunc,
   getFieldError: warningFunc,
@@ -3064,7 +3066,7 @@ function _validateRule() {
                 return (// Wrap ReactNode with `key`
 
                   /*#__PURE__*/
-                  isValidElement(message) ? /*#__PURE__*/cloneElement(message, {
+                  React.isValidElement(message) ? /*#__PURE__*/React.cloneElement(message, {
                     key: "error_".concat(index)
                   }) : message
                 );
@@ -3623,7 +3625,7 @@ var Field = /*#__PURE__*/function (_React$Component) {
 
       var childList = toArray(children);
 
-      if (childList.length !== 1 || ! /*#__PURE__*/isValidElement(childList[0])) {
+      if (childList.length !== 1 || ! /*#__PURE__*/React.isValidElement(childList[0])) {
         return {
           child: childList,
           isFunction: false
@@ -3798,21 +3800,21 @@ var Field = /*#__PURE__*/function (_React$Component) {
 
       if (isFunction) {
         returnChildNode = child;
-      } else if ( /*#__PURE__*/isValidElement(child)) {
-        returnChildNode = /*#__PURE__*/cloneElement(child, this.getControlled(child.props));
+      } else if ( /*#__PURE__*/React.isValidElement(child)) {
+        returnChildNode = /*#__PURE__*/React.cloneElement(child, this.getControlled(child.props));
       } else {
         warningOnce(!child, '`children` of Field is not validate ReactElement.');
         returnChildNode = child;
       }
 
-      return /*#__PURE__*/createElement(Fragment, {
+      return /*#__PURE__*/React.createElement(React.Fragment, {
         key: resetCount
       }, returnChildNode);
     }
   }]);
 
   return Field;
-}(Component);
+}(React.Component);
 
 Field.contextType = Context;
 Field.defaultProps = {
@@ -3824,7 +3826,7 @@ function WrapperField(_ref4) {
   var name = _ref4.name,
       restProps = _objectWithoutProperties(_ref4, ["name"]);
 
-  var fieldContext = useContext(Context);
+  var fieldContext = React.useContext(Context);
   var namePath = name !== undefined ? getNamePath(name) : undefined;
   var key = 'keep';
 
@@ -3838,7 +3840,7 @@ function WrapperField(_ref4) {
     warningOnce(false, '`preserve` should not apply on Form.List fields.');
   }
 
-  return /*#__PURE__*/createElement(Field, _extends({
+  return /*#__PURE__*/React.createElement(Field, _extends({
     key: key,
     name: namePath
   }, restProps, {
@@ -3852,8 +3854,8 @@ var List = function List(_ref) {
       children = _ref.children,
       rules = _ref.rules,
       validateTrigger = _ref.validateTrigger;
-  var context = useContext(Context);
-  var keyRef = useRef({
+  var context = React.useContext(Context);
+  var keyRef = React.useRef({
     keys: [],
     id: 0
   });
@@ -3877,11 +3879,11 @@ var List = function List(_ref) {
     return prevValue !== nextValue;
   };
 
-  return /*#__PURE__*/createElement(Context.Provider, {
+  return /*#__PURE__*/React.createElement(Context.Provider, {
     value: _objectSpread2(_objectSpread2({}, context), {}, {
       prefixName: prefixName
     })
-  }, /*#__PURE__*/createElement(WrapperField, {
+  }, /*#__PURE__*/React.createElement(WrapperField, {
     name: [],
     shouldUpdate: shouldUpdate,
     rules: rules,
@@ -4958,9 +4960,9 @@ var FormStore = function FormStore(forceRootUpdate) {
 };
 
 function useForm(form) {
-  var formRef = useRef();
+  var formRef = React.useRef();
 
-  var _React$useState = useState({}),
+  var _React$useState = React.useState({}),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       forceUpdate = _React$useState2[1];
 
@@ -4981,7 +4983,7 @@ function useForm(form) {
   return [formRef.current];
 }
 
-var FormContext = /*#__PURE__*/createContext({
+var FormContext = /*#__PURE__*/React.createContext({
   triggerFormChange: function triggerFormChange() {},
   triggerFormFinish: function triggerFormFinish() {},
   registerForm: function registerForm() {},
@@ -4993,9 +4995,9 @@ var FormProvider = function FormProvider(_ref) {
       onFormChange = _ref.onFormChange,
       onFormFinish = _ref.onFormFinish,
       children = _ref.children;
-  var formContext = useContext(FormContext);
-  var formsRef = useRef({});
-  return /*#__PURE__*/createElement(FormContext.Provider, {
+  var formContext = React.useContext(FormContext);
+  var formsRef = React.useRef({});
+  return /*#__PURE__*/React.createElement(FormContext.Provider, {
     value: _objectSpread2(_objectSpread2({}, formContext), {}, {
       validateMessages: _objectSpread2(_objectSpread2({}, formContext.validateMessages), validateMessages),
       // =========================================================
@@ -5057,7 +5059,7 @@ var Form$1 = function Form(_ref, ref) {
       onFinishFailed = _ref.onFinishFailed,
       restProps = _objectWithoutProperties(_ref, ["name", "initialValues", "fields", "form", "preserve", "children", "component", "validateMessages", "validateTrigger", "onValuesChange", "onFieldsChange", "onFinish", "onFinishFailed"]);
 
-  var formContext = useContext(FormContext); // We customize handle event since Context will makes all the consumer re-render:
+  var formContext = React.useContext(FormContext); // We customize handle event since Context will makes all the consumer re-render:
   // https://reactjs.org/docs/context.html#contextprovider
 
   var _useForm = useForm(form),
@@ -5072,11 +5074,11 @@ var Form$1 = function Form(_ref, ref) {
       setPreserve = _formInstance$getInte.setPreserve; // Pass ref with form instance
 
 
-  useImperativeHandle(ref, function () {
+  React.useImperativeHandle(ref, function () {
     return formInstance;
   }); // Register form into Context
 
-  useEffect(function () {
+  React.useEffect(function () {
     formContext.registerForm(name, formInstance);
     return function () {
       formContext.unregisterForm(name);
@@ -5108,7 +5110,7 @@ var Form$1 = function Form(_ref, ref) {
   });
   setPreserve(preserve); // Set initial value, init store value when first mount
 
-  var mountRef = useRef(null);
+  var mountRef = React.useRef(null);
   setInitialValues(initialValues, !mountRef.current);
 
   if (!mountRef.current) {
@@ -5127,20 +5129,20 @@ var Form$1 = function Form(_ref, ref) {
 
   useSubscribe(!childrenRenderProps); // Listen if fields provided. We use ref to save prev data here to avoid additional render
 
-  var prevFieldsRef = useRef();
-  useEffect(function () {
+  var prevFieldsRef = React.useRef();
+  React.useEffect(function () {
     if (!isSimilar(prevFieldsRef.current || [], fields || [])) {
       formInstance.setFields(fields || []);
     }
 
     prevFieldsRef.current = fields;
   }, [fields, formInstance]);
-  var formContextValue = useMemo$1(function () {
+  var formContextValue = React.useMemo(function () {
     return _objectSpread2(_objectSpread2({}, formInstance), {}, {
       validateTrigger: validateTrigger
     });
   }, [formInstance, validateTrigger]);
-  var wrapperNode = /*#__PURE__*/createElement(Context.Provider, {
+  var wrapperNode = /*#__PURE__*/React.createElement(Context.Provider, {
     value: formContextValue
   }, childrenNode);
 
@@ -5148,7 +5150,7 @@ var Form$1 = function Form(_ref, ref) {
     return wrapperNode;
   }
 
-  return /*#__PURE__*/createElement(Component, _extends({}, restProps, {
+  return /*#__PURE__*/React.createElement(Component, _extends({}, restProps, {
     onSubmit: function onSubmit(event) {
       event.preventDefault();
       event.stopPropagation();
@@ -5164,28 +5166,27 @@ var Form$1 = function Form(_ref, ref) {
   }), wrapperNode);
 };
 
-var InternalForm = /*#__PURE__*/forwardRef(Form$1);
+var InternalForm = /*#__PURE__*/React.forwardRef(Form$1);
 var RefForm = InternalForm;
 RefForm.FormProvider = FormProvider;
 RefForm.Field = WrapperField;
 RefForm.List = List;
 RefForm.useForm = useForm;
 
-const Form$2 = ({
-  children,
-  initialValue,
-  name,
-  rules,
-  errors
-}) => {
-  const props = {
-    children,
-    initialValue,
-    name,
-    rules,
-    errors
+var Form$2 = function Form(_ref) {
+  var children = _ref.children,
+      initialValue = _ref.initialValue,
+      name = _ref.name,
+      rules = _ref.rules,
+      errors = _ref.errors;
+  var props = {
+    children: children,
+    initialValue: initialValue,
+    name: name,
+    rules: rules,
+    errors: errors
   };
-  return /*#__PURE__*/React__default.createElement(Form$3.ErrorList, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Form.ErrorList, props, children);
 };
 
 var interopRequireWildcard = createCommonjsModule(function (module) {
@@ -5502,7 +5503,7 @@ function composeRef() {
 function supportRef(nodeOrComponent) {
   var _type$prototype, _nodeOrComponent$prot;
 
-  var type = isMemo(nodeOrComponent) ? nodeOrComponent.type.type : nodeOrComponent.type; // Function component node
+  var type = reactIs.isMemo(nodeOrComponent) ? nodeOrComponent.type.type : nodeOrComponent.type; // Function component node
 
   if (typeof type === 'function' && !((_type$prototype = type.prototype) === null || _type$prototype === void 0 ? void 0 : _type$prototype.render)) {
     return false;
@@ -5540,17 +5541,17 @@ function canUseDom() {
   return !!(typeof window !== 'undefined' && window.document && window.document.createElement);
 }
 
-var Portal = /*#__PURE__*/forwardRef(function (props, ref) {
+var Portal = /*#__PURE__*/React.forwardRef(function (props, ref) {
   var didUpdate = props.didUpdate,
       getContainer = props.getContainer,
       children = props.children;
-  var containerRef = useRef(); // Ref return nothing, only for wrapper check exist
+  var containerRef = React.useRef(); // Ref return nothing, only for wrapper check exist
 
-  useImperativeHandle(ref, function () {
+  React.useImperativeHandle(ref, function () {
     return {};
   }); // Create container in client side with sync to avoid useEffect not get ref
 
-  var initRef = useRef(false);
+  var initRef = React.useRef(false);
 
   if (!initRef.current && canUseDom()) {
     containerRef.current = getContainer();
@@ -5558,10 +5559,10 @@ var Portal = /*#__PURE__*/forwardRef(function (props, ref) {
   } // [Legacy] Used by `rc-trigger`
 
 
-  useEffect(function () {
+  React.useEffect(function () {
     didUpdate === null || didUpdate === void 0 ? void 0 : didUpdate(props);
   });
-  useEffect(function () {
+  React.useEffect(function () {
     return function () {
       var _containerRef$current, _containerRef$current2;
 
@@ -5761,9 +5762,9 @@ var STEP_ACTIVE = 'active';
 var STEP_ACTIVATED = 'end';
 
 function useMountStatus(defaultValue) {
-  var destroyRef = useRef(false);
+  var destroyRef = React.useRef(false);
 
-  var _useState = useState(defaultValue),
+  var _useState = React.useState(defaultValue),
       _useState2 = _slicedToArray(_useState, 2),
       val = _useState2[0],
       setVal = _useState2[1];
@@ -5774,7 +5775,7 @@ function useMountStatus(defaultValue) {
     }
   }
 
-  useEffect(function () {
+  React.useEffect(function () {
     return function () {
       destroyRef.current = true;
     };
@@ -5782,10 +5783,10 @@ function useMountStatus(defaultValue) {
   return [val, setValue];
 }
 
-var useIsomorphicLayoutEffect = canUseDom() ? useLayoutEffect : useEffect;
+var useIsomorphicLayoutEffect = canUseDom() ? React.useLayoutEffect : React.useEffect;
 
 var useNextFrame = (function () {
-  var nextFrameRef = useRef(null);
+  var nextFrameRef = React.useRef(null);
 
   function cancelNextFrame() {
     wrapperRaf.cancel(nextFrameRef.current);
@@ -5808,7 +5809,7 @@ var useNextFrame = (function () {
     nextFrameRef.current = nextFrameId;
   }
 
-  useEffect(function () {
+  React.useEffect(function () {
     return function () {
       cancelNextFrame();
     };
@@ -5827,7 +5828,7 @@ function isActive(step) {
   return step === STEP_ACTIVE || step === STEP_ACTIVATED;
 }
 var useStepQueue = (function (status, callback) {
-  var _React$useState = useState(STEP_NONE),
+  var _React$useState = React.useState(STEP_NONE),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       step = _React$useState2[0],
       setStep = _React$useState2[1];
@@ -5869,7 +5870,7 @@ var useStepQueue = (function (status, callback) {
       }
     }
   }, [status, step]);
-  useEffect(function () {
+  React.useEffect(function () {
     return function () {
       cancelNextFrame();
     };
@@ -5878,12 +5879,12 @@ var useStepQueue = (function (status, callback) {
 });
 
 var useDomMotionEvents = (function (callback) {
-  var cacheElementRef = useRef(); // Cache callback
+  var cacheElementRef = React.useRef(); // Cache callback
 
-  var callbackRef = useRef(callback);
+  var callbackRef = React.useRef(callback);
   callbackRef.current = callback; // Internal motion event handler
 
-  var onInternalMotionEnd = useCallback(function (event) {
+  var onInternalMotionEnd = React.useCallback(function (event) {
     callbackRef.current(event);
   }, []); // Remove events
 
@@ -5909,7 +5910,7 @@ var useDomMotionEvents = (function (callback) {
   } // Clean up when removed
 
 
-  useEffect(function () {
+  React.useEffect(function () {
     return function () {
       removeMotionEvents(cacheElementRef.current);
     };
@@ -5956,11 +5957,11 @@ function useStatus(supportMotion, visible, getElement, _ref) {
       style = _useState6[0],
       setStyle = _useState6[1];
 
-  var mountedRef = useRef(false);
-  var deadlineRef = useRef(null);
-  var destroyedRef = useRef(false); // =========================== Dom Node ===========================
+  var mountedRef = React.useRef(false);
+  var deadlineRef = React.useRef(null);
+  var destroyedRef = React.useRef(false); // =========================== Dom Node ===========================
 
-  var cacheElementRef = useRef(null);
+  var cacheElementRef = React.useRef(null);
 
   function getDomElement() {
     var element = getElement();
@@ -5968,7 +5969,7 @@ function useStatus(supportMotion, visible, getElement, _ref) {
   } // ========================== Motion End ==========================
 
 
-  var activeRef = useRef(false);
+  var activeRef = React.useRef(false);
 
   function onInternalMotionEnd(event) {
     var element = getDomElement();
@@ -6002,7 +6003,7 @@ function useStatus(supportMotion, visible, getElement, _ref) {
       patchMotionEvents = _useDomMotionEvents2[0]; // ============================= Step =============================
 
 
-  var eventHandlers = useMemo$1(function () {
+  var eventHandlers = React.useMemo(function () {
     var _ref2, _ref3, _ref4;
 
     switch (status) {
@@ -6097,7 +6098,7 @@ function useStatus(supportMotion, visible, getElement, _ref) {
   }, [visible]); // ============================ Effect ============================
   // Reset when motion changed
 
-  useEffect(function () {
+  React.useEffect(function () {
     if ( // Cancel appear
     status === STATUS_APPEAR && !motionAppear || // Cancel enter
     status === STATUS_ENTER && !motionEnter || // Cancel leave
@@ -6105,14 +6106,14 @@ function useStatus(supportMotion, visible, getElement, _ref) {
       setStatus(STATUS_NONE);
     }
   }, [motionAppear, motionEnter, motionLeave]);
-  useEffect(function () {
+  React.useEffect(function () {
     return function () {
       clearTimeout(deadlineRef.current);
       destroyedRef.current = true;
     };
   }, []); // Trigger `onVisibleChanged`
 
-  useEffect(function () {
+  React.useEffect(function () {
     if (asyncVisible !== undefined && status === STATUS_NONE) {
       onVisibleChanged === null || onVisibleChanged === void 0 ? void 0 : onVisibleChanged(asyncVisible);
     }
@@ -6148,7 +6149,7 @@ var DomWrapper = /*#__PURE__*/function (_React$Component) {
   }]);
 
   return DomWrapper;
-}(Component);
+}(React.Component);
 
 /**
  * `transitionSupport` is used for none transition test case.
@@ -6166,7 +6167,7 @@ function genCSSMotion(config) {
     return !!(props.motionName && transitionSupport);
   }
 
-  var CSSMotion = /*#__PURE__*/forwardRef(function (props, ref) {
+  var CSSMotion = /*#__PURE__*/React.forwardRef(function (props, ref) {
     var _props$visible = props.visible,
         visible = _props$visible === void 0 ? true : _props$visible,
         _props$removeOnLeave = props.removeOnLeave,
@@ -6178,9 +6179,9 @@ function genCSSMotion(config) {
         eventProps = props.eventProps;
     var supportMotion = isSupportTransition(props); // Ref to the react node, it may be a HTMLElement
 
-    var nodeRef = useRef(); // Ref to the dom wrapper in case ref can not pass to HTMLElement
+    var nodeRef = React.useRef(); // Ref to the dom wrapper in case ref can not pass to HTMLElement
 
-    var wrapperNodeRef = useRef();
+    var wrapperNodeRef = React.useRef();
 
     function getDomElement() {
       try {
@@ -6200,16 +6201,16 @@ function genCSSMotion(config) {
     // Will return null for un-rendered even when `removeOnLeave={false}`
 
 
-    var renderedRef = useRef(mergedVisible);
+    var renderedRef = React.useRef(mergedVisible);
 
     if (mergedVisible) {
       renderedRef.current = true;
     } // ====================== Refs ======================
 
 
-    var originRef = useRef(ref);
+    var originRef = React.useRef(ref);
     originRef.current = ref;
-    var setNodeRef = useCallback(function (node) {
+    var setNodeRef = React.useCallback(function (node) {
       nodeRef.current = node;
       fillRef(originRef.current, node);
     }, []); // ===================== Render =====================
@@ -6260,7 +6261,7 @@ function genCSSMotion(config) {
       }), setNodeRef);
     }
 
-    return /*#__PURE__*/createElement(DomWrapper, {
+    return /*#__PURE__*/React.createElement(DomWrapper, {
       ref: wrapperNodeRef
     }, motionChildren);
   });
@@ -6320,12 +6321,12 @@ function Mask(props) {
     }));
   }
 
-  return /*#__PURE__*/createElement(CSSMotion, _extends({}, motion, {
+  return /*#__PURE__*/React.createElement(CSSMotion, _extends({}, motion, {
     visible: visible,
     removeOnLeave: true
   }), function (_ref) {
     var className = _ref.className;
-    return /*#__PURE__*/createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       style: {
         zIndex: zIndex
       },
@@ -8877,13 +8878,13 @@ RefAlign.displayName = 'Align';
 
 var StatusQueue = ['measure', 'align', null, 'motion'];
 var useVisibleStatus = (function (visible, doMeasure) {
-  var _useState = useState(null),
+  var _useState = React.useState(null),
       _useState2 = _slicedToArray(_useState, 2),
       status = _useState2[0],
       setInternalStatus = _useState2[1];
 
-  var rafRef = useRef();
-  var destroyRef = useRef(false);
+  var rafRef = React.useRef();
+  var destroyRef = React.useRef(false);
 
   function setStatus(nextStatus) {
     if (!destroyRef.current) {
@@ -8915,11 +8916,11 @@ var useVisibleStatus = (function (visible, doMeasure) {
   } // Init status
 
 
-  useEffect(function () {
+  React.useEffect(function () {
     setStatus('measure');
   }, [visible]); // Go next status
 
-  useEffect(function () {
+  React.useEffect(function () {
     switch (status) {
       case 'measure':
         doMeasure();
@@ -8949,7 +8950,7 @@ var useVisibleStatus = (function (visible, doMeasure) {
       })));
     }
   }, [status]);
-  useEffect(function () {
+  React.useEffect(function () {
     return function () {
       destroyRef.current = true;
       cancelRaf();
@@ -8959,7 +8960,7 @@ var useVisibleStatus = (function (visible, doMeasure) {
 });
 
 var useStretchStyle = (function (stretch) {
-  var _React$useState = useState({
+  var _React$useState = React.useState({
     width: 0,
     height: 0
   }),
@@ -8975,7 +8976,7 @@ var useStretchStyle = (function (stretch) {
   } // Merge stretch style
 
 
-  var style = useMemo$1(function () {
+  var style = React.useMemo(function () {
     var sizeStyle = {};
 
     if (stretch) {
@@ -9000,7 +9001,7 @@ var useStretchStyle = (function (stretch) {
   return [style, measureStretch];
 });
 
-var PopupInner = /*#__PURE__*/forwardRef(function (props, ref) {
+var PopupInner = /*#__PURE__*/React.forwardRef(function (props, ref) {
   var visible = props.visible,
       prefixCls = props.prefixCls,
       className = props.className,
@@ -9019,10 +9020,10 @@ var PopupInner = /*#__PURE__*/forwardRef(function (props, ref) {
       onMouseLeave = props.onMouseLeave,
       onMouseDown = props.onMouseDown,
       onTouchStart = props.onTouchStart;
-  var alignRef = useRef();
-  var elementRef = useRef();
+  var alignRef = React.useRef();
+  var elementRef = React.useRef();
 
-  var _useState = useState(),
+  var _useState = React.useState(),
       _useState2 = _slicedToArray(_useState, 2),
       alignedClassName = _useState2[0],
       setAlignedClassName = _useState2[1]; // ======================= Measure ========================
@@ -9046,7 +9047,7 @@ var PopupInner = /*#__PURE__*/forwardRef(function (props, ref) {
       goNextStatus = _useVisibleStatus2[1]; // ======================== Aligns ========================
 
 
-  var prepareResolveRef = useRef(); // `target` on `rc-align` can accept as a function to get the bind element or a point.
+  var prepareResolveRef = React.useRef(); // `target` on `rc-align` can accept as a function to get the bind element or a point.
   // ref: https://www.npmjs.com/package/rc-align
 
   function getAlignTarget() {
@@ -9103,13 +9104,13 @@ var PopupInner = /*#__PURE__*/forwardRef(function (props, ref) {
   } // Go to stable directly when motion not provided
 
 
-  useEffect(function () {
+  React.useEffect(function () {
     if (!motion.motionName && status === 'motion') {
       goNextStatus();
     }
   }, [motion.motionName, status]); // ========================= Refs =========================
 
-  useImperativeHandle(ref, function () {
+  React.useImperativeHandle(ref, function () {
     return {
       forceAlign: forceAlign,
       getElement: function getElement() {
@@ -9133,13 +9134,13 @@ var PopupInner = /*#__PURE__*/forwardRef(function (props, ref) {
 
   var childNode = children; // Wrapper when multiple children
 
-  if (Children.count(children) > 1) {
-    childNode = /*#__PURE__*/createElement("div", {
+  if (React.Children.count(children) > 1) {
+    childNode = /*#__PURE__*/React.createElement("div", {
       className: "".concat(prefixCls, "-content")
     }, children);
   }
 
-  return /*#__PURE__*/createElement(CSSMotion, _extends({
+  return /*#__PURE__*/React.createElement(CSSMotion, _extends({
     visible: visible,
     ref: elementRef,
     leavedClassName: "".concat(prefixCls, "-hidden")
@@ -9152,7 +9153,7 @@ var PopupInner = /*#__PURE__*/forwardRef(function (props, ref) {
     var motionClassName = _ref.className,
         motionStyle = _ref.style;
     var mergedClassName = classnames(prefixCls, className, alignedClassName, motionClassName);
-    return /*#__PURE__*/createElement(RefAlign, {
+    return /*#__PURE__*/React.createElement(RefAlign, {
       target: getAlignTarget(),
       key: "popup",
       ref: alignRef,
@@ -9160,7 +9161,7 @@ var PopupInner = /*#__PURE__*/forwardRef(function (props, ref) {
       disabled: alignDisabled,
       align: align,
       onAlign: onInternalAlign
-    }, /*#__PURE__*/createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       ref: motionRef,
       className: mergedClassName,
       onMouseEnter: onMouseEnter,
@@ -9173,7 +9174,7 @@ var PopupInner = /*#__PURE__*/forwardRef(function (props, ref) {
 });
 PopupInner.displayName = 'PopupInner';
 
-var MobilePopupInner = /*#__PURE__*/forwardRef(function (props, ref) {
+var MobilePopupInner = /*#__PURE__*/React.forwardRef(function (props, ref) {
   var prefixCls = props.prefixCls,
       visible = props.visible,
       zIndex = props.zIndex,
@@ -9185,9 +9186,9 @@ var MobilePopupInner = /*#__PURE__*/forwardRef(function (props, ref) {
       _props$mobile$popupMo = _props$mobile.popupMotion,
       popupMotion = _props$mobile$popupMo === void 0 ? {} : _props$mobile$popupMo,
       popupRender = _props$mobile.popupRender;
-  var elementRef = useRef(); // ========================= Refs =========================
+  var elementRef = React.useRef(); // ========================= Refs =========================
 
-  useImperativeHandle(ref, function () {
+  React.useImperativeHandle(ref, function () {
     return {
       forceAlign: function forceAlign() {},
       getElement: function getElement() {
@@ -9202,8 +9203,8 @@ var MobilePopupInner = /*#__PURE__*/forwardRef(function (props, ref) {
 
   var childNode = children; // Wrapper when multiple children
 
-  if (Children.count(children) > 1) {
-    childNode = /*#__PURE__*/createElement("div", {
+  if (React.Children.count(children) > 1) {
+    childNode = /*#__PURE__*/React.createElement("div", {
       className: "".concat(prefixCls, "-content")
     }, children);
   } // Mobile support additional render
@@ -9213,7 +9214,7 @@ var MobilePopupInner = /*#__PURE__*/forwardRef(function (props, ref) {
     childNode = popupRender(childNode);
   }
 
-  return /*#__PURE__*/createElement(CSSMotion, _extends({
+  return /*#__PURE__*/React.createElement(CSSMotion, _extends({
     visible: visible,
     ref: elementRef,
     removeOnLeave: true
@@ -9221,7 +9222,7 @@ var MobilePopupInner = /*#__PURE__*/forwardRef(function (props, ref) {
     var motionClassName = _ref.className,
         motionStyle = _ref.style;
     var mergedClassName = classnames(prefixCls, popupClassName, motionClassName);
-    return /*#__PURE__*/createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       ref: motionRef,
       className: mergedClassName,
       style: _objectSpread2(_objectSpread2({}, motionStyle), mergedStyle)
@@ -9230,17 +9231,17 @@ var MobilePopupInner = /*#__PURE__*/forwardRef(function (props, ref) {
 });
 MobilePopupInner.displayName = 'MobilePopupInner';
 
-var Popup = /*#__PURE__*/forwardRef(function (_ref, ref) {
+var Popup = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
   var visible = _ref.visible,
       mobile = _ref.mobile,
       props = _objectWithoutProperties(_ref, ["visible", "mobile"]);
 
-  var _useState = useState(visible),
+  var _useState = React.useState(visible),
       _useState2 = _slicedToArray(_useState, 2),
       innerVisible = _useState2[0],
       serInnerVisible = _useState2[1];
 
-  var _useState3 = useState(false),
+  var _useState3 = React.useState(false),
       _useState4 = _slicedToArray(_useState3, 2),
       inMobile = _useState4[0],
       setInMobile = _useState4[1];
@@ -9251,25 +9252,25 @@ var Popup = /*#__PURE__*/forwardRef(function (_ref, ref) {
   // And this also delay set `innerVisible` to avoid popup component render flash
 
 
-  useEffect(function () {
+  React.useEffect(function () {
     serInnerVisible(visible);
 
     if (visible && mobile) {
       setInMobile(isMobile());
     }
   }, [visible, mobile]);
-  var popupNode = inMobile ? /*#__PURE__*/createElement(MobilePopupInner, _extends({}, cloneProps, {
+  var popupNode = inMobile ? /*#__PURE__*/React.createElement(MobilePopupInner, _extends({}, cloneProps, {
     mobile: mobile,
     ref: ref
-  })) : /*#__PURE__*/createElement(PopupInner, _extends({}, cloneProps, {
+  })) : /*#__PURE__*/React.createElement(PopupInner, _extends({}, cloneProps, {
     ref: ref
   })); // We can use fragment directly but this may failed some selector usage. Keep as origin logic
 
-  return /*#__PURE__*/createElement("div", null, /*#__PURE__*/createElement(Mask, cloneProps), popupNode);
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Mask, cloneProps), popupNode);
 });
 Popup.displayName = 'Popup';
 
-var TriggerContext = /*#__PURE__*/createContext(null);
+var TriggerContext = /*#__PURE__*/React.createContext(null);
 
 function noop() {}
 
@@ -9302,8 +9303,8 @@ function generateTrigger(PortalComponent) {
       _classCallCheck(this, Trigger);
 
       _this = _super.call(this, props);
-      _this.popupRef = /*#__PURE__*/createRef();
-      _this.triggerRef = /*#__PURE__*/createRef();
+      _this.popupRef = /*#__PURE__*/React.createRef();
+      _this.triggerRef = /*#__PURE__*/React.createRef();
 
       _this.onMouseEnter = function (e) {
         var mouseEnterDelay = _this.props.mouseEnterDelay;
@@ -9537,7 +9538,7 @@ function generateTrigger(PortalComponent) {
 
         mouseProps.onMouseDown = _this.onPopupMouseDown;
         mouseProps.onTouchStart = _this.onPopupMouseDown;
-        return /*#__PURE__*/createElement(Popup, _extends({
+        return /*#__PURE__*/React.createElement(Popup, _extends({
           prefixCls: prefixCls,
           destroyPopupOnHide: destroyPopupOnHide,
           visible: popupVisible,
@@ -9917,7 +9918,7 @@ function generateTrigger(PortalComponent) {
             alignPoint = _this$props11.alignPoint,
             className = _this$props11.className,
             autoDestroy = _this$props11.autoDestroy;
-        var child = Children.only(children);
+        var child = React.Children.only(children);
         var newChildProps = {
           key: 'trigger'
         }; // ============================== Visible Handlers ==============================
@@ -9980,11 +9981,11 @@ function generateTrigger(PortalComponent) {
           cloneProps.ref = composeRef(this.triggerRef, child.ref);
         }
 
-        var trigger = /*#__PURE__*/cloneElement(child, cloneProps);
+        var trigger = /*#__PURE__*/React.cloneElement(child, cloneProps);
         var portal; // prevent unmounting after it's rendered
 
         if (popupVisible || this.popupRef.current || forceRender) {
-          portal = /*#__PURE__*/createElement(PortalComponent, {
+          portal = /*#__PURE__*/React.createElement(PortalComponent, {
             key: "portal",
             getContainer: this.getContainer,
             didUpdate: this.handlePortalUpdate
@@ -9995,7 +9996,7 @@ function generateTrigger(PortalComponent) {
           portal = null;
         }
 
-        return /*#__PURE__*/createElement(TriggerContext.Provider, {
+        return /*#__PURE__*/React.createElement(TriggerContext.Provider, {
           value: this.triggerContextValue
         }, trigger, portal);
       }
@@ -10015,7 +10016,7 @@ function generateTrigger(PortalComponent) {
     }]);
 
     return Trigger;
-  }(Component);
+  }(React.Component);
 
   Trigger.contextType = TriggerContext;
   Trigger.defaultProps = {
@@ -10290,248 +10291,240 @@ exports.default = _default;
 
 unwrapExports(Tooltip_1);
 
-const FormItem = ({
-  colon,
-  dependencies,
-  extra,
-  getValueFromEvent,
-  getValueProps,
-  hasFeedback,
-  help,
-  hidden,
-  htmlFor,
-  initialValue,
-  label,
-  labelAlign,
-  labelCol,
-  messageVariables,
-  name,
-  normalize,
-  noStyle,
-  preserve,
-  required,
-  rules,
-  shouldUpdate,
-  tooltip,
-  trigger,
-  validateFirst,
-  validateStatus,
-  validateTrigger,
-  valuePropName,
-  wrapperCol,
-  children
-}) => {
-  const props = {
-    colon,
-    dependencies,
-    extra,
-    getValueFromEvent,
-    getValueProps,
-    hasFeedback,
-    help,
-    hidden,
-    htmlFor,
-    initialValue,
-    label,
-    labelAlign,
-    labelCol,
-    messageVariables,
-    name,
-    normalize,
-    noStyle,
-    preserve,
-    required,
-    rules,
-    shouldUpdate,
-    tooltip,
-    trigger,
-    validateFirst,
-    validateStatus,
-    validateTrigger,
-    valuePropName,
-    wrapperCol,
-    children
+var FormItem = function FormItem(_ref) {
+  var colon = _ref.colon,
+      dependencies = _ref.dependencies,
+      extra = _ref.extra,
+      getValueFromEvent = _ref.getValueFromEvent,
+      getValueProps = _ref.getValueProps,
+      hasFeedback = _ref.hasFeedback,
+      help = _ref.help,
+      hidden = _ref.hidden,
+      htmlFor = _ref.htmlFor,
+      initialValue = _ref.initialValue,
+      label = _ref.label,
+      labelAlign = _ref.labelAlign,
+      labelCol = _ref.labelCol,
+      messageVariables = _ref.messageVariables,
+      name = _ref.name,
+      normalize = _ref.normalize,
+      noStyle = _ref.noStyle,
+      preserve = _ref.preserve,
+      required = _ref.required,
+      rules = _ref.rules,
+      shouldUpdate = _ref.shouldUpdate,
+      tooltip = _ref.tooltip,
+      trigger = _ref.trigger,
+      validateFirst = _ref.validateFirst,
+      validateStatus = _ref.validateStatus,
+      validateTrigger = _ref.validateTrigger,
+      valuePropName = _ref.valuePropName,
+      wrapperCol = _ref.wrapperCol,
+      children = _ref.children;
+  var props = {
+    colon: colon,
+    dependencies: dependencies,
+    extra: extra,
+    getValueFromEvent: getValueFromEvent,
+    getValueProps: getValueProps,
+    hasFeedback: hasFeedback,
+    help: help,
+    hidden: hidden,
+    htmlFor: htmlFor,
+    initialValue: initialValue,
+    label: label,
+    labelAlign: labelAlign,
+    labelCol: labelCol,
+    messageVariables: messageVariables,
+    name: name,
+    normalize: normalize,
+    noStyle: noStyle,
+    preserve: preserve,
+    required: required,
+    rules: rules,
+    shouldUpdate: shouldUpdate,
+    tooltip: tooltip,
+    trigger: trigger,
+    validateFirst: validateFirst,
+    validateStatus: validateStatus,
+    validateTrigger: validateTrigger,
+    valuePropName: valuePropName,
+    wrapperCol: wrapperCol,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Form$3.Item, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Form.Item, props, children);
 };
 
-const FormProvider$1 = ({
-  onFormChange,
-  onFormFinish,
-  children
-}) => {
-  const props = {
-    onFormChange,
-    onFormFinish,
-    children
+var FormProvider$1 = function FormProvider(_ref) {
+  var onFormChange = _ref.onFormChange,
+      onFormFinish = _ref.onFormFinish,
+      children = _ref.children;
+  var props = {
+    onFormChange: onFormChange,
+    onFormFinish: onFormFinish,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Form$3.Provider, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Form.Provider, props, children);
 };
 
-const Layout = ({
-  className,
-  hasSider,
-  style,
-  children
-}) => {
-  const props = {
-    className,
-    hasSider,
-    style,
-    children
+var Layout = function Layout(_ref) {
+  var className = _ref.className,
+      hasSider = _ref.hasSider,
+      style = _ref.style,
+      children = _ref.children;
+  var props = {
+    className: className,
+    hasSider: hasSider,
+    style: style,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Layout$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Layout, props, children);
 };
 
-const Header = ({
-  className,
-  hasSider,
-  style,
-  children
-}) => {
-  const props = {
-    className,
-    hasSider,
-    style,
-    children
+var Header = function Header(_ref) {
+  var className = _ref.className,
+      hasSider = _ref.hasSider,
+      style = _ref.style,
+      children = _ref.children;
+  var props = {
+    className: className,
+    hasSider: hasSider,
+    style: style,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Layout$1.Header, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Layout.Header, props, children);
 };
 
-const Sider = ({
-  breakpoint,
-  className,
-  collapsed,
-  collapsedWidth,
-  collapsible,
-  defaultCollapsed,
-  reverseArrow,
-  style,
-  theme,
-  trigger,
-  width,
-  zeroWidthTriggerStyle,
-  onBreakpoint,
-  onCollapse,
-  children
-}) => {
-  const props = {
-    breakpoint,
-    className,
-    collapsed,
-    collapsedWidth,
-    collapsible,
-    defaultCollapsed,
-    reverseArrow,
-    style,
-    theme,
-    trigger,
-    width,
-    zeroWidthTriggerStyle,
-    onBreakpoint,
-    onCollapse,
-    children
+var Sider = function Sider(_ref) {
+  var breakpoint = _ref.breakpoint,
+      className = _ref.className,
+      collapsed = _ref.collapsed,
+      collapsedWidth = _ref.collapsedWidth,
+      collapsible = _ref.collapsible,
+      defaultCollapsed = _ref.defaultCollapsed,
+      reverseArrow = _ref.reverseArrow,
+      style = _ref.style,
+      theme = _ref.theme,
+      trigger = _ref.trigger,
+      width = _ref.width,
+      zeroWidthTriggerStyle = _ref.zeroWidthTriggerStyle,
+      onBreakpoint = _ref.onBreakpoint,
+      onCollapse = _ref.onCollapse,
+      children = _ref.children;
+  var props = {
+    breakpoint: breakpoint,
+    className: className,
+    collapsed: collapsed,
+    collapsedWidth: collapsedWidth,
+    collapsible: collapsible,
+    defaultCollapsed: defaultCollapsed,
+    reverseArrow: reverseArrow,
+    style: style,
+    theme: theme,
+    trigger: trigger,
+    width: width,
+    zeroWidthTriggerStyle: zeroWidthTriggerStyle,
+    onBreakpoint: onBreakpoint,
+    onCollapse: onCollapse,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Layout$1.Sider, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Layout.Sider, props, children);
 };
 
-const Content = ({
-  className,
-  hasSider,
-  style,
-  children
-}) => {
-  const props = {
-    className,
-    hasSider,
-    style,
-    children
+var Content = function Content(_ref) {
+  var className = _ref.className,
+      hasSider = _ref.hasSider,
+      style = _ref.style,
+      children = _ref.children;
+  var props = {
+    className: className,
+    hasSider: hasSider,
+    style: style,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Layout$1.Content, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Layout.Content, props, children);
 };
 
-const Footer = ({
-  className,
-  hasSider,
-  style,
-  children
-}) => {
-  const props = {
-    className,
-    hasSider,
-    style,
-    children
+var Footer = function Footer(_ref) {
+  var className = _ref.className,
+      hasSider = _ref.hasSider,
+      style = _ref.style,
+      children = _ref.children;
+  var props = {
+    className: className,
+    hasSider: hasSider,
+    style: style,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Layout$1.Footer, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Layout.Footer, props, children);
 };
 
-const TimePicker = ({
-  autoFocus,
-  bordered,
-  className,
-  clearIcon,
-  clearText,
-  defaultValue,
-  disabled,
-  disabledHours,
-  disabledMinutes,
-  disabledSeconds,
-  format,
-  allowClear,
-  getPopupContainer,
-  hideDisabledOptions,
-  hourStep,
-  inputReadOnly,
-  minuteStep,
-  open,
-  placeholder,
-  popupClassName,
-  popupStyle,
-  renderExtraFooter,
-  secondStep,
-  showNow,
-  suffixIcon,
-  use12Hours,
-  value,
-  onChange,
-  onOpenChange,
-  onSelect,
-  children
-}) => {
-  const props = {
-    autoFocus,
-    bordered,
-    className,
-    clearIcon,
-    clearText,
-    defaultValue,
-    disabled,
-    disabledHours,
-    disabledMinutes,
-    disabledSeconds,
-    format,
-    allowClear,
-    getPopupContainer,
-    hideDisabledOptions,
-    hourStep,
-    inputReadOnly,
-    minuteStep,
-    open,
-    placeholder,
-    popupClassName,
-    popupStyle,
-    renderExtraFooter,
-    secondStep,
-    showNow,
-    suffixIcon,
-    use12Hours,
-    value,
-    onChange,
-    onOpenChange,
-    onSelect,
-    children
+var TimePicker = function TimePicker(_ref) {
+  var autoFocus = _ref.autoFocus,
+      bordered = _ref.bordered,
+      className = _ref.className,
+      clearIcon = _ref.clearIcon,
+      clearText = _ref.clearText,
+      defaultValue = _ref.defaultValue,
+      disabled = _ref.disabled,
+      disabledHours = _ref.disabledHours,
+      disabledMinutes = _ref.disabledMinutes,
+      disabledSeconds = _ref.disabledSeconds,
+      format = _ref.format,
+      allowClear = _ref.allowClear,
+      getPopupContainer = _ref.getPopupContainer,
+      hideDisabledOptions = _ref.hideDisabledOptions,
+      hourStep = _ref.hourStep,
+      inputReadOnly = _ref.inputReadOnly,
+      minuteStep = _ref.minuteStep,
+      open = _ref.open,
+      placeholder = _ref.placeholder,
+      popupClassName = _ref.popupClassName,
+      popupStyle = _ref.popupStyle,
+      renderExtraFooter = _ref.renderExtraFooter,
+      secondStep = _ref.secondStep,
+      showNow = _ref.showNow,
+      suffixIcon = _ref.suffixIcon,
+      use12Hours = _ref.use12Hours,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      onOpenChange = _ref.onOpenChange,
+      onSelect = _ref.onSelect,
+      children = _ref.children;
+  var props = {
+    autoFocus: autoFocus,
+    bordered: bordered,
+    className: className,
+    clearIcon: clearIcon,
+    clearText: clearText,
+    defaultValue: defaultValue,
+    disabled: disabled,
+    disabledHours: disabledHours,
+    disabledMinutes: disabledMinutes,
+    disabledSeconds: disabledSeconds,
+    format: format,
+    allowClear: allowClear,
+    getPopupContainer: getPopupContainer,
+    hideDisabledOptions: hideDisabledOptions,
+    hourStep: hourStep,
+    inputReadOnly: inputReadOnly,
+    minuteStep: minuteStep,
+    open: open,
+    placeholder: placeholder,
+    popupClassName: popupClassName,
+    popupStyle: popupStyle,
+    renderExtraFooter: renderExtraFooter,
+    secondStep: secondStep,
+    showNow: showNow,
+    suffixIcon: suffixIcon,
+    use12Hours: use12Hours,
+    value: value,
+    onChange: onChange,
+    onOpenChange: onOpenChange,
+    onSelect: onSelect,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(TimePicker$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.TimePicker, props, children);
 };
 
 var _interface$1 = createCommonjsModule(function (module, exports) {
@@ -10543,77 +10536,76 @@ Object.defineProperty(exports, "__esModule", {
 
 unwrapExports(_interface$1);
 
-const TimePickerRangePicker = ({
-  order,
-  children,
-  allowClear,
-  autoFocus,
-  bordered,
-  className,
-  dateRender,
-  disabled,
-  disabledDate,
-  dropdownClassName,
-  getPopupContainer,
-  inputReadOnly,
-  locale,
-  mode,
-  open,
-  panelRender,
-  picker,
-  placeholder,
-  popupStyle,
-  size,
-  style,
-  suffixIcon,
-  onOpenChange,
-  onPanelChange,
-  defaultPickerValue,
-  defaultValue,
-  disabledTime,
-  format,
-  renderExtraFooter,
-  showNow,
-  showToday,
-  value,
-  onChange
-}) => {
-  const props = {
-    order,
-    children,
-    allowClear,
-    autoFocus,
-    bordered,
-    className,
-    dateRender,
-    disabled,
-    disabledDate,
-    dropdownClassName,
-    getPopupContainer,
-    inputReadOnly,
-    locale,
-    mode,
-    open,
-    panelRender,
-    picker,
-    placeholder,
-    popupStyle,
-    size,
-    style,
-    suffixIcon,
-    onOpenChange,
-    onPanelChange,
-    defaultPickerValue,
-    defaultValue,
-    disabledTime,
-    format,
-    renderExtraFooter,
-    showNow,
-    showToday,
-    value,
-    onChange
+var TimePickerRangePicker = function TimePickerRangePicker(_ref) {
+  var order = _ref.order,
+      children = _ref.children,
+      allowClear = _ref.allowClear,
+      autoFocus = _ref.autoFocus,
+      bordered = _ref.bordered,
+      className = _ref.className,
+      dateRender = _ref.dateRender,
+      disabled = _ref.disabled,
+      disabledDate = _ref.disabledDate,
+      dropdownClassName = _ref.dropdownClassName,
+      getPopupContainer = _ref.getPopupContainer,
+      inputReadOnly = _ref.inputReadOnly,
+      locale = _ref.locale,
+      mode = _ref.mode,
+      open = _ref.open,
+      panelRender = _ref.panelRender,
+      picker = _ref.picker,
+      placeholder = _ref.placeholder,
+      popupStyle = _ref.popupStyle,
+      size = _ref.size,
+      style = _ref.style,
+      suffixIcon = _ref.suffixIcon,
+      onOpenChange = _ref.onOpenChange,
+      onPanelChange = _ref.onPanelChange,
+      defaultPickerValue = _ref.defaultPickerValue,
+      defaultValue = _ref.defaultValue,
+      disabledTime = _ref.disabledTime,
+      format = _ref.format,
+      renderExtraFooter = _ref.renderExtraFooter,
+      showNow = _ref.showNow,
+      showToday = _ref.showToday,
+      value = _ref.value,
+      onChange = _ref.onChange;
+  var props = {
+    order: order,
+    children: children,
+    allowClear: allowClear,
+    autoFocus: autoFocus,
+    bordered: bordered,
+    className: className,
+    dateRender: dateRender,
+    disabled: disabled,
+    disabledDate: disabledDate,
+    dropdownClassName: dropdownClassName,
+    getPopupContainer: getPopupContainer,
+    inputReadOnly: inputReadOnly,
+    locale: locale,
+    mode: mode,
+    open: open,
+    panelRender: panelRender,
+    picker: picker,
+    placeholder: placeholder,
+    popupStyle: popupStyle,
+    size: size,
+    style: style,
+    suffixIcon: suffixIcon,
+    onOpenChange: onOpenChange,
+    onPanelChange: onPanelChange,
+    defaultPickerValue: defaultPickerValue,
+    defaultValue: defaultValue,
+    disabledTime: disabledTime,
+    format: format,
+    renderExtraFooter: renderExtraFooter,
+    showNow: showNow,
+    showToday: showToday,
+    value: value,
+    onChange: onChange
   };
-  return /*#__PURE__*/React__default.createElement(TimePicker$1.RangePicker, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.TimePicker.RangePicker, props, children);
 };
 
 var _interface$2 = createCommonjsModule(function (module, exports) {
@@ -10637,145 +10629,142 @@ exports.INTERNAL_PROPS_MARK = INTERNAL_PROPS_MARK;
 
 unwrapExports(generator);
 
-const Select = ({
-  allowClear,
-  autoClearSearchValue,
-  autoFocus,
-  bordered,
-  clearIcon,
-  defaultActiveFirstOption,
-  defaultOpen,
-  defaultValue,
-  disabled,
-  dropdownClassName,
-  dropdownMatchSelectWidth,
-  dropdownRender,
-  dropdownStyle,
-  filterOption,
-  filterSort,
-  getPopupContainer,
-  labelInValue,
-  listHeight,
-  loading,
-  maxTagCount,
-  maxTagPlaceholder,
-  maxTagTextLength,
-  menuItemSelectedIcon,
-  mode,
-  notFoundContent,
-  open,
-  optionFilterProp,
-  optionLabelProp,
-  options,
-  placeholder,
-  removeIcon,
-  searchValue,
-  showArrow,
-  showSearch,
-  tagRender,
-  suffixIcon,
-  tokenSeparators,
-  value,
-  virtual,
-  onBlur,
-  onChange,
-  onClear,
-  onDeselect,
-  onDropdownVisibleChange,
-  onFocus,
-  onInputKeyDown,
-  onMouseEnter,
-  onMouseLeave,
-  onPopupScroll,
-  onSearch,
-  onSelect,
-  children
-}) => {
-  const props = {
-    allowClear,
-    autoClearSearchValue,
-    autoFocus,
-    bordered,
-    clearIcon,
-    defaultActiveFirstOption,
-    defaultOpen,
-    defaultValue,
-    disabled,
-    dropdownClassName,
-    dropdownMatchSelectWidth,
-    dropdownRender,
-    dropdownStyle,
-    filterOption,
-    filterSort,
-    getPopupContainer,
-    labelInValue,
-    listHeight,
-    loading,
-    maxTagCount,
-    maxTagPlaceholder,
-    maxTagTextLength,
-    menuItemSelectedIcon,
-    mode,
-    notFoundContent,
-    open,
-    optionFilterProp,
-    optionLabelProp,
-    options,
-    placeholder,
-    removeIcon,
-    searchValue,
-    showArrow,
-    showSearch,
-    tagRender,
-    suffixIcon,
-    tokenSeparators,
-    value,
-    virtual,
-    onBlur,
-    onChange,
-    onClear,
-    onDeselect,
-    onDropdownVisibleChange,
-    onFocus,
-    onInputKeyDown,
-    onMouseEnter,
-    onMouseLeave,
-    onPopupScroll,
-    onSearch,
-    onSelect,
-    children
+var Select = function Select(_ref) {
+  var allowClear = _ref.allowClear,
+      autoClearSearchValue = _ref.autoClearSearchValue,
+      autoFocus = _ref.autoFocus,
+      bordered = _ref.bordered,
+      clearIcon = _ref.clearIcon,
+      defaultActiveFirstOption = _ref.defaultActiveFirstOption,
+      defaultOpen = _ref.defaultOpen,
+      defaultValue = _ref.defaultValue,
+      disabled = _ref.disabled,
+      dropdownClassName = _ref.dropdownClassName,
+      dropdownMatchSelectWidth = _ref.dropdownMatchSelectWidth,
+      dropdownRender = _ref.dropdownRender,
+      dropdownStyle = _ref.dropdownStyle,
+      filterOption = _ref.filterOption,
+      filterSort = _ref.filterSort,
+      getPopupContainer = _ref.getPopupContainer,
+      labelInValue = _ref.labelInValue,
+      listHeight = _ref.listHeight,
+      loading = _ref.loading,
+      maxTagCount = _ref.maxTagCount,
+      maxTagPlaceholder = _ref.maxTagPlaceholder,
+      maxTagTextLength = _ref.maxTagTextLength,
+      menuItemSelectedIcon = _ref.menuItemSelectedIcon,
+      mode = _ref.mode,
+      notFoundContent = _ref.notFoundContent,
+      open = _ref.open,
+      optionFilterProp = _ref.optionFilterProp,
+      optionLabelProp = _ref.optionLabelProp,
+      options = _ref.options,
+      placeholder = _ref.placeholder,
+      removeIcon = _ref.removeIcon,
+      searchValue = _ref.searchValue,
+      showArrow = _ref.showArrow,
+      showSearch = _ref.showSearch,
+      tagRender = _ref.tagRender,
+      suffixIcon = _ref.suffixIcon,
+      tokenSeparators = _ref.tokenSeparators,
+      value = _ref.value,
+      virtual = _ref.virtual,
+      onBlur = _ref.onBlur,
+      onChange = _ref.onChange,
+      onClear = _ref.onClear,
+      onDeselect = _ref.onDeselect,
+      onDropdownVisibleChange = _ref.onDropdownVisibleChange,
+      onFocus = _ref.onFocus,
+      onInputKeyDown = _ref.onInputKeyDown,
+      onMouseEnter = _ref.onMouseEnter,
+      onMouseLeave = _ref.onMouseLeave,
+      onPopupScroll = _ref.onPopupScroll,
+      onSearch = _ref.onSearch,
+      onSelect = _ref.onSelect,
+      children = _ref.children;
+  var props = {
+    allowClear: allowClear,
+    autoClearSearchValue: autoClearSearchValue,
+    autoFocus: autoFocus,
+    bordered: bordered,
+    clearIcon: clearIcon,
+    defaultActiveFirstOption: defaultActiveFirstOption,
+    defaultOpen: defaultOpen,
+    defaultValue: defaultValue,
+    disabled: disabled,
+    dropdownClassName: dropdownClassName,
+    dropdownMatchSelectWidth: dropdownMatchSelectWidth,
+    dropdownRender: dropdownRender,
+    dropdownStyle: dropdownStyle,
+    filterOption: filterOption,
+    filterSort: filterSort,
+    getPopupContainer: getPopupContainer,
+    labelInValue: labelInValue,
+    listHeight: listHeight,
+    loading: loading,
+    maxTagCount: maxTagCount,
+    maxTagPlaceholder: maxTagPlaceholder,
+    maxTagTextLength: maxTagTextLength,
+    menuItemSelectedIcon: menuItemSelectedIcon,
+    mode: mode,
+    notFoundContent: notFoundContent,
+    open: open,
+    optionFilterProp: optionFilterProp,
+    optionLabelProp: optionLabelProp,
+    options: options,
+    placeholder: placeholder,
+    removeIcon: removeIcon,
+    searchValue: searchValue,
+    showArrow: showArrow,
+    showSearch: showSearch,
+    tagRender: tagRender,
+    suffixIcon: suffixIcon,
+    tokenSeparators: tokenSeparators,
+    value: value,
+    virtual: virtual,
+    onBlur: onBlur,
+    onChange: onChange,
+    onClear: onClear,
+    onDeselect: onDeselect,
+    onDropdownVisibleChange: onDropdownVisibleChange,
+    onFocus: onFocus,
+    onInputKeyDown: onInputKeyDown,
+    onMouseEnter: onMouseEnter,
+    onMouseLeave: onMouseLeave,
+    onPopupScroll: onPopupScroll,
+    onSearch: onSearch,
+    onSelect: onSelect,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Select$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Select, props, children);
 };
 
-const SelectOption = ({
-  className,
-  disabled,
-  title,
-  value,
-  children
-}) => {
-  const props = {
-    className,
-    disabled,
-    title,
-    value,
-    children
+var SelectOption = function SelectOption(_ref) {
+  var className = _ref.className,
+      disabled = _ref.disabled,
+      title = _ref.title,
+      value = _ref.value,
+      children = _ref.children;
+  var props = {
+    className: className,
+    disabled: disabled,
+    title: title,
+    value: value,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Select$1.Option, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Select.Option, props, children);
 };
 
-const SelectOptGroup = ({
-  key,
-  label,
-  children
-}) => {
-  const props = {
-    key,
-    label,
-    children
+var SelectOptGroup = function SelectOptGroup(_ref) {
+  var key = _ref.key,
+      label = _ref.label,
+      children = _ref.children;
+  var props = {
+    key: key,
+    label: label,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Select$1.OptGroup, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Select.OptGroup, props, children);
 };
 
 var _interface$3 = createCommonjsModule(function (module, exports) {
@@ -10787,461 +10776,444 @@ Object.defineProperty(exports, "__esModule", {
 
 unwrapExports(_interface$3);
 
-const Table = ({
-  bordered,
-  columns,
-  components,
-  dataSource,
-  expandable,
-  footer,
-  getPopupContainer,
-  loading,
-  locale,
-  pagination,
-  rowClassName,
-  rowKey,
-  rowSelection,
-  scroll,
-  showHeader,
-  showSorterTooltip,
-  size,
-  sortDirections,
-  sticky,
-  summary,
-  tableLayout,
-  title,
-  children
-}) => {
-  const props = {
-    bordered,
-    columns,
-    components,
-    dataSource,
-    expandable,
-    footer,
-    getPopupContainer,
-    loading,
-    locale,
-    pagination,
-    rowClassName,
-    rowKey,
-    rowSelection,
-    scroll,
-    showHeader,
-    showSorterTooltip,
-    size,
-    sortDirections,
-    sticky,
-    summary,
-    tableLayout,
-    title,
-    children
+var Table = function Table(_ref) {
+  var bordered = _ref.bordered,
+      columns = _ref.columns,
+      components = _ref.components,
+      dataSource = _ref.dataSource,
+      expandable = _ref.expandable,
+      footer = _ref.footer,
+      getPopupContainer = _ref.getPopupContainer,
+      loading = _ref.loading,
+      locale = _ref.locale,
+      pagination = _ref.pagination,
+      rowClassName = _ref.rowClassName,
+      rowKey = _ref.rowKey,
+      rowSelection = _ref.rowSelection,
+      scroll = _ref.scroll,
+      showHeader = _ref.showHeader,
+      showSorterTooltip = _ref.showSorterTooltip,
+      size = _ref.size,
+      sortDirections = _ref.sortDirections,
+      sticky = _ref.sticky,
+      summary = _ref.summary,
+      tableLayout = _ref.tableLayout,
+      title = _ref.title,
+      children = _ref.children;
+  var props = {
+    bordered: bordered,
+    columns: columns,
+    components: components,
+    dataSource: dataSource,
+    expandable: expandable,
+    footer: footer,
+    getPopupContainer: getPopupContainer,
+    loading: loading,
+    locale: locale,
+    pagination: pagination,
+    rowClassName: rowClassName,
+    rowKey: rowKey,
+    rowSelection: rowSelection,
+    scroll: scroll,
+    showHeader: showHeader,
+    showSorterTooltip: showSorterTooltip,
+    size: size,
+    sortDirections: sortDirections,
+    sticky: sticky,
+    summary: summary,
+    tableLayout: tableLayout,
+    title: title,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Table$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Table, props, children);
 };
 
-const TableColumn = ({
-  align,
-  className,
-  colSpan,
-  dataIndex,
-  defaultFilteredValue,
-  defaultSortOrder,
-  editable,
-  ellipsis,
-  filterDropdown,
-  filterDropdownVisible,
-  filtered,
-  filteredValue,
-  filterIcon,
-  filterMultiple,
-  filters,
-  fixed,
-  key,
-  render,
-  responsive,
-  shouldCellUpdate,
-  showSorterTooltip,
-  sortDirections,
-  sorter,
-  sortOrder,
-  title,
-  width,
-  onCell,
-  onFilter,
-  onFilterDropdownVisibleChange,
-  onHeaderCell
-}) => {
-  const props = {
-    align,
-    className,
-    colSpan,
-    dataIndex,
-    defaultFilteredValue,
-    defaultSortOrder,
-    editable,
-    ellipsis,
-    filterDropdown,
-    filterDropdownVisible,
-    filtered,
-    filteredValue,
-    filterIcon,
-    filterMultiple,
-    filters,
-    fixed,
-    key,
-    render,
-    responsive,
-    shouldCellUpdate,
-    showSorterTooltip,
-    sortDirections,
-    sorter,
-    sortOrder,
-    title,
-    width,
-    onCell,
-    onFilter,
-    onFilterDropdownVisibleChange,
-    onHeaderCell
+var TableColumn = function TableColumn(_ref) {
+  var align = _ref.align,
+      className = _ref.className,
+      colSpan = _ref.colSpan,
+      dataIndex = _ref.dataIndex,
+      defaultFilteredValue = _ref.defaultFilteredValue,
+      defaultSortOrder = _ref.defaultSortOrder,
+      editable = _ref.editable,
+      ellipsis = _ref.ellipsis,
+      filterDropdown = _ref.filterDropdown,
+      filterDropdownVisible = _ref.filterDropdownVisible,
+      filtered = _ref.filtered,
+      filteredValue = _ref.filteredValue,
+      filterIcon = _ref.filterIcon,
+      filterMultiple = _ref.filterMultiple,
+      filters = _ref.filters,
+      fixed = _ref.fixed,
+      key = _ref.key,
+      render = _ref.render,
+      responsive = _ref.responsive,
+      shouldCellUpdate = _ref.shouldCellUpdate,
+      showSorterTooltip = _ref.showSorterTooltip,
+      sortDirections = _ref.sortDirections,
+      sorter = _ref.sorter,
+      sortOrder = _ref.sortOrder,
+      title = _ref.title,
+      width = _ref.width,
+      onCell = _ref.onCell,
+      onFilter = _ref.onFilter,
+      onFilterDropdownVisibleChange = _ref.onFilterDropdownVisibleChange,
+      onHeaderCell = _ref.onHeaderCell;
+  var props = {
+    align: align,
+    className: className,
+    colSpan: colSpan,
+    dataIndex: dataIndex,
+    defaultFilteredValue: defaultFilteredValue,
+    defaultSortOrder: defaultSortOrder,
+    editable: editable,
+    ellipsis: ellipsis,
+    filterDropdown: filterDropdown,
+    filterDropdownVisible: filterDropdownVisible,
+    filtered: filtered,
+    filteredValue: filteredValue,
+    filterIcon: filterIcon,
+    filterMultiple: filterMultiple,
+    filters: filters,
+    fixed: fixed,
+    key: key,
+    render: render,
+    responsive: responsive,
+    shouldCellUpdate: shouldCellUpdate,
+    showSorterTooltip: showSorterTooltip,
+    sortDirections: sortDirections,
+    sorter: sorter,
+    sortOrder: sortOrder,
+    title: title,
+    width: width,
+    onCell: onCell,
+    onFilter: onFilter,
+    onFilterDropdownVisibleChange: onFilterDropdownVisibleChange,
+    onHeaderCell: onHeaderCell
   };
-  return /*#__PURE__*/React__default.createElement(Table$1.Column, props);
+  return /*#__PURE__*/React__default.createElement(antd.Table.Column, props);
 };
 
-const TableColumn$1 = ({
-  children,
-  title
-}) => {
-  const props = {
-    children,
-    title
+var TableColumn$1 = function TableColumn(_ref) {
+  var children = _ref.children,
+      title = _ref.title;
+  var props = {
+    children: children,
+    title: title
   };
-  return /*#__PURE__*/React__default.createElement(Table$1.ColumnGroup, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Table.ColumnGroup, props, children);
 };
 
-const Descriptions = ({
-  bordered,
-  colon,
-  children,
-  column,
-  contentStyle,
-  extra,
-  labelStyle,
-  layout,
-  size,
-  title
-}) => {
-  const props = {
-    bordered,
-    colon,
-    children,
-    column,
-    contentStyle,
-    extra,
-    labelStyle,
-    layout,
-    size,
-    title
+var Descriptions = function Descriptions(_ref) {
+  var bordered = _ref.bordered,
+      colon = _ref.colon,
+      children = _ref.children,
+      column = _ref.column,
+      contentStyle = _ref.contentStyle,
+      extra = _ref.extra,
+      labelStyle = _ref.labelStyle,
+      layout = _ref.layout,
+      size = _ref.size,
+      title = _ref.title;
+  var props = {
+    bordered: bordered,
+    colon: colon,
+    children: children,
+    column: column,
+    contentStyle: contentStyle,
+    extra: extra,
+    labelStyle: labelStyle,
+    layout: layout,
+    size: size,
+    title: title
   };
-  return /*#__PURE__*/React__default.createElement(Descriptions$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Descriptions, props, children);
 };
 
-const DescriptionsItem = ({
-  contentStyle,
-  label,
-  labelStyle,
-  span,
-  children
-}) => {
-  const props = {
-    contentStyle,
-    label,
-    labelStyle,
-    span,
-    children
+var DescriptionsItem = function DescriptionsItem(_ref) {
+  var contentStyle = _ref.contentStyle,
+      label = _ref.label,
+      labelStyle = _ref.labelStyle,
+      span = _ref.span,
+      children = _ref.children;
+  var props = {
+    contentStyle: contentStyle,
+    label: label,
+    labelStyle: labelStyle,
+    span: span,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Descriptions$1.Item, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Descriptions.Item, props, children);
 };
 
-const Text = ({
-  code,
-  className,
-  copyable,
-  disabled,
-  editable,
-  ellipsis,
-  keyboard,
-  mark,
-  onClick,
-  strong,
-  italic,
-  type,
-  underline,
-  children
-}) => {
-  const props = {
-    code,
-    className,
-    copyable,
-    disabled,
-    editable,
-    ellipsis,
-    keyboard,
-    mark,
-    onClick,
-    strong,
-    italic,
-    type,
-    underline,
-    children
+var Text = function Text(_ref) {
+  var code = _ref.code,
+      className = _ref.className,
+      copyable = _ref.copyable,
+      disabled = _ref.disabled,
+      editable = _ref.editable,
+      ellipsis = _ref.ellipsis,
+      keyboard = _ref.keyboard,
+      mark = _ref.mark,
+      onClick = _ref.onClick,
+      strong = _ref.strong,
+      italic = _ref.italic,
+      type = _ref.type,
+      underline = _ref.underline,
+      children = _ref.children;
+  var props = {
+    code: code,
+    className: className,
+    copyable: copyable,
+    disabled: disabled,
+    editable: editable,
+    ellipsis: ellipsis,
+    keyboard: keyboard,
+    mark: mark,
+    onClick: onClick,
+    strong: strong,
+    italic: italic,
+    type: type,
+    underline: underline,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Typography.Text, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Typography.Text, props, children);
 };
 
-const Link = ({
-  href,
-  target,
-  title,
-  className,
-  children
-}) => {
-  const props = {
-    href,
-    target,
-    title,
-    className,
-    children
+var Link = function Link(_ref) {
+  var href = _ref.href,
+      target = _ref.target,
+      title = _ref.title,
+      className = _ref.className,
+      children = _ref.children;
+  var props = {
+    href: href,
+    target: target,
+    title: title,
+    className: className,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Typography.Link, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Typography.Link, props, children);
 };
 
-const Title = ({
-  code,
-  copyable,
-  disabled,
-  editable,
-  ellipsis,
-  level,
-  mark,
-  onClick,
-  italic,
-  type,
-  underline,
-  children
-}) => {
-  const props = {
-    code,
-    copyable,
-    disabled,
-    editable,
-    ellipsis,
-    level,
-    mark,
-    onClick,
-    italic,
-    type,
-    underline,
-    children
+var Title = function Title(_ref) {
+  var code = _ref.code,
+      copyable = _ref.copyable,
+      disabled = _ref.disabled,
+      editable = _ref.editable,
+      ellipsis = _ref.ellipsis,
+      level = _ref.level,
+      mark = _ref.mark,
+      onClick = _ref.onClick,
+      italic = _ref.italic,
+      type = _ref.type,
+      underline = _ref.underline,
+      children = _ref.children;
+  var props = {
+    code: code,
+    copyable: copyable,
+    disabled: disabled,
+    editable: editable,
+    ellipsis: ellipsis,
+    level: level,
+    mark: mark,
+    onClick: onClick,
+    italic: italic,
+    type: type,
+    underline: underline,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Typography.Title, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Typography.Title, props, children);
 };
 
-const Paragraph = ({
-  code,
-  copyable,
-  disabled,
-  editable,
-  ellipsis,
-  mark,
-  onClick,
-  strong,
-  italic,
-  type,
-  underline,
-  className,
-  children
-}) => {
-  const props = {
-    code,
-    copyable,
-    disabled,
-    editable,
-    ellipsis,
-    mark,
-    onClick,
-    strong,
-    italic,
-    type,
-    underline,
-    className,
-    children
+var Paragraph = function Paragraph(_ref) {
+  var code = _ref.code,
+      copyable = _ref.copyable,
+      disabled = _ref.disabled,
+      editable = _ref.editable,
+      ellipsis = _ref.ellipsis,
+      mark = _ref.mark,
+      onClick = _ref.onClick,
+      strong = _ref.strong,
+      italic = _ref.italic,
+      type = _ref.type,
+      underline = _ref.underline,
+      className = _ref.className,
+      children = _ref.children;
+  var props = {
+    code: code,
+    copyable: copyable,
+    disabled: disabled,
+    editable: editable,
+    ellipsis: ellipsis,
+    mark: mark,
+    onClick: onClick,
+    strong: strong,
+    italic: italic,
+    type: type,
+    underline: underline,
+    className: className,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Typography.Paragraph, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Typography.Paragraph, props, children);
 };
 
-const Statistic = ({
-  decimalSeparator,
-  children,
-  suffix,
-  title,
-  value,
-  valueStyle,
-  formatter,
-  groupSeparator,
-  loading,
-  precision,
-  prefix
-}) => {
-  const props = {
-    decimalSeparator,
-    children,
-    suffix,
-    title,
-    value,
-    valueStyle,
-    formatter,
-    groupSeparator,
-    loading,
-    precision,
-    prefix
+var Statistic = function Statistic(_ref) {
+  var decimalSeparator = _ref.decimalSeparator,
+      children = _ref.children,
+      suffix = _ref.suffix,
+      title = _ref.title,
+      value = _ref.value,
+      valueStyle = _ref.valueStyle,
+      formatter = _ref.formatter,
+      groupSeparator = _ref.groupSeparator,
+      loading = _ref.loading,
+      precision = _ref.precision,
+      prefix = _ref.prefix;
+  var props = {
+    decimalSeparator: decimalSeparator,
+    children: children,
+    suffix: suffix,
+    title: title,
+    value: value,
+    valueStyle: valueStyle,
+    formatter: formatter,
+    groupSeparator: groupSeparator,
+    loading: loading,
+    precision: precision,
+    prefix: prefix
   };
-  return /*#__PURE__*/React__default.createElement(Statistic$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Statistic, props, children);
 };
 
-const StatisticCountdown = ({
-  format,
-  prefix,
-  suffix,
-  title,
-  value,
-  valueStyle,
-  onFinish,
-  onChange,
-  children
-}) => {
-  const props = {
-    format,
-    prefix,
-    suffix,
-    title,
-    value,
-    valueStyle,
-    onFinish,
-    onChange,
-    children
+var StatisticCountdown = function StatisticCountdown(_ref) {
+  var format = _ref.format,
+      prefix = _ref.prefix,
+      suffix = _ref.suffix,
+      title = _ref.title,
+      value = _ref.value,
+      valueStyle = _ref.valueStyle,
+      onFinish = _ref.onFinish,
+      onChange = _ref.onChange,
+      children = _ref.children;
+  var props = {
+    format: format,
+    prefix: prefix,
+    suffix: suffix,
+    title: title,
+    value: value,
+    valueStyle: valueStyle,
+    onFinish: onFinish,
+    onChange: onChange,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Statistic$1.Countdown, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Statistic.Countdown, props, children);
 };
 
-const Breadcrumb = ({
-  itemRender,
-  params,
-  routes,
-  separator,
-  children
-}) => {
-  const props = {
-    itemRender,
-    params,
-    routes,
-    separator,
-    children
+var Breadcrumb = function Breadcrumb(_ref) {
+  var itemRender = _ref.itemRender,
+      params = _ref.params,
+      routes = _ref.routes,
+      separator = _ref.separator,
+      children = _ref.children;
+  var props = {
+    itemRender: itemRender,
+    params: params,
+    routes: routes,
+    separator: separator,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Breadcrumb$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Breadcrumb, props, children);
 };
 
-const BreadcrumbItem = ({
-  className,
-  dropdownProps,
-  href,
-  overlay,
-  onClick,
-  children
-}) => {
-  const props = {
-    className,
-    dropdownProps,
-    href,
-    overlay,
-    onClick,
-    children
+var BreadcrumbItem = function BreadcrumbItem(_ref) {
+  var className = _ref.className,
+      dropdownProps = _ref.dropdownProps,
+      href = _ref.href,
+      overlay = _ref.overlay,
+      onClick = _ref.onClick,
+      children = _ref.children;
+  var props = {
+    className: className,
+    dropdownProps: dropdownProps,
+    href: href,
+    overlay: overlay,
+    onClick: onClick,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Breadcrumb$1.Item, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Breadcrumb.Item, props, children);
 };
 
-const Separator = ({
-  className,
-  children
-}) => {
-  const props = {
-    className,
-    children
+var Separator = function Separator(_ref) {
+  var className = _ref.className,
+      children = _ref.children;
+  var props = {
+    className: className,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Breadcrumb$1.Separator, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Breadcrumb.Separator, props, children);
 };
 
-const Radio = ({
-  autoFocus,
-  checked,
-  defaultChecked,
-  disabled,
-  value,
-  children
-}) => {
-  const props = {
-    autoFocus,
-    checked,
-    defaultChecked,
-    disabled,
-    value,
-    children
+var Radio = function Radio(_ref) {
+  var autoFocus = _ref.autoFocus,
+      checked = _ref.checked,
+      defaultChecked = _ref.defaultChecked,
+      disabled = _ref.disabled,
+      value = _ref.value,
+      children = _ref.children;
+  var props = {
+    autoFocus: autoFocus,
+    checked: checked,
+    defaultChecked: defaultChecked,
+    disabled: disabled,
+    value: value,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Radio$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Radio, props, children);
 };
 
-const RadioGroup = ({
-  buttonStyle,
-  defaultValue,
-  disabled,
-  name,
-  options,
-  optionType,
-  size,
-  value,
-  onChange,
-  children
-}) => {
-  const props = {
-    buttonStyle,
-    defaultValue,
-    disabled,
-    name,
-    options,
-    optionType,
-    size,
-    value,
-    onChange,
-    children
+var RadioGroup = function RadioGroup(_ref) {
+  var buttonStyle = _ref.buttonStyle,
+      defaultValue = _ref.defaultValue,
+      disabled = _ref.disabled,
+      name = _ref.name,
+      options = _ref.options,
+      optionType = _ref.optionType,
+      size = _ref.size,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      children = _ref.children;
+  var props = {
+    buttonStyle: buttonStyle,
+    defaultValue: defaultValue,
+    disabled: disabled,
+    name: name,
+    options: options,
+    optionType: optionType,
+    size: size,
+    value: value,
+    onChange: onChange,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Radio$1.Group, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Radio.Group, props, children);
 };
 
-const RadioButton = ({
-  autoFocus,
-  checked,
-  defaultChecked,
-  disabled,
-  value,
-  children
-}) => {
-  const props = {
-    autoFocus,
-    checked,
-    defaultChecked,
-    disabled,
-    value,
-    children
+var RadioButton = function RadioButton(_ref) {
+  var autoFocus = _ref.autoFocus,
+      checked = _ref.checked,
+      defaultChecked = _ref.defaultChecked,
+      disabled = _ref.disabled,
+      value = _ref.value,
+      children = _ref.children;
+  var props = {
+    autoFocus: autoFocus,
+    checked: checked,
+    defaultChecked: defaultChecked,
+    disabled: disabled,
+    value: value,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Radio$1.Button, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Radio.Button, props, children);
 };
 
 var _interface$4 = createCommonjsModule(function (module, exports) {
@@ -11274,188 +11246,182 @@ exports.TreeContext = TreeContext;
 
 unwrapExports(contextTypes);
 
-const Tree = ({
-  allowDrop,
-  autoExpandParent,
-  blockNode,
-  checkable,
-  checkedKeys,
-  checkStrictly,
-  defaultCheckedKeys,
-  defaultExpandAll,
-  defaultExpandedKeys,
-  defaultSelectedKeys,
-  disabled,
-  draggable,
-  expandedKeys,
-  filterTreeNode,
-  height,
-  icon,
-  loadData,
-  loadedKeys,
-  multiple,
-  selectable,
-  selectedKeys,
-  showIcon,
-  showLine,
-  switcherIcon,
-  titleRender,
-  treeData,
-  virtual,
-  onCheck,
-  onDragEnd,
-  onDragEnter,
-  onDragLeave,
-  onDragOver,
-  onDragStart,
-  onDrop,
-  onExpand,
-  onLoad,
-  onRightClick,
-  onSelect,
-  children
-}) => {
-  const props = {
-    allowDrop,
-    autoExpandParent,
-    blockNode,
-    checkable,
-    checkedKeys,
-    checkStrictly,
-    defaultCheckedKeys,
-    defaultExpandAll,
-    defaultExpandedKeys,
-    defaultSelectedKeys,
-    disabled,
-    draggable,
-    expandedKeys,
-    filterTreeNode,
-    height,
-    icon,
-    loadData,
-    loadedKeys,
-    multiple,
-    selectable,
-    selectedKeys,
-    showIcon,
-    showLine,
-    switcherIcon,
-    titleRender,
-    treeData,
-    virtual,
-    onCheck,
-    onDragEnd,
-    onDragEnter,
-    onDragLeave,
-    onDragOver,
-    onDragStart,
-    onDrop,
-    onExpand,
-    onLoad,
-    onRightClick,
-    onSelect,
-    children
+var Tree = function Tree(_ref) {
+  var allowDrop = _ref.allowDrop,
+      autoExpandParent = _ref.autoExpandParent,
+      blockNode = _ref.blockNode,
+      checkable = _ref.checkable,
+      checkedKeys = _ref.checkedKeys,
+      checkStrictly = _ref.checkStrictly,
+      defaultCheckedKeys = _ref.defaultCheckedKeys,
+      defaultExpandAll = _ref.defaultExpandAll,
+      defaultExpandedKeys = _ref.defaultExpandedKeys,
+      defaultSelectedKeys = _ref.defaultSelectedKeys,
+      disabled = _ref.disabled,
+      draggable = _ref.draggable,
+      expandedKeys = _ref.expandedKeys,
+      filterTreeNode = _ref.filterTreeNode,
+      height = _ref.height,
+      icon = _ref.icon,
+      loadData = _ref.loadData,
+      loadedKeys = _ref.loadedKeys,
+      multiple = _ref.multiple,
+      selectable = _ref.selectable,
+      selectedKeys = _ref.selectedKeys,
+      showIcon = _ref.showIcon,
+      showLine = _ref.showLine,
+      switcherIcon = _ref.switcherIcon,
+      titleRender = _ref.titleRender,
+      treeData = _ref.treeData,
+      virtual = _ref.virtual,
+      onCheck = _ref.onCheck,
+      onDragEnd = _ref.onDragEnd,
+      onDragEnter = _ref.onDragEnter,
+      onDragLeave = _ref.onDragLeave,
+      onDragOver = _ref.onDragOver,
+      onDragStart = _ref.onDragStart,
+      onDrop = _ref.onDrop,
+      onExpand = _ref.onExpand,
+      onLoad = _ref.onLoad,
+      onRightClick = _ref.onRightClick,
+      onSelect = _ref.onSelect,
+      children = _ref.children;
+  var props = {
+    allowDrop: allowDrop,
+    autoExpandParent: autoExpandParent,
+    blockNode: blockNode,
+    checkable: checkable,
+    checkedKeys: checkedKeys,
+    checkStrictly: checkStrictly,
+    defaultCheckedKeys: defaultCheckedKeys,
+    defaultExpandAll: defaultExpandAll,
+    defaultExpandedKeys: defaultExpandedKeys,
+    defaultSelectedKeys: defaultSelectedKeys,
+    disabled: disabled,
+    draggable: draggable,
+    expandedKeys: expandedKeys,
+    filterTreeNode: filterTreeNode,
+    height: height,
+    icon: icon,
+    loadData: loadData,
+    loadedKeys: loadedKeys,
+    multiple: multiple,
+    selectable: selectable,
+    selectedKeys: selectedKeys,
+    showIcon: showIcon,
+    showLine: showLine,
+    switcherIcon: switcherIcon,
+    titleRender: titleRender,
+    treeData: treeData,
+    virtual: virtual,
+    onCheck: onCheck,
+    onDragEnd: onDragEnd,
+    onDragEnter: onDragEnter,
+    onDragLeave: onDragLeave,
+    onDragOver: onDragOver,
+    onDragStart: onDragStart,
+    onDrop: onDrop,
+    onExpand: onExpand,
+    onLoad: onLoad,
+    onRightClick: onRightClick,
+    onSelect: onSelect,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Tree$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Tree, props, children);
 };
 
-const TreeNode = ({
-  checkable,
-  title,
-  key,
-  selectable,
-  disableCheckbox,
-  disabled,
-  icon,
-  isLeaf
-}) => {
-  const props = {
-    checkable,
-    title,
-    key,
-    selectable,
-    disableCheckbox,
-    disabled,
-    icon,
-    isLeaf
+var TreeNode = function TreeNode(_ref) {
+  var checkable = _ref.checkable,
+      title = _ref.title,
+      key = _ref.key,
+      selectable = _ref.selectable,
+      disableCheckbox = _ref.disableCheckbox,
+      disabled = _ref.disabled,
+      icon = _ref.icon,
+      isLeaf = _ref.isLeaf;
+  var props = {
+    checkable: checkable,
+    title: title,
+    key: key,
+    selectable: selectable,
+    disableCheckbox: disableCheckbox,
+    disabled: disabled,
+    icon: icon,
+    isLeaf: isLeaf
   };
-  return /*#__PURE__*/React__default.createElement(Tree$1.TreeNode, props);
+  return /*#__PURE__*/React__default.createElement(antd.Tree.TreeNode, props);
 };
 
-const DirectoryTree = ({
-  expandAction
-}) => {
-  const props = {
-    expandAction
+var DirectoryTree = function DirectoryTree(_ref) {
+  var expandAction = _ref.expandAction;
+  var props = {
+    expandAction: expandAction
   };
-  return /*#__PURE__*/React__default.createElement(Tree$1.DirectoryTree, props);
+  return /*#__PURE__*/React__default.createElement(antd.Tree.DirectoryTree, props);
 };
 
-const List$1 = ({
-  children,
-  bordered,
-  dataSource,
-  footer,
-  grid,
-  header,
-  itemLayout,
-  loading,
-  loadMore,
-  locale,
-  pagination,
-  renderItem,
-  rowKey,
-  size,
-  split,
-  className
-}) => {
-  const props = {
-    children,
-    bordered,
-    dataSource,
-    footer,
-    grid,
-    header,
-    itemLayout,
-    loading,
-    loadMore,
-    locale,
-    pagination,
-    renderItem,
-    rowKey,
-    size,
-    split,
-    className
+var List$1 = function List(_ref) {
+  var children = _ref.children,
+      bordered = _ref.bordered,
+      dataSource = _ref.dataSource,
+      footer = _ref.footer,
+      grid = _ref.grid,
+      header = _ref.header,
+      itemLayout = _ref.itemLayout,
+      loading = _ref.loading,
+      loadMore = _ref.loadMore,
+      locale = _ref.locale,
+      pagination = _ref.pagination,
+      renderItem = _ref.renderItem,
+      rowKey = _ref.rowKey,
+      size = _ref.size,
+      split = _ref.split,
+      className = _ref.className;
+  var props = {
+    children: children,
+    bordered: bordered,
+    dataSource: dataSource,
+    footer: footer,
+    grid: grid,
+    header: header,
+    itemLayout: itemLayout,
+    loading: loading,
+    loadMore: loadMore,
+    locale: locale,
+    pagination: pagination,
+    renderItem: renderItem,
+    rowKey: rowKey,
+    size: size,
+    split: split,
+    className: className
   };
-  return /*#__PURE__*/React__default.createElement(List$2, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.List, props, children);
 };
 
-const ListItem = ({
-  children,
-  actions,
-  extra
-}) => {
-  const props = {
-    children,
-    actions,
-    extra
+var ListItem = function ListItem(_ref) {
+  var children = _ref.children,
+      actions = _ref.actions,
+      extra = _ref.extra;
+  var props = {
+    children: children,
+    actions: actions,
+    extra: extra
   };
-  return /*#__PURE__*/React__default.createElement(List$2.Item, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.List.Item, props, children);
 };
 
-const ListItemMeta = ({
-  avatar,
-  description,
-  title,
-  children
-}) => {
-  const props = {
-    avatar,
-    description,
-    title,
-    children
+var ListItemMeta = function ListItemMeta(_ref) {
+  var avatar = _ref.avatar,
+      description = _ref.description,
+      title = _ref.title,
+      children = _ref.children;
+  var props = {
+    avatar: avatar,
+    description: description,
+    title: title,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(List$2.Item.Meta, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.List.Item.Meta, props, children);
 };
 
 var classCallCheck = createCommonjsModule(function (module) {
@@ -11650,7 +11616,7 @@ function toArray(children) {
 
     if (Array.isArray(child)) {
       ret = ret.concat(toArray(child));
-    } else if ((0, reactIs.isFragment)(child) && child.props) {
+    } else if ((0, reactIs__default.isFragment)(child) && child.props) {
       ret = ret.concat(toArray(child.props.children, option));
     } else {
       ret.push(child);
@@ -12431,19 +12397,19 @@ var ReactResizeObserver = /*#__PURE__*/function (_React$Component) {
 
       var childNode = childNodes[0];
 
-      if ( /*#__PURE__*/isValidElement(childNode) && supportRef(childNode)) {
+      if ( /*#__PURE__*/React.isValidElement(childNode) && supportRef(childNode)) {
         var ref = childNode.ref;
-        childNodes[0] = /*#__PURE__*/cloneElement(childNode, {
+        childNodes[0] = /*#__PURE__*/React.cloneElement(childNode, {
           ref: composeRef(ref, this.setChildNode)
         });
       }
 
       return childNodes.length === 1 ? childNodes[0] : childNodes.map(function (node, index) {
-        if (! /*#__PURE__*/isValidElement(node) || 'key' in node && node.key !== null) {
+        if (! /*#__PURE__*/React.isValidElement(node) || 'key' in node && node.key !== null) {
           return node;
         }
 
-        return /*#__PURE__*/cloneElement(node, {
+        return /*#__PURE__*/React.cloneElement(node, {
           key: "".concat(INTERNAL_PREFIX_KEY, "-").concat(index)
         });
       });
@@ -12451,7 +12417,7 @@ var ReactResizeObserver = /*#__PURE__*/function (_React$Component) {
   }]);
 
   return ReactResizeObserver;
-}(Component);
+}(React.Component);
 
 ReactResizeObserver.displayName = 'ResizeObserver';
 
@@ -12692,10 +12658,10 @@ var ResizableTextArea = /*#__PURE__*/function (_React$Component) {
         overflowY: 'hidden'
       } : null);
 
-      return /*#__PURE__*/createElement(ReactResizeObserver, {
+      return /*#__PURE__*/React.createElement(ReactResizeObserver, {
         onResize: _this.handleResize,
         disabled: !(autoSize || onResize)
-      }, /*#__PURE__*/createElement("textarea", _extends({}, otherProps, {
+      }, /*#__PURE__*/React.createElement("textarea", _extends({}, otherProps, {
         className: cls,
         style: style,
         ref: _this.saveTextArea
@@ -12751,7 +12717,7 @@ var ResizableTextArea = /*#__PURE__*/function (_React$Component) {
   }]);
 
   return ResizableTextArea;
-}(Component);
+}(React.Component);
 
 var TextArea = /*#__PURE__*/function (_React$Component) {
   _inherits(TextArea, _React$Component);
@@ -12823,7 +12789,7 @@ var TextArea = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/createElement(ResizableTextArea, _extends({}, this.props, {
+      return /*#__PURE__*/React.createElement(ResizableTextArea, _extends({}, this.props, {
         value: this.state.value,
         onKeyDown: this.handleKeyDown,
         onChange: this.handleChange,
@@ -12844,7 +12810,7 @@ var TextArea = /*#__PURE__*/function (_React$Component) {
   }]);
 
   return TextArea;
-}(Component);
+}(React.Component);
 
 //
 
@@ -12900,7 +12866,7 @@ function useControlledState(defaultStateValue, option) {
       onChange = _ref.onChange,
       postState = _ref.postState;
 
-  var _React$useState = useState(function () {
+  var _React$useState = React.useState(function () {
     if (value !== undefined) {
       return value;
     }
@@ -12930,8 +12896,8 @@ function useControlledState(defaultStateValue, option) {
   } // Effect of reset value to `undefined`
 
 
-  var firstRenderRef = useRef(true);
-  useEffect(function () {
+  var firstRenderRef = React.useRef(true);
+  React.useEffect(function () {
     if (firstRenderRef.current) {
       firstRenderRef.current = false;
       return;
@@ -12969,7 +12935,7 @@ function InternalItem(props, ref) {
     registerSize(itemKey, width);
   }
 
-  useEffect(function () {
+  React.useEffect(function () {
     return function () {
       internalRegisterSize(null);
     };
@@ -12995,7 +12961,7 @@ function InternalItem(props, ref) {
     overflowProps['aria-hidden'] = true;
   }
 
-  var itemNode = /*#__PURE__*/createElement(Component, _extends({
+  var itemNode = /*#__PURE__*/React.createElement(Component, _extends({
     className: classnames(!invalidate && prefixCls, className),
     style: _objectSpread2(_objectSpread2({}, overflowStyle), style)
   }, overflowProps, restProps, {
@@ -13003,7 +12969,7 @@ function InternalItem(props, ref) {
   }), childNode);
 
   if (responsive) {
-    itemNode = /*#__PURE__*/createElement(ReactResizeObserver, {
+    itemNode = /*#__PURE__*/React.createElement(ReactResizeObserver, {
       onResize: function onResize(_ref) {
         var offsetWidth = _ref.offsetWidth;
         internalRegisterSize(offsetWidth);
@@ -13014,7 +12980,7 @@ function InternalItem(props, ref) {
   return itemNode;
 }
 
-var Item = /*#__PURE__*/forwardRef(InternalItem);
+var Item = /*#__PURE__*/React.forwardRef(InternalItem);
 Item.displayName = 'Item';
 
 /**
@@ -13023,15 +12989,15 @@ Item.displayName = 'Item';
  */
 
 function useBatchFrameState() {
-  var _useState = useState({}),
+  var _useState = React.useState({}),
       _useState2 = _slicedToArray(_useState, 2),
       forceUpdate = _useState2[1];
 
-  var statesRef = useRef([]);
-  var destroyRef = useRef(false);
+  var statesRef = React.useRef([]);
+  var destroyRef = React.useRef(false);
   var walkingIndex = 0;
   var beforeFrameId = 0;
-  useEffect(function () {
+  React.useEffect(function () {
     return function () {
       destroyRef.current = true;
     };
@@ -13066,14 +13032,14 @@ function useBatchFrameState() {
 }
 
 var InternalRawItem = function InternalRawItem(props, ref) {
-  var context = useContext(OverflowContext); // Render directly when context not provided
+  var context = React.useContext(OverflowContext); // Render directly when context not provided
 
   if (!context) {
     var _props$component = props.component,
         Component = _props$component === void 0 ? 'div' : _props$component,
         _restProps = _objectWithoutProperties(props, ["component"]);
 
-    return /*#__PURE__*/createElement(Component, _extends({}, _restProps, {
+    return /*#__PURE__*/React.createElement(Component, _extends({}, _restProps, {
       ref: ref
     }));
   }
@@ -13085,18 +13051,18 @@ var InternalRawItem = function InternalRawItem(props, ref) {
       restProps = _objectWithoutProperties(props, ["className"]); // Do not pass context to sub item to avoid multiple measure
 
 
-  return /*#__PURE__*/createElement(OverflowContext.Provider, {
+  return /*#__PURE__*/React.createElement(OverflowContext.Provider, {
     value: null
-  }, /*#__PURE__*/createElement(Item, _extends({
+  }, /*#__PURE__*/React.createElement(Item, _extends({
     ref: ref,
     className: classnames(contextClassName, className)
   }, restContext, restProps)));
 };
 
-var RawItem = /*#__PURE__*/forwardRef(InternalRawItem);
+var RawItem = /*#__PURE__*/React.forwardRef(InternalRawItem);
 RawItem.displayName = 'RawItem';
 
-var OverflowContext = /*#__PURE__*/createContext(null);
+var OverflowContext = /*#__PURE__*/React.createContext(null);
 var RESPONSIVE = 'responsive';
 var INVALIDATE = 'invalidate';
 
@@ -13157,17 +13123,17 @@ function Overflow(props, ref) {
       suffixWidth = _createUseState10[0],
       setSuffixWidth = _createUseState10[1];
 
-  var _useState = useState(null),
+  var _useState = React.useState(null),
       _useState2 = _slicedToArray(_useState, 2),
       suffixFixedStart = _useState2[0],
       setSuffixFixedStart = _useState2[1];
 
-  var _useState3 = useState(null),
+  var _useState3 = React.useState(null),
       _useState4 = _slicedToArray(_useState3, 2),
       displayCount = _useState4[0],
       setDisplayCount = _useState4[1];
 
-  var mergedDisplayCount = useMemo$1(function () {
+  var mergedDisplayCount = React.useMemo(function () {
     if (displayCount === null && fullySSR) {
       return Number.MAX_SAFE_INTEGER;
     }
@@ -13175,7 +13141,7 @@ function Overflow(props, ref) {
     return displayCount || 0;
   }, [displayCount, containerWidth]);
 
-  var _useState5 = useState(false),
+  var _useState5 = React.useState(false),
       _useState6 = _slicedToArray(_useState5, 2),
       restReady = _useState6[0],
       setRestReady = _useState6[1];
@@ -13191,7 +13157,7 @@ function Overflow(props, ref) {
    */
 
   var showRest = isResponsive || typeof maxCount === 'number' && data.length > maxCount;
-  var mergedData = useMemo$1(function () {
+  var mergedData = React.useMemo(function () {
     var items = data;
 
     if (isResponsive) {
@@ -13206,7 +13172,7 @@ function Overflow(props, ref) {
 
     return items;
   }, [data, itemWidth, containerWidth, maxCount, isResponsive]);
-  var omittedItems = useMemo$1(function () {
+  var omittedItems = React.useMemo(function () {
     if (isResponsive) {
       return data.slice(mergedDisplayCount + 1);
     }
@@ -13214,7 +13180,7 @@ function Overflow(props, ref) {
     return data.slice(mergedData.length);
   }, [data, mergedData, isResponsive, mergedDisplayCount]); // ================================= Item =================================
 
-  var getKey = useCallback(function (item, index) {
+  var getKey = React.useCallback(function (item, index) {
     var _ref;
 
     if (typeof itemKey === 'function') {
@@ -13223,7 +13189,7 @@ function Overflow(props, ref) {
 
     return (_ref = itemKey && (item === null || item === void 0 ? void 0 : item[itemKey])) !== null && _ref !== void 0 ? _ref : index;
   }, [itemKey]);
-  var mergedRenderItem = useCallback(renderItem || function (item) {
+  var mergedRenderItem = React.useCallback(renderItem || function (item) {
     return item;
   }, [renderItem]);
 
@@ -13269,7 +13235,7 @@ function Overflow(props, ref) {
     return itemWidths.get(getKey(mergedData[index], index));
   }
 
-  useLayoutEffect(function () {
+  React.useLayoutEffect(function () {
     if (mergedContainerWidth && mergedRestWidth && mergedData) {
       var totalWidth = suffixWidth;
       var len = mergedData.length;
@@ -13333,7 +13299,7 @@ function Overflow(props, ref) {
 
   var internalRenderItemNode = renderRawItem ? function (item, index) {
     var key = getKey(item, index);
-    return /*#__PURE__*/createElement(OverflowContext.Provider, {
+    return /*#__PURE__*/React.createElement(OverflowContext.Provider, {
       key: key,
       value: _objectSpread2(_objectSpread2({}, itemSharedProps), {}, {
         order: index,
@@ -13345,7 +13311,7 @@ function Overflow(props, ref) {
     }, renderRawItem(item, index));
   } : function (item, index) {
     var key = getKey(item, index);
-    return /*#__PURE__*/createElement(Item, _extends({}, itemSharedProps, {
+    return /*#__PURE__*/React.createElement(Item, _extends({}, itemSharedProps, {
       order: index,
       key: key,
       item: item,
@@ -13366,18 +13332,18 @@ function Overflow(props, ref) {
 
   if (!renderRawRest) {
     var mergedRenderRest = renderRest || defaultRenderRest;
-    restNode = /*#__PURE__*/createElement(Item, _extends({}, itemSharedProps, restContextProps), typeof mergedRenderRest === 'function' ? mergedRenderRest(omittedItems) : mergedRenderRest);
+    restNode = /*#__PURE__*/React.createElement(Item, _extends({}, itemSharedProps, restContextProps), typeof mergedRenderRest === 'function' ? mergedRenderRest(omittedItems) : mergedRenderRest);
   } else if (renderRawRest) {
-    restNode = /*#__PURE__*/createElement(OverflowContext.Provider, {
+    restNode = /*#__PURE__*/React.createElement(OverflowContext.Provider, {
       value: _objectSpread2(_objectSpread2({}, itemSharedProps), restContextProps)
     }, renderRawRest(omittedItems));
   }
 
-  var overflowNode = /*#__PURE__*/createElement(Component, _extends({
+  var overflowNode = /*#__PURE__*/React.createElement(Component, _extends({
     className: classnames(!invalidate && prefixCls, className),
     style: style,
     ref: ref
-  }, restProps), mergedData.map(internalRenderItemNode), showRest ? restNode : null, suffix && /*#__PURE__*/createElement(Item, _extends({}, itemSharedProps, {
+  }, restProps), mergedData.map(internalRenderItemNode), showRest ? restNode : null, suffix && /*#__PURE__*/React.createElement(Item, _extends({}, itemSharedProps, {
     order: mergedDisplayCount,
     className: "".concat(itemPrefixCls, "-suffix"),
     registerSize: registerSuffixSize,
@@ -13386,7 +13352,7 @@ function Overflow(props, ref) {
   }), suffix));
 
   if (isResponsive) {
-    overflowNode = /*#__PURE__*/createElement(ReactResizeObserver, {
+    overflowNode = /*#__PURE__*/React.createElement(ReactResizeObserver, {
       onResize: onOverflowResize
     }, overflowNode);
   }
@@ -13394,7 +13360,7 @@ function Overflow(props, ref) {
   return overflowNode;
 }
 
-var ForwardOverflow = /*#__PURE__*/forwardRef(Overflow);
+var ForwardOverflow = /*#__PURE__*/React.forwardRef(Overflow);
 ForwardOverflow.displayName = 'Overflow';
 ForwardOverflow.Item = RawItem;
 ForwardOverflow.RESPONSIVE = RESPONSIVE;
@@ -14024,7 +13990,7 @@ var KeyCode = {
 };
 
 function useMemo(getValue, condition, shouldUpdate) {
-  var cacheRef = useRef({});
+  var cacheRef = React.useRef({});
 
   if (!('value' in cacheRef.current) || shouldUpdate(cacheRef.current.condition, condition)) {
     cacheRef.current.value = getValue();
@@ -14034,7 +14000,7 @@ function useMemo(getValue, condition, shouldUpdate) {
   return cacheRef.current.value;
 }
 
-var MenuContext = /*#__PURE__*/createContext(null);
+var MenuContext = /*#__PURE__*/React.createContext(null);
 
 function mergeProps(origin, target) {
   var clone = _objectSpread2({}, origin);
@@ -14054,19 +14020,19 @@ function InheritableContextProvider(_ref) {
       locked = _ref.locked,
       restProps = _objectWithoutProperties(_ref, ["children", "locked"]);
 
-  var context = useContext(MenuContext);
+  var context = React.useContext(MenuContext);
   var inheritableContext = useMemo(function () {
     return mergeProps(context, restProps);
   }, [context, restProps], function (prev, next) {
     return !locked && (prev[0] !== next[0] || !shallowequal(prev[1], next[1]));
   });
-  return /*#__PURE__*/createElement(MenuContext.Provider, {
+  return /*#__PURE__*/React.createElement(MenuContext.Provider, {
     value: inheritableContext
   }, children);
 }
 
 function useActive(eventKey, disabled, onMouseEnter, onMouseLeave) {
-  var _React$useContext = useContext(MenuContext),
+  var _React$useContext = React.useContext(MenuContext),
       activeKey = _React$useContext.activeKey,
       onActive = _React$useContext.onActive,
       onInactive = _React$useContext.onInactive;
@@ -14121,7 +14087,7 @@ function Icon(_ref) {
   var iconNode;
 
   if (typeof icon === 'function') {
-    iconNode = /*#__PURE__*/createElement(icon, _objectSpread2({}, props));
+    iconNode = /*#__PURE__*/React.createElement(icon, _objectSpread2({}, props));
   } else {
     // Compatible for origin definition
     iconNode = icon;
@@ -14131,7 +14097,7 @@ function Icon(_ref) {
 }
 
 function useDirectionStyle(level) {
-  var _React$useContext = useContext(MenuContext),
+  var _React$useContext = React.useContext(MenuContext),
       mode = _React$useContext.mode,
       rtl = _React$useContext.rtl,
       inlineIndent = _React$useContext.inlineIndent;
@@ -14149,21 +14115,21 @@ function useDirectionStyle(level) {
 }
 
 var EmptyList = [];
-var PathRegisterContext = /*#__PURE__*/createContext(null);
+var PathRegisterContext = /*#__PURE__*/React.createContext(null);
 function useMeasure() {
-  return useContext(PathRegisterContext);
+  return React.useContext(PathRegisterContext);
 } // ========================= Path Tracker ==========================
 
-var PathTrackerContext = /*#__PURE__*/createContext(EmptyList);
+var PathTrackerContext = /*#__PURE__*/React.createContext(EmptyList);
 function useFullPath(eventKey) {
-  var parentKeyPath = useContext(PathTrackerContext);
-  return useMemo$1(function () {
+  var parentKeyPath = React.useContext(PathTrackerContext);
+  return React.useMemo(function () {
     return eventKey !== undefined ? [].concat(_toConsumableArray(parentKeyPath), [eventKey]) : parentKeyPath;
   }, [parentKeyPath, eventKey]);
 }
-var PathUserContext = /*#__PURE__*/createContext(null);
+var PathUserContext = /*#__PURE__*/React.createContext(null);
 
-var IdContext = /*#__PURE__*/createContext(null);
+var IdContext = /*#__PURE__*/React.createContext(null);
 function getMenuId(uuid, eventKey) {
   if (uuid === undefined) {
     return null;
@@ -14176,7 +14142,7 @@ function getMenuId(uuid, eventKey) {
  */
 
 function useMenuId(eventKey) {
-  var id = useContext(IdContext);
+  var id = React.useContext(IdContext);
   return getMenuId(id, eventKey);
 }
 
@@ -14205,7 +14171,7 @@ var LegacyMenuItem = /*#__PURE__*/function (_React$Component) {
 
       var passedProps = omit(restProps, ['eventKey']);
       warningOnce(!attribute, '`attribute` of Menu.Item is deprecated. Please pass attribute directly.');
-      return /*#__PURE__*/createElement(ForwardOverflow.Item, _extends({}, attribute, {
+      return /*#__PURE__*/React.createElement(ForwardOverflow.Item, _extends({}, attribute, {
         title: typeof title === 'string' ? title : undefined
       }, passedProps, {
         ref: elementRef
@@ -14214,7 +14180,7 @@ var LegacyMenuItem = /*#__PURE__*/function (_React$Component) {
   }]);
 
   return LegacyMenuItem;
-}(Component);
+}(React.Component);
 /**
  * Real Menu Item component
  */
@@ -14240,7 +14206,7 @@ var InternalMenuItem = function InternalMenuItem(props) {
 
   var domDataId = useMenuId(eventKey);
 
-  var _React$useContext = useContext(MenuContext),
+  var _React$useContext = React.useContext(MenuContext),
       prefixCls = _React$useContext.prefixCls,
       onItemClick = _React$useContext.onItemClick,
       contextDisabled = _React$useContext.disabled,
@@ -14250,8 +14216,8 @@ var InternalMenuItem = function InternalMenuItem(props) {
       onActive = _React$useContext.onActive;
 
   var itemCls = "".concat(prefixCls, "-item");
-  var legacyMenuItemRef = useRef();
-  var elementRef = useRef();
+  var legacyMenuItemRef = React.useRef();
+  var elementRef = React.useRef();
   var mergedDisabled = contextDisabled || disabled;
   var connectedKeys = useFullPath(eventKey); // ================================ Warn ================================
 
@@ -14320,7 +14286,7 @@ var InternalMenuItem = function InternalMenuItem(props) {
     optionRoleProps['aria-selected'] = selected;
   }
 
-  return /*#__PURE__*/createElement(LegacyMenuItem, _extends({
+  return /*#__PURE__*/React.createElement(LegacyMenuItem, _extends({
     ref: legacyMenuItemRef,
     elementRef: elementRef,
     role: role === null ? 'none' : role || 'menuitem',
@@ -14334,7 +14300,7 @@ var InternalMenuItem = function InternalMenuItem(props) {
     onClick: onInternalClick,
     onKeyDown: onInternalKeyDown,
     onFocus: onInternalFocus
-  }), children, /*#__PURE__*/createElement(Icon, {
+  }), children, /*#__PURE__*/React.createElement(Icon, {
     props: _objectSpread2(_objectSpread2({}, props), {}, {
       isSelected: selected
     }),
@@ -14348,7 +14314,7 @@ function MenuItem(props) {
   var measure = useMeasure();
   var connectedKeyPath = useFullPath(eventKey); // eslint-disable-next-line consistent-return
 
-  useEffect(function () {
+  React.useEffect(function () {
     if (measure) {
       measure.registerPath(eventKey, connectedKeyPath);
       return function () {
@@ -14362,12 +14328,12 @@ function MenuItem(props) {
   } // ======================== Render ========================
 
 
-  return /*#__PURE__*/createElement(InternalMenuItem, props);
+  return /*#__PURE__*/React.createElement(InternalMenuItem, props);
 }
 
 function parseChildren(children, keyPath) {
   return toArray(children).map(function (child, index) {
-    if ( /*#__PURE__*/isValidElement(child)) {
+    if ( /*#__PURE__*/React.isValidElement(child)) {
       var _child$props$eventKey, _child$props;
 
       var key = child.key;
@@ -14387,7 +14353,7 @@ function parseChildren(children, keyPath) {
         cloneProps.warnKey = true;
       }
 
-      return /*#__PURE__*/cloneElement(child, cloneProps);
+      return /*#__PURE__*/React.cloneElement(child, cloneProps);
     }
 
     return child;
@@ -14400,9 +14366,9 @@ function parseChildren(children, keyPath) {
  */
 
 function useMemoCallback(func) {
-  var funRef = useRef(func);
+  var funRef = React.useRef(func);
   funRef.current = func;
-  var callback = useCallback(function () {
+  var callback = React.useCallback(function () {
     var _funRef$current;
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
@@ -14419,11 +14385,11 @@ var InternalSubMenuList = function InternalSubMenuList(_ref, ref) {
       children = _ref.children,
       restProps = _objectWithoutProperties(_ref, ["className", "children"]);
 
-  var _React$useContext = useContext(MenuContext),
+  var _React$useContext = React.useContext(MenuContext),
       prefixCls = _React$useContext.prefixCls,
       mode = _React$useContext.mode;
 
-  return /*#__PURE__*/createElement("ul", _extends({
+  return /*#__PURE__*/React.createElement("ul", _extends({
     className: classnames(prefixCls, "".concat(prefixCls, "-sub"), "".concat(prefixCls, "-").concat(mode === 'inline' ? 'inline' : 'vertical'), className)
   }, restProps, {
     "data-menu-list": true,
@@ -14431,7 +14397,7 @@ var InternalSubMenuList = function InternalSubMenuList(_ref, ref) {
   }), children);
 };
 
-var SubMenuList = /*#__PURE__*/forwardRef(InternalSubMenuList);
+var SubMenuList = /*#__PURE__*/React.forwardRef(InternalSubMenuList);
 SubMenuList.displayName = 'SubMenuList';
 
 var autoAdjustOverflow = {
@@ -14512,7 +14478,7 @@ function PopupTrigger(_ref) {
       mode = _ref.mode,
       onVisibleChange = _ref.onVisibleChange;
 
-  var _React$useContext = useContext(MenuContext),
+  var _React$useContext = React.useContext(MenuContext),
       getPopupContainer = _React$useContext.getPopupContainer,
       rtl = _React$useContext.rtl,
       subMenuOpenDelay = _React$useContext.subMenuOpenDelay,
@@ -14523,7 +14489,7 @@ function PopupTrigger(_ref) {
       motion = _React$useContext.motion,
       defaultMotions = _React$useContext.defaultMotions;
 
-  var _React$useState = useState(false),
+  var _React$useState = React.useState(false),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       innerVisible = _React$useState2[0],
       setInnerVisible = _React$useState2[1];
@@ -14539,8 +14505,8 @@ function PopupTrigger(_ref) {
   }); // Delay to change visible
 
 
-  var visibleRef = useRef();
-  useEffect(function () {
+  var visibleRef = React.useRef();
+  React.useEffect(function () {
     visibleRef.current = wrapperRaf(function () {
       setInnerVisible(visible);
     });
@@ -14548,7 +14514,7 @@ function PopupTrigger(_ref) {
       wrapperRaf.cancel(visibleRef.current);
     };
   }, [visible]);
-  return /*#__PURE__*/createElement(require$$3, {
+  return /*#__PURE__*/React.createElement(require$$3, {
     prefixCls: prefixCls,
     popupClassName: classnames("".concat(prefixCls, "-popup"), _defineProperty({}, "".concat(prefixCls, "-rtl"), rtl), popupClassName),
     stretch: mode === 'horizontal' ? 'minWidth' : null,
@@ -14576,7 +14542,7 @@ function InlineSubMenuList(_ref) {
       children = _ref.children;
   var fixedMode = 'inline';
 
-  var _React$useContext = useContext(MenuContext),
+  var _React$useContext = React.useContext(MenuContext),
       prefixCls = _React$useContext.prefixCls,
       forceSubMenuRender = _React$useContext.forceSubMenuRender,
       motion = _React$useContext.motion,
@@ -14584,11 +14550,11 @@ function InlineSubMenuList(_ref) {
       mode = _React$useContext.mode; // Always use latest mode check
 
 
-  var sameModeRef = useRef(false);
+  var sameModeRef = React.useRef(false);
   sameModeRef.current = mode === fixedMode; // We record `destroy` mark here since when mode change from `inline` to others.
   // The inline list should remove when motion end.
 
-  var _React$useState = useState(!sameModeRef.current),
+  var _React$useState = React.useState(!sameModeRef.current),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       destroy = _React$useState2[0],
       setDestroy = _React$useState2[1];
@@ -14596,7 +14562,7 @@ function InlineSubMenuList(_ref) {
   var mergedOpen = sameModeRef.current ? open : false; // ================================= Effect =================================
   // Reset destroy state when mode change back
 
-  useEffect(function () {
+  React.useEffect(function () {
     if (sameModeRef.current) {
       setDestroy(false);
     }
@@ -14624,10 +14590,10 @@ function InlineSubMenuList(_ref) {
     return null;
   }
 
-  return /*#__PURE__*/createElement(InheritableContextProvider, {
+  return /*#__PURE__*/React.createElement(InheritableContextProvider, {
     mode: fixedMode,
     locked: !sameModeRef.current
-  }, /*#__PURE__*/createElement(CSSMotion, _extends({
+  }, /*#__PURE__*/React.createElement(CSSMotion, _extends({
     visible: mergedOpen
   }, mergedMotion, {
     forceRender: forceSubMenuRender,
@@ -14636,7 +14602,7 @@ function InlineSubMenuList(_ref) {
   }), function (_ref2) {
     var motionClassName = _ref2.className,
         motionStyle = _ref2.style;
-    return /*#__PURE__*/createElement(SubMenuList, {
+    return /*#__PURE__*/React.createElement(SubMenuList, {
       id: id,
       className: motionClassName,
       style: motionStyle
@@ -14669,7 +14635,7 @@ var InternalSubMenu = function InternalSubMenu(props) {
 
   var domDataId = useMenuId(eventKey);
 
-  var _React$useContext = useContext(MenuContext),
+  var _React$useContext = React.useContext(MenuContext),
       prefixCls = _React$useContext.prefixCls,
       mode = _React$useContext.mode,
       openKeys = _React$useContext.openKeys,
@@ -14683,14 +14649,14 @@ var InternalSubMenu = function InternalSubMenu(props) {
       onOpenChange = _React$useContext.onOpenChange,
       onActive = _React$useContext.onActive;
 
-  var _React$useContext2 = useContext(PathUserContext),
+  var _React$useContext2 = React.useContext(PathUserContext),
       isSubPathKey = _React$useContext2.isSubPathKey;
 
   var connectedPath = useFullPath();
   var subMenuPrefixCls = "".concat(prefixCls, "-submenu");
   var mergedDisabled = contextDisabled || disabled;
-  var elementRef = useRef();
-  var popupRef = useRef(); // ================================ Warn ================================
+  var elementRef = React.useRef();
+  var popupRef = React.useRef(); // ================================ Warn ================================
 
   if (process.env.NODE_ENV !== 'production' && warnKey) {
     warningOnce(false, 'SubMenu should not leave undefined `key`.');
@@ -14710,7 +14676,7 @@ var InternalSubMenu = function InternalSubMenu(props) {
       activeProps = _objectWithoutProperties(_useActive, ["active"]); // Fallback of active check to avoid hover on menu title or disabled item
 
 
-  var _React$useState = useState(false),
+  var _React$useState = React.useState(false),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       childrenActive = _React$useState2[0],
       setChildrenActive = _React$useState2[1];
@@ -14737,7 +14703,7 @@ var InternalSubMenu = function InternalSubMenu(props) {
     });
   };
 
-  var mergedActive = useMemo$1(function () {
+  var mergedActive = React.useMemo(function () {
     if (active) {
       return active;
     }
@@ -14792,7 +14758,7 @@ var InternalSubMenu = function InternalSubMenu(props) {
 
   var popupId = domDataId && "".concat(domDataId, "-popup"); // >>>>> Title
 
-  var titleNode = /*#__PURE__*/createElement("div", _extends({
+  var titleNode = /*#__PURE__*/React.createElement("div", _extends({
     role: "menuitem",
     style: directionStyle,
     className: "".concat(subMenuPrefixCls, "-title"),
@@ -14806,18 +14772,18 @@ var InternalSubMenu = function InternalSubMenu(props) {
     "aria-disabled": mergedDisabled,
     onClick: onInternalTitleClick,
     onFocus: onInternalFocus
-  }, activeProps), title, /*#__PURE__*/createElement(Icon, {
+  }, activeProps), title, /*#__PURE__*/React.createElement(Icon, {
     icon: mode !== 'horizontal' ? mergedExpandIcon : null,
     props: _objectSpread2(_objectSpread2({}, props), {}, {
       isOpen: open,
       // [Legacy] Not sure why need this mark
       isSubMenu: true
     })
-  }, /*#__PURE__*/createElement("i", {
+  }, /*#__PURE__*/React.createElement("i", {
     className: "".concat(subMenuPrefixCls, "-arrow")
   }))); // Cache mode if it change to `inline` which do not have popup motion
 
-  var triggerModeRef = useRef(mode);
+  var triggerModeRef = React.useRef(mode);
 
   if (mode !== 'inline') {
     triggerModeRef.current = connectedPath.length > 1 ? 'vertical' : mode;
@@ -14827,16 +14793,16 @@ var InternalSubMenu = function InternalSubMenu(props) {
     var triggerMode = triggerModeRef.current; // Still wrap with Trigger here since we need avoid react re-mount dom node
     // Which makes motion failed
 
-    titleNode = /*#__PURE__*/createElement(PopupTrigger, {
+    titleNode = /*#__PURE__*/React.createElement(PopupTrigger, {
       mode: triggerMode,
       prefixCls: subMenuPrefixCls,
       visible: !internalPopupClose && open && mode !== 'inline',
       popupClassName: popupClassName,
       popupOffset: popupOffset,
-      popup: /*#__PURE__*/createElement(InheritableContextProvider // Special handle of horizontal mode
+      popup: /*#__PURE__*/React.createElement(InheritableContextProvider // Special handle of horizontal mode
       , {
         mode: triggerMode === 'horizontal' ? 'vertical' : triggerMode
-      }, /*#__PURE__*/createElement(SubMenuList, {
+      }, /*#__PURE__*/React.createElement(SubMenuList, {
         id: popupId,
         ref: popupRef
       }, children)),
@@ -14846,12 +14812,12 @@ var InternalSubMenu = function InternalSubMenu(props) {
   } // >>>>> Render
 
 
-  return /*#__PURE__*/createElement(InheritableContextProvider, {
+  return /*#__PURE__*/React.createElement(InheritableContextProvider, {
     onItemClick: onMergedItemClick,
     mode: mode === 'horizontal' ? 'vertical' : mode,
     itemIcon: mergedItemIcon,
     expandIcon: mergedExpandIcon
-  }, /*#__PURE__*/createElement(ForwardOverflow.Item, _extends({
+  }, /*#__PURE__*/React.createElement(ForwardOverflow.Item, _extends({
     role: "none"
   }, restProps, {
     component: "li",
@@ -14859,7 +14825,7 @@ var InternalSubMenu = function InternalSubMenu(props) {
     className: classnames(subMenuPrefixCls, "".concat(subMenuPrefixCls, "-").concat(mode), className, (_classNames = {}, _defineProperty(_classNames, "".concat(subMenuPrefixCls, "-open"), open), _defineProperty(_classNames, "".concat(subMenuPrefixCls, "-active"), mergedActive), _defineProperty(_classNames, "".concat(subMenuPrefixCls, "-selected"), childrenSelected), _defineProperty(_classNames, "".concat(subMenuPrefixCls, "-disabled"), mergedDisabled), _classNames)),
     onMouseEnter: onInternalMouseEnter,
     onMouseLeave: onInternalMouseLeave
-  }), titleNode, !overflowDisabled && /*#__PURE__*/createElement(InlineSubMenuList, {
+  }), titleNode, !overflowDisabled && /*#__PURE__*/React.createElement(InlineSubMenuList, {
     id: popupId,
     open: open,
     keyPath: connectedPath
@@ -14874,7 +14840,7 @@ function SubMenu(props) {
 
   var measure = useMeasure(); // eslint-disable-next-line consistent-return
 
-  useEffect(function () {
+  React.useEffect(function () {
     if (measure) {
       measure.registerPath(eventKey, connectedKeyPath);
       return function () {
@@ -14887,10 +14853,10 @@ function SubMenu(props) {
   if (measure) {
     renderNode = childList;
   } else {
-    renderNode = /*#__PURE__*/createElement(InternalSubMenu, props, childList);
+    renderNode = /*#__PURE__*/React.createElement(InternalSubMenu, props, childList);
   }
 
-  return /*#__PURE__*/createElement(PathTrackerContext.Provider, {
+  return /*#__PURE__*/React.createElement(PathTrackerContext.Provider, {
     value: connectedKeyPath
   }, renderNode);
 }
@@ -15084,15 +15050,15 @@ function getNextFocusElement(parentQueryContainer, elements, focusMenuElement) {
 }
 
 function useAccessibility(mode, activeKey, isRtl, id, containerRef, getKeys, getKeyPath, triggerActiveKey, triggerAccessibilityOpen, originOnKeyDown) {
-  var rafRef = useRef();
-  var activeRef = useRef();
+  var rafRef = React.useRef();
+  var activeRef = React.useRef();
   activeRef.current = activeKey;
 
   var cleanRaf = function cleanRaf() {
     wrapperRaf.cancel(rafRef.current);
   };
 
-  useEffect(function () {
+  React.useEffect(function () {
     return function () {
       cleanRaf();
     };
@@ -15222,7 +15188,7 @@ function useUUID(id) {
       uuid = _useMergedState2[0],
       setUUID = _useMergedState2[1];
 
-  useEffect(function () {
+  React.useEffect(function () {
     internalId += 1;
     var newId = process.env.NODE_ENV === 'test' ? 'test' : "".concat(uniquePrefix, "-").concat(internalId);
     setUUID("rc-menu-uuid-".concat(newId));
@@ -15247,20 +15213,20 @@ var getPathKeys = function getPathKeys(keyPathStr) {
 
 var OVERFLOW_KEY = 'rc-menu-more';
 function useKeyRecords() {
-  var _React$useState = useState({}),
+  var _React$useState = React.useState({}),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       internalForceUpdate = _React$useState2[1];
 
-  var key2pathRef = useRef(new Map());
-  var path2keyRef = useRef(new Map());
+  var key2pathRef = React.useRef(new Map());
+  var path2keyRef = React.useRef(new Map());
 
-  var _React$useState3 = useState([]),
+  var _React$useState3 = React.useState([]),
       _React$useState4 = _slicedToArray(_React$useState3, 2),
       overflowKeys = _React$useState4[0],
       setOverflowKeys = _React$useState4[1];
 
-  var updateRef = useRef(0);
-  var destroyRef = useRef(false);
+  var updateRef = React.useRef(0);
+  var destroyRef = React.useRef(false);
 
   var forceUpdate = function forceUpdate() {
     if (!destroyRef.current) {
@@ -15268,7 +15234,7 @@ function useKeyRecords() {
     }
   };
 
-  var registerPath = useCallback(function (key, keyPath) {
+  var registerPath = React.useCallback(function (key, keyPath) {
     // Warning for invalidate or duplicated `key`
     if (process.env.NODE_ENV !== 'production') {
       warningOnce(!key2pathRef.current.has(key), "Duplicated key '".concat(key, "' used in Menu by path [").concat(keyPath.join(' > '), "]"));
@@ -15286,15 +15252,15 @@ function useKeyRecords() {
       }
     });
   }, []);
-  var unregisterPath = useCallback(function (key, keyPath) {
+  var unregisterPath = React.useCallback(function (key, keyPath) {
     var connectedPath = getPathStr(keyPath);
     path2keyRef.current.delete(connectedPath);
     key2pathRef.current.delete(key);
   }, []);
-  var refreshOverflowKeys = useCallback(function (keys) {
+  var refreshOverflowKeys = React.useCallback(function (keys) {
     setOverflowKeys(keys);
   }, []);
-  var getKeyPath = useCallback(function (eventKey, includeOverflow) {
+  var getKeyPath = React.useCallback(function (eventKey, includeOverflow) {
     var fullPath = key2pathRef.current.get(eventKey) || '';
     var keys = getPathKeys(fullPath);
 
@@ -15304,7 +15270,7 @@ function useKeyRecords() {
 
     return keys;
   }, [overflowKeys]);
-  var isSubPathKey = useCallback(function (pathKeys, eventKey) {
+  var isSubPathKey = React.useCallback(function (pathKeys, eventKey) {
     return pathKeys.some(function (pathKey) {
       var pathKeyList = getKeyPath(pathKey, true);
       return pathKeyList.includes(eventKey);
@@ -15325,7 +15291,7 @@ function useKeyRecords() {
    */
 
 
-  var getSubPathKeys = useCallback(function (key) {
+  var getSubPathKeys = React.useCallback(function (key) {
     var connectedPath = "".concat(key2pathRef.current.get(key)).concat(PATH_SPLIT);
     var pathKeys = new Set();
 
@@ -15337,7 +15303,7 @@ function useKeyRecords() {
 
     return pathKeys;
   }, []);
-  useEffect(function () {
+  React.useEffect(function () {
     return function () {
       destroyRef.current = true;
     };
@@ -15427,12 +15393,12 @@ var Menu = function Menu(props) {
 
   var childList = parseChildren(children, EMPTY_LIST);
 
-  var _React$useState = useState(false),
+  var _React$useState = React.useState(false),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       mounted = _React$useState2[0],
       setMounted = _React$useState2[1];
 
-  var containerRef = useRef();
+  var containerRef = React.useRef();
   var uuid = useUUID(id);
   var isRtl = direction === 'rtl'; // ========================= Warn =========================
 
@@ -15441,7 +15407,7 @@ var Menu = function Menu(props) {
   } // ========================= Mode =========================
 
 
-  var _React$useMemo = useMemo$1(function () {
+  var _React$useMemo = React.useMemo(function () {
     if ((mode === 'inline' || mode === 'vertical') && inlineCollapsed) {
       return ['vertical', inlineCollapsed];
     }
@@ -15453,7 +15419,7 @@ var Menu = function Menu(props) {
       mergedInlineCollapsed = _React$useMemo2[1]; // ====================== Responsive ======================
 
 
-  var _React$useState3 = useState(0),
+  var _React$useState3 = React.useState(0),
       _React$useState4 = _slicedToArray(_React$useState3, 2),
       lastVisibleIndex = _React$useState4[0],
       setLastVisibleIndex = _React$useState4[1];
@@ -15476,21 +15442,21 @@ var Menu = function Menu(props) {
   }; // >>>>> Cache & Reset open keys when inlineCollapsed changed
 
 
-  var _React$useState5 = useState(mergedOpenKeys),
+  var _React$useState5 = React.useState(mergedOpenKeys),
       _React$useState6 = _slicedToArray(_React$useState5, 2),
       inlineCacheOpenKeys = _React$useState6[0],
       setInlineCacheOpenKeys = _React$useState6[1];
 
   var isInlineMode = mergedMode === 'inline';
-  var mountRef = useRef(false); // Cache
+  var mountRef = React.useRef(false); // Cache
 
-  useEffect(function () {
+  React.useEffect(function () {
     if (isInlineMode) {
       setInlineCacheOpenKeys(mergedOpenKeys);
     }
   }, [mergedOpenKeys]); // Restore
 
-  useEffect(function () {
+  React.useEffect(function () {
     if (!mountRef.current) {
       mountRef.current = true;
       return;
@@ -15513,18 +15479,18 @@ var Menu = function Menu(props) {
       getKeys = _useKeyRecords.getKeys,
       getSubPathKeys = _useKeyRecords.getSubPathKeys;
 
-  var registerPathContext = useMemo$1(function () {
+  var registerPathContext = React.useMemo(function () {
     return {
       registerPath: registerPath,
       unregisterPath: unregisterPath
     };
   }, [registerPath, unregisterPath]);
-  var pathUserContext = useMemo$1(function () {
+  var pathUserContext = React.useMemo(function () {
     return {
       isSubPathKey: isSubPathKey
     };
   }, [isSubPathKey]);
-  useEffect(function () {
+  React.useEffect(function () {
     refreshOverflowKeys(allVisible ? EMPTY_LIST : childList.slice(lastVisibleIndex + 1).map(function (child) {
       return child.key;
     }));
@@ -15640,7 +15606,7 @@ var Menu = function Menu(props) {
 
   var onInternalKeyDown = useAccessibility(mergedMode, mergedActiveKey, isRtl, uuid, containerRef, getKeys, getKeyPath, setMergedActiveKey, triggerAccessibilityOpen, onKeyDown); // ======================== Effect ========================
 
-  useEffect(function () {
+  React.useEffect(function () {
     setMounted(true);
   }, []); // ======================== Render ========================
   // >>>>> Children
@@ -15650,14 +15616,14 @@ var Menu = function Menu(props) {
     return (
       /*#__PURE__*/
       // Always wrap provider to avoid sub node re-mount
-      createElement(InheritableContextProvider, {
+      React.createElement(InheritableContextProvider, {
         key: child.key,
         overflowDisabled: index > lastVisibleIndex
       }, child)
     );
   }); // >>>>> Container
 
-  var container = /*#__PURE__*/createElement(ForwardOverflow, _extends({
+  var container = /*#__PURE__*/React.createElement(ForwardOverflow, _extends({
     id: id,
     ref: containerRef,
     prefixCls: "".concat(prefixCls, "-overflow"),
@@ -15676,7 +15642,7 @@ var Menu = function Menu(props) {
       // We use origin list since wrapped list use context to prevent open
       var len = omitItems.length;
       var originOmitItems = len ? childList.slice(-len) : null;
-      return /*#__PURE__*/createElement(SubMenu, {
+      return /*#__PURE__*/React.createElement(SubMenu, {
         eventKey: OVERFLOW_KEY,
         title: overflowedIndicator,
         disabled: allVisible,
@@ -15693,9 +15659,9 @@ var Menu = function Menu(props) {
     onKeyDown: onInternalKeyDown
   }, restProps)); // >>>>> Render
 
-  return /*#__PURE__*/createElement(IdContext.Provider, {
+  return /*#__PURE__*/React.createElement(IdContext.Provider, {
     value: uuid
-  }, /*#__PURE__*/createElement(InheritableContextProvider, {
+  }, /*#__PURE__*/React.createElement(InheritableContextProvider, {
     prefixCls: prefixCls,
     mode: mergedMode,
     openKeys: mergedOpenKeys,
@@ -15726,14 +15692,14 @@ var Menu = function Menu(props) {
     ,
     onItemClick: onInternalClick,
     onOpenChange: onInternalOpenChange
-  }, /*#__PURE__*/createElement(PathUserContext.Provider, {
+  }, /*#__PURE__*/React.createElement(PathUserContext.Provider, {
     value: pathUserContext
-  }, container), /*#__PURE__*/createElement("div", {
+  }, container), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'none'
     },
     "aria-hidden": true
-  }, /*#__PURE__*/createElement(PathRegisterContext.Provider, {
+  }, /*#__PURE__*/React.createElement(PathRegisterContext.Provider, {
     value: registerPathContext
   }, childList))));
 };
@@ -15744,19 +15710,19 @@ var InternalMenuItemGroup = function InternalMenuItemGroup(_ref) {
       children = _ref.children,
       restProps = _objectWithoutProperties(_ref, ["className", "title", "eventKey", "children"]);
 
-  var _React$useContext = useContext(MenuContext),
+  var _React$useContext = React.useContext(MenuContext),
       prefixCls = _React$useContext.prefixCls;
 
   var groupPrefixCls = "".concat(prefixCls, "-item-group");
-  return /*#__PURE__*/createElement("li", _extends({}, restProps, {
+  return /*#__PURE__*/React.createElement("li", _extends({}, restProps, {
     onClick: function onClick(e) {
       return e.stopPropagation();
     },
     className: classnames(groupPrefixCls, className)
-  }), /*#__PURE__*/createElement("div", {
+  }), /*#__PURE__*/React.createElement("div", {
     className: "".concat(groupPrefixCls, "-title"),
     title: typeof title === 'string' ? title : undefined
-  }, title), /*#__PURE__*/createElement("ul", {
+  }, title), /*#__PURE__*/React.createElement("ul", {
     className: "".concat(groupPrefixCls, "-list")
   }, children));
 };
@@ -15773,14 +15739,14 @@ function MenuItemGroup(_ref2) {
     return childList;
   }
 
-  return /*#__PURE__*/createElement(InternalMenuItemGroup, omit(props, ['warnKey']), childList);
+  return /*#__PURE__*/React.createElement(InternalMenuItemGroup, omit(props, ['warnKey']), childList);
 }
 
 function Divider(_ref) {
   var className = _ref.className,
       style = _ref.style;
 
-  var _React$useContext = useContext(MenuContext),
+  var _React$useContext = React.useContext(MenuContext),
       prefixCls = _React$useContext.prefixCls;
 
   var measure = useMeasure();
@@ -15789,7 +15755,7 @@ function Divider(_ref) {
     return null;
   }
 
-  return /*#__PURE__*/createElement("li", {
+  return /*#__PURE__*/React.createElement("li", {
     className: classnames("".concat(prefixCls, "-item-divider"), className),
     style: style
   });
@@ -16675,939 +16641,890 @@ exports.default = _default;
 
 unwrapExports(Mentions_1);
 
-const Mentions = ({
-  autoFocus,
-  autoSize,
-  defaultValue,
-  filterOption,
-  getPopupContainer,
-  notFoundContent,
-  placement,
-  prefix,
-  split,
-  validateSearch,
-  value,
-  onBlur,
-  onChange,
-  onFocus,
-  onResize,
-  onSearch,
-  onSelect,
-  children
-}) => {
-  const props = {
-    autoFocus,
-    autoSize,
-    defaultValue,
-    filterOption,
-    getPopupContainer,
-    notFoundContent,
-    placement,
-    prefix,
-    split,
-    validateSearch,
-    value,
-    onBlur,
-    onChange,
-    onFocus,
-    onResize,
-    onSearch,
-    onSelect,
-    children
+var Mentions = function Mentions(_ref) {
+  var autoFocus = _ref.autoFocus,
+      autoSize = _ref.autoSize,
+      defaultValue = _ref.defaultValue,
+      filterOption = _ref.filterOption,
+      getPopupContainer = _ref.getPopupContainer,
+      notFoundContent = _ref.notFoundContent,
+      placement = _ref.placement,
+      prefix = _ref.prefix,
+      split = _ref.split,
+      validateSearch = _ref.validateSearch,
+      value = _ref.value,
+      onBlur = _ref.onBlur,
+      onChange = _ref.onChange,
+      onFocus = _ref.onFocus,
+      onResize = _ref.onResize,
+      onSearch = _ref.onSearch,
+      onSelect = _ref.onSelect,
+      children = _ref.children;
+  var props = {
+    autoFocus: autoFocus,
+    autoSize: autoSize,
+    defaultValue: defaultValue,
+    filterOption: filterOption,
+    getPopupContainer: getPopupContainer,
+    notFoundContent: notFoundContent,
+    placement: placement,
+    prefix: prefix,
+    split: split,
+    validateSearch: validateSearch,
+    value: value,
+    onBlur: onBlur,
+    onChange: onChange,
+    onFocus: onFocus,
+    onResize: onResize,
+    onSearch: onSearch,
+    onSelect: onSelect,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Mentions$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Mentions, props, children);
 };
 
-const MentionsOption = ({
-  value,
-  children
-}) => {
-  const props = {
-    value,
-    children
+var MentionsOption = function MentionsOption(_ref) {
+  var value = _ref.value,
+      children = _ref.children;
+  var props = {
+    value: value,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Mentions$1.Option, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Mentions.Option, props, children);
 };
 
-const Dropdown = ({
-  arrow,
-  disabled,
-  getPopupContainer,
-  overlay,
-  overlayClassName,
-  overlayStyle,
-  placement,
-  trigger,
-  visible,
-  onVisibleChange,
-  children
-}) => {
-  const props = {
-    arrow,
-    disabled,
-    getPopupContainer,
-    overlay,
-    overlayClassName,
-    overlayStyle,
-    placement,
-    trigger,
-    visible,
-    onVisibleChange,
-    children
+var Dropdown = function Dropdown(_ref) {
+  var arrow = _ref.arrow,
+      disabled = _ref.disabled,
+      getPopupContainer = _ref.getPopupContainer,
+      overlay = _ref.overlay,
+      overlayClassName = _ref.overlayClassName,
+      overlayStyle = _ref.overlayStyle,
+      placement = _ref.placement,
+      trigger = _ref.trigger,
+      visible = _ref.visible,
+      onVisibleChange = _ref.onVisibleChange,
+      children = _ref.children;
+  var props = {
+    arrow: arrow,
+    disabled: disabled,
+    getPopupContainer: getPopupContainer,
+    overlay: overlay,
+    overlayClassName: overlayClassName,
+    overlayStyle: overlayStyle,
+    placement: placement,
+    trigger: trigger,
+    visible: visible,
+    onVisibleChange: onVisibleChange,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Dropdown$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Dropdown, props, children);
 };
 
-const DropdownButton = ({
-  buttonsRender,
-  disabled,
-  icon,
-  overlay,
-  placement,
-  size,
-  trigger,
-  type,
-  visible,
-  onClick,
-  onVisibleChange,
-  children
-}) => {
-  const props = {
-    buttonsRender,
-    disabled,
-    icon,
-    overlay,
-    placement,
-    size,
-    trigger,
-    type,
-    visible,
-    onClick,
-    onVisibleChange,
-    children
+var DropdownButton = function DropdownButton(_ref) {
+  var buttonsRender = _ref.buttonsRender,
+      disabled = _ref.disabled,
+      icon = _ref.icon,
+      overlay = _ref.overlay,
+      placement = _ref.placement,
+      size = _ref.size,
+      trigger = _ref.trigger,
+      type = _ref.type,
+      visible = _ref.visible,
+      onClick = _ref.onClick,
+      onVisibleChange = _ref.onVisibleChange,
+      children = _ref.children;
+  var props = {
+    buttonsRender: buttonsRender,
+    disabled: disabled,
+    icon: icon,
+    overlay: overlay,
+    placement: placement,
+    size: size,
+    trigger: trigger,
+    type: type,
+    visible: visible,
+    onClick: onClick,
+    onVisibleChange: onVisibleChange,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Dropdown$1.Button, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Dropdown.Button, props, children);
 };
 
-const CheckboxGroup = ({
-  defaultValue,
-  disabled,
-  name,
-  options,
-  value,
-  onChange,
-  children
-}) => {
-  const props = {
-    defaultValue,
-    disabled,
-    name,
-    options,
-    value,
-    onChange,
-    children
+var CheckboxGroup = function CheckboxGroup(_ref) {
+  var defaultValue = _ref.defaultValue,
+      disabled = _ref.disabled,
+      name = _ref.name,
+      options = _ref.options,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      children = _ref.children;
+  var props = {
+    defaultValue: defaultValue,
+    disabled: disabled,
+    name: name,
+    options: options,
+    value: value,
+    onChange: onChange,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Checkbox$1.Group, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Checkbox.Group, props, children);
 };
 
-const Checkbox = ({
-  autoFocus,
-  checked,
-  defaultChecked,
-  disabled,
-  indeterminate,
-  onChange,
-  children
-}) => {
-  const props = {
-    autoFocus,
-    checked,
-    defaultChecked,
-    disabled,
-    indeterminate,
-    onChange,
-    children
+var Checkbox = function Checkbox(_ref) {
+  var autoFocus = _ref.autoFocus,
+      checked = _ref.checked,
+      defaultChecked = _ref.defaultChecked,
+      disabled = _ref.disabled,
+      indeterminate = _ref.indeterminate,
+      onChange = _ref.onChange,
+      children = _ref.children;
+  var props = {
+    autoFocus: autoFocus,
+    checked: checked,
+    defaultChecked: defaultChecked,
+    disabled: disabled,
+    indeterminate: indeterminate,
+    onChange: onChange,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Checkbox$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Checkbox, props, children);
 };
 
-const CollapsePanel = ({
-  collapsible,
-  extra,
-  forceRender,
-  header,
-  key,
-  showArrow,
-  children
-}) => {
-  const props = {
-    collapsible,
-    extra,
-    forceRender,
-    header,
-    key,
-    showArrow,
-    children
+var CollapsePanel = function CollapsePanel(_ref) {
+  var collapsible = _ref.collapsible,
+      extra = _ref.extra,
+      forceRender = _ref.forceRender,
+      header = _ref.header,
+      key = _ref.key,
+      showArrow = _ref.showArrow,
+      children = _ref.children;
+  var props = {
+    collapsible: collapsible,
+    extra: extra,
+    forceRender: forceRender,
+    header: header,
+    key: key,
+    showArrow: showArrow,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Collapse$1.Panel, props, children);
+  var Panel = antd.Collapse.Panel;
+  return /*#__PURE__*/React__default.createElement(Panel, props, children);
 };
 
-const Collapse = ({
-  accordion,
-  activeKey,
-  bordered,
-  collapsible,
-  defaultActiveKey,
-  destroyInactivePanel,
-  expandIcon,
-  expandIconPosition,
-  ghost,
-  onChange,
-  children
-}) => {
-  const props = {
-    accordion,
-    activeKey,
-    bordered,
-    collapsible,
-    defaultActiveKey,
-    destroyInactivePanel,
-    expandIcon,
-    expandIconPosition,
-    ghost,
-    onChange,
-    children
+var Collapse = function Collapse(_ref) {
+  var accordion = _ref.accordion,
+      activeKey = _ref.activeKey,
+      bordered = _ref.bordered,
+      collapsible = _ref.collapsible,
+      defaultActiveKey = _ref.defaultActiveKey,
+      destroyInactivePanel = _ref.destroyInactivePanel,
+      expandIcon = _ref.expandIcon,
+      expandIconPosition = _ref.expandIconPosition,
+      ghost = _ref.ghost,
+      onChange = _ref.onChange,
+      children = _ref.children;
+  var props = {
+    accordion: accordion,
+    activeKey: activeKey,
+    bordered: bordered,
+    collapsible: collapsible,
+    defaultActiveKey: defaultActiveKey,
+    destroyInactivePanel: destroyInactivePanel,
+    expandIcon: expandIcon,
+    expandIconPosition: expandIconPosition,
+    ghost: ghost,
+    onChange: onChange,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Collapse$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Collapse, props, children);
 };
 
-const Timeline = ({
-  children,
-  mode,
-  pending,
-  pendingDot,
-  reverse
-}) => {
-  const props = {
-    children,
-    mode,
-    pending,
-    pendingDot,
-    reverse
+var Timeline = function Timeline(_ref) {
+  var children = _ref.children,
+      mode = _ref.mode,
+      pending = _ref.pending,
+      pendingDot = _ref.pendingDot,
+      reverse = _ref.reverse;
+  var props = {
+    children: children,
+    mode: mode,
+    pending: pending,
+    pendingDot: pendingDot,
+    reverse: reverse
   };
-  return /*#__PURE__*/React__default.createElement(Timeline$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Timeline, props, children);
 };
 
-const TimelineItem = ({
-  children,
-  color,
-  dot,
-  label,
-  position
-}) => {
-  const props = {
-    children,
-    color,
-    dot,
-    label,
-    position
+var TimelineItem = function TimelineItem(_ref) {
+  var children = _ref.children,
+      color = _ref.color,
+      dot = _ref.dot,
+      label = _ref.label,
+      position = _ref.position;
+  var props = {
+    children: children,
+    color: color,
+    dot: dot,
+    label: label,
+    position: position
   };
-  return /*#__PURE__*/React__default.createElement(Timeline$1.Item, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Timeline.Item, props, children);
 };
 
-const Alert = ({
-  action,
-  afterClose,
-  banner,
-  closable,
-  closeText,
-  description,
-  icon,
-  message,
-  showIcon,
-  type,
-  onClose
-}) => {
-  const props = {
-    action,
-    afterClose,
-    banner,
-    closable,
-    closeText,
-    description,
-    icon,
-    message,
-    showIcon,
-    type,
-    onClose
+var Alert = function Alert(_ref) {
+  var action = _ref.action,
+      afterClose = _ref.afterClose,
+      banner = _ref.banner,
+      closable = _ref.closable,
+      closeText = _ref.closeText,
+      description = _ref.description,
+      icon = _ref.icon,
+      message = _ref.message,
+      showIcon = _ref.showIcon,
+      type = _ref.type,
+      onClose = _ref.onClose;
+  var props = {
+    action: action,
+    afterClose: afterClose,
+    banner: banner,
+    closable: closable,
+    closeText: closeText,
+    description: description,
+    icon: icon,
+    message: message,
+    showIcon: showIcon,
+    type: type,
+    onClose: onClose
   };
-  return /*#__PURE__*/React__default.createElement(Alert$2, props);
+  return /*#__PURE__*/React__default.createElement(antd.Alert, props);
 };
 
-const Alert$1 = ({
-  description,
-  message
-}) => {
-  const props = {
-    description,
-    message
+var Alert$1 = function Alert(_ref) {
+  var description = _ref.description,
+      message = _ref.message;
+  var props = {
+    description: description,
+    message: message
   };
-  return /*#__PURE__*/React__default.createElement(Alert$2.ErrorBoundary, props);
+  return /*#__PURE__*/React__default.createElement(antd.Alert.ErrorBoundary, props);
 };
 
-const Card = ({
-  children,
-  className,
-  actions,
-  activeTabKey,
-  bodyStyle,
-  bordered,
-  cover,
-  defaultActiveTabKey,
-  extra,
-  headStyle,
-  hoverable,
-  loading,
-  size,
-  tabBarExtraContent,
-  tabList,
-  tabProps,
-  title,
-  type,
-  onTabChange,
-  style
-}) => {
-  const props = {
-    children,
-    className,
-    actions,
-    activeTabKey,
-    bodyStyle,
-    bordered,
-    cover,
-    defaultActiveTabKey,
-    extra,
-    headStyle,
-    hoverable,
-    loading,
-    size,
-    tabBarExtraContent,
-    tabList,
-    tabProps,
-    title,
-    type,
-    onTabChange,
-    style
+var Card = function Card(_ref) {
+  var children = _ref.children,
+      className = _ref.className,
+      actions = _ref.actions,
+      activeTabKey = _ref.activeTabKey,
+      bodyStyle = _ref.bodyStyle,
+      bordered = _ref.bordered,
+      cover = _ref.cover,
+      defaultActiveTabKey = _ref.defaultActiveTabKey,
+      extra = _ref.extra,
+      headStyle = _ref.headStyle,
+      hoverable = _ref.hoverable,
+      loading = _ref.loading,
+      size = _ref.size,
+      tabBarExtraContent = _ref.tabBarExtraContent,
+      tabList = _ref.tabList,
+      tabProps = _ref.tabProps,
+      title = _ref.title,
+      type = _ref.type,
+      onTabChange = _ref.onTabChange,
+      style = _ref.style;
+  var props = {
+    children: children,
+    className: className,
+    actions: actions,
+    activeTabKey: activeTabKey,
+    bodyStyle: bodyStyle,
+    bordered: bordered,
+    cover: cover,
+    defaultActiveTabKey: defaultActiveTabKey,
+    extra: extra,
+    headStyle: headStyle,
+    hoverable: hoverable,
+    loading: loading,
+    size: size,
+    tabBarExtraContent: tabBarExtraContent,
+    tabList: tabList,
+    tabProps: tabProps,
+    title: title,
+    type: type,
+    onTabChange: onTabChange,
+    style: style
   };
-  return /*#__PURE__*/React__default.createElement(Card$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Card, props, children);
 };
 
-const CardGrid = ({
-  children,
-  className,
-  hoverable,
-  style
-}) => {
-  const props = {
-    children,
-    className,
-    hoverable,
-    style
+var CardGrid = function CardGrid(_ref) {
+  var children = _ref.children,
+      className = _ref.className,
+      hoverable = _ref.hoverable,
+      style = _ref.style;
+  var props = {
+    children: children,
+    className: className,
+    hoverable: hoverable,
+    style: style
   };
-  return /*#__PURE__*/React__default.createElement(Card$1.Grid, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Card.Grid, props, children);
 };
 
-const CardMeta = ({
-  children,
-  avatar,
-  className,
-  description,
-  style,
-  title
-}) => {
-  const props = {
-    children,
-    avatar,
-    className,
-    description,
-    style,
-    title
+var CardMeta = function CardMeta(_ref) {
+  var children = _ref.children,
+      avatar = _ref.avatar,
+      className = _ref.className,
+      description = _ref.description,
+      style = _ref.style,
+      title = _ref.title;
+  var props = {
+    children: children,
+    avatar: avatar,
+    className: className,
+    description: description,
+    style: style,
+    title: title
   };
-  return /*#__PURE__*/React__default.createElement(Card$1.Meta, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Card.Meta, props, children);
 };
 
-const Avatar = ({
-  alt,
-  gap,
-  icon,
-  shape,
-  size,
-  src,
-  srcSet,
-  onError,
-  children,
-  style,
-  className
-}) => {
-  const props = {
-    alt,
-    style,
-    gap,
-    icon,
-    shape,
-    size,
-    src,
-    srcSet,
-    onError,
-    children,
-    className
+var Avatar = function Avatar(_ref) {
+  var alt = _ref.alt,
+      gap = _ref.gap,
+      icon = _ref.icon,
+      shape = _ref.shape,
+      size = _ref.size,
+      src = _ref.src,
+      srcSet = _ref.srcSet,
+      onError = _ref.onError,
+      children = _ref.children,
+      style = _ref.style,
+      className = _ref.className;
+  var props = {
+    alt: alt,
+    style: style,
+    gap: gap,
+    icon: icon,
+    shape: shape,
+    size: size,
+    src: src,
+    srcSet: srcSet,
+    onError: onError,
+    children: children,
+    className: className
   };
-  return /*#__PURE__*/React__default.createElement(Avatar$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Avatar, props, children);
 };
 
-const AvatarGroup = ({
-  maxCount,
-  maxPopoverPlacement,
-  maxStyle,
-  size,
-  children
-}) => {
-  const props = {
-    maxCount,
-    maxPopoverPlacement,
-    maxStyle,
-    size,
-    children
+var AvatarGroup = function AvatarGroup(_ref) {
+  var maxCount = _ref.maxCount,
+      maxPopoverPlacement = _ref.maxPopoverPlacement,
+      maxStyle = _ref.maxStyle,
+      size = _ref.size,
+      children = _ref.children;
+  var props = {
+    maxCount: maxCount,
+    maxPopoverPlacement: maxPopoverPlacement,
+    maxStyle: maxStyle,
+    size: size,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Avatar$1.Group, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Avatar.Group, props, children);
 };
 
-const Badge = ({
-  color,
-  count,
-  dot,
-  offset,
-  overflowCount,
-  showZero,
-  size,
-  status,
-  text,
-  title,
-  children
-}) => {
-  const props = {
-    color,
-    count,
-    dot,
-    offset,
-    overflowCount,
-    showZero,
-    size,
-    status,
-    text,
-    title,
-    children
+var Badge = function Badge(_ref) {
+  var color = _ref.color,
+      count = _ref.count,
+      dot = _ref.dot,
+      offset = _ref.offset,
+      overflowCount = _ref.overflowCount,
+      showZero = _ref.showZero,
+      size = _ref.size,
+      status = _ref.status,
+      text = _ref.text,
+      title = _ref.title,
+      children = _ref.children;
+  var props = {
+    color: color,
+    count: count,
+    dot: dot,
+    offset: offset,
+    overflowCount: overflowCount,
+    showZero: showZero,
+    size: size,
+    status: status,
+    text: text,
+    title: title,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Badge$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Badge, props, children);
 };
 
-const BadgeRibbon = ({
-  color,
-  children,
-  placement,
-  text
-}) => {
-  const props = {
-    color,
-    placement,
-    text,
-    children
+var BadgeRibbon = function BadgeRibbon(_ref) {
+  var color = _ref.color,
+      children = _ref.children,
+      placement = _ref.placement,
+      text = _ref.text;
+  var props = {
+    color: color,
+    placement: placement,
+    text: text,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Badge$1.Ribbon, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Badge.Ribbon, props, children);
 };
 
-const Steps = ({
-  className,
-  current,
-  direction,
-  initial,
-  labelPlacement,
-  percent,
-  progressDot,
-  responsive,
-  size,
-  status,
-  type,
-  onChange,
-  children
-}) => {
-  const props = {
-    className,
-    current,
-    direction,
-    initial,
-    labelPlacement,
-    percent,
-    progressDot,
-    responsive,
-    size,
-    status,
-    type,
-    onChange,
-    children
+var Steps = function Steps(_ref) {
+  var className = _ref.className,
+      current = _ref.current,
+      direction = _ref.direction,
+      initial = _ref.initial,
+      labelPlacement = _ref.labelPlacement,
+      percent = _ref.percent,
+      progressDot = _ref.progressDot,
+      responsive = _ref.responsive,
+      size = _ref.size,
+      status = _ref.status,
+      type = _ref.type,
+      onChange = _ref.onChange,
+      children = _ref.children;
+  var props = {
+    className: className,
+    current: current,
+    direction: direction,
+    initial: initial,
+    labelPlacement: labelPlacement,
+    percent: percent,
+    progressDot: progressDot,
+    responsive: responsive,
+    size: size,
+    status: status,
+    type: type,
+    onChange: onChange,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Steps$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Steps, props, children);
 };
 
-const Step = ({
-  description,
-  disabled,
-  icon,
-  status,
-  subTitle,
-  title,
-  children
-}) => {
-  const props = {
-    description,
-    disabled,
-    icon,
-    status,
-    subTitle,
-    title,
-    children
+var Step = function Step(_ref) {
+  var description = _ref.description,
+      disabled = _ref.disabled,
+      icon = _ref.icon,
+      status = _ref.status,
+      subTitle = _ref.subTitle,
+      title = _ref.title,
+      children = _ref.children;
+  var props = {
+    description: description,
+    disabled: disabled,
+    icon: icon,
+    status: status,
+    subTitle: subTitle,
+    title: title,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Steps$1.Step, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Steps.Step, props, children);
 };
 
-const Tabs = ({
-  children
-}) => {
-  const props = {};
-  return /*#__PURE__*/React__default.createElement(Tabs$1, props, children);
+var Tabs = function Tabs(_ref) {
+  var children = _ref.children;
+  var props = {};
+  return /*#__PURE__*/React__default.createElement(antd.Tabs, props, children);
 };
 
-const TabsTabPane = ({
-  closeIcon,
-  forceRender,
-  key,
-  tab,
-  children
-}) => {
-  const props = {
-    closeIcon,
-    forceRender,
-    key,
-    tab,
-    children
+var TabsTabPane = function TabsTabPane(_ref) {
+  var closeIcon = _ref.closeIcon,
+      forceRender = _ref.forceRender,
+      key = _ref.key,
+      tab = _ref.tab,
+      children = _ref.children;
+  var props = {
+    closeIcon: closeIcon,
+    forceRender: forceRender,
+    key: key,
+    tab: tab,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Tabs$1.TabPane, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Tabs.TabPane, props, children);
 };
 
-const Tag = ({
-  children,
-  closable,
-  closeIcon,
-  color,
-  icon,
-  visible,
-  onClose
-}) => {
-  const props = {
-    children,
-    closable,
-    closeIcon,
-    color,
-    icon,
-    visible,
-    onClose
+var Tag = function Tag(_ref) {
+  var children = _ref.children,
+      closable = _ref.closable,
+      closeIcon = _ref.closeIcon,
+      color = _ref.color,
+      icon = _ref.icon,
+      visible = _ref.visible,
+      onClose = _ref.onClose;
+  var props = {
+    children: children,
+    closable: closable,
+    closeIcon: closeIcon,
+    color: color,
+    icon: icon,
+    visible: visible,
+    onClose: onClose
   };
-  return /*#__PURE__*/React__default.createElement(Tag$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Tag, props, children);
 };
 
-const CheckableTag = ({
-  checked,
-  onChange,
-  children
-}) => {
-  const props = {
-    checked,
-    onChange,
-    children
+var CheckableTag = function CheckableTag(_ref) {
+  var checked = _ref.checked,
+      onChange = _ref.onChange,
+      children = _ref.children;
+  var props = {
+    checked: checked,
+    onChange: onChange,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Tag$1.CheckableTag, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Tag.CheckableTag, props, children);
 };
 
-const Col = ({
-  children,
-  flex,
-  offset,
-  order,
-  pull,
-  push,
-  span,
-  xs,
-  sm,
-  lg,
-  xl,
-  xxl
-}) => {
-  const props = {
-    children,
-    flex,
-    offset,
-    order,
-    pull,
-    push,
-    span,
-    xs,
-    sm,
-    lg,
-    xl,
-    xxl
+var Col = function Col(_ref) {
+  var children = _ref.children,
+      flex = _ref.flex,
+      offset = _ref.offset,
+      order = _ref.order,
+      pull = _ref.pull,
+      push = _ref.push,
+      span = _ref.span,
+      xs = _ref.xs,
+      sm = _ref.sm,
+      lg = _ref.lg,
+      xl = _ref.xl,
+      xxl = _ref.xxl;
+  var props = {
+    children: children,
+    flex: flex,
+    offset: offset,
+    order: order,
+    pull: pull,
+    push: push,
+    span: span,
+    xs: xs,
+    sm: sm,
+    lg: lg,
+    xl: xl,
+    xxl: xxl
   };
-  return /*#__PURE__*/React__default.createElement(Col$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Col, props, children);
 };
 
-const Row = ({
-  children,
-  align,
-  gutter,
-  justify,
-  wrap,
-  className
-}) => {
-  const props = {
-    children,
-    align,
-    gutter,
-    justify,
-    wrap,
-    className
+var Row = function Row(_ref) {
+  var children = _ref.children,
+      align = _ref.align,
+      gutter = _ref.gutter,
+      justify = _ref.justify,
+      wrap = _ref.wrap,
+      className = _ref.className;
+  var props = {
+    children: children,
+    align: align,
+    gutter: gutter,
+    justify: justify,
+    wrap: wrap,
+    className: className
   };
-  return /*#__PURE__*/React__default.createElement(Row$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Row, props, children);
 };
 
-const ConfigProvider = ({
-  autoInsertSpaceInButton,
-  componentSize,
-  csp,
-  direction,
-  dropdownMatchSelectWidth,
-  form,
-  getPopupContainer,
-  iconPrefixCls,
-  input,
-  locale,
-  pageHeader,
-  prefixCls,
-  renderEmpty,
-  space,
-  virtual,
-  children
-}) => {
-  const props = {
-    autoInsertSpaceInButton,
-    componentSize,
-    csp,
-    direction,
-    dropdownMatchSelectWidth,
-    form,
-    getPopupContainer,
-    iconPrefixCls,
-    input,
-    locale,
-    pageHeader,
-    prefixCls,
-    renderEmpty,
-    space,
-    virtual,
-    children
+var ConfigProvider = function ConfigProvider(_ref) {
+  var autoInsertSpaceInButton = _ref.autoInsertSpaceInButton,
+      componentSize = _ref.componentSize,
+      csp = _ref.csp,
+      direction = _ref.direction,
+      dropdownMatchSelectWidth = _ref.dropdownMatchSelectWidth,
+      form = _ref.form,
+      getPopupContainer = _ref.getPopupContainer,
+      iconPrefixCls = _ref.iconPrefixCls,
+      input = _ref.input,
+      locale = _ref.locale,
+      pageHeader = _ref.pageHeader,
+      prefixCls = _ref.prefixCls,
+      renderEmpty = _ref.renderEmpty,
+      space = _ref.space,
+      virtual = _ref.virtual,
+      children = _ref.children;
+  var props = {
+    autoInsertSpaceInButton: autoInsertSpaceInButton,
+    componentSize: componentSize,
+    csp: csp,
+    direction: direction,
+    dropdownMatchSelectWidth: dropdownMatchSelectWidth,
+    form: form,
+    getPopupContainer: getPopupContainer,
+    iconPrefixCls: iconPrefixCls,
+    input: input,
+    locale: locale,
+    pageHeader: pageHeader,
+    prefixCls: prefixCls,
+    renderEmpty: renderEmpty,
+    space: space,
+    virtual: virtual,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(ConfigProvider$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.ConfigProvider, props, children);
 };
 
-const AutoComplete = ({
-  allowClear,
-  className,
-  autoFocus,
-  backfill,
-  children,
-  defaultActiveFirstOption,
-  defaultOpen,
-  defaultValue,
-  disabled,
-  dropdownClassName,
-  dropdownMatchSelectWidth,
-  filterOption,
-  notFoundContent,
-  open,
-  options,
-  placeholder,
-  value,
-  onBlur,
-  onChange,
-  onDropdownVisibleChange,
-  onFocus,
-  onSearch,
-  onSelect
-}) => {
-  const props = {
-    allowClear,
-    className,
-    autoFocus,
-    backfill,
-    children,
-    defaultActiveFirstOption,
-    defaultOpen,
-    defaultValue,
-    disabled,
-    dropdownClassName,
-    dropdownMatchSelectWidth,
-    filterOption,
-    notFoundContent,
-    open,
-    options,
-    placeholder,
-    value,
-    onBlur,
-    onChange,
-    onDropdownVisibleChange,
-    onFocus,
-    onSearch,
-    onSelect
+var AutoComplete = function AutoComplete(_ref) {
+  var allowClear = _ref.allowClear,
+      className = _ref.className,
+      autoFocus = _ref.autoFocus,
+      backfill = _ref.backfill,
+      children = _ref.children,
+      defaultActiveFirstOption = _ref.defaultActiveFirstOption,
+      defaultOpen = _ref.defaultOpen,
+      defaultValue = _ref.defaultValue,
+      disabled = _ref.disabled,
+      dropdownClassName = _ref.dropdownClassName,
+      dropdownMatchSelectWidth = _ref.dropdownMatchSelectWidth,
+      filterOption = _ref.filterOption,
+      notFoundContent = _ref.notFoundContent,
+      open = _ref.open,
+      options = _ref.options,
+      placeholder = _ref.placeholder,
+      value = _ref.value,
+      onBlur = _ref.onBlur,
+      onChange = _ref.onChange,
+      onDropdownVisibleChange = _ref.onDropdownVisibleChange,
+      onFocus = _ref.onFocus,
+      onSearch = _ref.onSearch,
+      onSelect = _ref.onSelect;
+  var props = {
+    allowClear: allowClear,
+    className: className,
+    autoFocus: autoFocus,
+    backfill: backfill,
+    children: children,
+    defaultActiveFirstOption: defaultActiveFirstOption,
+    defaultOpen: defaultOpen,
+    defaultValue: defaultValue,
+    disabled: disabled,
+    dropdownClassName: dropdownClassName,
+    dropdownMatchSelectWidth: dropdownMatchSelectWidth,
+    filterOption: filterOption,
+    notFoundContent: notFoundContent,
+    open: open,
+    options: options,
+    placeholder: placeholder,
+    value: value,
+    onBlur: onBlur,
+    onChange: onChange,
+    onDropdownVisibleChange: onDropdownVisibleChange,
+    onFocus: onFocus,
+    onSearch: onSearch,
+    onSelect: onSelect
   };
-  return /*#__PURE__*/React__default.createElement(AutoComplete$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.AutoComplete, props, children);
 };
 
-const notification = ({
-  bottom,
-  btn,
-  className,
-  closeIcon,
-  description,
-  duration,
-  getContainer,
-  icon,
-  key,
-  message,
-  placement,
-  style,
-  top,
-  onClick,
-  onClose
-}) => {
-  return notification$1;
+var notification = function notification(_ref) {
+  return antd.notification;
 };
 
-const InputNumber = ({
-  autoFocus,
-  bordered,
-  decimalSeparator,
-  defaultValue,
-  disabled,
-  formatter,
-  keyboard,
-  max,
-  min,
-  parser,
-  precision,
-  readOnly,
-  size,
-  step,
-  stringMode,
-  value,
-  onChange,
-  onPressEnter,
-  onStep,
-  children
-}) => {
-  const props = {
-    children,
-    autoFocus,
-    bordered,
-    decimalSeparator,
-    defaultValue,
-    disabled,
-    formatter,
-    keyboard,
-    max,
-    min,
-    parser,
-    precision,
-    readOnly,
-    size,
-    step,
-    stringMode,
-    value,
-    onChange,
-    onPressEnter,
-    onStep
+var InputNumber = function InputNumber(_ref) {
+  var autoFocus = _ref.autoFocus,
+      bordered = _ref.bordered,
+      decimalSeparator = _ref.decimalSeparator,
+      defaultValue = _ref.defaultValue,
+      disabled = _ref.disabled,
+      formatter = _ref.formatter,
+      keyboard = _ref.keyboard,
+      max = _ref.max,
+      min = _ref.min,
+      parser = _ref.parser,
+      precision = _ref.precision,
+      readOnly = _ref.readOnly,
+      size = _ref.size,
+      step = _ref.step,
+      stringMode = _ref.stringMode,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      onPressEnter = _ref.onPressEnter,
+      onStep = _ref.onStep,
+      children = _ref.children;
+  var props = {
+    children: children,
+    autoFocus: autoFocus,
+    bordered: bordered,
+    decimalSeparator: decimalSeparator,
+    defaultValue: defaultValue,
+    disabled: disabled,
+    formatter: formatter,
+    keyboard: keyboard,
+    max: max,
+    min: min,
+    parser: parser,
+    precision: precision,
+    readOnly: readOnly,
+    size: size,
+    step: step,
+    stringMode: stringMode,
+    value: value,
+    onChange: onChange,
+    onPressEnter: onPressEnter,
+    onStep: onStep
   };
-  return /*#__PURE__*/React__default.createElement(InputNumber$1, props);
+  return /*#__PURE__*/React__default.createElement(antd.InputNumber, props);
 };
 
-const Pagination = ({
-  current,
-  defaultCurrent,
-  defaultPageSize,
-  disabled,
-  hideOnSinglePage,
-  itemRender,
-  pageSize,
-  pageSizeOptions,
-  responsive,
-  showLessItems,
-  showQuickJumper,
-  showSizeChanger,
-  showTitle,
-  showTotalshowTotal,
-  simple,
-  size,
-  total,
-  onChange,
-  onShowSizeChange
-}) => {
-  const props = {
-    current,
-    defaultCurrent,
-    defaultPageSize,
-    disabled,
-    hideOnSinglePage,
-    itemRender,
-    pageSize,
-    pageSizeOptions,
-    responsive,
-    showLessItems,
-    showQuickJumper,
-    showSizeChanger,
-    showTitle,
-    showTotalshowTotal,
-    simple,
-    size,
-    total,
-    onChange,
-    onShowSizeChange
+var Pagination = function Pagination(_ref) {
+  var current = _ref.current,
+      defaultCurrent = _ref.defaultCurrent,
+      defaultPageSize = _ref.defaultPageSize,
+      disabled = _ref.disabled,
+      hideOnSinglePage = _ref.hideOnSinglePage,
+      itemRender = _ref.itemRender,
+      pageSize = _ref.pageSize,
+      pageSizeOptions = _ref.pageSizeOptions,
+      responsive = _ref.responsive,
+      showLessItems = _ref.showLessItems,
+      showQuickJumper = _ref.showQuickJumper,
+      showSizeChanger = _ref.showSizeChanger,
+      showTitle = _ref.showTitle,
+      showTotalshowTotal = _ref.showTotalshowTotal,
+      simple = _ref.simple,
+      size = _ref.size,
+      total = _ref.total,
+      onChange = _ref.onChange,
+      onShowSizeChange = _ref.onShowSizeChange;
+  var props = {
+    current: current,
+    defaultCurrent: defaultCurrent,
+    defaultPageSize: defaultPageSize,
+    disabled: disabled,
+    hideOnSinglePage: hideOnSinglePage,
+    itemRender: itemRender,
+    pageSize: pageSize,
+    pageSizeOptions: pageSizeOptions,
+    responsive: responsive,
+    showLessItems: showLessItems,
+    showQuickJumper: showQuickJumper,
+    showSizeChanger: showSizeChanger,
+    showTitle: showTitle,
+    showTotalshowTotal: showTotalshowTotal,
+    simple: simple,
+    size: size,
+    total: total,
+    onChange: onChange,
+    onShowSizeChange: onShowSizeChange
   };
   console.log(props);
-  return /*#__PURE__*/React__default.createElement(Pagination$1, props);
+  return /*#__PURE__*/React__default.createElement(antd.Pagination, props);
 };
 
-const PageHeader = ({
-  avatar,
-  backIcon,
-  breadcrumbRender,
-  breadcrumb,
-  extra,
-  footer,
-  ghost,
-  subTitle,
-  tags,
-  title,
-  onBack
-}) => {
-  const props = {
-    avatar,
-    backIcon,
-    breadcrumbRender,
-    breadcrumb,
-    extra,
-    footer,
-    ghost,
-    subTitle,
-    tags,
-    title,
-    onBack
+var PageHeader = function PageHeader(_ref) {
+  var avatar = _ref.avatar,
+      backIcon = _ref.backIcon,
+      breadcrumbRender = _ref.breadcrumbRender,
+      breadcrumb = _ref.breadcrumb,
+      extra = _ref.extra,
+      footer = _ref.footer,
+      ghost = _ref.ghost,
+      subTitle = _ref.subTitle,
+      tags = _ref.tags,
+      title = _ref.title,
+      onBack = _ref.onBack;
+  var props = {
+    avatar: avatar,
+    backIcon: backIcon,
+    breadcrumbRender: breadcrumbRender,
+    breadcrumb: breadcrumb,
+    extra: extra,
+    footer: footer,
+    ghost: ghost,
+    subTitle: subTitle,
+    tags: tags,
+    title: title,
+    onBack: onBack
   };
-  return /*#__PURE__*/React__default.createElement(PageHeader$1, props);
+  return /*#__PURE__*/React__default.createElement(antd.PageHeader, props);
 };
 
-const Popconfirm = ({
-  cancelButtonProps,
-  cancelText,
-  disabled,
-  icon,
-  okButtonProps,
-  okText,
-  okType,
-  title,
-  onCancel,
-  onConfirm,
-  children
-}) => {
-  const props = {
-    cancelButtonProps,
-    cancelText,
-    disabled,
-    icon,
-    okButtonProps,
-    okText,
-    okType,
-    title,
-    onCancel,
-    onConfirm,
-    children
+var Popconfirm = function Popconfirm(_ref) {
+  var cancelButtonProps = _ref.cancelButtonProps,
+      cancelText = _ref.cancelText,
+      disabled = _ref.disabled,
+      icon = _ref.icon,
+      okButtonProps = _ref.okButtonProps,
+      okText = _ref.okText,
+      okType = _ref.okType,
+      title = _ref.title,
+      onCancel = _ref.onCancel,
+      onConfirm = _ref.onConfirm,
+      children = _ref.children;
+  var props = {
+    cancelButtonProps: cancelButtonProps,
+    cancelText: cancelText,
+    disabled: disabled,
+    icon: icon,
+    okButtonProps: okButtonProps,
+    okText: okText,
+    okType: okType,
+    title: title,
+    onCancel: onCancel,
+    onConfirm: onConfirm,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Popconfirm$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Popconfirm, props, children);
 };
 
-const Cascader = ({
-  allowClear,
-  autoFocus,
-  bordered,
-  changeOnSelect,
-  className,
-  defaultValue,
-  disabled,
-  dropdownRender,
-  expandIcon,
-  expandTrigger,
-  fieldNames,
-  getPopupContainer,
-  loadData,
-  notFoundContent,
-  options,
-  placeholder,
-  popupClassName,
-  popupPlacement,
-  popupVisible,
-  showSearch,
-  size,
-  style,
-  suffixIcon,
-  value,
-  onChange,
-  onPopupVisibleChange
-}) => {
-  const props = {
-    allowClear,
-    autoFocus,
-    bordered,
-    changeOnSelect,
-    className,
-    defaultValue,
-    disabled,
-    dropdownRender,
-    expandIcon,
-    expandTrigger,
-    fieldNames,
-    getPopupContainer,
-    loadData,
-    notFoundContent,
-    options,
-    placeholder,
-    popupClassName,
-    popupPlacement,
-    popupVisible,
-    showSearch,
-    size,
-    style,
-    suffixIcon,
-    value,
-    onChange,
-    onPopupVisibleChange
+var Cascader = function Cascader(_ref) {
+  var allowClear = _ref.allowClear,
+      autoFocus = _ref.autoFocus,
+      bordered = _ref.bordered,
+      changeOnSelect = _ref.changeOnSelect,
+      className = _ref.className,
+      defaultValue = _ref.defaultValue,
+      disabled = _ref.disabled,
+      dropdownRender = _ref.dropdownRender,
+      expandIcon = _ref.expandIcon,
+      expandTrigger = _ref.expandTrigger,
+      fieldNames = _ref.fieldNames,
+      getPopupContainer = _ref.getPopupContainer,
+      loadData = _ref.loadData,
+      notFoundContent = _ref.notFoundContent,
+      options = _ref.options,
+      placeholder = _ref.placeholder,
+      popupClassName = _ref.popupClassName,
+      popupPlacement = _ref.popupPlacement,
+      popupVisible = _ref.popupVisible,
+      showSearch = _ref.showSearch,
+      size = _ref.size,
+      style = _ref.style,
+      suffixIcon = _ref.suffixIcon,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      onPopupVisibleChange = _ref.onPopupVisibleChange;
+  var props = {
+    allowClear: allowClear,
+    autoFocus: autoFocus,
+    bordered: bordered,
+    changeOnSelect: changeOnSelect,
+    className: className,
+    defaultValue: defaultValue,
+    disabled: disabled,
+    dropdownRender: dropdownRender,
+    expandIcon: expandIcon,
+    expandTrigger: expandTrigger,
+    fieldNames: fieldNames,
+    getPopupContainer: getPopupContainer,
+    loadData: loadData,
+    notFoundContent: notFoundContent,
+    options: options,
+    placeholder: placeholder,
+    popupClassName: popupClassName,
+    popupPlacement: popupPlacement,
+    popupVisible: popupVisible,
+    showSearch: showSearch,
+    size: size,
+    style: style,
+    suffixIcon: suffixIcon,
+    value: value,
+    onChange: onChange,
+    onPopupVisibleChange: onPopupVisibleChange
   };
-  return /*#__PURE__*/React__default.createElement(Cascader$1, props);
+  return /*#__PURE__*/React__default.createElement(antd.Cascader, props);
 };
 
 var de_DE = createCommonjsModule(function (module, exports) {
@@ -17650,383 +17567,362 @@ exports.default = _default;
 
 unwrapExports(de_DE);
 
-const Calendar = ({
-  dateCellRender,
-  dateFullCellRender,
-  defaultValue,
-  disabledDate,
-  fullscreen,
-  headerRender,
-  locale,
-  mode,
-  monthCellRender,
-  validRange,
-  value,
-  onChange,
-  onPanelChange,
-  onSelect
-}) => {
-  const props = {
-    dateCellRender,
-    dateFullCellRender,
-    defaultValue,
-    disabledDate,
-    fullscreen,
-    headerRender,
-    locale,
-    mode,
-    monthCellRender,
-    validRange,
-    value,
-    onChange,
-    onPanelChange,
-    onSelect
+var Calendar = function Calendar(_ref) {
+  var dateCellRender = _ref.dateCellRender,
+      dateFullCellRender = _ref.dateFullCellRender,
+      defaultValue = _ref.defaultValue,
+      disabledDate = _ref.disabledDate,
+      fullscreen = _ref.fullscreen,
+      headerRender = _ref.headerRender,
+      locale = _ref.locale,
+      mode = _ref.mode,
+      monthCellRender = _ref.monthCellRender,
+      validRange = _ref.validRange,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      onPanelChange = _ref.onPanelChange,
+      onSelect = _ref.onSelect;
+  var props = {
+    dateCellRender: dateCellRender,
+    dateFullCellRender: dateFullCellRender,
+    defaultValue: defaultValue,
+    disabledDate: disabledDate,
+    fullscreen: fullscreen,
+    headerRender: headerRender,
+    locale: locale,
+    mode: mode,
+    monthCellRender: monthCellRender,
+    validRange: validRange,
+    value: value,
+    onChange: onChange,
+    onPanelChange: onPanelChange,
+    onSelect: onSelect
   };
-  return /*#__PURE__*/React__default.createElement(Calendar$1, props);
+  return /*#__PURE__*/React__default.createElement(antd.Calendar, props);
 };
 
-const Carousel = ({
-  autoplay,
-  dotPosition,
-  dots,
-  easing,
-  effect,
-  afterChange,
-  beforeChange,
-  children
-}) => {
-  const props = {
-    autoplay,
-    dotPosition,
-    dots,
-    easing,
-    effect,
-    afterChange,
-    beforeChange,
-    children
+var Carousel = function Carousel(_ref) {
+  var autoplay = _ref.autoplay,
+      dotPosition = _ref.dotPosition,
+      dots = _ref.dots,
+      easing = _ref.easing,
+      effect = _ref.effect,
+      afterChange = _ref.afterChange,
+      beforeChange = _ref.beforeChange,
+      children = _ref.children;
+  var props = {
+    autoplay: autoplay,
+    dotPosition: dotPosition,
+    dots: dots,
+    easing: easing,
+    effect: effect,
+    afterChange: afterChange,
+    beforeChange: beforeChange,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Carousel$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Carousel, props, children);
 };
 
-const Progress = ({
-  format,
-  percent,
-  showInfo,
-  status,
-  strokeColor,
-  strokeLinecap,
-  success,
-  trailColor,
-  type,
-  steps,
-  strokeWidth,
-  width,
-  gapDegree,
-  gapPosition
-}) => {
-  const props = {
-    format,
-    percent,
-    showInfo,
-    status,
-    strokeLinecap,
-    success,
-    trailColor,
-    type,
-    steps,
-    strokeColor,
-    strokeWidth,
-    width,
-    gapDegree,
-    gapPosition
+var Progress = function Progress(_ref) {
+  var format = _ref.format,
+      percent = _ref.percent,
+      showInfo = _ref.showInfo,
+      status = _ref.status,
+      strokeColor = _ref.strokeColor,
+      strokeLinecap = _ref.strokeLinecap,
+      success = _ref.success,
+      trailColor = _ref.trailColor,
+      type = _ref.type,
+      steps = _ref.steps,
+      strokeWidth = _ref.strokeWidth,
+      width = _ref.width,
+      gapDegree = _ref.gapDegree,
+      gapPosition = _ref.gapPosition;
+  var props = {
+    format: format,
+    percent: percent,
+    showInfo: showInfo,
+    status: status,
+    strokeLinecap: strokeLinecap,
+    success: success,
+    trailColor: trailColor,
+    type: type,
+    steps: steps,
+    strokeColor: strokeColor,
+    strokeWidth: strokeWidth,
+    width: width,
+    gapDegree: gapDegree,
+    gapPosition: gapPosition
   };
-  return /*#__PURE__*/React__default.createElement(Progress$1, props);
+  return /*#__PURE__*/React__default.createElement(antd.Progress, props);
 };
 
-const Transfer = ({
-  dataSource,
-  disabled,
-  filterOption,
-  footer,
-  listStyle,
-  locale,
-  oneWay,
-  operations,
-  operationStyle,
-  pagination,
-  render,
-  selectAllLabels,
-  selectedKeys,
-  showSearch,
-  showSelectAll,
-  targetKeys,
-  titles,
-  onChange,
-  onScroll,
-  onSearch,
-  onSelectChange
-}) => {
-  const props = {
-    dataSource,
-    disabled,
-    filterOption,
-    footer,
-    listStyle,
-    locale,
-    oneWay,
-    operations,
-    operationStyle,
-    pagination,
-    render,
-    selectAllLabels,
-    selectedKeys,
-    showSearch,
-    showSelectAll,
-    targetKeys,
-    titles,
-    onChange,
-    onScroll,
-    onSearch,
-    onSelectChange
+var Transfer = function Transfer(_ref) {
+  var dataSource = _ref.dataSource,
+      disabled = _ref.disabled,
+      filterOption = _ref.filterOption,
+      footer = _ref.footer,
+      listStyle = _ref.listStyle,
+      locale = _ref.locale,
+      oneWay = _ref.oneWay,
+      operations = _ref.operations,
+      operationStyle = _ref.operationStyle,
+      pagination = _ref.pagination,
+      render = _ref.render,
+      selectAllLabels = _ref.selectAllLabels,
+      selectedKeys = _ref.selectedKeys,
+      showSearch = _ref.showSearch,
+      showSelectAll = _ref.showSelectAll,
+      targetKeys = _ref.targetKeys,
+      titles = _ref.titles,
+      onChange = _ref.onChange,
+      onScroll = _ref.onScroll,
+      onSearch = _ref.onSearch,
+      onSelectChange = _ref.onSelectChange;
+  var props = {
+    dataSource: dataSource,
+    disabled: disabled,
+    filterOption: filterOption,
+    footer: footer,
+    listStyle: listStyle,
+    locale: locale,
+    oneWay: oneWay,
+    operations: operations,
+    operationStyle: operationStyle,
+    pagination: pagination,
+    render: render,
+    selectAllLabels: selectAllLabels,
+    selectedKeys: selectedKeys,
+    showSearch: showSearch,
+    showSelectAll: showSelectAll,
+    targetKeys: targetKeys,
+    titles: titles,
+    onChange: onChange,
+    onScroll: onScroll,
+    onSearch: onSearch,
+    onSelectChange: onSelectChange
   };
-  return /*#__PURE__*/React__default.createElement(Transfer$1, props);
+  return /*#__PURE__*/React__default.createElement(antd.Transfer, props);
 };
 
-const Rate = ({
-  onChange,
-  onFocus,
-  onHoverChange,
-  onKeyDown,
-  count,
-  defaultValue,
-  disabled,
-  style,
-  tooltips,
-  value,
-  onBlur,
-  allowClear,
-  allowHalf,
-  autoFocus,
-  character,
-  className,
-  children
-}) => {
-  const props = {
-    onChange,
-    onFocus,
-    onHoverChange,
-    onKeyDown,
-    count,
-    defaultValue,
-    disabled,
-    style,
-    tooltips,
-    value,
-    onBlur,
-    allowClear,
-    allowHalf,
-    autoFocus,
-    character,
-    className,
-    children
+var Rate = function Rate(_ref) {
+  var onChange = _ref.onChange,
+      onFocus = _ref.onFocus,
+      onHoverChange = _ref.onHoverChange,
+      onKeyDown = _ref.onKeyDown,
+      count = _ref.count,
+      defaultValue = _ref.defaultValue,
+      disabled = _ref.disabled,
+      style = _ref.style,
+      tooltips = _ref.tooltips,
+      value = _ref.value,
+      onBlur = _ref.onBlur,
+      allowClear = _ref.allowClear,
+      allowHalf = _ref.allowHalf,
+      autoFocus = _ref.autoFocus,
+      character = _ref.character,
+      className = _ref.className,
+      children = _ref.children;
+  var props = {
+    onChange: onChange,
+    onFocus: onFocus,
+    onHoverChange: onHoverChange,
+    onKeyDown: onKeyDown,
+    count: count,
+    defaultValue: defaultValue,
+    disabled: disabled,
+    style: style,
+    tooltips: tooltips,
+    value: value,
+    onBlur: onBlur,
+    allowClear: allowClear,
+    allowHalf: allowHalf,
+    autoFocus: autoFocus,
+    character: character,
+    className: className,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Rate$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Rate, props, children);
 };
 
-const Tooltip = ({
-  getPopupContainer,
-  mouseEnterDelay,
-  mouseLeaveDelay,
-  overlayClassName,
-  overlayStyle,
-  placement,
-  trigger,
-  visible,
-  zIndex,
-  onVisibleChange,
-  children,
-  title,
-  align,
-  arrowPointAtCenter,
-  autoAdjustOverflow,
-  color,
-  defaultVisible,
-  destroyTooltipOnHide
-}) => {
-  const props = {
-    getPopupContainer,
-    mouseEnterDelay,
-    mouseLeaveDelay,
-    overlayClassName,
-    overlayStyle,
-    placement,
-    trigger,
-    visible,
-    zIndex,
-    onVisibleChange,
-    children,
-    title,
-    align,
-    arrowPointAtCenter,
-    autoAdjustOverflow,
-    color,
-    defaultVisible,
-    destroyTooltipOnHide
+var Tooltip = function Tooltip(_ref) {
+  var getPopupContainer = _ref.getPopupContainer,
+      mouseEnterDelay = _ref.mouseEnterDelay,
+      mouseLeaveDelay = _ref.mouseLeaveDelay,
+      overlayClassName = _ref.overlayClassName,
+      overlayStyle = _ref.overlayStyle,
+      placement = _ref.placement,
+      trigger = _ref.trigger,
+      visible = _ref.visible,
+      zIndex = _ref.zIndex,
+      onVisibleChange = _ref.onVisibleChange,
+      children = _ref.children,
+      title = _ref.title,
+      align = _ref.align,
+      arrowPointAtCenter = _ref.arrowPointAtCenter,
+      autoAdjustOverflow = _ref.autoAdjustOverflow,
+      color = _ref.color,
+      defaultVisible = _ref.defaultVisible,
+      destroyTooltipOnHide = _ref.destroyTooltipOnHide;
+  var props = {
+    getPopupContainer: getPopupContainer,
+    mouseEnterDelay: mouseEnterDelay,
+    mouseLeaveDelay: mouseLeaveDelay,
+    overlayClassName: overlayClassName,
+    overlayStyle: overlayStyle,
+    placement: placement,
+    trigger: trigger,
+    visible: visible,
+    zIndex: zIndex,
+    onVisibleChange: onVisibleChange,
+    children: children,
+    title: title,
+    align: align,
+    arrowPointAtCenter: arrowPointAtCenter,
+    autoAdjustOverflow: autoAdjustOverflow,
+    color: color,
+    defaultVisible: defaultVisible,
+    destroyTooltipOnHide: destroyTooltipOnHide
   };
-  return /*#__PURE__*/React__default.createElement(Tooltip$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Tooltip, props, children);
 };
 
-const Divider$1 = ({
-  className,
-  dashed,
-  orientation,
-  plain,
-  style,
-  type,
-  children
-}) => {
-  const props = {
-    className,
-    dashed,
-    orientation,
-    plain,
-    style,
-    type,
-    children
+var Divider$1 = function Divider(_ref) {
+  var className = _ref.className,
+      dashed = _ref.dashed,
+      orientation = _ref.orientation,
+      plain = _ref.plain,
+      style = _ref.style,
+      type = _ref.type,
+      children = _ref.children;
+  var props = {
+    className: className,
+    dashed: dashed,
+    orientation: orientation,
+    plain: plain,
+    style: style,
+    type: type,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Divider$2, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Divider, props, children);
 };
 
-const Comment = ({
-  actions,
-  author,
-  avatar,
-  children,
-  content,
-  datetime
-}) => {
-  const props = {
-    actions,
-    author,
-    avatar,
-    children,
-    content,
-    datetime
+var Comment = function Comment(_ref) {
+  var actions = _ref.actions,
+      author = _ref.author,
+      avatar = _ref.avatar,
+      children = _ref.children,
+      content = _ref.content,
+      datetime = _ref.datetime;
+  var props = {
+    actions: actions,
+    author: author,
+    avatar: avatar,
+    children: children,
+    content: content,
+    datetime: datetime
   };
-  return /*#__PURE__*/React__default.createElement(Comment$1, props);
+  return /*#__PURE__*/React__default.createElement(antd.Comment, props);
 };
 
-const Popover = ({
-  content,
-  title,
-  children
-}) => {
-  const props = {
-    content,
-    title,
-    children
+var Popover = function Popover(_ref) {
+  var content = _ref.content,
+      title = _ref.title,
+      children = _ref.children;
+  var props = {
+    content: content,
+    title: title,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Popover$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Popover, props, children);
 };
 
-const Message = ({
-  className,
-  content,
-  duration,
-  icon,
-  key,
-  style,
-  onClick,
-  onClose
-}) => {
-  return message;
+var message = function message(_ref) {
+  return antd.message;
 };
 
-const BackTop = ({
-  duration,
-  target,
-  visibilityHeight,
-  onClick,
-  children
-}) => {
-  const props = {
-    duration,
-    target,
-    visibilityHeight,
-    onClick,
-    children
+var BackTop = function BackTop(_ref) {
+  var duration = _ref.duration,
+      target = _ref.target,
+      visibilityHeight = _ref.visibilityHeight,
+      onClick = _ref.onClick,
+      children = _ref.children;
+  var props = {
+    duration: duration,
+    target: target,
+    visibilityHeight: visibilityHeight,
+    onClick: onClick,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(BackTop$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.BackTop, props, children);
 };
 
-const Button = ({
-  block,
-  danger,
-  disabled,
-  ghost,
-  href,
-  htmlType,
-  icon,
-  loading,
-  shape,
-  size,
-  target,
-  type,
-  onClick,
-  className,
-  children,
-  style
-}) => {
-  const props = {
-    block,
-    danger,
-    disabled,
-    ghost,
-    href,
-    htmlType,
-    icon,
-    loading,
-    shape,
-    size,
-    target,
-    type,
-    onClick,
-    className,
-    children,
-    style
+var Button = function Button(_ref) {
+  var block = _ref.block,
+      danger = _ref.danger,
+      disabled = _ref.disabled,
+      ghost = _ref.ghost,
+      href = _ref.href,
+      htmlType = _ref.htmlType,
+      icon = _ref.icon,
+      loading = _ref.loading,
+      shape = _ref.shape,
+      size = _ref.size,
+      target = _ref.target,
+      type = _ref.type,
+      onClick = _ref.onClick,
+      className = _ref.className,
+      children = _ref.children,
+      style = _ref.style;
+  var props = {
+    block: block,
+    danger: danger,
+    disabled: disabled,
+    ghost: ghost,
+    href: href,
+    htmlType: htmlType,
+    icon: icon,
+    loading: loading,
+    shape: shape,
+    size: size,
+    target: target,
+    type: type,
+    onClick: onClick,
+    className: className,
+    children: children,
+    style: style
   };
-  return /*#__PURE__*/React__default.createElement(Button$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Button, props, children);
 };
 
-const Switch = ({
-  autoFocus,
-  checked,
-  checkedChildren,
-  className,
-  defaultChecked,
-  disabled,
-  loading,
-  size,
-  unCheckedChildren,
-  ReactNode,
-  onClick,
-  children
-}) => {
-  const props = {
-    autoFocus,
-    checked,
-    checkedChildren,
-    className,
-    defaultChecked,
-    disabled,
-    loading,
-    size,
-    unCheckedChildren,
-    ReactNode,
-    onClick,
-    children
+var Switch = function Switch(_ref) {
+  var autoFocus = _ref.autoFocus,
+      checked = _ref.checked,
+      checkedChildren = _ref.checkedChildren,
+      className = _ref.className,
+      defaultChecked = _ref.defaultChecked,
+      disabled = _ref.disabled,
+      loading = _ref.loading,
+      size = _ref.size,
+      unCheckedChildren = _ref.unCheckedChildren,
+      ReactNode = _ref.ReactNode,
+      onClick = _ref.onClick,
+      children = _ref.children;
+  var props = {
+    autoFocus: autoFocus,
+    checked: checked,
+    checkedChildren: checkedChildren,
+    className: className,
+    defaultChecked: defaultChecked,
+    disabled: disabled,
+    loading: loading,
+    size: size,
+    unCheckedChildren: unCheckedChildren,
+    ReactNode: ReactNode,
+    onClick: onClick,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Switch$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Switch, props, children);
 };
 
 var _interface$5 = createCommonjsModule(function (module, exports) {
@@ -18038,69 +17934,68 @@ Object.defineProperty(exports, "__esModule", {
 
 unwrapExports(_interface$5);
 
-const Upload = ({
-  accept,
-  action,
-  beforeUpload,
-  customRequest,
-  data,
-  defaultFileList,
-  directory,
-  disabled,
-  fileList,
-  headers,
-  iconRender,
-  isImageUrl,
-  itemRender,
-  listType,
-  maxCount,
-  method,
-  multiple,
-  name,
-  openFileDialogOnClick,
-  previewFile,
-  progress,
-  showUploadList,
-  withCredentials,
-  onChange,
-  onDrop,
-  onDownload,
-  onPreview,
-  onRemove,
-  children
-}) => {
-  const props = {
-    accept,
-    action,
-    beforeUpload,
-    customRequest,
-    data,
-    defaultFileList,
-    directory,
-    disabled,
-    fileList,
-    headers,
-    iconRender,
-    isImageUrl,
-    itemRender,
-    listType,
-    maxCount,
-    method,
-    multiple,
-    name,
-    openFileDialogOnClick,
-    previewFile,
-    progress,
-    showUploadList,
-    withCredentials,
-    onChange,
-    onDrop,
-    onDownload,
-    onPreview,
-    onRemove,
-    children
+var Upload = function Upload(_ref) {
+  var accept = _ref.accept,
+      action = _ref.action,
+      beforeUpload = _ref.beforeUpload,
+      customRequest = _ref.customRequest,
+      data = _ref.data,
+      defaultFileList = _ref.defaultFileList,
+      directory = _ref.directory,
+      disabled = _ref.disabled,
+      fileList = _ref.fileList,
+      headers = _ref.headers,
+      iconRender = _ref.iconRender,
+      isImageUrl = _ref.isImageUrl,
+      itemRender = _ref.itemRender,
+      listType = _ref.listType,
+      maxCount = _ref.maxCount,
+      method = _ref.method,
+      multiple = _ref.multiple,
+      name = _ref.name,
+      openFileDialogOnClick = _ref.openFileDialogOnClick,
+      previewFile = _ref.previewFile,
+      progress = _ref.progress,
+      showUploadList = _ref.showUploadList,
+      withCredentials = _ref.withCredentials,
+      onChange = _ref.onChange,
+      onDrop = _ref.onDrop,
+      onDownload = _ref.onDownload,
+      onPreview = _ref.onPreview,
+      onRemove = _ref.onRemove,
+      children = _ref.children;
+  var props = {
+    accept: accept,
+    action: action,
+    beforeUpload: beforeUpload,
+    customRequest: customRequest,
+    data: data,
+    defaultFileList: defaultFileList,
+    directory: directory,
+    disabled: disabled,
+    fileList: fileList,
+    headers: headers,
+    iconRender: iconRender,
+    isImageUrl: isImageUrl,
+    itemRender: itemRender,
+    listType: listType,
+    maxCount: maxCount,
+    method: method,
+    multiple: multiple,
+    name: name,
+    openFileDialogOnClick: openFileDialogOnClick,
+    previewFile: previewFile,
+    progress: progress,
+    showUploadList: showUploadList,
+    withCredentials: withCredentials,
+    onChange: onChange,
+    onDrop: onDrop,
+    onDownload: onDownload,
+    onPreview: onPreview,
+    onRemove: onRemove,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Upload$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Upload, props, children);
 };
 
 var arrayLikeToArray = createCommonjsModule(function (module) {
@@ -20014,264 +19909,256 @@ exports.default = _default;
 
 unwrapExports(Range_1);
 
-const Slider = ({
-  disabled,
-  dots,
-  getTooltipPopupContainer,
-  included,
-  marks,
-  max,
-  min,
-  range,
-  reverse,
-  step,
-  tipFormatter,
-  tooltipPlacement,
-  tooltipVisible,
-  value,
-  vertical,
-  onAfterChange,
-  onChange,
-  children
-}) => {
-  const props = {
-    disabled,
-    dots,
-    getTooltipPopupContainer,
-    included,
-    marks,
-    max,
-    min,
-    range,
-    reverse,
-    step,
-    tipFormatter,
-    tooltipPlacement,
-    tooltipVisible,
-    value,
-    vertical,
-    onAfterChange,
-    onChange,
-    children
+var Slider = function Slider(_ref) {
+  var disabled = _ref.disabled,
+      dots = _ref.dots,
+      getTooltipPopupContainer = _ref.getTooltipPopupContainer,
+      included = _ref.included,
+      marks = _ref.marks,
+      max = _ref.max,
+      min = _ref.min,
+      range = _ref.range,
+      reverse = _ref.reverse,
+      step = _ref.step,
+      tipFormatter = _ref.tipFormatter,
+      tooltipPlacement = _ref.tooltipPlacement,
+      tooltipVisible = _ref.tooltipVisible,
+      value = _ref.value,
+      vertical = _ref.vertical,
+      onAfterChange = _ref.onAfterChange,
+      onChange = _ref.onChange,
+      children = _ref.children;
+  var props = {
+    disabled: disabled,
+    dots: dots,
+    getTooltipPopupContainer: getTooltipPopupContainer,
+    included: included,
+    marks: marks,
+    max: max,
+    min: min,
+    range: range,
+    reverse: reverse,
+    step: step,
+    tipFormatter: tipFormatter,
+    tooltipPlacement: tooltipPlacement,
+    tooltipVisible: tooltipVisible,
+    value: value,
+    vertical: vertical,
+    onAfterChange: onAfterChange,
+    onChange: onChange,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Slider$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Slider, props, children);
 };
 
-const Drawer = ({
-  afterVisibleChange,
-  bodyStyle,
-  className,
-  closable,
-  closeIcon,
-  contentWrapperStyle,
-  destroyOnClose,
-  drawerStyle,
-  footer,
-  footerStyle,
-  forceRender,
-  getContainer,
-  headerStyle,
-  height,
-  keyboard,
-  mask,
-  maskClosable,
-  maskStyle,
-  placement,
-  push,
-  style,
-  title,
-  visible,
-  width,
-  zIndex,
-  onClose,
-  children
-}) => {
-  const props = {
-    afterVisibleChange,
-    bodyStyle,
-    className,
-    closable,
-    closeIcon,
-    contentWrapperStyle,
-    destroyOnClose,
-    drawerStyle,
-    footer,
-    footerStyle,
-    forceRender,
-    getContainer,
-    headerStyle,
-    height,
-    keyboard,
-    mask,
-    maskClosable,
-    maskStyle,
-    placement,
-    push,
-    style,
-    title,
-    visible,
-    width,
-    zIndex,
-    onClose,
-    children
+var Drawer = function Drawer(_ref) {
+  var afterVisibleChange = _ref.afterVisibleChange,
+      bodyStyle = _ref.bodyStyle,
+      className = _ref.className,
+      closable = _ref.closable,
+      closeIcon = _ref.closeIcon,
+      contentWrapperStyle = _ref.contentWrapperStyle,
+      destroyOnClose = _ref.destroyOnClose,
+      drawerStyle = _ref.drawerStyle,
+      footer = _ref.footer,
+      footerStyle = _ref.footerStyle,
+      forceRender = _ref.forceRender,
+      getContainer = _ref.getContainer,
+      headerStyle = _ref.headerStyle,
+      height = _ref.height,
+      keyboard = _ref.keyboard,
+      mask = _ref.mask,
+      maskClosable = _ref.maskClosable,
+      maskStyle = _ref.maskStyle,
+      placement = _ref.placement,
+      push = _ref.push,
+      style = _ref.style,
+      title = _ref.title,
+      visible = _ref.visible,
+      width = _ref.width,
+      zIndex = _ref.zIndex,
+      onClose = _ref.onClose,
+      children = _ref.children;
+  var props = {
+    afterVisibleChange: afterVisibleChange,
+    bodyStyle: bodyStyle,
+    className: className,
+    closable: closable,
+    closeIcon: closeIcon,
+    contentWrapperStyle: contentWrapperStyle,
+    destroyOnClose: destroyOnClose,
+    drawerStyle: drawerStyle,
+    footer: footer,
+    footerStyle: footerStyle,
+    forceRender: forceRender,
+    getContainer: getContainer,
+    headerStyle: headerStyle,
+    height: height,
+    keyboard: keyboard,
+    mask: mask,
+    maskClosable: maskClosable,
+    maskStyle: maskStyle,
+    placement: placement,
+    push: push,
+    style: style,
+    title: title,
+    visible: visible,
+    width: width,
+    zIndex: zIndex,
+    onClose: onClose,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Drawer$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Drawer, props, children);
 };
 
-const Anchor = ({
-  affix,
-  bounds,
-  getContainer,
-  getCurrentAnchor,
-  offsetTop,
-  showInkInFixed,
-  targetOffset,
-  onChange,
-  onClick,
-  children
-}) => {
-  const props = {
-    affix,
-    bounds,
-    getContainer,
-    getCurrentAnchor,
-    offsetTop,
-    showInkInFixed,
-    targetOffset,
-    onChange,
-    onClick,
-    children
+var Anchor = function Anchor(_ref) {
+  var affix = _ref.affix,
+      bounds = _ref.bounds,
+      getContainer = _ref.getContainer,
+      getCurrentAnchor = _ref.getCurrentAnchor,
+      offsetTop = _ref.offsetTop,
+      showInkInFixed = _ref.showInkInFixed,
+      targetOffset = _ref.targetOffset,
+      onChange = _ref.onChange,
+      onClick = _ref.onClick,
+      children = _ref.children;
+  var props = {
+    affix: affix,
+    bounds: bounds,
+    getContainer: getContainer,
+    getCurrentAnchor: getCurrentAnchor,
+    offsetTop: offsetTop,
+    showInkInFixed: showInkInFixed,
+    targetOffset: targetOffset,
+    onChange: onChange,
+    onClick: onClick,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Anchor$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Anchor, props, children);
 };
 
-const Result = ({
-  extra,
-  icon,
-  status,
-  subTitle,
-  title
-}) => {
-  const props = {
-    extra,
-    icon,
-    status,
-    subTitle,
-    title
+var Result = function Result(_ref) {
+  var extra = _ref.extra,
+      icon = _ref.icon,
+      status = _ref.status,
+      subTitle = _ref.subTitle,
+      title = _ref.title;
+  var props = {
+    extra: extra,
+    icon: icon,
+    status: status,
+    subTitle: subTitle,
+    title: title
   };
-  return /*#__PURE__*/React__default.createElement(Result$1, props);
+  return /*#__PURE__*/React__default.createElement(antd.Result, props);
 };
 
-const Space = ({
-  align,
-  direction,
-  size,
-  split,
-  wrap,
-  children
-}) => {
-  const props = {
-    align,
-    direction,
-    size,
-    split,
-    wrap,
-    children
+var Space = function Space(_ref) {
+  var align = _ref.align,
+      direction = _ref.direction,
+      size = _ref.size,
+      split = _ref.split,
+      wrap = _ref.wrap,
+      children = _ref.children;
+  var props = {
+    align: align,
+    direction: direction,
+    size: size,
+    split: split,
+    wrap: wrap,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Space$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Space, props, children);
 };
 
-const Affix = ({
-  offsetBottom,
-  offsetTop,
-  target,
-  onChange,
-  children
-}) => {
-  const props = {
-    offsetBottom,
-    offsetTop,
-    target,
-    onChange,
-    children
+var Affix = function Affix(_ref) {
+  var offsetBottom = _ref.offsetBottom,
+      offsetTop = _ref.offsetTop,
+      target = _ref.target,
+      onChange = _ref.onChange,
+      children = _ref.children;
+  var props = {
+    offsetBottom: offsetBottom,
+    offsetTop: offsetTop,
+    target: target,
+    onChange: onChange,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Affix$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Affix, props, children);
 };
 
-const Empty = ({
-  description,
-  image,
-  imageStyle,
-  children
-}) => {
-  const props = {
-    description,
-    image,
-    imageStyle,
-    children
+var Empty = function Empty(_ref) {
+  var description = _ref.description,
+      image = _ref.image,
+      imageStyle = _ref.imageStyle,
+      children = _ref.children;
+  var props = {
+    description: description,
+    image: image,
+    imageStyle: imageStyle,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Empty$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Empty, props, children);
 };
 
-const Modal = ({
-  afterClose,
-  bodyStyle,
-  cancelButtonProps,
-  centered,
-  closable,
-  confirmLoading,
-  destroyOnClose,
-  focusTriggerAfterClose,
-  footer,
-  forceRender,
-  getContainer,
-  keyboard,
-  mask,
-  maskClosable,
-  maskStyle,
-  modalRender,
-  okButtonProps,
-  okText,
-  okType,
-  style,
-  title,
-  width,
-  wrapClassName,
-  zIndex,
-  onCancel,
-  onOk,
-  children
-}) => {
-  const props = {
-    afterClose,
-    bodyStyle,
-    cancelButtonProps,
-    centered,
-    closable,
-    confirmLoading,
-    destroyOnClose,
-    focusTriggerAfterClose,
-    footer,
-    forceRender,
-    getContainer,
-    keyboard,
-    mask,
-    maskClosable,
-    maskStyle,
-    modalRender,
-    okButtonProps,
-    okText,
-    okType,
-    style,
-    title,
-    width,
-    wrapClassName,
-    zIndex,
-    onCancel,
-    onOk,
-    children
+var Modal = function Modal(_ref) {
+  var afterClose = _ref.afterClose,
+      bodyStyle = _ref.bodyStyle,
+      cancelButtonProps = _ref.cancelButtonProps,
+      centered = _ref.centered,
+      closable = _ref.closable,
+      confirmLoading = _ref.confirmLoading,
+      destroyOnClose = _ref.destroyOnClose,
+      focusTriggerAfterClose = _ref.focusTriggerAfterClose,
+      footer = _ref.footer,
+      forceRender = _ref.forceRender,
+      getContainer = _ref.getContainer,
+      keyboard = _ref.keyboard,
+      mask = _ref.mask,
+      maskClosable = _ref.maskClosable,
+      maskStyle = _ref.maskStyle,
+      modalRender = _ref.modalRender,
+      okButtonProps = _ref.okButtonProps,
+      okText = _ref.okText,
+      okType = _ref.okType,
+      style = _ref.style,
+      title = _ref.title,
+      width = _ref.width,
+      wrapClassName = _ref.wrapClassName,
+      zIndex = _ref.zIndex,
+      onCancel = _ref.onCancel,
+      onOk = _ref.onOk,
+      children = _ref.children;
+  var props = {
+    afterClose: afterClose,
+    bodyStyle: bodyStyle,
+    cancelButtonProps: cancelButtonProps,
+    centered: centered,
+    closable: closable,
+    confirmLoading: confirmLoading,
+    destroyOnClose: destroyOnClose,
+    focusTriggerAfterClose: focusTriggerAfterClose,
+    footer: footer,
+    forceRender: forceRender,
+    getContainer: getContainer,
+    keyboard: keyboard,
+    mask: mask,
+    maskClosable: maskClosable,
+    maskStyle: maskStyle,
+    modalRender: modalRender,
+    okButtonProps: okButtonProps,
+    okText: okText,
+    okType: okType,
+    style: style,
+    title: title,
+    width: width,
+    wrapClassName: wrapClassName,
+    zIndex: zIndex,
+    onCancel: onCancel,
+    onOk: onOk,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Modal$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Modal, props, children);
 };
 
 var arrayWithHoles = createCommonjsModule(function (module) {
@@ -20830,7 +20717,7 @@ var PortalWrapper = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.container = void 0;
-    _this.componentRef = /*#__PURE__*/createRef();
+    _this.componentRef = /*#__PURE__*/React.createRef();
     _this.rafId = void 0;
     _this.scrollLocker = void 0;
     _this.renderComponent = void 0;
@@ -21000,7 +20887,7 @@ var PortalWrapper = /*#__PURE__*/function (_React$Component) {
       };
 
       if (forceRender || visible || this.componentRef.current) {
-        portal = /*#__PURE__*/createElement(Portal, {
+        portal = /*#__PURE__*/React.createElement(Portal, {
           getContainer: this.getContainer,
           ref: this.componentRef
         }, children(childProps));
@@ -21011,7 +20898,7 @@ var PortalWrapper = /*#__PURE__*/function (_React$Component) {
   }]);
 
   return PortalWrapper;
-}(Component);
+}(React.Component);
 
 function Mask$1(props) {
   var prefixCls = props.prefixCls,
@@ -21019,7 +20906,7 @@ function Mask$1(props) {
       visible = props.visible,
       maskProps = props.maskProps,
       motionName = props.motionName;
-  return /*#__PURE__*/createElement(CSSMotion, {
+  return /*#__PURE__*/React.createElement(CSSMotion, {
     key: "mask",
     visible: visible,
     motionName: motionName,
@@ -21027,7 +20914,7 @@ function Mask$1(props) {
   }, function (_ref) {
     var motionClassName = _ref.className,
         motionStyle = _ref.style;
-    return /*#__PURE__*/createElement("div", _extends({
+    return /*#__PURE__*/React.createElement("div", _extends({
       style: _objectSpread2(_objectSpread2({}, motionStyle), style),
       className: classnames("".concat(prefixCls, "-mask"), motionClassName)
     }, maskProps));
@@ -21080,7 +20967,7 @@ function offset(el) {
   return pos;
 }
 
-var MemoChildren = /*#__PURE__*/memo(function (_ref) {
+var MemoChildren = /*#__PURE__*/React.memo(function (_ref) {
   var children = _ref.children;
   return children;
 }, function (_, _ref2) {
@@ -21094,7 +20981,7 @@ var sentinelStyle = {
   overflow: 'hidden',
   outline: 'none'
 };
-var Content$1 = /*#__PURE__*/forwardRef(function (props, ref) {
+var Content$1 = /*#__PURE__*/React.forwardRef(function (props, ref) {
   var closable = props.closable,
       prefixCls = props.prefixCls,
       width = props.width,
@@ -21118,11 +21005,11 @@ var Content$1 = /*#__PURE__*/forwardRef(function (props, ref) {
       onMouseDown = props.onMouseDown,
       onMouseUp = props.onMouseUp,
       mousePosition = props.mousePosition;
-  var sentinelStartRef = useRef();
-  var sentinelEndRef = useRef();
-  var dialogRef = useRef(); // ============================== Ref ===============================
+  var sentinelStartRef = React.useRef();
+  var sentinelEndRef = React.useRef();
+  var dialogRef = React.useRef(); // ============================== Ref ===============================
 
-  useImperativeHandle(ref, function () {
+  React.useImperativeHandle(ref, function () {
     return {
       focus: function focus() {
         var _sentinelStartRef$cur;
@@ -21142,7 +21029,7 @@ var Content$1 = /*#__PURE__*/forwardRef(function (props, ref) {
     };
   }); // ============================= Style ==============================
 
-  var _React$useState = useState(),
+  var _React$useState = React.useState(),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       transformOrigin = _React$useState2[0],
       setTransformOrigin = _React$useState2[1];
@@ -21170,7 +21057,7 @@ var Content$1 = /*#__PURE__*/forwardRef(function (props, ref) {
   var footerNode;
 
   if (footer) {
-    footerNode = /*#__PURE__*/createElement("div", {
+    footerNode = /*#__PURE__*/React.createElement("div", {
       className: "".concat(prefixCls, "-footer")
     }, footer);
   }
@@ -21178,9 +21065,9 @@ var Content$1 = /*#__PURE__*/forwardRef(function (props, ref) {
   var headerNode;
 
   if (title) {
-    headerNode = /*#__PURE__*/createElement("div", {
+    headerNode = /*#__PURE__*/React.createElement("div", {
       className: "".concat(prefixCls, "-header")
-    }, /*#__PURE__*/createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       className: "".concat(prefixCls, "-title"),
       id: ariaId
     }, title));
@@ -21189,23 +21076,23 @@ var Content$1 = /*#__PURE__*/forwardRef(function (props, ref) {
   var closer;
 
   if (closable) {
-    closer = /*#__PURE__*/createElement("button", {
+    closer = /*#__PURE__*/React.createElement("button", {
       type: "button",
       onClick: onClose,
       "aria-label": "Close",
       className: "".concat(prefixCls, "-close")
-    }, closeIcon || /*#__PURE__*/createElement("span", {
+    }, closeIcon || /*#__PURE__*/React.createElement("span", {
       className: "".concat(prefixCls, "-close-x")
     }));
   }
 
-  var content = /*#__PURE__*/createElement("div", {
+  var content = /*#__PURE__*/React.createElement("div", {
     className: "".concat(prefixCls, "-content")
-  }, closer, headerNode, /*#__PURE__*/createElement("div", _extends({
+  }, closer, headerNode, /*#__PURE__*/React.createElement("div", _extends({
     className: "".concat(prefixCls, "-body"),
     style: bodyStyle
   }, bodyProps), children), footerNode);
-  return /*#__PURE__*/createElement(CSSMotion, {
+  return /*#__PURE__*/React.createElement(CSSMotion, {
     visible: visible,
     onVisibleChanged: onVisibleChanged,
     onAppearPrepare: onPrepare,
@@ -21217,7 +21104,7 @@ var Content$1 = /*#__PURE__*/forwardRef(function (props, ref) {
   }, function (_ref, motionRef) {
     var motionClassName = _ref.className,
         motionStyle = _ref.style;
-    return /*#__PURE__*/createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       key: "dialog-element",
       role: "document",
       ref: motionRef,
@@ -21225,14 +21112,14 @@ var Content$1 = /*#__PURE__*/forwardRef(function (props, ref) {
       className: classnames(prefixCls, className, motionClassName),
       onMouseDown: onMouseDown,
       onMouseUp: onMouseUp
-    }, /*#__PURE__*/createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       tabIndex: 0,
       ref: sentinelStartRef,
       style: sentinelStyle,
       "aria-hidden": "true"
-    }), /*#__PURE__*/createElement(MemoChildren, {
+    }), /*#__PURE__*/React.createElement(MemoChildren, {
       shouldUpdate: visible || forceRender
-    }, modalRender ? modalRender(content) : content), /*#__PURE__*/createElement("div", {
+    }, modalRender ? modalRender(content) : content), /*#__PURE__*/React.createElement("div", {
       tabIndex: 0,
       ref: sentinelEndRef,
       style: sentinelStyle,
@@ -21271,17 +21158,17 @@ function Dialog(props) {
       maskClosable = _props$maskClosable === void 0 ? true : _props$maskClosable,
       maskStyle = props.maskStyle,
       maskProps = props.maskProps;
-  var lastOutSideActiveElementRef = useRef();
-  var wrapperRef = useRef();
-  var contentRef = useRef();
+  var lastOutSideActiveElementRef = React.useRef();
+  var wrapperRef = React.useRef();
+  var contentRef = React.useRef();
 
-  var _React$useState = useState(visible),
+  var _React$useState = React.useState(visible),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       animatedVisible = _React$useState2[0],
       setAnimatedVisible = _React$useState2[1]; // ========================== Init ==========================
 
 
-  var ariaIdRef = useRef();
+  var ariaIdRef = React.useRef();
 
   if (!ariaIdRef.current) {
     ariaIdRef.current = "rcDialogTitle".concat(getUUID());
@@ -21324,8 +21211,8 @@ function Dialog(props) {
   } // >>> Content
 
 
-  var contentClickRef = useRef(false);
-  var contentTimeoutRef = useRef(); // We need record content click incase content popup out of dialog
+  var contentClickRef = React.useRef(false);
+  var contentTimeoutRef = React.useRef(); // We need record content click incase content popup out of dialog
 
   var onContentMouseDown = function onContentMouseDown() {
     clearTimeout(contentTimeoutRef.current);
@@ -21368,7 +21255,7 @@ function Dialog(props) {
   } // ========================= Effect =========================
 
 
-  useEffect(function () {
+  React.useEffect(function () {
     if (visible) {
       setAnimatedVisible(true);
     }
@@ -21376,12 +21263,12 @@ function Dialog(props) {
     return function () {};
   }, [visible]); // Remove direct should also check the scroll bar update
 
-  useEffect(function () {
+  React.useEffect(function () {
     return function () {
       clearTimeout(contentTimeoutRef.current);
     };
   }, []);
-  useEffect(function () {
+  React.useEffect(function () {
     if (animatedVisible) {
       scrollLocker === null || scrollLocker === void 0 ? void 0 : scrollLocker.lock();
       return scrollLocker === null || scrollLocker === void 0 ? void 0 : scrollLocker.unLock;
@@ -21390,9 +21277,9 @@ function Dialog(props) {
     return function () {};
   }, [animatedVisible, scrollLocker]); // ========================= Render =========================
 
-  return /*#__PURE__*/createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "".concat(prefixCls, "-root")
-  }, /*#__PURE__*/createElement(Mask$1, {
+  }, /*#__PURE__*/React.createElement(Mask$1, {
     prefixCls: prefixCls,
     visible: mask && visible,
     motionName: getMotionName(prefixCls, maskTransitionName, maskAnimation),
@@ -21400,7 +21287,7 @@ function Dialog(props) {
       zIndex: zIndex
     }, maskStyle),
     maskProps: maskProps
-  }), /*#__PURE__*/createElement("div", _extends({
+  }), /*#__PURE__*/React.createElement("div", _extends({
     tabIndex: -1,
     onKeyDown: onWrapperKeyDown,
     className: classnames("".concat(prefixCls, "-wrap"), wrapClassName),
@@ -21413,7 +21300,7 @@ function Dialog(props) {
     }, wrapStyle), {}, {
       display: !animatedVisible ? 'none' : null
     })
-  }, wrapProps), /*#__PURE__*/createElement(Content$1, _extends({}, props, {
+  }, wrapProps), /*#__PURE__*/React.createElement(Content$1, _extends({}, props, {
     onMouseDown: onContentMouseDown,
     onMouseUp: onContentMouseUp,
     ref: contentRef,
@@ -21443,19 +21330,19 @@ var DialogWrap = function DialogWrap(props) {
       destroyOnClose = _props$destroyOnClose === void 0 ? false : _props$destroyOnClose,
       _afterClose = props.afterClose;
 
-  var _React$useState = useState(visible),
+  var _React$useState = React.useState(visible),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       animatedVisible = _React$useState2[0],
       setAnimatedVisible = _React$useState2[1];
 
-  useEffect(function () {
+  React.useEffect(function () {
     if (visible) {
       setAnimatedVisible(true);
     }
   }, [visible]); // 渲染在当前 dom 里；
 
   if (getContainer === false) {
-    return /*#__PURE__*/createElement(Dialog, _extends({}, props, {
+    return /*#__PURE__*/React.createElement(Dialog, _extends({}, props, {
       getOpenCount: function getOpenCount() {
         return 2;
       } // 不对 body 做任何操作。。
@@ -21468,12 +21355,12 @@ var DialogWrap = function DialogWrap(props) {
     return null;
   }
 
-  return /*#__PURE__*/createElement(PortalWrapper, {
+  return /*#__PURE__*/React.createElement(PortalWrapper, {
     visible: visible,
     forceRender: forceRender,
     getContainer: getContainer
   }, function (childProps) {
-    return /*#__PURE__*/createElement(Dialog, _extends({}, props, {
+    return /*#__PURE__*/React.createElement(Dialog, _extends({}, props, {
       destroyOnClose: destroyOnClose,
       afterClose: function afterClose() {
         _afterClose === null || _afterClose === void 0 ? void 0 : _afterClose();
@@ -22441,1017 +22328,44 @@ exports.default = _default;
 
 unwrapExports(Image);
 
-const Image$1 = ({
-  alt,
-  fallback,
-  height,
-  placeholder,
-  preview,
-  src,
-  width,
-  onError
-}) => {
-  const props = {
-    alt,
-    fallback,
-    height,
-    placeholder,
-    preview,
-    src,
-    width,
-    onError
+var Image$1 = function Image(_ref) {
+  var alt = _ref.alt,
+      fallback = _ref.fallback,
+      height = _ref.height,
+      placeholder = _ref.placeholder,
+      preview = _ref.preview,
+      src = _ref.src,
+      width = _ref.width,
+      onError = _ref.onError;
+  var props = {
+    alt: alt,
+    fallback: fallback,
+    height: height,
+    placeholder: placeholder,
+    preview: preview,
+    src: src,
+    width: width,
+    onError: onError
   };
-  return /*#__PURE__*/React__default.createElement(Image$2, props);
+  return /*#__PURE__*/React__default.createElement(antd.Image, props);
 };
 
-const Spin = ({
-  delay,
-  indicator,
-  size,
-  spinning,
-  tip,
-  wrapperClassName
-}) => {
-  const props = {
-    delay,
-    indicator,
-    size,
-    spinning,
-    tip,
-    wrapperClassName
+var Spin = function Spin(_ref) {
+  var delay = _ref.delay,
+      indicator = _ref.indicator,
+      size = _ref.size,
+      spinning = _ref.spinning,
+      tip = _ref.tip,
+      wrapperClassName = _ref.wrapperClassName;
+  var props = {
+    delay: delay,
+    indicator: indicator,
+    size: size,
+    spinning: spinning,
+    tip: tip,
+    wrapperClassName: wrapperClassName
   };
-  return /*#__PURE__*/React__default.createElement(Spin$1, props);
-};
-
-var IconContext = /*#__PURE__*/createContext({});
-
-/**
- * Take input from [0, n] and return it as [0, 1]
- * @hidden
- */
-function bound01(n, max) {
-    if (isOnePointZero(n)) {
-        n = '100%';
-    }
-    var isPercent = isPercentage(n);
-    n = max === 360 ? n : Math.min(max, Math.max(0, parseFloat(n)));
-    // Automatically convert percentage into number
-    if (isPercent) {
-        n = parseInt(String(n * max), 10) / 100;
-    }
-    // Handle floating point rounding errors
-    if (Math.abs(n - max) < 0.000001) {
-        return 1;
-    }
-    // Convert into [0, 1] range if it isn't already
-    if (max === 360) {
-        // If n is a hue given in degrees,
-        // wrap around out-of-range values into [0, 360] range
-        // then convert into [0, 1].
-        n = (n < 0 ? (n % max) + max : n % max) / parseFloat(String(max));
-    }
-    else {
-        // If n not a hue given in degrees
-        // Convert into [0, 1] range if it isn't already.
-        n = (n % max) / parseFloat(String(max));
-    }
-    return n;
-}
-/**
- * Need to handle 1.0 as 100%, since once it is a number, there is no difference between it and 1
- * <http://stackoverflow.com/questions/7422072/javascript-how-to-detect-number-as-a-decimal-including-1-0>
- * @hidden
- */
-function isOnePointZero(n) {
-    return typeof n === 'string' && n.indexOf('.') !== -1 && parseFloat(n) === 1;
-}
-/**
- * Check to see if string passed in is a percentage
- * @hidden
- */
-function isPercentage(n) {
-    return typeof n === 'string' && n.indexOf('%') !== -1;
-}
-/**
- * Return a valid alpha value [0,1] with all invalid values being set to 1
- * @hidden
- */
-function boundAlpha(a) {
-    a = parseFloat(a);
-    if (isNaN(a) || a < 0 || a > 1) {
-        a = 1;
-    }
-    return a;
-}
-/**
- * Replace a decimal with it's percentage value
- * @hidden
- */
-function convertToPercentage(n) {
-    if (n <= 1) {
-        return Number(n) * 100 + "%";
-    }
-    return n;
-}
-/**
- * Force a hex value to have 2 characters
- * @hidden
- */
-function pad2(c) {
-    return c.length === 1 ? '0' + c : String(c);
-}
-
-// `rgbToHsl`, `rgbToHsv`, `hslToRgb`, `hsvToRgb` modified from:
-// <http://mjijackson.com/2008/02/rgb-to-hsl-and-rgb-to-hsv-color-model-conversion-algorithms-in-javascript>
-/**
- * Handle bounds / percentage checking to conform to CSS color spec
- * <http://www.w3.org/TR/css3-color/>
- * *Assumes:* r, g, b in [0, 255] or [0, 1]
- * *Returns:* { r, g, b } in [0, 255]
- */
-function rgbToRgb(r, g, b) {
-    return {
-        r: bound01(r, 255) * 255,
-        g: bound01(g, 255) * 255,
-        b: bound01(b, 255) * 255,
-    };
-}
-function hue2rgb(p, q, t) {
-    if (t < 0) {
-        t += 1;
-    }
-    if (t > 1) {
-        t -= 1;
-    }
-    if (t < 1 / 6) {
-        return p + (q - p) * (6 * t);
-    }
-    if (t < 1 / 2) {
-        return q;
-    }
-    if (t < 2 / 3) {
-        return p + (q - p) * (2 / 3 - t) * 6;
-    }
-    return p;
-}
-/**
- * Converts an HSL color value to RGB.
- *
- * *Assumes:* h is contained in [0, 1] or [0, 360] and s and l are contained [0, 1] or [0, 100]
- * *Returns:* { r, g, b } in the set [0, 255]
- */
-function hslToRgb(h, s, l) {
-    var r;
-    var g;
-    var b;
-    h = bound01(h, 360);
-    s = bound01(s, 100);
-    l = bound01(l, 100);
-    if (s === 0) {
-        // achromatic
-        g = l;
-        b = l;
-        r = l;
-    }
-    else {
-        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-        var p = 2 * l - q;
-        r = hue2rgb(p, q, h + 1 / 3);
-        g = hue2rgb(p, q, h);
-        b = hue2rgb(p, q, h - 1 / 3);
-    }
-    return { r: r * 255, g: g * 255, b: b * 255 };
-}
-/**
- * Converts an RGB color value to HSV
- *
- * *Assumes:* r, g, and b are contained in the set [0, 255] or [0, 1]
- * *Returns:* { h, s, v } in [0,1]
- */
-function rgbToHsv(r, g, b) {
-    r = bound01(r, 255);
-    g = bound01(g, 255);
-    b = bound01(b, 255);
-    var max = Math.max(r, g, b);
-    var min = Math.min(r, g, b);
-    var h = 0;
-    var v = max;
-    var d = max - min;
-    var s = max === 0 ? 0 : d / max;
-    if (max === min) {
-        h = 0; // achromatic
-    }
-    else {
-        switch (max) {
-            case r:
-                h = (g - b) / d + (g < b ? 6 : 0);
-                break;
-            case g:
-                h = (b - r) / d + 2;
-                break;
-            case b:
-                h = (r - g) / d + 4;
-                break;
-        }
-        h /= 6;
-    }
-    return { h: h, s: s, v: v };
-}
-/**
- * Converts an HSV color value to RGB.
- *
- * *Assumes:* h is contained in [0, 1] or [0, 360] and s and v are contained in [0, 1] or [0, 100]
- * *Returns:* { r, g, b } in the set [0, 255]
- */
-function hsvToRgb(h, s, v) {
-    h = bound01(h, 360) * 6;
-    s = bound01(s, 100);
-    v = bound01(v, 100);
-    var i = Math.floor(h);
-    var f = h - i;
-    var p = v * (1 - s);
-    var q = v * (1 - f * s);
-    var t = v * (1 - (1 - f) * s);
-    var mod = i % 6;
-    var r = [v, q, p, p, t, v][mod];
-    var g = [t, v, v, q, p, p][mod];
-    var b = [p, p, t, v, v, q][mod];
-    return { r: r * 255, g: g * 255, b: b * 255 };
-}
-/**
- * Converts an RGB color to hex
- *
- * Assumes r, g, and b are contained in the set [0, 255]
- * Returns a 3 or 6 character hex
- */
-function rgbToHex(r, g, b, allow3Char) {
-    var hex = [
-        pad2(Math.round(r).toString(16)),
-        pad2(Math.round(g).toString(16)),
-        pad2(Math.round(b).toString(16)),
-    ];
-    // Return a 3 character hex if possible
-    if (allow3Char &&
-        hex[0].startsWith(hex[0].charAt(1)) &&
-        hex[1].startsWith(hex[1].charAt(1)) &&
-        hex[2].startsWith(hex[2].charAt(1))) {
-        return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0);
-    }
-    return hex.join('');
-}
-/** Converts a hex value to a decimal */
-function convertHexToDecimal(h) {
-    return parseIntFromHex(h) / 255;
-}
-/** Parse a base-16 hex value into a base-10 integer */
-function parseIntFromHex(val) {
-    return parseInt(val, 16);
-}
-
-// https://github.com/bahamas10/css-color-names/blob/master/css-color-names.json
-/**
- * @hidden
- */
-var names = {
-    aliceblue: '#f0f8ff',
-    antiquewhite: '#faebd7',
-    aqua: '#00ffff',
-    aquamarine: '#7fffd4',
-    azure: '#f0ffff',
-    beige: '#f5f5dc',
-    bisque: '#ffe4c4',
-    black: '#000000',
-    blanchedalmond: '#ffebcd',
-    blue: '#0000ff',
-    blueviolet: '#8a2be2',
-    brown: '#a52a2a',
-    burlywood: '#deb887',
-    cadetblue: '#5f9ea0',
-    chartreuse: '#7fff00',
-    chocolate: '#d2691e',
-    coral: '#ff7f50',
-    cornflowerblue: '#6495ed',
-    cornsilk: '#fff8dc',
-    crimson: '#dc143c',
-    cyan: '#00ffff',
-    darkblue: '#00008b',
-    darkcyan: '#008b8b',
-    darkgoldenrod: '#b8860b',
-    darkgray: '#a9a9a9',
-    darkgreen: '#006400',
-    darkgrey: '#a9a9a9',
-    darkkhaki: '#bdb76b',
-    darkmagenta: '#8b008b',
-    darkolivegreen: '#556b2f',
-    darkorange: '#ff8c00',
-    darkorchid: '#9932cc',
-    darkred: '#8b0000',
-    darksalmon: '#e9967a',
-    darkseagreen: '#8fbc8f',
-    darkslateblue: '#483d8b',
-    darkslategray: '#2f4f4f',
-    darkslategrey: '#2f4f4f',
-    darkturquoise: '#00ced1',
-    darkviolet: '#9400d3',
-    deeppink: '#ff1493',
-    deepskyblue: '#00bfff',
-    dimgray: '#696969',
-    dimgrey: '#696969',
-    dodgerblue: '#1e90ff',
-    firebrick: '#b22222',
-    floralwhite: '#fffaf0',
-    forestgreen: '#228b22',
-    fuchsia: '#ff00ff',
-    gainsboro: '#dcdcdc',
-    ghostwhite: '#f8f8ff',
-    goldenrod: '#daa520',
-    gold: '#ffd700',
-    gray: '#808080',
-    green: '#008000',
-    greenyellow: '#adff2f',
-    grey: '#808080',
-    honeydew: '#f0fff0',
-    hotpink: '#ff69b4',
-    indianred: '#cd5c5c',
-    indigo: '#4b0082',
-    ivory: '#fffff0',
-    khaki: '#f0e68c',
-    lavenderblush: '#fff0f5',
-    lavender: '#e6e6fa',
-    lawngreen: '#7cfc00',
-    lemonchiffon: '#fffacd',
-    lightblue: '#add8e6',
-    lightcoral: '#f08080',
-    lightcyan: '#e0ffff',
-    lightgoldenrodyellow: '#fafad2',
-    lightgray: '#d3d3d3',
-    lightgreen: '#90ee90',
-    lightgrey: '#d3d3d3',
-    lightpink: '#ffb6c1',
-    lightsalmon: '#ffa07a',
-    lightseagreen: '#20b2aa',
-    lightskyblue: '#87cefa',
-    lightslategray: '#778899',
-    lightslategrey: '#778899',
-    lightsteelblue: '#b0c4de',
-    lightyellow: '#ffffe0',
-    lime: '#00ff00',
-    limegreen: '#32cd32',
-    linen: '#faf0e6',
-    magenta: '#ff00ff',
-    maroon: '#800000',
-    mediumaquamarine: '#66cdaa',
-    mediumblue: '#0000cd',
-    mediumorchid: '#ba55d3',
-    mediumpurple: '#9370db',
-    mediumseagreen: '#3cb371',
-    mediumslateblue: '#7b68ee',
-    mediumspringgreen: '#00fa9a',
-    mediumturquoise: '#48d1cc',
-    mediumvioletred: '#c71585',
-    midnightblue: '#191970',
-    mintcream: '#f5fffa',
-    mistyrose: '#ffe4e1',
-    moccasin: '#ffe4b5',
-    navajowhite: '#ffdead',
-    navy: '#000080',
-    oldlace: '#fdf5e6',
-    olive: '#808000',
-    olivedrab: '#6b8e23',
-    orange: '#ffa500',
-    orangered: '#ff4500',
-    orchid: '#da70d6',
-    palegoldenrod: '#eee8aa',
-    palegreen: '#98fb98',
-    paleturquoise: '#afeeee',
-    palevioletred: '#db7093',
-    papayawhip: '#ffefd5',
-    peachpuff: '#ffdab9',
-    peru: '#cd853f',
-    pink: '#ffc0cb',
-    plum: '#dda0dd',
-    powderblue: '#b0e0e6',
-    purple: '#800080',
-    rebeccapurple: '#663399',
-    red: '#ff0000',
-    rosybrown: '#bc8f8f',
-    royalblue: '#4169e1',
-    saddlebrown: '#8b4513',
-    salmon: '#fa8072',
-    sandybrown: '#f4a460',
-    seagreen: '#2e8b57',
-    seashell: '#fff5ee',
-    sienna: '#a0522d',
-    silver: '#c0c0c0',
-    skyblue: '#87ceeb',
-    slateblue: '#6a5acd',
-    slategray: '#708090',
-    slategrey: '#708090',
-    snow: '#fffafa',
-    springgreen: '#00ff7f',
-    steelblue: '#4682b4',
-    tan: '#d2b48c',
-    teal: '#008080',
-    thistle: '#d8bfd8',
-    tomato: '#ff6347',
-    turquoise: '#40e0d0',
-    violet: '#ee82ee',
-    wheat: '#f5deb3',
-    white: '#ffffff',
-    whitesmoke: '#f5f5f5',
-    yellow: '#ffff00',
-    yellowgreen: '#9acd32',
-};
-
-/**
- * Given a string or object, convert that input to RGB
- *
- * Possible string inputs:
- * ```
- * "red"
- * "#f00" or "f00"
- * "#ff0000" or "ff0000"
- * "#ff000000" or "ff000000"
- * "rgb 255 0 0" or "rgb (255, 0, 0)"
- * "rgb 1.0 0 0" or "rgb (1, 0, 0)"
- * "rgba (255, 0, 0, 1)" or "rgba 255, 0, 0, 1"
- * "rgba (1.0, 0, 0, 1)" or "rgba 1.0, 0, 0, 1"
- * "hsl(0, 100%, 50%)" or "hsl 0 100% 50%"
- * "hsla(0, 100%, 50%, 1)" or "hsla 0 100% 50%, 1"
- * "hsv(0, 100%, 100%)" or "hsv 0 100% 100%"
- * ```
- */
-function inputToRGB(color) {
-    var rgb = { r: 0, g: 0, b: 0 };
-    var a = 1;
-    var s = null;
-    var v = null;
-    var l = null;
-    var ok = false;
-    var format = false;
-    if (typeof color === 'string') {
-        color = stringInputToObject(color);
-    }
-    if (typeof color === 'object') {
-        if (isValidCSSUnit(color.r) && isValidCSSUnit(color.g) && isValidCSSUnit(color.b)) {
-            rgb = rgbToRgb(color.r, color.g, color.b);
-            ok = true;
-            format = String(color.r).substr(-1) === '%' ? 'prgb' : 'rgb';
-        }
-        else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.v)) {
-            s = convertToPercentage(color.s);
-            v = convertToPercentage(color.v);
-            rgb = hsvToRgb(color.h, s, v);
-            ok = true;
-            format = 'hsv';
-        }
-        else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.l)) {
-            s = convertToPercentage(color.s);
-            l = convertToPercentage(color.l);
-            rgb = hslToRgb(color.h, s, l);
-            ok = true;
-            format = 'hsl';
-        }
-        if (Object.prototype.hasOwnProperty.call(color, 'a')) {
-            a = color.a;
-        }
-    }
-    a = boundAlpha(a);
-    return {
-        ok: ok,
-        format: color.format || format,
-        r: Math.min(255, Math.max(rgb.r, 0)),
-        g: Math.min(255, Math.max(rgb.g, 0)),
-        b: Math.min(255, Math.max(rgb.b, 0)),
-        a: a,
-    };
-}
-// <http://www.w3.org/TR/css3-values/#integers>
-var CSS_INTEGER = '[-\\+]?\\d+%?';
-// <http://www.w3.org/TR/css3-values/#number-value>
-var CSS_NUMBER = '[-\\+]?\\d*\\.\\d+%?';
-// Allow positive/negative integer/number.  Don't capture the either/or, just the entire outcome.
-var CSS_UNIT = "(?:" + CSS_NUMBER + ")|(?:" + CSS_INTEGER + ")";
-// Actual matching.
-// Parentheses and commas are optional, but not required.
-// Whitespace can take the place of commas or opening paren
-var PERMISSIVE_MATCH3 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
-var PERMISSIVE_MATCH4 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
-var matchers = {
-    CSS_UNIT: new RegExp(CSS_UNIT),
-    rgb: new RegExp('rgb' + PERMISSIVE_MATCH3),
-    rgba: new RegExp('rgba' + PERMISSIVE_MATCH4),
-    hsl: new RegExp('hsl' + PERMISSIVE_MATCH3),
-    hsla: new RegExp('hsla' + PERMISSIVE_MATCH4),
-    hsv: new RegExp('hsv' + PERMISSIVE_MATCH3),
-    hsva: new RegExp('hsva' + PERMISSIVE_MATCH4),
-    hex3: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
-    hex6: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,
-    hex4: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
-    hex8: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,
-};
-/**
- * Permissive string parsing.  Take in a number of formats, and output an object
- * based on detected format.  Returns `{ r, g, b }` or `{ h, s, l }` or `{ h, s, v}`
- */
-function stringInputToObject(color) {
-    color = color.trim().toLowerCase();
-    if (color.length === 0) {
-        return false;
-    }
-    var named = false;
-    if (names[color]) {
-        color = names[color];
-        named = true;
-    }
-    else if (color === 'transparent') {
-        return { r: 0, g: 0, b: 0, a: 0, format: 'name' };
-    }
-    // Try to match string input using regular expressions.
-    // Keep most of the number bounding out of this function - don't worry about [0,1] or [0,100] or [0,360]
-    // Just return an object and let the conversion functions handle that.
-    // This way the result will be the same whether the tinycolor is initialized with string or object.
-    var match = matchers.rgb.exec(color);
-    if (match) {
-        return { r: match[1], g: match[2], b: match[3] };
-    }
-    match = matchers.rgba.exec(color);
-    if (match) {
-        return { r: match[1], g: match[2], b: match[3], a: match[4] };
-    }
-    match = matchers.hsl.exec(color);
-    if (match) {
-        return { h: match[1], s: match[2], l: match[3] };
-    }
-    match = matchers.hsla.exec(color);
-    if (match) {
-        return { h: match[1], s: match[2], l: match[3], a: match[4] };
-    }
-    match = matchers.hsv.exec(color);
-    if (match) {
-        return { h: match[1], s: match[2], v: match[3] };
-    }
-    match = matchers.hsva.exec(color);
-    if (match) {
-        return { h: match[1], s: match[2], v: match[3], a: match[4] };
-    }
-    match = matchers.hex8.exec(color);
-    if (match) {
-        return {
-            r: parseIntFromHex(match[1]),
-            g: parseIntFromHex(match[2]),
-            b: parseIntFromHex(match[3]),
-            a: convertHexToDecimal(match[4]),
-            format: named ? 'name' : 'hex8',
-        };
-    }
-    match = matchers.hex6.exec(color);
-    if (match) {
-        return {
-            r: parseIntFromHex(match[1]),
-            g: parseIntFromHex(match[2]),
-            b: parseIntFromHex(match[3]),
-            format: named ? 'name' : 'hex',
-        };
-    }
-    match = matchers.hex4.exec(color);
-    if (match) {
-        return {
-            r: parseIntFromHex(match[1] + match[1]),
-            g: parseIntFromHex(match[2] + match[2]),
-            b: parseIntFromHex(match[3] + match[3]),
-            a: convertHexToDecimal(match[4] + match[4]),
-            format: named ? 'name' : 'hex8',
-        };
-    }
-    match = matchers.hex3.exec(color);
-    if (match) {
-        return {
-            r: parseIntFromHex(match[1] + match[1]),
-            g: parseIntFromHex(match[2] + match[2]),
-            b: parseIntFromHex(match[3] + match[3]),
-            format: named ? 'name' : 'hex',
-        };
-    }
-    return false;
-}
-/**
- * Check to see if it looks like a CSS unit
- * (see `matchers` above for definition).
- */
-function isValidCSSUnit(color) {
-    return Boolean(matchers.CSS_UNIT.exec(String(color)));
-}
-
-var hueStep = 2; // 色相阶梯
-
-var saturationStep = 0.16; // 饱和度阶梯，浅色部分
-
-var saturationStep2 = 0.05; // 饱和度阶梯，深色部分
-
-var brightnessStep1 = 0.05; // 亮度阶梯，浅色部分
-
-var brightnessStep2 = 0.15; // 亮度阶梯，深色部分
-
-var lightColorCount = 5; // 浅色数量，主色上
-
-var darkColorCount = 4; // 深色数量，主色下
-// 暗色主题颜色映射关系表
-
-var darkColorMap = [{
-  index: 7,
-  opacity: 0.15
-}, {
-  index: 6,
-  opacity: 0.25
-}, {
-  index: 5,
-  opacity: 0.3
-}, {
-  index: 5,
-  opacity: 0.45
-}, {
-  index: 5,
-  opacity: 0.65
-}, {
-  index: 5,
-  opacity: 0.85
-}, {
-  index: 4,
-  opacity: 0.9
-}, {
-  index: 3,
-  opacity: 0.95
-}, {
-  index: 2,
-  opacity: 0.97
-}, {
-  index: 1,
-  opacity: 0.98
-}]; // Wrapper function ported from TinyColor.prototype.toHsv
-// Keep it here because of `hsv.h * 360`
-
-function toHsv(_ref) {
-  var r = _ref.r,
-      g = _ref.g,
-      b = _ref.b;
-  var hsv = rgbToHsv(r, g, b);
-  return {
-    h: hsv.h * 360,
-    s: hsv.s,
-    v: hsv.v
-  };
-} // Wrapper function ported from TinyColor.prototype.toHexString
-// Keep it here because of the prefix `#`
-
-
-function toHex(_ref2) {
-  var r = _ref2.r,
-      g = _ref2.g,
-      b = _ref2.b;
-  return "#".concat(rgbToHex(r, g, b, false));
-} // Wrapper function ported from TinyColor.prototype.mix, not treeshakable.
-// Amount in range [0, 1]
-// Assume color1 & color2 has no alpha, since the following src code did so.
-
-
-function mix$1(rgb1, rgb2, amount) {
-  var p = amount / 100;
-  var rgb = {
-    r: (rgb2.r - rgb1.r) * p + rgb1.r,
-    g: (rgb2.g - rgb1.g) * p + rgb1.g,
-    b: (rgb2.b - rgb1.b) * p + rgb1.b
-  };
-  return rgb;
-}
-
-function getHue(hsv, i, light) {
-  var hue; // 根据色相不同，色相转向不同
-
-  if (Math.round(hsv.h) >= 60 && Math.round(hsv.h) <= 240) {
-    hue = light ? Math.round(hsv.h) - hueStep * i : Math.round(hsv.h) + hueStep * i;
-  } else {
-    hue = light ? Math.round(hsv.h) + hueStep * i : Math.round(hsv.h) - hueStep * i;
-  }
-
-  if (hue < 0) {
-    hue += 360;
-  } else if (hue >= 360) {
-    hue -= 360;
-  }
-
-  return hue;
-}
-
-function getSaturation(hsv, i, light) {
-  // grey color don't change saturation
-  if (hsv.h === 0 && hsv.s === 0) {
-    return hsv.s;
-  }
-
-  var saturation;
-
-  if (light) {
-    saturation = hsv.s - saturationStep * i;
-  } else if (i === darkColorCount) {
-    saturation = hsv.s + saturationStep;
-  } else {
-    saturation = hsv.s + saturationStep2 * i;
-  } // 边界值修正
-
-
-  if (saturation > 1) {
-    saturation = 1;
-  } // 第一格的 s 限制在 0.06-0.1 之间
-
-
-  if (light && i === lightColorCount && saturation > 0.1) {
-    saturation = 0.1;
-  }
-
-  if (saturation < 0.06) {
-    saturation = 0.06;
-  }
-
-  return Number(saturation.toFixed(2));
-}
-
-function getValue$1(hsv, i, light) {
-  var value;
-
-  if (light) {
-    value = hsv.v + brightnessStep1 * i;
-  } else {
-    value = hsv.v - brightnessStep2 * i;
-  }
-
-  if (value > 1) {
-    value = 1;
-  }
-
-  return Number(value.toFixed(2));
-}
-
-function generate(color) {
-  var opts = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  var patterns = [];
-  var pColor = inputToRGB(color);
-
-  for (var i = lightColorCount; i > 0; i -= 1) {
-    var hsv = toHsv(pColor);
-    var colorString = toHex(inputToRGB({
-      h: getHue(hsv, i, true),
-      s: getSaturation(hsv, i, true),
-      v: getValue$1(hsv, i, true)
-    }));
-    patterns.push(colorString);
-  }
-
-  patterns.push(toHex(pColor));
-
-  for (var _i = 1; _i <= darkColorCount; _i += 1) {
-    var _hsv = toHsv(pColor);
-
-    var _colorString = toHex(inputToRGB({
-      h: getHue(_hsv, _i),
-      s: getSaturation(_hsv, _i),
-      v: getValue$1(_hsv, _i)
-    }));
-
-    patterns.push(_colorString);
-  } // dark theme patterns
-
-
-  if (opts.theme === 'dark') {
-    return darkColorMap.map(function (_ref3) {
-      var index = _ref3.index,
-          opacity = _ref3.opacity;
-      var darkColorString = toHex(mix$1(inputToRGB(opts.backgroundColor || '#141414'), inputToRGB(patterns[index]), opacity * 100));
-      return darkColorString;
-    });
-  }
-
-  return patterns;
-}
-
-var presetPrimaryColors = {
-  red: '#F5222D',
-  volcano: '#FA541C',
-  orange: '#FA8C16',
-  gold: '#FAAD14',
-  yellow: '#FADB14',
-  lime: '#A0D911',
-  green: '#52C41A',
-  cyan: '#13C2C2',
-  blue: '#1890FF',
-  geekblue: '#2F54EB',
-  purple: '#722ED1',
-  magenta: '#EB2F96',
-  grey: '#666666'
-};
-var presetPalettes = {};
-var presetDarkPalettes = {};
-Object.keys(presetPrimaryColors).forEach(function (key) {
-  presetPalettes[key] = generate(presetPrimaryColors[key]);
-  presetPalettes[key].primary = presetPalettes[key][5]; // dark presetPalettes
-
-  presetDarkPalettes[key] = generate(presetPrimaryColors[key], {
-    theme: 'dark',
-    backgroundColor: '#141414'
-  });
-  presetDarkPalettes[key].primary = presetDarkPalettes[key][5];
-});
-
-var MARK_KEY = "rc-util-key";
-
-function getContainer(option) {
-  if (option.attachTo) {
-    return option.attachTo;
-  }
-
-  var head = document.querySelector('head');
-  return head || document.body;
-}
-
-function injectCSS(css) {
-  var _option$csp;
-
-  var option = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-  if (!canUseDom()) {
-    return null;
-  }
-
-  var styleNode = document.createElement('style');
-
-  if ((_option$csp = option.csp) === null || _option$csp === void 0 ? void 0 : _option$csp.nonce) {
-    var _option$csp2;
-
-    styleNode.nonce = (_option$csp2 = option.csp) === null || _option$csp2 === void 0 ? void 0 : _option$csp2.nonce;
-  }
-
-  styleNode.innerHTML = css;
-  var container = getContainer(option);
-  var firstChild = container.firstChild;
-
-  if (option.prepend && container.prepend) {
-    // Use `prepend` first
-    container.prepend(styleNode);
-  } else if (option.prepend && firstChild) {
-    // Fallback to `insertBefore` like IE not support `prepend`
-    container.insertBefore(styleNode, firstChild);
-  } else {
-    container.appendChild(styleNode);
-  }
-
-  return styleNode;
-}
-var containerCache = new Map();
-function updateCSS(css, key) {
-  var option = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-  var container = getContainer(option); // Get real parent
-
-  if (!containerCache.has(container)) {
-    var placeholderStyle = injectCSS('', option);
-    var parentNode = placeholderStyle.parentNode;
-    containerCache.set(container, parentNode);
-    parentNode.removeChild(placeholderStyle);
-  }
-
-  var existNode = Array.from(containerCache.get(container).children).find(function (node) {
-    return node.tagName === 'STYLE' && node[MARK_KEY] === key;
-  });
-
-  if (existNode) {
-    var _option$csp3, _option$csp4;
-
-    if (((_option$csp3 = option.csp) === null || _option$csp3 === void 0 ? void 0 : _option$csp3.nonce) && existNode.nonce !== ((_option$csp4 = option.csp) === null || _option$csp4 === void 0 ? void 0 : _option$csp4.nonce)) {
-      var _option$csp5;
-
-      existNode.nonce = (_option$csp5 = option.csp) === null || _option$csp5 === void 0 ? void 0 : _option$csp5.nonce;
-    }
-
-    if (existNode.innerHTML !== css) {
-      existNode.innerHTML = css;
-    }
-
-    return existNode;
-  }
-
-  var newNode = injectCSS(css, option);
-  newNode[MARK_KEY] = key;
-  return newNode;
-}
-
-function warning$2(valid, message) {
-  warningOnce(valid, "[@ant-design/icons] ".concat(message));
-}
-// Reference: https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4
-
-var svgBaseProps = {
-  width: '1em',
-  height: '1em',
-  fill: 'currentColor',
-  'aria-hidden': 'true',
-  focusable: 'false'
-};
-var iconStyles = "\n.anticon {\n  display: inline-block;\n  color: inherit;\n  font-style: normal;\n  line-height: 0;\n  text-align: center;\n  text-transform: none;\n  vertical-align: -0.125em;\n  text-rendering: optimizeLegibility;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\n.anticon > * {\n  line-height: 1;\n}\n\n.anticon svg {\n  display: inline-block;\n}\n\n.anticon::before {\n  display: none;\n}\n\n.anticon .anticon-icon {\n  display: block;\n}\n\n.anticon[tabindex] {\n  cursor: pointer;\n}\n\n.anticon-spin::before,\n.anticon-spin {\n  display: inline-block;\n  -webkit-animation: loadingCircle 1s infinite linear;\n  animation: loadingCircle 1s infinite linear;\n}\n\n@-webkit-keyframes loadingCircle {\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes loadingCircle {\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n";
-var useInsertStyles = function useInsertStyles() {
-  var styleStr = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : iconStyles;
-
-  var _useContext = useContext(IconContext),
-      csp = _useContext.csp;
-
-  useEffect(function () {
-    updateCSS(styleStr, '@ant-design-icons', {
-      prepend: true,
-      csp: csp
-    });
-  }, []);
-};
-
-var Icon$1 = /*#__PURE__*/forwardRef(function (props, ref) {
-  var className = props.className,
-      Component = props.component,
-      viewBox = props.viewBox,
-      spin = props.spin,
-      rotate = props.rotate,
-      tabIndex = props.tabIndex,
-      onClick = props.onClick,
-      children = props.children,
-      restProps = _objectWithoutProperties(props, ["className", "component", "viewBox", "spin", "rotate", "tabIndex", "onClick", "children"]);
-
-  warning$2(Boolean(Component || children), 'Should have `component` prop or `children`.');
-  useInsertStyles();
-  var classString = classnames('anticon', className);
-  var svgClassString = classnames({
-    'anticon-spin': !!spin
-  });
-  var svgStyle = rotate ? {
-    msTransform: "rotate(".concat(rotate, "deg)"),
-    transform: "rotate(".concat(rotate, "deg)")
-  } : undefined;
-
-  var innerSvgProps = _objectSpread2(_objectSpread2({}, svgBaseProps), {}, {
-    className: svgClassString,
-    style: svgStyle,
-    viewBox: viewBox
-  });
-
-  if (!viewBox) {
-    delete innerSvgProps.viewBox;
-  } // component > children
-
-
-  var renderInnerNode = function renderInnerNode() {
-    if (Component) {
-      return /*#__PURE__*/createElement(Component, Object.assign({}, innerSvgProps), children);
-    }
-
-    if (children) {
-      warning$2(Boolean(viewBox) || Children.count(children) === 1 && /*#__PURE__*/isValidElement(children) && Children.only(children).type === 'use', 'Make sure that you provide correct `viewBox`' + ' prop (default `0 0 1024 1024`) to the icon.');
-      return /*#__PURE__*/createElement("svg", Object.assign({}, innerSvgProps, {
-        viewBox: viewBox
-      }), children);
-    }
-
-    return null;
-  };
-
-  var iconTabIndex = tabIndex;
-
-  if (iconTabIndex === undefined && onClick) {
-    iconTabIndex = -1;
-  }
-
-  return /*#__PURE__*/createElement("span", Object.assign({
-    role: "img"
-  }, restProps, {
-    ref: ref,
-    tabIndex: iconTabIndex,
-    onClick: onClick,
-    className: classString
-  }), renderInnerNode());
-});
-Icon$1.displayName = 'AntdIcon';
-
-const CommonIcon = ({
-  className,
-  rotate,
-  spin,
-  style,
-  twoToneColor,
-  component
-}) => {
-  const props = {
-    className,
-    rotate,
-    spin,
-    style,
-    twoToneColor,
-    component
-  };
-  return /*#__PURE__*/React__default.createElement(Icon$1, props);
+  return /*#__PURE__*/React__default.createElement(antd.Spin, props);
 };
 
 var _interface$6 = createCommonjsModule(function (module, exports) {
@@ -23463,265 +22377,256 @@ Object.defineProperty(exports, "__esModule", {
 
 unwrapExports(_interface$6);
 
-const Menu$1 = ({
-  defaultOpenKeys,
-  defaultSelectedKeys,
-  expandIcon,
-  forceSubMenuRender,
-  inlineCollapsed,
-  inlineIndent,
-  mode,
-  multiple,
-  openKeys,
-  overflowedIndicator,
-  selectable,
-  selectedKeys,
-  style,
-  subMenuCloseDelay,
-  subMenuOpenDelay,
-  theme,
-  triggerSubMenuAction,
-  onClick,
-  onDeselect,
-  onOpenChange,
-  onSelect,
-  children
-}) => {
-  const props = {
-    defaultOpenKeys,
-    defaultSelectedKeys,
-    expandIcon,
-    forceSubMenuRender,
-    inlineCollapsed,
-    inlineIndent,
-    mode,
-    multiple,
-    openKeys,
-    overflowedIndicator,
-    selectable,
-    selectedKeys,
-    style,
-    subMenuCloseDelay,
-    subMenuOpenDelay,
-    theme,
-    triggerSubMenuAction,
-    onClick,
-    onDeselect,
-    onOpenChange,
-    onSelect,
-    children
+var Menu$1 = function Menu(_ref) {
+  var defaultOpenKeys = _ref.defaultOpenKeys,
+      defaultSelectedKeys = _ref.defaultSelectedKeys,
+      expandIcon = _ref.expandIcon,
+      forceSubMenuRender = _ref.forceSubMenuRender,
+      inlineCollapsed = _ref.inlineCollapsed,
+      inlineIndent = _ref.inlineIndent,
+      mode = _ref.mode,
+      multiple = _ref.multiple,
+      openKeys = _ref.openKeys,
+      overflowedIndicator = _ref.overflowedIndicator,
+      selectable = _ref.selectable,
+      selectedKeys = _ref.selectedKeys,
+      style = _ref.style,
+      subMenuCloseDelay = _ref.subMenuCloseDelay,
+      subMenuOpenDelay = _ref.subMenuOpenDelay,
+      theme = _ref.theme,
+      triggerSubMenuAction = _ref.triggerSubMenuAction,
+      onClick = _ref.onClick,
+      onDeselect = _ref.onDeselect,
+      onOpenChange = _ref.onOpenChange,
+      onSelect = _ref.onSelect,
+      children = _ref.children;
+  var props = {
+    defaultOpenKeys: defaultOpenKeys,
+    defaultSelectedKeys: defaultSelectedKeys,
+    expandIcon: expandIcon,
+    forceSubMenuRender: forceSubMenuRender,
+    inlineCollapsed: inlineCollapsed,
+    inlineIndent: inlineIndent,
+    mode: mode,
+    multiple: multiple,
+    openKeys: openKeys,
+    overflowedIndicator: overflowedIndicator,
+    selectable: selectable,
+    selectedKeys: selectedKeys,
+    style: style,
+    subMenuCloseDelay: subMenuCloseDelay,
+    subMenuOpenDelay: subMenuOpenDelay,
+    theme: theme,
+    triggerSubMenuAction: triggerSubMenuAction,
+    onClick: onClick,
+    onDeselect: onDeselect,
+    onOpenChange: onOpenChange,
+    onSelect: onSelect,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Menu$2, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Menu, props, children);
 };
 
-const MenuItem$1 = ({
-  danger,
-  disabled,
-  icon,
-  key,
-  title,
-  children
-}) => {
-  const props = {
-    danger,
-    disabled,
-    icon,
-    key,
-    title,
-    children
+var MenuItem$1 = function MenuItem(_ref) {
+  var danger = _ref.danger,
+      disabled = _ref.disabled,
+      icon = _ref.icon,
+      key = _ref.key,
+      title = _ref.title,
+      children = _ref.children;
+  var props = {
+    danger: danger,
+    disabled: disabled,
+    icon: icon,
+    key: key,
+    title: title,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Menu$2.Item, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Menu.Item, props, children);
 };
 
-const MenuItemGroup$1 = ({
-  title,
-  children
-}) => {
-  const props = {
-    title,
-    children
+var MenuItemGroup$1 = function MenuItemGroup(_ref) {
+  var title = _ref.title,
+      children = _ref.children;
+  var props = {
+    title: title,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Menu$2.ItemGroup, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Menu.ItemGroup, props, children);
 };
 
-const SubMenu$1 = ({
-  disabled,
-  icon,
-  key,
-  title,
-  popupClassName,
-  popupOffset,
-  onTitleClick,
-  children
-}) => {
-  const props = {
-    disabled,
-    icon,
-    key,
-    title,
-    popupClassName,
-    popupOffset,
-    onTitleClick,
-    children
+var SubMenu$1 = function SubMenu(_ref) {
+  var disabled = _ref.disabled,
+      icon = _ref.icon,
+      key = _ref.key,
+      title = _ref.title,
+      popupClassName = _ref.popupClassName,
+      popupOffset = _ref.popupOffset,
+      onTitleClick = _ref.onTitleClick,
+      children = _ref.children;
+  var props = {
+    disabled: disabled,
+    icon: icon,
+    key: key,
+    title: title,
+    popupClassName: popupClassName,
+    popupOffset: popupOffset,
+    onTitleClick: onTitleClick,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Menu$2.SubMenu, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Menu.SubMenu, props, children);
 };
 
-const DatePicker = ({
-  children,
-  allowClear,
-  autoFocus,
-  bordered,
-  className,
-  dateRender,
-  disabled,
-  disabledDate,
-  dropdownClassName,
-  getPopupContainer,
-  inputReadOnly,
-  locale,
-  mode,
-  open,
-  panelRender,
-  picker,
-  placeholder,
-  popupStyle,
-  size,
-  style,
-  suffixIcon,
-  onOpenChange,
-  onPanelChange,
-  defaultPickerValue,
-  defaultValue,
-  disabledTime,
-  format,
-  renderExtraFooter,
-  showNow,
-  showToday,
-  value,
-  onChange
-}) => {
-  const props = {
-    children,
-    allowClear,
-    autoFocus,
-    bordered,
-    className,
-    dateRender,
-    disabled,
-    disabledDate,
-    dropdownClassName,
-    getPopupContainer,
-    inputReadOnly,
-    locale,
-    mode,
-    open,
-    panelRender,
-    picker,
-    placeholder,
-    popupStyle,
-    size,
-    style,
-    suffixIcon,
-    onOpenChange,
-    onPanelChange,
-    defaultPickerValue,
-    defaultValue,
-    disabledTime,
-    format,
-    renderExtraFooter,
-    showNow,
-    showToday,
-    value,
-    onChange
+var DatePicker = function DatePicker(_ref) {
+  var children = _ref.children,
+      allowClear = _ref.allowClear,
+      autoFocus = _ref.autoFocus,
+      bordered = _ref.bordered,
+      className = _ref.className,
+      dateRender = _ref.dateRender,
+      disabled = _ref.disabled,
+      disabledDate = _ref.disabledDate,
+      dropdownClassName = _ref.dropdownClassName,
+      getPopupContainer = _ref.getPopupContainer,
+      inputReadOnly = _ref.inputReadOnly,
+      locale = _ref.locale,
+      mode = _ref.mode,
+      open = _ref.open,
+      panelRender = _ref.panelRender,
+      picker = _ref.picker,
+      placeholder = _ref.placeholder,
+      popupStyle = _ref.popupStyle,
+      size = _ref.size,
+      style = _ref.style,
+      suffixIcon = _ref.suffixIcon,
+      onOpenChange = _ref.onOpenChange,
+      onPanelChange = _ref.onPanelChange,
+      defaultPickerValue = _ref.defaultPickerValue,
+      defaultValue = _ref.defaultValue,
+      disabledTime = _ref.disabledTime,
+      format = _ref.format,
+      renderExtraFooter = _ref.renderExtraFooter,
+      showNow = _ref.showNow,
+      showToday = _ref.showToday,
+      value = _ref.value,
+      onChange = _ref.onChange;
+  var props = {
+    children: children,
+    allowClear: allowClear,
+    autoFocus: autoFocus,
+    bordered: bordered,
+    className: className,
+    dateRender: dateRender,
+    disabled: disabled,
+    disabledDate: disabledDate,
+    dropdownClassName: dropdownClassName,
+    getPopupContainer: getPopupContainer,
+    inputReadOnly: inputReadOnly,
+    locale: locale,
+    mode: mode,
+    open: open,
+    panelRender: panelRender,
+    picker: picker,
+    placeholder: placeholder,
+    popupStyle: popupStyle,
+    size: size,
+    style: style,
+    suffixIcon: suffixIcon,
+    onOpenChange: onOpenChange,
+    onPanelChange: onPanelChange,
+    defaultPickerValue: defaultPickerValue,
+    defaultValue: defaultValue,
+    disabledTime: disabledTime,
+    format: format,
+    renderExtraFooter: renderExtraFooter,
+    showNow: showNow,
+    showToday: showToday,
+    value: value,
+    onChange: onChange
   };
-  return /*#__PURE__*/React__default.createElement(DatePicker$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.DatePicker, props, children);
 };
 
-const YearPicker = ({
-  defaultPickerValue,
-  defaultValue,
-  format,
-  renderExtraFooter,
-  value,
-  onChange,
-  children
-}) => {
-  const props = {
-    defaultPickerValue,
-    defaultValue,
-    format,
-    renderExtraFooter,
-    value,
-    onChange,
-    children
+var YearPicker = function YearPicker(_ref) {
+  var defaultPickerValue = _ref.defaultPickerValue,
+      defaultValue = _ref.defaultValue,
+      format = _ref.format,
+      renderExtraFooter = _ref.renderExtraFooter,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      children = _ref.children;
+  var props = {
+    defaultPickerValue: defaultPickerValue,
+    defaultValue: defaultValue,
+    format: format,
+    renderExtraFooter: renderExtraFooter,
+    value: value,
+    onChange: onChange,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(DatePicker$1.YearPicker, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.DatePicker.YearPicker, props, children);
 };
 
-const QuarterPicker = ({
-  defaultPickerValue,
-  defaultValue,
-  onChange,
-  value,
-  format,
-  renderExtraFooter,
-  children
-}) => {
-  const props = {
-    defaultPickerValue,
-    defaultValue,
-    onChange,
-    value,
-    format,
-    renderExtraFooter,
-    children
+var QuarterPicker = function QuarterPicker(_ref) {
+  var defaultPickerValue = _ref.defaultPickerValue,
+      defaultValue = _ref.defaultValue,
+      onChange = _ref.onChange,
+      value = _ref.value,
+      format = _ref.format,
+      renderExtraFooter = _ref.renderExtraFooter,
+      children = _ref.children;
+  var props = {
+    defaultPickerValue: defaultPickerValue,
+    defaultValue: defaultValue,
+    onChange: onChange,
+    value: value,
+    format: format,
+    renderExtraFooter: renderExtraFooter,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(DatePicker$1.QuarterPicker, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.DatePicker.QuarterPicker, props, children);
 };
 
-const MonthPicker = ({
-  defaultPickerValue,
-  defaultValue,
-  format,
-  renderExtraFooter,
-  monthCellRender,
-  value,
-  onChange,
-  children
-}) => {
-  const props = {
-    defaultPickerValue,
-    defaultValue,
-    format,
-    renderExtraFooter,
-    monthCellRender,
-    value,
-    onChange,
-    children
+var MonthPicker = function MonthPicker(_ref) {
+  var defaultPickerValue = _ref.defaultPickerValue,
+      defaultValue = _ref.defaultValue,
+      format = _ref.format,
+      renderExtraFooter = _ref.renderExtraFooter,
+      monthCellRender = _ref.monthCellRender,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      children = _ref.children;
+  var props = {
+    defaultPickerValue: defaultPickerValue,
+    defaultValue: defaultValue,
+    format: format,
+    renderExtraFooter: renderExtraFooter,
+    monthCellRender: monthCellRender,
+    value: value,
+    onChange: onChange,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(DatePicker$1.MonthPicker, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.DatePicker.MonthPicker, props, children);
 };
 
-const WeekPicker = ({
-  defaultPickerValue,
-  defaultValue,
-  format,
-  renderExtraFooter,
-  value,
-  onChange,
-  children
-}) => {
-  const props = {
-    defaultPickerValue,
-    defaultValue,
-    format,
-    renderExtraFooter,
-    value,
-    onChange,
-    children
+var WeekPicker = function WeekPicker(_ref) {
+  var defaultPickerValue = _ref.defaultPickerValue,
+      defaultValue = _ref.defaultValue,
+      format = _ref.format,
+      renderExtraFooter = _ref.renderExtraFooter,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      children = _ref.children;
+  var props = {
+    defaultPickerValue: defaultPickerValue,
+    defaultValue: defaultValue,
+    format: format,
+    renderExtraFooter: renderExtraFooter,
+    value: value,
+    onChange: onChange,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(DatePicker$1.WeekPicker, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.DatePicker.WeekPicker, props, children);
 };
 
 var PickerTrigger_1 = createCommonjsModule(function (module, exports) {
@@ -29030,216 +27935,323 @@ exports.default = _default;
 
 unwrapExports(RangePicker_1);
 
-const RangePicker = ({
-  allowClear,
-  autoFocus,
-  bordered,
-  className,
-  disabled,
-  disabledDate,
-  dropdownClassName,
-  getPopupContainer,
-  inputReadOnly,
-  locale,
-  mode,
-  open,
-  panelRender,
-  picker,
-  placeholder,
-  popupStyle,
-  size,
-  style,
-  suffixIcon,
-  onOpenChange,
-  onPanelChange,
-  allowEmpty,
-  dateRender,
-  defaultPickerValue,
-  defaultValue,
-  disabledTime,
-  format,
-  ranges,
-  renderExtraFooter,
-  separator,
-  showTime,
-  value,
-  onCalendarChange,
-  onChange,
-  children
-}) => {
-  const props = {
-    allowClear,
-    autoFocus,
-    bordered,
-    className,
-    disabled,
-    disabledDate,
-    dropdownClassName,
-    getPopupContainer,
-    inputReadOnly,
-    locale,
-    mode,
-    open,
-    panelRender,
-    picker,
-    placeholder,
-    popupStyle,
-    size,
-    style,
-    suffixIcon,
-    onOpenChange,
-    onPanelChange,
-    allowEmpty,
-    dateRender,
-    defaultPickerValue,
-    defaultValue,
-    disabledTime,
-    format,
-    ranges,
-    renderExtraFooter,
-    separator,
-    showTime,
-    value,
-    onCalendarChange,
-    onChange,
-    children
+var RangePicker = function RangePicker(_ref) {
+  var allowClear = _ref.allowClear,
+      autoFocus = _ref.autoFocus,
+      bordered = _ref.bordered,
+      className = _ref.className,
+      disabled = _ref.disabled,
+      disabledDate = _ref.disabledDate,
+      dropdownClassName = _ref.dropdownClassName,
+      getPopupContainer = _ref.getPopupContainer,
+      inputReadOnly = _ref.inputReadOnly,
+      locale = _ref.locale,
+      mode = _ref.mode,
+      open = _ref.open,
+      panelRender = _ref.panelRender,
+      picker = _ref.picker,
+      placeholder = _ref.placeholder,
+      popupStyle = _ref.popupStyle,
+      size = _ref.size,
+      style = _ref.style,
+      suffixIcon = _ref.suffixIcon,
+      onOpenChange = _ref.onOpenChange,
+      onPanelChange = _ref.onPanelChange,
+      allowEmpty = _ref.allowEmpty,
+      dateRender = _ref.dateRender,
+      defaultPickerValue = _ref.defaultPickerValue,
+      defaultValue = _ref.defaultValue,
+      disabledTime = _ref.disabledTime,
+      format = _ref.format,
+      ranges = _ref.ranges,
+      renderExtraFooter = _ref.renderExtraFooter,
+      separator = _ref.separator,
+      showTime = _ref.showTime,
+      value = _ref.value,
+      onCalendarChange = _ref.onCalendarChange,
+      onChange = _ref.onChange,
+      children = _ref.children;
+  var props = {
+    allowClear: allowClear,
+    autoFocus: autoFocus,
+    bordered: bordered,
+    className: className,
+    disabled: disabled,
+    disabledDate: disabledDate,
+    dropdownClassName: dropdownClassName,
+    getPopupContainer: getPopupContainer,
+    inputReadOnly: inputReadOnly,
+    locale: locale,
+    mode: mode,
+    open: open,
+    panelRender: panelRender,
+    picker: picker,
+    placeholder: placeholder,
+    popupStyle: popupStyle,
+    size: size,
+    style: style,
+    suffixIcon: suffixIcon,
+    onOpenChange: onOpenChange,
+    onPanelChange: onPanelChange,
+    allowEmpty: allowEmpty,
+    dateRender: dateRender,
+    defaultPickerValue: defaultPickerValue,
+    defaultValue: defaultValue,
+    disabledTime: disabledTime,
+    format: format,
+    ranges: ranges,
+    renderExtraFooter: renderExtraFooter,
+    separator: separator,
+    showTime: showTime,
+    value: value,
+    onCalendarChange: onCalendarChange,
+    onChange: onChange,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(DatePicker$1.RangePicker, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.DatePicker.RangePicker, props, children);
 };
 
-const Input = ({
-  addonAfter,
-  addonBefore,
-  allowClear,
-  bordered,
-  disabled,
-  id,
-  maxLength,
-  prefix,
-  size,
-  suffix,
-  type,
-  value,
-  onChange,
-  onPressEnter,
-  defaultValue,
-  className,
-  placeholder,
-  style
-}) => {
-  const props = {
-    addonAfter,
-    addonBefore,
-    allowClear,
-    bordered,
-    disabled,
-    id,
-    maxLength,
-    prefix,
-    size,
-    suffix,
-    type,
-    value,
-    onChange,
-    onPressEnter,
-    defaultValue,
-    className,
-    placeholder,
-    style
+var Input = function Input(_ref) {
+  var addonAfter = _ref.addonAfter,
+      addonBefore = _ref.addonBefore,
+      allowClear = _ref.allowClear,
+      bordered = _ref.bordered,
+      disabled = _ref.disabled,
+      id = _ref.id,
+      maxLength = _ref.maxLength,
+      prefix = _ref.prefix,
+      size = _ref.size,
+      suffix = _ref.suffix,
+      type = _ref.type,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      onPressEnter = _ref.onPressEnter,
+      defaultValue = _ref.defaultValue,
+      className = _ref.className,
+      placeholder = _ref.placeholder,
+      style = _ref.style;
+  var props = {
+    addonAfter: addonAfter,
+    addonBefore: addonBefore,
+    allowClear: allowClear,
+    bordered: bordered,
+    disabled: disabled,
+    id: id,
+    maxLength: maxLength,
+    prefix: prefix,
+    size: size,
+    suffix: suffix,
+    type: type,
+    value: value,
+    onChange: onChange,
+    onPressEnter: onPressEnter,
+    defaultValue: defaultValue,
+    className: className,
+    placeholder: placeholder,
+    style: style
   };
-  return /*#__PURE__*/React__default.createElement(Input$1, props);
+  return /*#__PURE__*/React__default.createElement(antd.Input, props);
 };
 
-const InputGroup = ({
-  compact,
-  size,
-  children
-}) => {
-  const props = {
-    compact,
-    size,
-    children
+var InputGroup = function InputGroup(_ref) {
+  var compact = _ref.compact,
+      size = _ref.size,
+      children = _ref.children;
+  var props = {
+    compact: compact,
+    size: size,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Input$1.Group, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Input.Group, props, children);
 };
 
-const InputPassword = ({
-  iconRender,
-  visibilityToggle
-}) => {
-  const props = {
-    iconRender,
-    visibilityToggle
+var InputPassword = function InputPassword(_ref) {
+  var iconRender = _ref.iconRender,
+      visibilityToggle = _ref.visibilityToggle;
+  var props = {
+    iconRender: iconRender,
+    visibilityToggle: visibilityToggle
   };
-  return /*#__PURE__*/React__default.createElement(Input$1.Password, props);
+  return /*#__PURE__*/React__default.createElement(antd.Input.Password, props);
 };
 
-const InputSearch = ({
-  enterButton,
-  size,
-  loading,
-  onSearch,
-  className,
-  placeholder,
-  style
-}) => {
-  const props = {
-    enterButton,
-    size,
-    className,
-    loading,
-    onSearch,
-    placeholder,
-    style
+var InputSearch = function InputSearch(_ref) {
+  var enterButton = _ref.enterButton,
+      size = _ref.size,
+      loading = _ref.loading,
+      onSearch = _ref.onSearch,
+      className = _ref.className,
+      placeholder = _ref.placeholder,
+      style = _ref.style;
+  var props = {
+    enterButton: enterButton,
+    size: size,
+    className: className,
+    loading: loading,
+    onSearch: onSearch,
+    placeholder: placeholder,
+    style: style
   };
-  return /*#__PURE__*/React__default.createElement(Input$1.Search, props);
+  return /*#__PURE__*/React__default.createElement(antd.Input.Search, props);
 };
 
-const InputTextArea = ({
-  allowClear,
-  autoSize,
-  bordered,
-  defaultValue,
-  maxLength,
-  showCount,
-  value,
-  onResize,
-  onPressEnter
-}) => {
-  const props = {
-    allowClear,
-    autoSize,
-    bordered,
-    defaultValue,
-    maxLength,
-    showCount,
-    value,
-    onResize,
-    onPressEnter
+var InputTextArea = function InputTextArea(_ref) {
+  var allowClear = _ref.allowClear,
+      autoSize = _ref.autoSize,
+      bordered = _ref.bordered,
+      defaultValue = _ref.defaultValue,
+      maxLength = _ref.maxLength,
+      showCount = _ref.showCount,
+      value = _ref.value,
+      onResize = _ref.onResize,
+      onPressEnter = _ref.onPressEnter;
+  var props = {
+    allowClear: allowClear,
+    autoSize: autoSize,
+    bordered: bordered,
+    defaultValue: defaultValue,
+    maxLength: maxLength,
+    showCount: showCount,
+    value: value,
+    onResize: onResize,
+    onPressEnter: onPressEnter
   };
-  return /*#__PURE__*/React__default.createElement(Input$1.TextArea, props);
+  return /*#__PURE__*/React__default.createElement(antd.Input.TextArea, props);
 };
 
-const Skeleton = ({
-  active,
-  avatar,
-  loading,
-  paragraph,
-  round,
-  title,
-  children
-}) => {
-  const props = {
-    active,
-    avatar,
-    loading,
-    paragraph,
-    round,
-    title,
-    children
+var Skeleton = function Skeleton(_ref) {
+  var active = _ref.active,
+      avatar = _ref.avatar,
+      loading = _ref.loading,
+      paragraph = _ref.paragraph,
+      round = _ref.round,
+      title = _ref.title,
+      children = _ref.children;
+  var props = {
+    active: active,
+    avatar: avatar,
+    loading: loading,
+    paragraph: paragraph,
+    round: round,
+    title: title,
+    children: children
   };
-  return /*#__PURE__*/React__default.createElement(Skeleton$1, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Skeleton, props, children);
 };
 
-export { Affix, Alert, Alert$1 as AlertErrorBoundary, Anchor, AutoComplete, Avatar, AvatarGroup, BackTop, Badge, BadgeRibbon, Breadcrumb, BreadcrumbItem, Button, Calendar, Card, CardGrid, CardMeta, Carousel, Cascader, CheckableTag, Checkbox, CheckboxGroup, Col, Collapse, CollapsePanel, Comment, AutoComplete as Complete, ConfigProvider, Content, DatePicker, DescriptionsItem as DescriptionItem, Descriptions, DirectoryTree, Divider$1 as Divider, Drawer, Dropdown, DropdownButton, Empty, Footer, Form, Form$2 as FormErrorList, FormItem, FormList, FormProvider$1 as FormProvider, Header, CommonIcon as Icon, Image$1 as Image, Input, InputGroup, InputNumber, InputPassword, InputSearch, InputTextArea, Layout, Link, List$1 as List, ListItem, ListItemMeta, Mentions, MentionsOption, Menu$1 as Menu, MenuItem$1 as MenuItem, MenuItemGroup$1 as MenuItemGroup, Modal, MonthPicker, PageHeader, Pagination, Paragraph, Popconfirm, Popover, Progress, QuarterPicker, Radio, RadioButton, RadioGroup, RangePicker, Rate, Result, Row, Select, SelectOptGroup, SelectOption, Separator, Sider, Skeleton, Slider, Space, Spin, Statistic, StatisticCountdown, Step, Steps, SubMenu$1 as SubMenu, Switch, Table, TableColumn, TableColumn$1 as TableColumnGroup, Tabs, TabsTabPane, Tag, Text, TimePicker, TimePickerRangePicker, Timeline, TimelineItem, Title, Tooltip, Transfer, Tree, TreeNode, Rate as TreeSelect, Upload, WeekPicker, YearPicker, Message as message, notification };
-//# sourceMappingURL=index.modern.js.map
+exports.Affix = Affix;
+exports.Alert = Alert;
+exports.AlertErrorBoundary = Alert$1;
+exports.Anchor = Anchor;
+exports.AutoComplete = AutoComplete;
+exports.Avatar = Avatar;
+exports.AvatarGroup = AvatarGroup;
+exports.BackTop = BackTop;
+exports.Badge = Badge;
+exports.BadgeRibbon = BadgeRibbon;
+exports.Breadcrumb = Breadcrumb;
+exports.BreadcrumbItem = BreadcrumbItem;
+exports.Button = Button;
+exports.Calendar = Calendar;
+exports.Card = Card;
+exports.CardGrid = CardGrid;
+exports.CardMeta = CardMeta;
+exports.Carousel = Carousel;
+exports.Cascader = Cascader;
+exports.CheckableTag = CheckableTag;
+exports.Checkbox = Checkbox;
+exports.CheckboxGroup = CheckboxGroup;
+exports.Col = Col;
+exports.Collapse = Collapse;
+exports.CollapsePanel = CollapsePanel;
+exports.Comment = Comment;
+exports.Complete = AutoComplete;
+exports.ConfigProvider = ConfigProvider;
+exports.Content = Content;
+exports.DatePicker = DatePicker;
+exports.DescriptionItem = DescriptionsItem;
+exports.Descriptions = Descriptions;
+exports.DirectoryTree = DirectoryTree;
+exports.Divider = Divider$1;
+exports.Drawer = Drawer;
+exports.Dropdown = Dropdown;
+exports.DropdownButton = DropdownButton;
+exports.Empty = Empty;
+exports.Footer = Footer;
+exports.Form = Form;
+exports.FormErrorList = Form$2;
+exports.FormItem = FormItem;
+exports.FormList = FormList;
+exports.FormProvider = FormProvider$1;
+exports.Header = Header;
+exports.Image = Image$1;
+exports.Input = Input;
+exports.InputGroup = InputGroup;
+exports.InputNumber = InputNumber;
+exports.InputPassword = InputPassword;
+exports.InputSearch = InputSearch;
+exports.InputTextArea = InputTextArea;
+exports.Layout = Layout;
+exports.Link = Link;
+exports.List = List$1;
+exports.ListItem = ListItem;
+exports.ListItemMeta = ListItemMeta;
+exports.Mentions = Mentions;
+exports.MentionsOption = MentionsOption;
+exports.Menu = Menu$1;
+exports.MenuItem = MenuItem$1;
+exports.MenuItemGroup = MenuItemGroup$1;
+exports.Modal = Modal;
+exports.MonthPicker = MonthPicker;
+exports.Notification = notification;
+exports.PageHeader = PageHeader;
+exports.Pagination = Pagination;
+exports.Paragraph = Paragraph;
+exports.Popconfirm = Popconfirm;
+exports.Popover = Popover;
+exports.Progress = Progress;
+exports.QuarterPicker = QuarterPicker;
+exports.Radio = Radio;
+exports.RadioButton = RadioButton;
+exports.RadioGroup = RadioGroup;
+exports.RangePicker = RangePicker;
+exports.Rate = Rate;
+exports.Result = Result;
+exports.Row = Row;
+exports.Select = Select;
+exports.SelectOptGroup = SelectOptGroup;
+exports.SelectOption = SelectOption;
+exports.Separator = Separator;
+exports.Sider = Sider;
+exports.Skeleton = Skeleton;
+exports.Slider = Slider;
+exports.Space = Space;
+exports.Spin = Spin;
+exports.Statistic = Statistic;
+exports.StatisticCountdown = StatisticCountdown;
+exports.Step = Step;
+exports.Steps = Steps;
+exports.SubMenu = SubMenu$1;
+exports.Switch = Switch;
+exports.Table = Table;
+exports.TableColumn = TableColumn;
+exports.TableColumnGroup = TableColumn$1;
+exports.Tabs = Tabs;
+exports.TabsTabPane = TabsTabPane;
+exports.Tag = Tag;
+exports.Text = Text;
+exports.TimePicker = TimePicker;
+exports.TimePickerRangePicker = TimePickerRangePicker;
+exports.Timeline = Timeline;
+exports.TimelineItem = TimelineItem;
+exports.Title = Title;
+exports.Tooltip = Tooltip;
+exports.Transfer = Transfer;
+exports.Tree = Tree;
+exports.TreeNode = TreeNode;
+exports.TreeSelect = Rate;
+exports.Upload = Upload;
+exports.WeekPicker = WeekPicker;
+exports.YearPicker = YearPicker;
+exports.message = message;
+//# sourceMappingURL=index.js.map

@@ -16808,8 +16808,7 @@ var CollapsePanel = function CollapsePanel(_ref) {
     showArrow: showArrow,
     children: children
   };
-  var Panel = antd.Collapse.Panel;
-  return /*#__PURE__*/React__default.createElement(Panel, props, children);
+  return /*#__PURE__*/React__default.createElement(antd.Collapse.Panel, props, children);
 };
 
 var Collapse = function Collapse(_ref) {

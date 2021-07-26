@@ -36,8 +36,6 @@ const CollapsePanel = ({
     children,
   };
 
-  const { Panel } = Collapse;
-
-  return <Panel {...props}>{children}</Panel>;
+  return <Collapse.Panel {...props}>{children}</Collapse.Panel>;
 };
 export default CollapsePanel;
