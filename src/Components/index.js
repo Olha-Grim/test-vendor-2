@@ -1,53 +1,3 @@
-// import Affix from "./Affix";
-// import { Alert, AlertErrorBoundary } from "./Alert";
-// import Anchor from "./Anchor";
-// import AutoComplete from "./AutoComplete";
-// import { Avatar, AvatarGroup } from "./Avatar";
-// import BackTop from "./BackTop";
-// import { Badge, BadgeRibbon } from "./Badge";
-// import Space from "./Space";
-// import { Breadcrumb, BreadcrumbItem, Separator } from "./Breadcrumb";
-// import Button from "./Button";
-// import Calendar from "./Calendar";
-// import Divider from "./Divider";
-// import { Link, Text, Paragraph, Title } from "./Typography";
-// import { Checkbox, CheckboxGroup } from "./Checkbox";
-// import {
-//   Input,
-//   InputGroup,
-//   InputPassword,
-//   InputSearch,
-//   InputTextArea,
-// } from "./Input/";
-
-// export {
-//   Button,
-//   Divider,
-//   Avatar,
-//   AvatarGroup,
-//   Affix,
-//   Anchor,
-//   Alert,
-//   AlertErrorBoundary,
-//   AutoComplete,
-//   BackTop,
-//   Badge,
-//   BadgeRibbon,
-//   Link,
-//   Input,
-//   InputGroup,
-//   InputPassword,
-//   InputSearch,
-//   InputTextArea,
-//   Space,
-//   Breadcrumb,
-//   BreadcrumbItem,
-//   Separator,
-//   Calendar,
-//   Checkbox,
-//   CheckboxGroup,
-// };
-
 import { Form, FormList, FormErrorList, FormItem, FormProvider } from "./Form";
 import { Layout, Header, Sider, Content, Footer } from "./Layout";
 import { TimePicker, TimePickerRangePicker } from "./TimePicker";
@@ -67,7 +17,6 @@ import { CollapsePanel, Collapse } from "./Collapse";
 import { TimelineItem, Timeline } from "./Timeline";
 import { Alert, AlertErrorBoundary } from "./Alert";
 import { CardMeta, CardGrid, Card } from "./Card";
-// import { CommonIcon, CustomIcon } from "./Icon";
 import { AvatarGroup, Avatar } from "./Avatar";
 import { BadgeRibbon, Badge } from "./Badge";
 import { Steps, Step } from "./Steps";
@@ -76,7 +25,7 @@ import { Tag, CheckableTag } from "./Tag";
 import { Col, Row } from "./Grid";
 import ConfigProvider from "./ConfigProvider";
 import AutoComplete from "./AutoComplete";
-import Notification from "./Notification";
+import notification from "./Notification";
 import InputNumber from "./InputNumber";
 import Pagination from "./Pagination";
 import PageHeader from "./PageHeader";
@@ -107,6 +56,7 @@ import Modal from "./Modal";
 import Image from "./Image";
 import Rate from "./Rate";
 import Spin from "./Spin";
+import { Icon } from "./Icon";
 
 import { Menu, MenuItemGroup, MenuItem, SubMenu } from "./Menu";
 import {
@@ -125,24 +75,14 @@ import {
   InputTextArea,
 } from "./Input";
 import { Skeleton } from "./Skeleton";
-
 import Complete from "./AutoComplete";
-// import AccountChange from "./Screens/AccountChange";
-// import Apps from "./Screens/Apps";
-// import Settings from "./Screens/Settings";
-// import PSError from "./Screens/PSError";
 
 export {
-  // PSError,
-  // Settings,
-  // Apps,
   Button,
   Text,
   Link,
   Title,
   Paragraph,
-  // CommonIcon,
-  // CustomIcon,
   Divider,
   Col,
   Row,
@@ -162,7 +102,6 @@ export {
   MenuItemGroup,
   MenuItem,
   SubMenu,
-  // MenuDivider,
   PageHeader,
   Pagination,
   Steps,
@@ -208,6 +147,7 @@ export {
   Avatar,
   BadgeRibbon,
   Badge,
+  Icon,
   Calendar,
   CardMeta,
   CardGrid,
@@ -244,17 +184,11 @@ export {
   Drawer,
   message,
   Modal,
-  Notification,
+  notification,
   Popconfirm,
   Progress,
   Result,
   Skeleton,
-  // SkeletonParagraph,
-  // SkeletonTitle,
-  // SkeletonInput,
-  // SkeletonImage,
-  // SkeletonButton,
-  // SkeletonAvatar,
   Spin,
   Anchor,
   BackTop,

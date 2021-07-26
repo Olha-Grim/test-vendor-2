@@ -1,8 +1,6 @@
 import React from "react";
 import { Collapse } from "antd";
 
-
-
 /**
  * @typedef Props
  * @prop {"header" | "disabled"} collapsible

@@ -5,7 +5,7 @@ import { Badge as AntdBadge } from "antd";
  * 
  * @typedef Props
  * @prop {string} color
- * @prop {React.ReactNode} count
+ * @prop {React.ReactNode | number} count
  * @prop {boolean} dot
  * @prop {[number, number]	} offset
  * @prop {number} overflowCount

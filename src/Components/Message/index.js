@@ -17,7 +17,7 @@ import { message as AntdMessage } from "antd";
 /**
  * @param {Props} props
  */
-const message = ({
+const Message = ({
   className,
   content,
   duration,
@@ -40,4 +40,4 @@ const message = ({
 
   return AntdMessage ;
 };
-export default message;
+export default Message;
