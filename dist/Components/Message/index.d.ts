@@ -1,0 +1,31 @@
+export default Message;
+export type Props = {
+    className: string;
+    content: React.ReactNode;
+    duration: number;
+    icon: React.ReactNode;
+    key: string | number;
+    style: React.CSSProperties;
+    onClick: Function;
+    onClose: Function;
+};
+/**
+ *
+ * @typedef Props
+ * @prop {string} className
+ * @prop {React.ReactNode} content
+ * @prop {number} duration
+ * @prop {React.ReactNode} icon
+ * @prop {string | number	} key
+ * @prop {React.CSSProperties} style
+ * @prop {function} onClick
+ * @prop {function} onClose
+ * @return {void}
+ * @constructor
+ */
+/**
+ * @param {Props} props
+ */
+declare function Message({ className, content, duration, icon, key, style, onClick, onClose, }: Props): import("antd/lib/message").MessageApi;
+import React from "react";
+//# sourceMappingURL=index.d.ts.map
