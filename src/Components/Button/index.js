@@ -10,7 +10,7 @@ import { Button as AntdButton } from "antd";
  * @prop {string} href
  * @prop {"button" | "submit" | "reset" | undefined} htmlType
  * @prop {React.ReactNode} icon
- * @prop {boolean | { delay: number}}loading
+ * @prop {boolean | { delay: number}} loading
  * @prop {"circle" | "round"} shape
  * @prop {"large" | "middle" | "small"} size
  * @prop {string} target

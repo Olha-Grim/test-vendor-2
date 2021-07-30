@@ -1,7 +1,6 @@
 import React from "react";
 import { InputNumber as AntdInputNumber } from "antd";
-import { ValueType } from "antd/lib/input-number";
-
+import {ValueType} from "antd/lib/input-number";
 
 /**
  * @typedef Props

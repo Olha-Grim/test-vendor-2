@@ -1,62 +1,33 @@
-
 {
-    "compilerOptions": {
-      "jsx": "react",
-      "target": "es6",
-      "module": "commonjs",
-      "lib": [
-        "DOM",
-        "ESNext",
-        "es6",
-   
-      ],
-      "allowJs": true,
-      "checkJs": true,
-      "declaration": true,
-      "emitDeclarationOnly": true,
-      "declarationMap": true,
-      "declarationDir": "./dist",
-      "noEmit": false,
-      "strict": true,
-      "suppressImplicitAnyIndexErrors": true,
-      "noImplicitThis": false,
-      "moduleResolution": "node",
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true
-    },
-    "include": [
-      "src"
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "es6",
+    "module": "esnext",
+    "lib": [
+      "DOM",
+      "ESNext",
+      "es6"
     ],
-   
-  }
-// {
-//   "compilerOptions": {
-//     "jsx": "react",
-//     "target": "es6",
-//     "lib": [
-//       "dom",
-//       "dom.iterable",
-//       "esnext"
-//     ],
-//     "skipLibCheck": true,
-//     "esModuleInterop": true,
-//     "allowSyntheticDefaultImports": true,
-//     "strict": true,
-//     "forceConsistentCasingInFileNames": true,
-//     "noFallthroughCasesInSwitch": true,
-//     "module": "esnext",
-//     "moduleResolution": "node",
-//     "resolveJsonModule": true,
-//     "isolatedModules": true,
-//     "noEmit": true,
-//     "allowJs": true,
-//     "removeComments": true,
-//     "sourceMap": true,
-//     "noResolve": false,
-//     "noImplicitAny": false
-//   },
-//   "include": [
-//     "src",
-//   ]
-// }
+    "allowJs": true,
+    "checkJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationMap": true,
+    "declarationDir": "./dist",
+    "strict": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noImplicitThis": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "incremental": true,
+    "isolatedModules": true
+  },
+  "include": [
+    "src"
+  ]
+}

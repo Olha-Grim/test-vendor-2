@@ -1,1 +1,0 @@
-{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../../src/Components/Grid/Row/index.js"],"names":[],"mappings":";;WAMU,QAAQ,GAAG,KAAK,GAAG,QAAQ,GAAG,SAAS,GAAG,SAAS;YACnD,MAAM,GAAG,CAAC,MAAM,EAAE,MAAM,CAAC,GAAG,SAAS;aACrC,OAAO,GAAG,KAAK,GAAG,QAAQ,GAAE,cAAc,GAAG,eAAe;UAC5D,OAAO;eACP,MAAM;cACN,WAAW;;AARrB;;;;;;;;;;;GAWG;AACH;;GAEG;AACH,4EAFW,KAAK,eAMf"}
